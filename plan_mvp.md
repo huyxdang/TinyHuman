@@ -1,4 +1,4 @@
-# TinyUser — MVP Plan
+# TinyUser — MVP Plan v2
 
 **Find out if your product is invisible to the people who need it most.**
 
@@ -10,138 +10,116 @@ Powered by TinyFish + Modal + Claude
 
 ```
 PRE-COMPUTED (one-time, cached forever):
-  100K personas → Qwen generates their problems → Embed problems → Store vectors
+  Sample 100K (age, gender, city) from census data
+  → Qwen generates full persona: job, industry, education, income, platform, frustrations
+  → Embed all frustrations → Store vectors
 
 PER PRODUCT RUN:
-  (1) Claude: "What problems does this product solve?" → Embed → 30 vectors
-  (2) Cosine similarity: 100K persona vectors × 30 product vectors → instant match
-  (3) Qwen: qualifying personas generate search queries → deduplicate
+  (1) Claude: "What problems does this product solve?" → Embed
+  (2) Cosine similarity: 100K persona frustrations × product problems → instant match
+  (3) Qwen: qualifying personas generate search queries
   (4) TinyFish: run real Google searches → rank + competitors
-  (5) Report: segments, discoverability scores, gap analysis, 3D visualization
+  (5) Report: human-readable segments, discoverability scores, gap analysis
 ```
 
 ---
 
-## Pre-Computed Assets (One-Time Setup)
+## Persona Design
 
-### 100,000 Vietnamese Personas
+### 3 Anchor Fields (sampled from real census data)
 
-Generated from `persona_specification.json` using autoregressive sampling.
-
-**Persona schema:**
-
-| Field | Type | Example |
+| Field | Source | Method |
 |---|---|---|
-| id | int | 47832 |
-| age | string | "25-34" |
-| location | string | "urban" |
-| occupation | string | "white_collar" |
-| C1_digital_fluency | int (1-4) | 3 (platform_savvy) |
-| C2_collective_trust | int (1-4) | 2 (community_validated) |
-| C3_price_value | int (1-4) | 3 (value_conscious) |
-| C4_ethnocentricity | int (1-4) | 2 (local_leaning) |
-| C5_risk_aversion | int (1-4) | 3 (platform_trusting) |
+| Age | GSO 2024, UN Population Prospects | Weighted random from age pyramid |
+| Gender | GSO 2024 (49% M, 51% F) | Weighted random |
+| City | GSO 2024 intercensal census, top 20 provinces + rural bucket | Weighted by population |
 
-**The 5 characteristics (from persona_specification.json):**
+### LLM-Generated Fields (Qwen, conditioned on anchors)
 
-| ID | Name | Controls |
+| Field | Example | Why it matters |
 |---|---|---|
-| C1 | Digital Fluency & Platform Affinity | How they discover products |
-| C2 | Collective Trust & Social Validation | Whose opinion they need before buying |
-| C3 | Pragmatic Price-Value Orientation | When/if they convert |
-| C4 | Ethno-Centricity | Which products they'd consider (local vs foreign) |
-| C5 | Risk Aversion & Transactional Security | How they pay |
+| Job title | "Hotel front desk manager" | Targetable by ads, content |
+| Industry | "Tourism & hospitality" | Segment label |
+| Company size | "medium (50-200)" | B2B vs B2C signal |
+| Education level | "university" | Content complexity |
+| Income bracket | "7-15M VND/month" | Pricing sensitivity |
+| Primary platform | "Zalo" | Channel strategy |
+| Search language | "mixed" | SEO language |
+| Top 3 frustrations | "Guest complaints pile up with no tracking system" | Core of the simulation |
 
-### Pre-Computed Persona Problems
+**Every field is directly reportable.** A marketing team reads "Hotel managers in Da Nang, 25-44, university-educated, search in Vietnamese on Zalo" and knows exactly what to do.
 
-For each of the 100K personas, Qwen generates their top 3-5 daily frustrations / unmet needs **without any product context**. This is believable because we're asking "what bothers you?" not "would you use X?"
+**No abstract behavioral characteristics.** No "C1=3 digital fluency." The persona is a person, not a vector.
 
-Example for persona #47832 (urban, 25-34, white-collar, platform-savvy):
-- "My team's project docs are scattered across Zalo, email, and Google Drive"
-- "I spend too long writing status reports every week"
-- "I can't find the spec my PM shared last month"
+---
 
-These problems are then embedded using `intfloat/multilingual-e5-small` (handles Vietnamese) and stored as vectors. **Never recomputed.**
+## Pre-Computed Assets (One-Time)
 
-**Stored files:**
-- `personas.json` — 100K persona demographic + characteristic data
-- `persona_problems.json` — 100K × 3-5 problems per persona (text)
-- `persona_embeddings.npy` — 100K pre-computed embedding vectors
+### Step 1: Sample Anchors
+Python script samples 100K (age, gender, city) triplets from `persona_specification.json` distributions.
 
-**One-time cost:**
-- Modal (Qwen inference for 100K personas): ~$3-5
-- Modal (embedding 100K × 5 problems): ~$0.50
-- **Total one-time: ~$4-6, then $0 forever**
+### Step 2: Generate Full Personas
+Qwen2.5-7B-Instruct on Modal generates the remaining fields for each persona. Batched 10 per call = 10K calls. ~15 minutes with 100+ concurrent GPU workers.
+
+### Step 3: Embed Frustrations
+`intfloat/multilingual-e5-small` on Modal embeds all frustrations. Stored as `persona_embeddings.npy`.
+
+**One-time cost: ~$6-9. Cached forever.**
+
+**Output files:**
+- `personas.json` — 100K complete personas
+- `persona_embeddings.npy` — 100K frustration vectors
 
 ---
 
 ## Per-Product Pipeline
 
-### Step 1 — Product Problem Space (Claude, 1 API call)
+### Step 1 — Product Problem Space (Claude, 1 call)
 
-User inputs product name + URL + description. Claude generates a broad problem space: every possible way someone might *experience the need* for this product.
+User inputs product. Claude generates ~20-30 problem statements — not what the product *does*, but what problems people *feel* that the product solves.
 
-Not a product description — a list of **problems people feel**, phrased in their language.
+Embedded using same multilingual-e5-small model.
 
-Example for Notion:
-- "I can't find the document my teammate shared last week"
-- "My meeting notes are scattered across 5 apps"
-- "I need a simple wiki for my small team"
-- "I'm a student and I need to organize my coursework"
-- "I run a freelance business and track everything in spreadsheets"
+**Cost:** ~$0.01 | **Time:** ~2 seconds
 
-Output: ~20-30 problem statements, then embedded using the same multilingual-e5-small model.
+### Step 2 — Problem Matching (Cosine Similarity)
 
-**Cost:** ~$0.01 (one Claude call) + milliseconds for embedding
+Matrix multiply: 100K persona frustration vectors × 30 product problem vectors.
 
-### Step 2 — Problem Matching (Cosine Similarity, Deterministic)
+Each persona gets a match score (0.0 to 1.0). No LLM needed — pure numpy.
 
-Matrix multiply: 100K pre-computed persona problem vectors × 30 product problem vectors.
+- Score > 0.75 → strong match
+- Score 0.55-0.75 → adjacent
+- Score < 0.55 → filtered out
 
-Each persona gets a **match score** (0.0 to 1.0). No LLM judgment — pure math.
+**Cost:** $0 | **Time:** <1 second
 
-- Score > 0.75 → **strong match** (actively has this problem)
-- Score 0.55-0.75 → **adjacent** (related problem, might discover it)
-- Score < 0.55 → **no match** (filtered out)
+### Step 3 — Search Query Generation (Qwen on Modal)
 
-This gives you not just yes/no but a gradient. A persona at 0.92 is desperate for your product. A persona at 0.60 is a stretch audience.
+Only qualifying personas (~5K-20K) get this step. Qwen generates the search query they'd type, based on:
+- Their frustration (not the product)
+- Their primary platform
+- Their search language
 
-**Cost:** $0 (numpy dot product, under 1 second)
+The persona never sees the product.
 
-### Step 3 — Search Query Generation (Qwen on Modal, qualifying personas only)
+**Cost:** ~$1-3 | **Time:** ~30-60 seconds
 
-Only personas that passed Step 2 (expect ~5K-20K out of 100K) get this step.
+### Step 4 — Live Search (TinyFish API)
 
-Qwen generates the search query this persona would type, given:
-- Their problem (from pre-computed problems, not the product)
-- Their C1 digital fluency level (determines if they Google, ask Zalo, browse TikTok)
-- Their language patterns (Vietnamese, English, or mixed — based on C1 and C4)
+Deduplicate queries (~200-500 unique). TinyFish runs them on real Google. Records rank + competitors.
 
-The persona **never sees the product**. They're searching for their problem, not your solution. This is how real discovery works.
-
-**Cost:** ~$1-3 on Modal (only qualifying personas, not all 100K)
-
-### Step 4 — Live Search Execution (TinyFish API)
-
-Deduplicate search queries from Step 3 (expect ~200-500 unique queries).
-
-TinyFish agents run each query on real Google:
-- Extract first page of results
-- Check if product URL appears
-- Record rank position
-- Capture all competing URLs that rank above the product
-- Queries in both Vietnamese and English depending on persona patterns
-
-**Cost:** ~300 unique queries × ~3 steps × $0.015/step = ~$13.50
+**Cost:** ~$13.50 | **Time:** ~2 minutes
 
 ### Step 5 — Report
 
-- Segment summary table (segment name, size, match score distribution, representative queries)
-- Discoverability score per segment (% of queries where product ranks page 1)
-- Overall discoverability score
-- Gap analysis: high-match segments where product is invisible
-- Competitor table: who ranks where you don't
-- 3D visualization: 100K fish clustered by segment (Three.js)
+Segments labeled with human-readable demographics:
+
+| Segment | Size | Top Query | You Rank | Competitor |
+|---|---|---|---|---|
+| Hotel managers in Da Nang (25-44) | 3,200 | "phần mềm quản lý khách sạn" | Not found | Cloudbeds, ezCloud |
+| Bank tellers in HCMC (25-34) | 8,100 | "công cụ tự động hóa tài liệu" | #7 | Jira, Confluence |
+| Young Shopee sellers (18-24, TikTok) | 12,400 | "cách tăng đơn hàng Shopee" | Not found | Shopee University |
 
 ---
 
@@ -149,62 +127,56 @@ TinyFish agents run each query on real Google:
 
 | Step | Cost | Time |
 |---|---|---|
-| 1. Claude: product problem space | ~$0.01 | ~2 seconds |
-| 2. Cosine similarity (100K × 30) | $0 | <1 second |
-| 3. Qwen: search queries (qualifying only) | ~$1-3 | ~30-60 seconds |
-| 4. TinyFish: real Google searches | ~$13.50 | ~2 minutes |
-| 5. Report generation | $0 | ~5 seconds |
-| **Total per product** | **~$15-17** | **~3-4 minutes** |
-
-Charge $50-100 per report. Pre-computed assets amortized to $0.
+| 1. Claude: product problem space | ~$0.01 | ~2 sec |
+| 2. Cosine similarity | $0 | <1 sec |
+| 3. Qwen: search queries (qualifying only) | ~$1-3 | ~30-60 sec |
+| 4. TinyFish: real Google searches | ~$13.50 | ~2 min |
+| 5. Report generation | $0 | ~5 sec |
+| **Total** | **~$15-17** | **~3-4 min** |
 
 ---
 
 ## Tech Stack
 
-| Layer | Technology | Role |
-|---|---|---|
-| Persona storage | Static JSON + .npy embeddings | Pre-generated, cached forever |
-| Problem generation | Qwen2.5-7B-Instruct on Modal (vLLM) | One-time: persona problems |
-| Embedding | multilingual-e5-small on Modal | One-time: persona embeddings. Per-run: product embeddings |
-| Problem matching | Numpy cosine similarity | Per-run: instant matching |
-| Search query generation | Qwen2.5-7B-Instruct on Modal (vLLM) | Per-run: qualifying personas only |
-| Search execution | TinyFish API (batch async) | Per-run: real Google searches |
-| Visualization | Three.js / WebGL | 100K particle fish in 3D clusters |
-| Frontend | React (Vite) | User interface, report display |
-| Backend | FastAPI | Orchestration, Modal calls, TinyFish calls |
+| Layer | Technology |
+|---|---|
+| Persona storage | Static JSON + .npy embeddings |
+| Persona generation | Qwen2.5-7B-Instruct on Modal (vLLM) |
+| Embedding | multilingual-e5-small on Modal |
+| Problem matching | Numpy cosine similarity |
+| Search query generation | Qwen2.5-7B-Instruct on Modal (vLLM) |
+| Search execution | TinyFish API (batch async) |
+| Visualization | Three.js — force-directed network graph, 1.5K nodes |
+| Frontend | React (Vite) |
+| Backend | FastAPI |
 
 ---
 
 ## MVP Milestones
 
-### M1 — Persona Dataset & Pre-Computation
-- [ ] Implement sampling algorithm from `persona_specification.json`
-- [ ] Generate 100,000 personas → `personas.json`
-- [ ] Validate distributions match spec (C1-C5 within ±2%)
-- [ ] Set up Modal project with Qwen2.5-7B-Instruct (vLLM)
-- [ ] Generate persona problems (100K × 3-5 problems each) → `persona_problems.json`
-- [ ] Set up multilingual-e5-small on Modal
-- [ ] Embed all persona problems → `persona_embeddings.npy`
+### M1 — Persona Dataset
+- [ ] Implement anchor sampling from census distributions
+- [ ] Set up Modal with Qwen2.5-7B-Instruct (vLLM)
+- [ ] Design + test persona generation prompt
+- [ ] Generate 100K personas → `personas.json`
+- [ ] Validate: realistic job/city combos, no nonsense personas
+- [ ] Embed frustrations → `persona_embeddings.npy`
 
 ### M2 — Per-Product Pipeline
-- [ ] User inputs product name + URL + description
 - [ ] Claude generates product problem space
 - [ ] Embed product problems
-- [ ] Cosine similarity matching against 100K personas
-- [ ] Filter qualifying personas by threshold
-- [ ] Cluster qualifying personas into segments
+- [ ] Cosine similarity matching
+- [ ] Filter + cluster qualifying personas
+- [ ] Auto-label segments from demographics
 
-### M3 — Search Query Generation & Execution
+### M3 — Search Execution
 - [ ] Qwen generates search queries for qualifying personas
 - [ ] Deduplicate queries
-- [ ] Run queries via TinyFish batch async
-- [ ] Parse search results: rank position + competitors per query
+- [ ] TinyFish batch async → real Google results
+- [ ] Parse: rank position + competitors
 
 ### M4 — Report & Visualization
-- [ ] Segment discoverability scores
-- [ ] Overall score
-- [ ] Gap analysis
-- [ ] Competitor ranking table
-- [ ] 3D fish visualization (Three.js, 100K particles, colored by segment)
-- [ ] Web UI to input product + display report
+- [ ] Segment table with discoverability scores
+- [ ] Gap analysis + competitor table
+- [ ] Force-directed 3D network graph (Three.js, ~1.5K nodes)
+- [ ] Web UI: hero graph on load → input modal → animated clustering → report
