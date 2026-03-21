@@ -6,6 +6,7 @@ import TopBar from './components/TopBar';
 import ProgressBar from './components/ProgressBar';
 import ClusterLegend from './components/ClusterLegend';
 import ResultsPanel from './components/ResultsPanel';
+import ChatPanel from './components/ChatPanel';
 import NodeDetailPanel from './components/NodeDetailPanel';
 import { generateNodes, generateEdges, simulateProduct } from './data/mockData';
 import './App.css';
@@ -164,12 +165,33 @@ export default function App() {
 
       {/* Results panel */}
       {phase === 'results' && (
-        <ResultsPanel
-          clusters={clusters}
-          discoverability={discoverability}
-          qualifying={qualifying}
-        />
+        <>
+          <ResultsPanel
+            clusters={clusters}
+            discoverability={discoverability}
+            qualifying={qualifying}
+          />
+          <button
+            className="chat-launch-btn"
+            onClick={() => setPhase('chatting')}
+            style={{
+              position: 'absolute', bottom: 24, left: '50%', transform: 'translateX(-50%)',
+              zIndex: 25, background: '#2563eb', color: 'white', border: 'none',
+              padding: '12px 28px', borderRadius: 8, fontSize: 14, fontWeight: 600,
+              cursor: 'pointer', boxShadow: '0 4px 20px rgba(37,99,235,0.4)',
+            }}
+          >
+            Start Group Discussion
+          </button>
+        </>
       )}
+
+      {/* Chat panel (fullscreen overlay) */}
+      <ChatPanel
+        visible={phase === 'chatting'}
+        clusters={clusters}
+        apiBase="http://localhost:8000"
+      />
 
       {/* Node detail panel */}
       {selectedNode && (

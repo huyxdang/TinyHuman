@@ -1,0 +1,8 @@
+{
+  "name": "Notion",
+  "url": "https://notion.so",
+  "description": "All-in-one workspace for notes, docs, and project management",
+  "launch_messaging": "Notion replaces your docs, wikis, and project management tools in one place",
+  "competitors": ["Evernote", "Obsidian", "Google Docs", "Trello"],
+  "launch_channels": ["Facebook", "Product Hunt"]
+}
