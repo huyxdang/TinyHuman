@@ -27,6 +27,7 @@ MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
     gpu="A10G",
     timeout=600,
     container_idle_timeout=300,
+    keep_warm=1,
 )
 class Qwen:
     @modal.enter()

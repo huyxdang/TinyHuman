@@ -24,6 +24,7 @@ MODEL_NAME = "intfloat/multilingual-e5-small"
     gpu="T4",
     timeout=600,
     container_idle_timeout=300,
+    keep_warm=1,
 )
 class Embedder:
     @modal.enter()
@@ -38,16 +39,17 @@ class Embedder:
         self.model.to(self.device)
 
     @modal.method()
-    def embed(self, texts: list[str]) -> list[list[float]]:
+    def embed(self, texts: list[str], prefix: str = "passage") -> list[list[float]]:
         """Embed a batch of texts. Returns list of vectors.
 
         E5 models require a "query: " or "passage: " prefix.
-        We use "passage: " since these are frustrations being stored for retrieval.
+        Use prefix="passage" for stored documents (persona frustrations).
+        Use prefix="query" for retrieval queries (product problems).
         """
         import torch
         import numpy as np
 
-        prefixed = [f"passage: {t}" for t in texts]
+        prefixed = [f"{prefix}: {t}" for t in texts]
 
         tokens = self.tokenizer(
             prefixed,

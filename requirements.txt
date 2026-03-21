@@ -1,3 +1,5 @@
 numpy
 modal
 requests
+openai
+python-dotenv
