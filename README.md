@@ -1,2 +1,2 @@
 # TinyUser
-100,000 simulated humans to test your marketing
+1,000 simulated humans to test your marketing
