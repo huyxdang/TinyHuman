@@ -1,9 +1,11 @@
 """
 Step 0 — Sample Anchor Demographics from Census Data
 
-Samples (age, gender, city) triplets from real Vietnamese census distributions
+Samples (age, gender, province, region) from real Vietnamese census distributions
 defined in persona_specification.json. These anchors are the input for Step 1
 where Qwen generates full personas.
+
+Uses the 2025 post-merger 34-province structure with real GSO population weights.
 
 Usage:
     python scripts/0_generate_personas.py --count 100 --output data/anchors.json
@@ -23,32 +25,41 @@ def load_spec(path: str = "persona_specification.json") -> dict:
 
 
 def sample_anchors(rng: np.random.Generator, count: int, spec: dict) -> list[dict]:
-    """Sample (age, gender, city) triplets from census distributions."""
+    """Sample (age, gender, province, region) from census distributions."""
     dist = spec["anchor_distributions"]
 
     # Age
-    age_brackets = {k: v for k, v in dist["age_bracket"].items() if k not in ("source",)}
-    age_opts = list(age_brackets.keys())
-    age_wts = np.array(list(age_brackets.values()), dtype=np.float64)
+    age_raw = dist["age_bracket"]
+    age_opts = [k for k in age_raw if k != "source"]
+    age_wts = np.array([age_raw[k] for k in age_opts], dtype=np.float64)
     age_wts /= age_wts.sum()
     ages = rng.choice(age_opts, size=count, p=age_wts)
 
     # Gender
-    gender_map = {k: v for k, v in dist["gender"].items() if k != "source"}
-    gender_opts = list(gender_map.keys())
-    gender_wts = np.array(list(gender_map.values()), dtype=np.float64)
+    gender_raw = dist["gender"]
+    gender_opts = [k for k in gender_raw if k != "source"]
+    gender_wts = np.array([gender_raw[k] for k in gender_opts], dtype=np.float64)
     gender_wts /= gender_wts.sum()
     genders = rng.choice(gender_opts, size=count, p=gender_wts)
 
-    # City
-    city_dist = dist["city"]["distribution"]
-    city_opts = list(city_dist.keys())
-    city_wts = np.array(list(city_dist.values()), dtype=np.float64)
-    city_wts /= city_wts.sum()
-    cities = rng.choice(city_opts, size=count, p=city_wts)
+    # Province (new structure: each value is {pop, weight, region, type})
+    prov_dist = dist["province"]["distribution"]
+    prov_opts = list(prov_dist.keys())
+    prov_wts = np.array([prov_dist[k]["weight"] for k in prov_opts], dtype=np.float64)
+    prov_wts /= prov_wts.sum()
+    provinces = rng.choice(prov_opts, size=count, p=prov_wts)
+
+    # Build region lookup
+    region_map = {k: v["region"] for k, v in prov_dist.items()}
 
     return [
-        {"id": i, "age": ages[i], "gender": genders[i], "city": cities[i]}
+        {
+            "id": i,
+            "age": ages[i],
+            "gender": genders[i],
+            "province": provinces[i],
+            "region": region_map[provinces[i]],
+        }
         for i in range(count)
     ]
 
@@ -62,41 +73,61 @@ def validate(anchors: list[dict], spec: dict):
     print(f"{'='*55}")
 
     # Age
-    age_expected = {k: v for k, v in dist["age_bracket"].items() if k != "source"}
+    age_raw = dist["age_bracket"]
     print("\nage_bracket:")
-    age_counts = {}
+    counts = {}
     for a in anchors:
-        age_counts[a["age"]] = age_counts.get(a["age"], 0) + 1
-    for key, exp in age_expected.items():
-        actual = age_counts.get(key, 0) / n
+        counts[a["age"]] = counts.get(a["age"], 0) + 1
+    for k in [k for k in age_raw if k != "source"]:
+        exp = age_raw[k]
+        actual = counts.get(k, 0) / n
         diff = abs(actual - exp)
         flag = " ⚠" if diff > 0.03 else ""
-        print(f"  {key:20s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
+        print(f"  {k:20s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
 
     # Gender
-    gender_expected = {k: v for k, v in dist["gender"].items() if k != "source"}
+    gender_raw = dist["gender"]
     print("\ngender:")
-    gender_counts = {}
+    counts = {}
     for a in anchors:
-        gender_counts[a["gender"]] = gender_counts.get(a["gender"], 0) + 1
-    for key, exp in gender_expected.items():
-        actual = gender_counts.get(key, 0) / n
+        counts[a["gender"]] = counts.get(a["gender"], 0) + 1
+    for k in [k for k in gender_raw if k != "source"]:
+        exp = gender_raw[k]
+        actual = counts.get(k, 0) / n
         diff = abs(actual - exp)
         flag = " ⚠" if diff > 0.03 else ""
-        print(f"  {key:20s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
+        print(f"  {k:20s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
 
-    # City (top 5 + rural_other)
-    city_expected = dist["city"]["distribution"]
-    print("\ncity (top 5 + rural_other):")
-    city_counts = {}
+    # Province: top 10 by weight
+    prov_dist = dist["province"]["distribution"]
+    print("\nprovince (top 10 by population):")
+    counts = {}
     for a in anchors:
-        city_counts[a["city"]] = city_counts.get(a["city"], 0) + 1
-    top_cities = sorted(city_expected.items(), key=lambda x: x[1], reverse=True)[:6]
-    for key, exp in top_cities:
-        actual = city_counts.get(key, 0) / n
+        counts[a["province"]] = counts.get(a["province"], 0) + 1
+    top = sorted(prov_dist.items(), key=lambda x: x[1]["weight"], reverse=True)[:10]
+    for name, info in top:
+        exp = info["weight"]
+        actual = counts.get(name, 0) / n
         diff = abs(actual - exp)
         flag = " ⚠" if diff > 0.03 else ""
-        print(f"  {key:25s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
+        print(f"  {name:25s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
+
+    # Region summary
+    print("\nby region:")
+    region_expected = {}
+    for name, info in prov_dist.items():
+        r = info["region"]
+        region_expected[r] = region_expected.get(r, 0) + info["weight"]
+    region_actual = {}
+    for a in anchors:
+        r = a["region"]
+        region_actual[r] = region_actual.get(r, 0) + 1
+    for r in sorted(region_expected, key=region_expected.get, reverse=True):
+        exp = region_expected[r]
+        actual = region_actual.get(r, 0) / n
+        diff = abs(actual - exp)
+        flag = " ⚠" if diff > 0.03 else ""
+        print(f"  {r:25s}  exp={exp:.3f}  actual={actual:.3f}  diff={diff:.3f}{flag}")
 
 
 def main():

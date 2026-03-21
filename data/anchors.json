@@ -3,600 +3,700 @@
     "id": 0,
     "age": "55-64",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Phu Tho",
+    "region": "Northeast"
   },
   {
     "id": 1,
     "age": "35-44",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Vinh Long",
+    "region": "Mekong Delta"
   },
   {
     "id": 2,
     "age": "55-64",
     "gender": "male",
-    "city": "Thai Nguyen"
+    "province": "Dong Thap",
+    "region": "Mekong Delta"
   },
   {
     "id": 3,
     "age": "45-54",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 4,
     "age": "18-24",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 5,
     "age": "65+",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hai Phong",
+    "region": "Red River Delta"
   },
   {
     "id": 6,
     "age": "55-64",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 7,
     "age": "55-64",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lang Son",
+    "region": "Northeast"
   },
   {
     "id": 8,
     "age": "18-24",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 9,
     "age": "35-44",
     "gender": "female",
-    "city": "Thai Nguyen"
+    "province": "Dong Thap",
+    "region": "Mekong Delta"
   },
   {
     "id": 10,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lao Cai",
+    "region": "Northwest"
   },
   {
     "id": 11,
     "age": "65+",
     "gender": "male",
-    "city": "Binh Thuan"
+    "province": "Ha Tinh",
+    "region": "North Central"
   },
   {
     "id": 12,
     "age": "45-54",
     "gender": "male",
-    "city": "Hanoi"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 13,
     "age": "55-64",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Quang Ngai",
+    "region": "South Central"
   },
   {
     "id": 14,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Nghe An",
+    "region": "North Central"
   },
   {
     "id": 15,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Ninh Binh",
+    "region": "Red River Delta"
   },
   {
     "id": 16,
     "age": "35-44",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 17,
     "age": "18-24",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 18,
     "age": "55-64",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Thanh Hoa",
+    "region": "North Central"
   },
   {
     "id": 19,
     "age": "45-54",
     "gender": "female",
-    "city": "Dong Nai"
+    "province": "Ca Mau",
+    "region": "Mekong Delta"
   },
   {
     "id": 20,
     "age": "55-64",
     "gender": "female",
-    "city": "Thanh Hoa"
+    "province": "Da Nang",
+    "region": "South Central"
   },
   {
     "id": 21,
     "age": "25-34",
     "gender": "female",
-    "city": "Quang Ninh"
+    "province": "Dong Nai",
+    "region": "Southeast"
   },
   {
     "id": 22,
     "age": "65+",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lam Dong",
+    "region": "Central Highlands"
   },
   {
     "id": 23,
     "age": "65+",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Tuyen Quang",
+    "region": "Northeast"
   },
   {
     "id": 24,
     "age": "55-64",
     "gender": "male",
-    "city": "Can Tho"
+    "province": "Da Nang",
+    "region": "South Central"
   },
   {
     "id": 25,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Thanh Hoa",
+    "region": "North Central"
   },
   {
     "id": 26,
     "age": "35-44",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 27,
     "age": "18-24",
     "gender": "male",
-    "city": "Long An"
+    "province": "Gia Lai",
+    "region": "Central Highlands"
   },
   {
     "id": 28,
     "age": "25-34",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lai Chau",
+    "region": "Northwest"
   },
   {
     "id": 29,
     "age": "45-54",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 30,
     "age": "55-64",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 31,
     "age": "65+",
     "gender": "female",
-    "city": "Binh Duong"
+    "province": "Cao Bang",
+    "region": "Northeast"
   },
   {
     "id": 32,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Vinh Long",
+    "region": "Mekong Delta"
   },
   {
     "id": 33,
     "age": "35-44",
     "gender": "male",
-    "city": "Lam Dong"
+    "province": "Hung Yen",
+    "region": "Red River Delta"
   },
   {
     "id": 34,
     "age": "35-44",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Thanh Hoa",
+    "region": "North Central"
   },
   {
     "id": 35,
     "age": "25-34",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Quang Ngai",
+    "region": "South Central"
   },
   {
     "id": 36,
     "age": "18-24",
     "gender": "female",
-    "city": "An Giang"
+    "province": "Dong Nai",
+    "region": "Southeast"
   },
   {
     "id": 37,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Phu Tho",
+    "region": "Northeast"
   },
   {
     "id": 38,
     "age": "25-34",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 39,
     "age": "45-54",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 40,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Quang Ninh",
+    "region": "Northeast"
   },
   {
     "id": 41,
     "age": "55-64",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Phu Tho",
+    "region": "Northeast"
   },
   {
     "id": 42,
     "age": "45-54",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hai Phong",
+    "region": "Red River Delta"
   },
   {
     "id": 43,
     "age": "25-34",
     "gender": "female",
-    "city": "Dak Lak"
+    "province": "Dong Thap",
+    "region": "Mekong Delta"
   },
   {
     "id": 44,
     "age": "55-64",
     "gender": "male",
-    "city": "Lam Dong"
+    "province": "Hung Yen",
+    "region": "Red River Delta"
   },
   {
     "id": 45,
     "age": "55-64",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Tay Ninh",
+    "region": "Southeast"
   },
   {
     "id": 46,
     "age": "35-44",
     "gender": "male",
-    "city": "Lam Dong"
+    "province": "Hung Yen",
+    "region": "Red River Delta"
   },
   {
     "id": 47,
     "age": "25-34",
     "gender": "female",
-    "city": "Binh Duong"
+    "province": "Ca Mau",
+    "region": "Mekong Delta"
   },
   {
     "id": 48,
     "age": "45-54",
     "gender": "male",
-    "city": "Nghe An"
+    "province": "Bac Ninh",
+    "region": "Red River Delta"
   },
   {
     "id": 49,
     "age": "18-24",
     "gender": "male",
-    "city": "Binh Duong"
+    "province": "Dak Lak",
+    "region": "Central Highlands"
   },
   {
     "id": 50,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Lam Dong",
+    "region": "Central Highlands"
   },
   {
     "id": 51,
     "age": "18-24",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Tay Ninh",
+    "region": "Southeast"
   },
   {
     "id": 52,
     "age": "55-64",
     "gender": "male",
-    "city": "Ha Tinh"
+    "province": "Dien Bien",
+    "region": "Northwest"
   },
   {
     "id": 53,
     "age": "45-54",
     "gender": "female",
-    "city": "Hai Phong"
+    "province": "Can Tho",
+    "region": "Mekong Delta"
   },
   {
     "id": 54,
     "age": "45-54",
     "gender": "male",
-    "city": "Hanoi"
+    "province": "Hai Phong",
+    "region": "Red River Delta"
   },
   {
     "id": 55,
     "age": "55-64",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Ninh Binh",
+    "region": "Red River Delta"
   },
   {
     "id": 56,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Quang Ngai",
+    "region": "South Central"
   },
   {
     "id": 57,
     "age": "35-44",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 58,
     "age": "18-24",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 59,
     "age": "18-24",
     "gender": "female",
-    "city": "Binh Thuan"
+    "province": "Hung Yen",
+    "region": "Red River Delta"
   },
   {
     "id": 60,
     "age": "45-54",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 61,
     "age": "35-44",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Quang Ninh",
+    "region": "Northeast"
   },
   {
     "id": 62,
     "age": "35-44",
     "gender": "male",
-    "city": "Thanh Hoa"
+    "province": "Hue",
+    "region": "North Central"
   },
   {
     "id": 63,
     "age": "55-64",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 64,
     "age": "45-54",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Thanh Hoa",
+    "region": "North Central"
   },
   {
     "id": 65,
     "age": "35-44",
     "gender": "male",
-    "city": "Hanoi"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 66,
     "age": "35-44",
     "gender": "female",
-    "city": "Can Tho"
+    "province": "Da Nang",
+    "region": "South Central"
   },
   {
     "id": 67,
     "age": "25-34",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 68,
     "age": "18-24",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 69,
     "age": "35-44",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 70,
     "age": "25-34",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 71,
     "age": "35-44",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 72,
     "age": "55-64",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 73,
     "age": "25-34",
     "gender": "female",
-    "city": "Binh Thuan"
+    "province": "Hung Yen",
+    "region": "Red River Delta"
   },
   {
     "id": 74,
     "age": "18-24",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lao Cai",
+    "region": "Northwest"
   },
   {
     "id": 75,
     "age": "25-34",
     "gender": "male",
-    "city": "Dong Nai"
+    "province": "Bac Ninh",
+    "region": "Red River Delta"
   },
   {
     "id": 76,
     "age": "25-34",
     "gender": "male",
-    "city": "Thanh Hoa"
+    "province": "Hue",
+    "region": "North Central"
   },
   {
     "id": 77,
     "age": "45-54",
     "gender": "female",
-    "city": "Thai Nguyen"
+    "province": "Dong Thap",
+    "region": "Mekong Delta"
   },
   {
     "id": 78,
     "age": "35-44",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Tay Ninh",
+    "region": "Southeast"
   },
   {
     "id": 79,
     "age": "55-64",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Son La",
+    "region": "Northwest"
   },
   {
     "id": 80,
     "age": "45-54",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 81,
     "age": "35-44",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hanoi",
+    "region": "Red River Delta"
   },
   {
     "id": 82,
     "age": "55-64",
     "gender": "female",
-    "city": "Hanoi"
+    "province": "Hai Phong",
+    "region": "Red River Delta"
   },
   {
     "id": 83,
     "age": "25-34",
     "gender": "male",
-    "city": "Hai Phong"
+    "province": "Can Tho",
+    "region": "Mekong Delta"
   },
   {
     "id": 84,
     "age": "18-24",
     "gender": "female",
-    "city": "Tien Giang"
+    "province": "Ha Tinh",
+    "region": "North Central"
   },
   {
     "id": 85,
     "age": "18-24",
     "gender": "female",
-    "city": "Binh Duong"
+    "province": "Ca Mau",
+    "region": "Mekong Delta"
   },
   {
     "id": 86,
     "age": "45-54",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 87,
     "age": "35-44",
     "gender": "male",
-    "city": "Nghe An"
+    "province": "Bac Ninh",
+    "region": "Red River Delta"
   },
   {
     "id": 88,
     "age": "25-34",
     "gender": "female",
-    "city": "Dak Lak"
+    "province": "Dong Thap",
+    "region": "Mekong Delta"
   },
   {
     "id": 89,
     "age": "35-44",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 90,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Quang Ninh",
+    "region": "Northeast"
   },
   {
     "id": 91,
     "age": "45-54",
     "gender": "male",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 92,
     "age": "35-44",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Thanh Hoa",
+    "region": "North Central"
   },
   {
     "id": 93,
     "age": "35-44",
     "gender": "female",
-    "city": "Ho Chi Minh City"
+    "province": "Ho Chi Minh City",
+    "region": "Southeast"
   },
   {
     "id": 94,
     "age": "25-34",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Quang Tri",
+    "region": "North Central"
   },
   {
     "id": 95,
     "age": "45-54",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Thai Nguyen",
+    "region": "Northeast"
   },
   {
     "id": 96,
     "age": "25-34",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Vinh Long",
+    "region": "Mekong Delta"
   },
   {
     "id": 97,
     "age": "18-24",
     "gender": "female",
-    "city": "rural_other"
+    "province": "Phu Tho",
+    "region": "Northeast"
   },
   {
     "id": 98,
     "age": "18-24",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Phu Tho",
+    "region": "Northeast"
   },
   {
     "id": 99,
     "age": "65+",
     "gender": "male",
-    "city": "rural_other"
+    "province": "Lam Dong",
+    "region": "Central Highlands"
   }
 ]
