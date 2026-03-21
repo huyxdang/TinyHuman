@@ -1,0 +1,35 @@
+[
+  {
+    "query": "Giải pháp tăng tốc internet cho IT Manager tại Hà Nội",
+    "lang": "vi",
+    "persona_ids": [
+      101
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "IT Manager",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "nhanh tay internet làm sao cho nhanh khi làm việc từ xa",
+    "lang": "vi",
+    "persona_ids": [
+      111
+    ],
+    "persona_province": "Bac Ninh",
+    "persona_job": "Software Developer",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "tìm việc làm tech tại tphcm mới nhất 2023",
+    "lang": "vi",
+    "persona_ids": [
+      426
+    ],
+    "persona_province": "Ho Chi Minh City",
+    "persona_job": "Software Developer",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  }
+]

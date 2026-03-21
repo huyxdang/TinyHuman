@@ -1,0 +1,112 @@
+[
+  {
+    "query": "Giải pháp tăng tốc internet cho IT Manager tại Hà Nội",
+    "lang": "vi",
+    "persona_ids": [
+      101
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "IT Manager",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "nhanh tay internet làm sao cho nhanh khi làm việc từ xa",
+    "lang": "vi",
+    "persona_ids": [
+      111
+    ],
+    "persona_province": "Bac Ninh",
+    "persona_job": "Software Developer",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "tìm việc làm tech tại tphcm mới nhất 2023",
+    "lang": "vi",
+    "persona_ids": [
+      426
+    ],
+    "persona_province": "Ho Chi Minh City",
+    "persona_job": "Software Developer",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "Đồng hồ đếm thời giao hàng chậm tìm cách cải thiện",
+    "lang": "vi",
+    "persona_ids": [
+      709
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "Trưởng phòng kinh doanh",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "Ứng dụng di động tốt nhất cho trưởng nhóm phát triển 25-34 tuổi",
+    "lang": "vi",
+    "persona_ids": [
+      1075
+    ],
+    "persona_province": "Dong Nai",
+    "persona_job": "Trưởng nhóm phát triển ứng dụng di động",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "solving-inconsistent-internet-connectivity-during-meetings-project-manager-HCMC-Mobile-app-solutions",
+    "lang": "vi",
+    "persona_ids": [
+      1722
+    ],
+    "persona_province": "Ho Chi Minh City",
+    "persona_job": "Project Manager",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "Ứng dụng di động phù hợp với nhu cầu công việc kinh doanh tại công ty công nghệ Vinh Long",
+    "lang": "vi",
+    "persona_ids": [
+      1818
+    ],
+    "persona_province": "Vinh Long",
+    "persona_job": "Nhân viên kinh doanh tại công ty công nghệ",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "tìm thông tin về công nghệ mới Tuyên Quang 35-44 kỹ thuật viên",
+    "lang": "vi",
+    "persona_ids": [
+      2904
+    ],
+    "persona_province": "Tuyen Quang",
+    "persona_job": "Trưởng nhóm kỹ thuật",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "IT projects Hanoi 35-44 project management updates reliable sources",
+    "lang": "vi",
+    "persona_ids": [
+      2965
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "Project Manager",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "cập nhật tin công nghệ tiếng anh tin cậy LinkedIn Hanoi",
+    "lang": "vi",
+    "persona_ids": [
+      62
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "Marketing Manager",
+    "match_score": 0.8,
+    "match_tier": "strong"
+  }
+]

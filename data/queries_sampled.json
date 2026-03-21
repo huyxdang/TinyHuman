@@ -1,0 +1,112 @@
+[
+  {
+    "query": "tay ninh kỹ sư phần mềm tìm hiểu công nghệ mới",
+    "lang": "vi",
+    "persona_ids": [
+      1038
+    ],
+    "persona_province": "Tay Ninh",
+    "persona_job": "Kỹ sư phần mềm",
+    "match_score": 0.8,
+    "match_tier": "strong"
+  },
+  {
+    "query": "adjusting-marketing-strategies-changing-customer-preferences-phu-tho",
+    "lang": "vi",
+    "persona_ids": [
+      1583
+    ],
+    "persona_province": "Phu Tho",
+    "persona_job": "Marketing Coordinator",
+    "match_score": 0.8,
+    "match_tier": "strong"
+  },
+  {
+    "query": "IT projects Hanoi 35-44 project management updates reliable sources",
+    "lang": "vi",
+    "persona_ids": [
+      2965
+    ],
+    "persona_province": "Hanoi",
+    "persona_job": "Project Manager",
+    "match_score": 1.0,
+    "match_tier": "strong"
+  },
+  {
+    "query": "mẫu sản phẩm mới Tay Ninh mã số thuế đánh giá",
+    "lang": "vi",
+    "persona_ids": [
+      949
+    ],
+    "persona_province": "Tay Ninh",
+    "persona_job": "Trợ lý quản lý bán hàng",
+    "match_score": 0.8,
+    "match_tier": "strong"
+  },
+  {
+    "query": "Tìm giải pháp giao tiếp làm việc từ xa với đồng nghiệp",
+    "lang": "vi",
+    "persona_ids": [
+      1581
+    ],
+    "persona_province": "Quang Tri",
+    "persona_job": "Nhân viên kinh doanh",
+    "match_score": 0.8,
+    "match_tier": "strong"
+  },
+  {
+    "query": "Viên thuốc để cải thiện giao tiếp với nhóm công việc ở xa trong Red River Delta",
+    "lang": "vi",
+    "persona_ids": [
+      1231
+    ],
+    "persona_province": "Hai Phong",
+    "persona_job": "Manager of Sales Department",
+    "match_score": 0.5,
+    "match_tier": "adjacent"
+  },
+  {
+    "query": "Tìm kiếm sản phẩm cũ chất lượng cao TP.HCM cho nhân viên bán hàng 55-64",
+    "lang": "vi",
+    "persona_ids": [
+      2613
+    ],
+    "persona_province": "Ho Chi Minh City",
+    "persona_job": "Nhân viên bán hàng",
+    "match_score": 0.5,
+    "match_tier": "adjacent"
+  },
+  {
+    "query": "Khanh Hoa part time jobs student",
+    "lang": "vi",
+    "persona_ids": [
+      1901
+    ],
+    "persona_province": "Khanh Hoa",
+    "persona_job": "Student",
+    "match_score": 0.5,
+    "match_tier": "adjacent"
+  },
+  {
+    "query": "mã tây nguyên nguồn hàng chất lượng",
+    "lang": "vi",
+    "persona_ids": [
+      2836
+    ],
+    "persona_province": "Lam Dong",
+    "persona_job": "Nhân viên bán hàng tại một cửa hàng thời trang",
+    "match_score": 0.5,
+    "match_tier": "adjacent"
+  },
+  {
+    "query": "tin tuc ve dieu khien bac ninh ve quy dinh doanh bon",
+    "lang": "vi",
+    "persona_ids": [
+      1647
+    ],
+    "persona_province": "Bac Ninh",
+    "persona_job": "Manager of a small manufacturing company",
+    "match_score": 0.5,
+    "match_tier": "adjacent"
+  }
+]

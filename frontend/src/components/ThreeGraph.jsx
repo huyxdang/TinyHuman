@@ -33,11 +33,17 @@ const NODE_FRAGMENT = `
     float dist = length(uv);
     if (dist > 0.5) discard;
 
-    float glow = 1.0 - smoothstep(0.0, 0.5, dist);
-    float core = smoothstep(0.12, 0.0, dist);
+    // Solid fill with thin white stroke at the edge
+    float strokeOuter = 0.5;
+    float strokeInner = 0.38;
+    float edge = smoothstep(strokeOuter, strokeOuter - 0.02, dist); // anti-alias outer
+    float strokeMask = smoothstep(strokeInner, strokeInner + 0.04, dist);
 
-    vec3 color = mix(vColor, vec3(1.0), core * 0.35);
-    gl_FragColor = vec4(color, glow * glow * vAlpha);
+    vec3 fill = vColor * 0.85 + 0.15; // slightly lifted, not pure saturated
+    vec3 stroke = vec3(1.0); // white border
+    vec3 color = mix(fill, stroke, strokeMask * 0.6);
+
+    gl_FragColor = vec4(color, edge * vAlpha);
   }
 `;
 
@@ -139,11 +145,67 @@ export default function ThreeGraph({
     const edgeMaterial = new THREE.LineBasicMaterial({
       vertexColors: true,
       transparent: true,
-      opacity: 0.12,
+      opacity: 0.25,
     });
 
     const edgesMesh = new THREE.LineSegments(edgeGeometry, edgeMaterial);
     scene.add(edgesMesh);
+
+    // --- Emoji textures ---
+    function createEmojiTexture(emoji) {
+      const size = 64;
+      const canvas = document.createElement('canvas');
+      canvas.width = size;
+      canvas.height = size;
+      const ctx = canvas.getContext('2d');
+      ctx.font = `${size * 0.75}px serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(emoji, size / 2, size / 2);
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.needsUpdate = true;
+      return tex;
+    }
+
+    const heartTexture = createEmojiTexture('❤️');
+    const thumbsDownTexture = createEmojiTexture('👎');
+
+    // Active emoji sprites
+    const emojiSprites = [];
+
+    function spawnEmoji(x, y, z, accepted) {
+      const mat = new THREE.SpriteMaterial({
+        map: accepted ? heartTexture : thumbsDownTexture,
+        transparent: true,
+        depthWrite: false,
+      });
+      const sprite = new THREE.Sprite(mat);
+      sprite.position.set(x, y, z);
+      sprite.scale.set(2.5, 2.5, 1);
+      scene.add(sprite);
+      emojiSprites.push({
+        sprite,
+        startY: y,
+        velocity: 0.015 + Math.random() * 0.01,
+        life: 1.0,
+        decay: 0.0015 + Math.random() * 0.001,
+      });
+    }
+
+    function updateEmojis() {
+      for (let i = emojiSprites.length - 1; i >= 0; i--) {
+        const e = emojiSprites[i];
+        e.sprite.position.y += e.velocity;
+        e.life -= e.decay;
+        e.sprite.material.opacity = Math.max(0, e.life);
+        e.sprite.scale.setScalar(2.5 * Math.max(0.3, e.life));
+        if (e.life <= 0) {
+          scene.remove(e.sprite);
+          e.sprite.material.dispose();
+          emojiSprites.splice(i, 1);
+        }
+      }
+    }
 
     // --- Store target positions and colors ---
     const targetPos = new Float32Array(maxNodes * 3);
@@ -442,6 +504,9 @@ export default function ThreeGraph({
       }
       edgePosAttr.needsUpdate = true;
 
+      // Update flying emojis
+      updateEmojis();
+
       controls.update();
       renderer.render(scene, camera);
     }
@@ -507,7 +572,8 @@ export default function ThreeGraph({
       positionAttr, colorAttr, sizeAttr, alphaAttr,
       edgePosAttr, edgeColorAttr, edgeMaterial,
       targetPos, targetColor, targetAlpha, targetSize, basePos,
-      syncNodes, syncEdges, applyPhaseTargets, applyHighlights,
+      positionAttr,
+      syncNodes, syncEdges, applyPhaseTargets, applyHighlights, spawnEmoji,
     };
 
     animate();
@@ -517,6 +583,14 @@ export default function ThreeGraph({
       container.removeEventListener('pointermove', onPointerMove);
       container.removeEventListener('click', onClick);
       window.removeEventListener('resize', onResize);
+      // Clean up emojis
+      emojiSprites.forEach(e => {
+        scene.remove(e.sprite);
+        e.sprite.material.dispose();
+      });
+      emojiSprites.length = 0;
+      heartTexture.dispose();
+      thumbsDownTexture.dispose();
       renderer.dispose();
       nodeGeometry.dispose();
       nodeMaterial.dispose();
@@ -543,10 +617,48 @@ export default function ThreeGraph({
   }, [edges]);
 
   // --- React to phase changes ---
+  const emojiTimersRef = useRef([]);
+
   useEffect(() => {
+    const prevPhase = stateRef.current.phase;
     stateRef.current.phase = phase;
     if (stateRef.current.three) {
       stateRef.current.three.applyPhaseTargets();
+
+      // Spawn emojis when entering clustering phase
+      if (phase === 'clustering' && prevPhase !== 'clustering') {
+        // Clear any previous emoji timers
+        emojiTimersRef.current.forEach(clearTimeout);
+        emojiTimersRef.current = [];
+
+        const nodeList = stateRef.current.nodes;
+        const posAttr = stateRef.current.three.positionAttr;
+
+        // Sample a subset of nodes for emojis (not all 1500 — ~150 for performance)
+        const sampleRate = Math.max(1, Math.floor(nodeList.length / 150));
+        const sampled = nodeList.filter((_, i) => i % sampleRate === 0);
+
+        // Stagger spawning over ~8 seconds, trickling in naturally
+        // Early: sparse, then a wave in the middle, then trailing off
+        sampled.forEach((node, i) => {
+          // Use a skewed distribution — most answers come in the middle
+          const r = Math.random();
+          const skewed = Math.pow(r, 0.6); // front-loads slightly but spreads out
+          const jitter = (Math.random() - 0.5) * 800; // +/- 400ms noise
+          const delay = skewed * 7000 + jitter + 500; // 0.5s to ~8s
+
+          const t = setTimeout(() => {
+            if (!stateRef.current.three) return;
+            const i3 = node.id * 3;
+            const x = posAttr.array[i3];
+            const y = posAttr.array[i3 + 1];
+            const z = posAttr.array[i3 + 2];
+            const accepted = node.matchScore > 0.55;
+            stateRef.current.three.spawnEmoji(x, y, z, accepted);
+          }, Math.max(100, delay));
+          emojiTimersRef.current.push(t);
+        });
+      }
     }
   }, [phase, clusters]);
 
