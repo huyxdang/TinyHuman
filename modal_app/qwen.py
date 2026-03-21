@@ -19,7 +19,7 @@ vllm_image = (
     .pip_install("vllm>=0.6.0", "torch")
 )
 
-MODEL_NAME = "Qwen/Qwen2.5-3B-Instruct"
+MODEL_NAME = "Qwen/Qwen2.5-7B-Instruct"
 
 
 @app.cls(

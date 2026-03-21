@@ -1,86 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 const CLUSTER_COLORS = ['#FF6B35', '#4ECDC4', '#7B68EE', '#FF85A2'];
 
-export default function ChatPanel({ visible, clusters, apiBase }) {
-  const [chatLogs, setChatLogs] = useState({});  // clusterId -> messages[]
-  const [results, setResults] = useState({});     // clusterId -> { product_pct, competitor_pct, pass_pct, summary }
-  const [running, setRunning] = useState(false);
-  const [done, setDone] = useState(false);
+export default function ChatPanel({ visible, clusters, chatLogs, chatResults, running, done }) {
   const scrollRefs = useRef({});
-
-  useEffect(() => {
-    if (!visible) return;
-    // Initialize empty logs for each cluster
-    const initial = {};
-    (clusters || []).forEach(c => { initial[c.id] = []; });
-    setChatLogs(initial);
-    setResults({});
-    setDone(false);
-  }, [visible, clusters]);
-
-  function startChat() {
-    if (running) return;
-    setRunning(true);
-
-    const base = apiBase || 'http://localhost:8000';
-    fetch(`${base}/api/start`, { method: 'POST' });
-
-    const es = new EventSource(`${base}/api/stream`);
-    es.onmessage = (e) => {
-      const data = JSON.parse(e.data);
-
-      if (data.type === 'message') {
-        setChatLogs(prev => ({
-          ...prev,
-          [data.cluster_id]: [...(prev[data.cluster_id] || []), {
-            type: 'message',
-            name: data.name,
-            message: data.message,
-            job: data.job,
-            round: data.round,
-          }],
-        }));
-      } else if (data.type === 'system') {
-        setChatLogs(prev => ({
-          ...prev,
-          [data.cluster_id]: [...(prev[data.cluster_id] || []), {
-            type: 'system',
-            message: data.message,
-          }],
-        }));
-      } else if (data.type === 'vote') {
-        setChatLogs(prev => ({
-          ...prev,
-          [data.cluster_id]: [...(prev[data.cluster_id] || []), {
-            type: 'vote',
-            name: data.name,
-            choice: data.choice,
-            reason: data.reason,
-          }],
-        }));
-      } else if (data.type === 'results') {
-        setResults(prev => ({
-          ...prev,
-          [data.cluster_id]: {
-            product_pct: data.product_pct,
-            competitor_pct: data.competitor_pct,
-            pass_pct: data.pass_pct,
-            summary: data.summary,
-          },
-        }));
-      } else if (data.type === 'done') {
-        setRunning(false);
-        setDone(true);
-        es.close();
-      }
-    };
-
-    es.onerror = () => {
-      setRunning(false);
-      es.close();
-    };
-  }
 
   // Auto-scroll
   useEffect(() => {
@@ -96,13 +19,9 @@ export default function ChatPanel({ visible, clusters, apiBase }) {
     <div className="chat-panel">
       <div className="chat-header">
         <h2>Group Discussions</h2>
-        <button
-          className="chat-start-btn"
-          onClick={startChat}
-          disabled={running || done}
-        >
-          {done ? 'Discussion Complete' : running ? 'Running...' : 'Start Discussion'}
-        </button>
+        <span className="chat-status">
+          {done ? 'Discussion Complete' : running ? 'Running...' : 'Waiting...'}
+        </span>
       </div>
 
       <div className="chat-grid">
@@ -154,13 +73,13 @@ export default function ChatPanel({ visible, clusters, apiBase }) {
               })}
             </div>
 
-            {results[cluster.id] && (
+            {chatResults[cluster.id] && (
               <div className="chat-results-bar">
-                <div className="chat-results-text">{results[cluster.id].summary}</div>
+                <div className="chat-results-text">{chatResults[cluster.id].summary}</div>
                 <div className="chat-results-segments">
-                  <div className="chat-bar-segment chat-bar-product" style={{ width: `${results[cluster.id].product_pct}%` }} />
-                  <div className="chat-bar-segment chat-bar-competitor" style={{ width: `${results[cluster.id].competitor_pct}%` }} />
-                  <div className="chat-bar-segment chat-bar-pass" style={{ width: `${results[cluster.id].pass_pct}%` }} />
+                  <div className="chat-bar-segment chat-bar-product" style={{ width: `${chatResults[cluster.id].product_pct}%` }} />
+                  <div className="chat-bar-segment chat-bar-competitor" style={{ width: `${chatResults[cluster.id].competitor_pct}%` }} />
+                  <div className="chat-bar-segment chat-bar-pass" style={{ width: `${chatResults[cluster.id].pass_pct}%` }} />
                 </div>
               </div>
             )}

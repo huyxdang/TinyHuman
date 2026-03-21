@@ -40,8 +40,8 @@ const NODE_FRAGMENT = `
     float strokeMask = smoothstep(strokeInner, strokeInner + 0.04, dist);
 
     vec3 fill = vColor * 0.85 + 0.15; // slightly lifted, not pure saturated
-    vec3 stroke = vec3(1.0); // white border
-    vec3 color = mix(fill, stroke, strokeMask * 0.6);
+    vec3 stroke = vec3(0.15); // dark border
+    vec3 color = mix(fill, stroke, strokeMask * 0.85);
 
     gl_FragColor = vec4(color, edge * vAlpha);
   }
@@ -84,7 +84,7 @@ export default function ThreeGraph({
 
     // Camera
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-    camera.position.set(0, 0, 75);
+    camera.position.set(0, 0, 30);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -99,7 +99,7 @@ export default function ThreeGraph({
     controls.enableDamping = true;
     controls.dampingFactor = 0.05;
     controls.minDistance = 20;
-    controls.maxDistance = 150;
+    controls.maxDistance = 70;
     controls.enablePan = false;
 
     // Raycaster
@@ -145,7 +145,7 @@ export default function ThreeGraph({
     const edgeMaterial = new THREE.LineBasicMaterial({
       vertexColors: true,
       transparent: true,
-      opacity: 0.25,
+      opacity: 0.6,
     });
 
     const edgesMesh = new THREE.LineSegments(edgeGeometry, edgeMaterial);
@@ -274,8 +274,8 @@ export default function ThreeGraph({
         edgePosAttr.array[i6 + 4] = nb.y;
         edgePosAttr.array[i6 + 5] = nb.z;
 
-        // Default grey
-        const grey = 0.65;
+        // Black
+        const grey = 0.0;
         for (let c = 0; c < 6; c++) {
           edgeColorAttr.array[i6 + c] = grey;
         }
@@ -337,7 +337,7 @@ export default function ThreeGraph({
             targetColor[i3 + 2] = cc[2];
 
             targetAlpha[i] = 0.85;
-            targetSize[i] = 3.0 + n.matchScore * 4.0;
+            targetSize[i] = 6.0 + n.matchScore * 6.0;
           } else {
             // Non-matching: push out and fade
             targetPos[i3] = basePos[i3] * 1.8;
@@ -349,7 +349,7 @@ export default function ThreeGraph({
             targetColor[i3 + 2] = 0.75;
 
             targetAlpha[i] = 0.06;
-            targetSize[i] = 1.5;
+            targetSize[i] = 4.0;
           }
         }
 
@@ -374,14 +374,14 @@ export default function ThreeGraph({
             edgeColorAttr.array[i6 + 4] = cc[1];
             edgeColorAttr.array[i6 + 5] = cc[2];
           } else {
-            // Grey and will be invisible via opacity
+            // Dim non-matching edges
             for (let c = 0; c < 6; c++) {
-              edgeColorAttr.array[i6 + c] = 0.85;
+              edgeColorAttr.array[i6 + c] = 0.0;
             }
           }
         }
         edgeColorAttr.needsUpdate = true;
-        edgeMaterial.opacity = 0.2;
+        edgeMaterial.opacity = 0.5;
 
         // For scanning/results: color found clusters green, invisible red
         if (s.phase === 'scanning' || s.phase === 'results') {
@@ -420,7 +420,7 @@ export default function ThreeGraph({
           const n = nodeList[i];
           if (n.clusterId === s.hoveredClusterId) {
             targetAlpha[i] = 1.0;
-            targetSize[i] = (3.0 + n.matchScore * 4.0) * 1.3;
+            targetSize[i] = (6.0 + n.matchScore * 6.0) * 1.3;
           } else if (n.clusterId !== null) {
             targetAlpha[i] = 0.25;
           }
@@ -572,7 +572,6 @@ export default function ThreeGraph({
       positionAttr, colorAttr, sizeAttr, alphaAttr,
       edgePosAttr, edgeColorAttr, edgeMaterial,
       targetPos, targetColor, targetAlpha, targetSize, basePos,
-      positionAttr,
       syncNodes, syncEdges, applyPhaseTargets, applyHighlights, spawnEmoji,
     };
 

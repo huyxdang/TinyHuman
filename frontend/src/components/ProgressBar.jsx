@@ -1,16 +1,16 @@
 const PHASES = [
-  { key: 'clustering', label: 'Clustering' },
-  { key: 'scanning', label: 'Scanning' },
-  { key: 'results', label: 'Results' },
+  { key: 'researching', label: 'Research' },
+  { key: 'chatting', label: 'Discussion' },
+  { key: 'report', label: 'Report' },
 ];
 
-const STATUS_TEXT = {
-  clustering: 'Personas forming into natural audience segments...',
-  scanning: 'Running search queries against live Google...',
-  results: 'Analysis complete.',
+const DEFAULT_STATUS = {
+  researching: 'Researching product & competitors...',
+  chatting: 'Personas discussing the product...',
+  report: 'Analysis complete.',
 };
 
-export default function ProgressBar({ phase }) {
+export default function ProgressBar({ phase, statusText }) {
   const phaseIndex = PHASES.findIndex(p => p.key === phase);
 
   return (
@@ -29,7 +29,7 @@ export default function ProgressBar({ phase }) {
           </span>
         ))}
       </div>
-      <div className="progress-status">{STATUS_TEXT[phase] || ''}</div>
+      <div className="progress-status">{statusText || DEFAULT_STATUS[phase] || ''}</div>
     </div>
   );
 }
