@@ -1,0 +1,46 @@
+/* ============================================================
+   TinyUser — Global Styles
+   ============================================================ */
+
+:root {
+  --bg: #f8f6f2;
+  --accent: #FF6B35;
+  --accent-hover: #e55a28;
+  --text: #1a1a1a;
+  --text-secondary: #666;
+  --text-muted: #999;
+  --found: #22c55e;
+  --invisible: #ef4444;
+  --panel-bg: rgba(255, 255, 255, 0.92);
+  --panel-border: rgba(0, 0, 0, 0.06);
+  --font-serif: 'DM Serif Display', serif;
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: var(--bg);
+  font-family: var(--font-sans);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: var(--font-sans);
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+input, textarea {
+  font-family: var(--font-sans);
+  outline: none;
+}
