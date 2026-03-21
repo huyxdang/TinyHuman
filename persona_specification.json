@@ -1,14 +1,13 @@
 {
     "name": "TinyUser Vietnamese Persona Specification v2",
-    "approach": "3 anchor fields sampled from real census data, then Qwen generates the remaining fields as a coherent persona. No abstract behavioral characteristics — every field is human-readable and directly reportable.",
+    "approach": "3 anchor fields sampled from real census data, then Qwen generates remaining fields as one coherent persona. Every field is human-readable and directly reportable.",
     "sample_size": 100000,
-    "population": 101000000,
+    "total_population": 101343800,
   
     "anchor_distributions": {
-      "description": "These 3 fields are sampled from real GSO/census data. They are the ONLY fields generated statistically. Everything else is LLM-generated conditioned on these anchors.",
   
       "age_bracket": {
-        "source": "UN World Population Prospects 2024, GSO 2024 census. Restricted to adults 18+.",
+        "source": "UN World Population Prospects 2024, GSO 2024 mid-term census. Adults 18+ only.",
         "18-24": 0.145,
         "25-34": 0.220,
         "35-44": 0.205,
@@ -18,117 +17,126 @@
       },
   
       "gender": {
-        "source": "GSO 2024: sex ratio 0.96 overall, DataReportal 2025",
+        "source": "GSO 2024 census. Sex ratio ~0.96 overall.",
         "male": 0.49,
         "female": 0.51
       },
   
-      "city": {
-        "source": "GSO 2024 intercensal census, Wikipedia provinces of Vietnam (2024 population data). Top 20 cities/provinces by population, plus a 'rural_other' bucket for remaining ~40% of population.",
+      "province": {
+        "source": "GSO 2024 intercensal census + 2025 province merger (Resolution 202/2025/QH15). All 34 post-merger provinces and municipalities. Population from Wikipedia/GSO April 2024 data.",
+        "note": "Weights are population / total_population. Every province is included — no 'other' bucket.",
         "distribution": {
-          "Ho Chi Minh City": 0.135,
-          "Hanoi": 0.087,
-          "Hai Phong": 0.021,
-          "Da Nang": 0.013,
-          "Can Tho": 0.013,
-          "Thanh Hoa": 0.036,
-          "Nghe An": 0.033,
-          "Dong Nai": 0.032,
-          "Binh Duong": 0.027,
-          "Ha Tinh": 0.013,
-          "An Giang": 0.019,
-          "Quang Ninh": 0.014,
-          "Thai Nguyen": 0.013,
-          "Khanh Hoa": 0.013,
-          "Dak Lak": 0.019,
-          "Long An": 0.016,
-          "Tien Giang": 0.018,
-          "Binh Thuan": 0.013,
-          "Lam Dong": 0.013,
-          "Quang Nam": 0.015,
-          "rural_other": 0.337
-        },
-        "note": "For 'rural_other', Qwen should generate a plausible smaller province/town name from remaining provinces."
-      }
-    },
-  
-    "llm_generated_fields": {
-      "description": "Given the 3 anchors (age, gender, city), Qwen generates ALL of the following as one coherent persona. These fields are directly reportable — a marketing team can read and act on every one.",
-  
-      "fields": {
-        "job_title": {
-          "type": "string",
-          "examples": ["BA Lead", "Grab driver", "Rice farmer", "Garment factory worker", "High school teacher", "Shopee seller", "Bank teller", "Software engineer", "Street food vendor", "Retired"],
-          "note": "Must be realistic for the age + city combination. A 22-year-old in rural Ha Tinh is not a 'VP of Engineering'."
-        },
-        "industry": {
-          "type": "string",
-          "examples": ["Banking & finance", "Agriculture", "Manufacturing", "Education", "Retail & e-commerce", "Technology", "Healthcare", "Tourism & hospitality", "Government", "Construction", "Transportation"],
-          "note": "Must match job title and city. Da Nang skews tourism, Binh Duong skews manufacturing, HCMC is diverse."
-        },
-        "company_size": {
-          "type": "string",
-          "enum": ["solo/freelance", "micro (<10)", "small (10-50)", "medium (50-200)", "large (200-1000)", "enterprise (1000+)", "not_applicable"],
-          "note": "Farmers, street vendors, retirees = 'not_applicable'. Factory workers = 'large' or 'enterprise'."
-        },
-        "education_level": {
-          "type": "string",
-          "enum": ["no_formal", "primary", "secondary", "vocational", "university", "postgraduate"],
-          "note": "GSO 2024: ~28% of labor force holds training certificates. University education concentrated in urban areas."
-        },
-        "income_bracket": {
-          "type": "string",
-          "enum": ["<3M VND/month", "3-7M", "7-15M", "15-30M", "30M+"],
-          "note": "GSO 2024: average monthly salary ~7.7M VND. Agriculture workers earn lowest. Must correlate with job + city."
-        },
-        "primary_platform": {
-          "type": "string",
-          "examples": ["Zalo", "Facebook", "TikTok", "Google", "YouTube", "Shopee", "none/offline"],
-          "note": "DataReportal 2025: Facebook 95.4% of internet users, Zalo 86%, YouTube 80%, TikTok 53%. Older rural = Zalo/Facebook. Young urban = TikTok/Google."
-        },
-        "search_language": {
-          "type": "string",
-          "enum": ["vietnamese", "english", "mixed"],
-          "note": "Vast majority search in Vietnamese. English mainly for tech workers, educated urban youth, international-facing roles."
-        },
-        "top_3_frustrations": {
-          "type": "string[]",
-          "examples": [
-            "Can't find a reliable supplier for my shop",
-            "Too much paperwork at the bank branch",
-            "My kids' school fees keep going up",
-            "Commute from Binh Duong to HCMC takes 2 hours",
-            "I don't understand the new tax regulations"
-          ],
-          "note": "These are the CORE of the simulation. They must be specific, realistic, and tied to this person's actual life — not generic. A farmer's frustrations are completely different from a software engineer's."
+          "Ho Chi Minh City": { "pop": 14002598, "weight": 0.1381, "region": "Southeast", "type": "municipality" },
+          "Hanoi": { "pop": 8807523, "weight": 0.0869, "region": "Red River Delta", "type": "municipality" },
+          "Hai Phong": { "pop": 4664124, "weight": 0.0460, "region": "Red River Delta", "type": "municipality" },
+          "Can Tho": { "pop": 4199824, "weight": 0.0414, "region": "Mekong Delta", "type": "municipality" },
+          "Da Nang": { "pop": 3065628, "weight": 0.0302, "region": "South Central", "type": "municipality" },
+          "Hue": { "pop": 1432986, "weight": 0.0141, "region": "North Central", "type": "municipality" },
+          "An Giang": { "pop": 4952238, "weight": 0.0489, "region": "Mekong Delta", "type": "province" },
+          "Bac Ninh": { "pop": 3619433, "weight": 0.0357, "region": "Red River Delta", "type": "province" },
+          "Ca Mau": { "pop": 2606672, "weight": 0.0257, "region": "Mekong Delta", "type": "province" },
+          "Cao Bang": { "pop": 573119, "weight": 0.0057, "region": "Northeast", "type": "province" },
+          "Dak Lak": { "pop": 3346853, "weight": 0.0330, "region": "Central Highlands", "type": "province" },
+          "Dien Bien": { "pop": 673091, "weight": 0.0066, "region": "Northwest", "type": "province" },
+          "Dong Nai": { "pop": 4491408, "weight": 0.0443, "region": "Southeast", "type": "province" },
+          "Dong Thap": { "pop": 4370046, "weight": 0.0431, "region": "Mekong Delta", "type": "province" },
+          "Gia Lai": { "pop": 3583693, "weight": 0.0354, "region": "Central Highlands", "type": "province" },
+          "Ha Tinh": { "pop": 1622901, "weight": 0.0160, "region": "North Central", "type": "province" },
+          "Hung Yen": { "pop": 3567943, "weight": 0.0352, "region": "Red River Delta", "type": "province" },
+          "Khanh Hoa": { "pop": 2243554, "weight": 0.0221, "region": "South Central", "type": "province" },
+          "Lai Chau": { "pop": 512601, "weight": 0.0051, "region": "Northwest", "type": "province" },
+          "Lam Dong": { "pop": 3872999, "weight": 0.0382, "region": "Central Highlands", "type": "province" },
+          "Lang Son": { "pop": 881384, "weight": 0.0087, "region": "Northeast", "type": "province" },
+          "Lao Cai": { "pop": 1778785, "weight": 0.0175, "region": "Northwest", "type": "province" },
+          "Nghe An": { "pop": 3831694, "weight": 0.0378, "region": "North Central", "type": "province" },
+          "Ninh Binh": { "pop": 4412464, "weight": 0.0435, "region": "Red River Delta", "type": "province" },
+          "Phu Tho": { "pop": 4022638, "weight": 0.0397, "region": "Northeast", "type": "province" },
+          "Quang Ngai": { "pop": 2161755, "weight": 0.0213, "region": "South Central", "type": "province" },
+          "Quang Ninh": { "pop": 1497477, "weight": 0.0148, "region": "Northeast", "type": "province" },
+          "Quang Tri": { "pop": 1870845, "weight": 0.0185, "region": "North Central", "type": "province" },
+          "Son La": { "pop": 1404587, "weight": 0.0139, "region": "Northwest", "type": "province" },
+          "Tay Ninh": { "pop": 3254170, "weight": 0.0321, "region": "Southeast", "type": "province" },
+          "Thai Nguyen": { "pop": 1799489, "weight": 0.0178, "region": "Northeast", "type": "province" },
+          "Thanh Hoa": { "pop": 4324783, "weight": 0.0427, "region": "North Central", "type": "province" },
+          "Tuyen Quang": { "pop": 1865270, "weight": 0.0184, "region": "Northeast", "type": "province" },
+          "Vinh Long": { "pop": 4257581, "weight": 0.0420, "region": "Mekong Delta", "type": "province" }
         }
       }
     },
   
-    "generation_prompt_template": {
-      "description": "This is the prompt sent to Qwen for each persona. The 3 anchors are filled in, Qwen generates the rest as JSON.",
-      "system": "You are generating realistic Vietnamese personas for market research. Each persona must be a coherent, believable person. All fields must be consistent with each other and with the anchor demographics provided. Output valid JSON only, no explanation.",
-      "user": "Generate a realistic Vietnamese persona.\n\nAnchors:\n- Age: {age}\n- Gender: {gender}\n- City: {city}\n\nFill in:\n{\n  \"job_title\": \"\",\n  \"industry\": \"\",\n  \"company_size\": \"\",\n  \"education_level\": \"\",\n  \"income_bracket\": \"\",\n  \"primary_platform\": \"\",\n  \"search_language\": \"\",\n  \"top_3_frustrations\": [\"\", \"\", \"\"]\n}",
-      "note": "Batch 5-10 personas per call for efficiency. Qwen should output a JSON array."
+    "llm_generated_fields": {
+      "description": "Given the 3 anchors (age, gender, province), Qwen generates ALL of these as one coherent persona. Every field is directly usable in the final report.",
+      "fields": [
+        {
+          "name": "job_title",
+          "type": "string",
+          "examples": ["BA Lead", "Grab driver", "Rice farmer", "Garment factory worker", "High school teacher", "Shopee seller", "Bank teller", "Software engineer", "Street food vendor", "Retired", "Shrimp farmer", "Tour guide", "Carpenter", "University lecturer"],
+          "note": "Must be realistic for age + province. A 22-year-old in Lai Chau is not a VP of Engineering. A 50-year-old in An Giang is likely in agriculture or aquaculture."
+        },
+        {
+          "name": "industry",
+          "type": "string",
+          "examples": ["Banking & finance", "Agriculture & aquaculture", "Manufacturing", "Education", "Retail & e-commerce", "Technology", "Healthcare", "Tourism & hospitality", "Government", "Construction", "Transportation & logistics", "Food & beverage"],
+          "note": "Must match job title and province. Mekong Delta = agriculture/aquaculture. Binh Duong/Dong Nai = manufacturing. Da Nang/Khanh Hoa = tourism. HCMC = diverse."
+        },
+        {
+          "name": "company_size",
+          "type": "string",
+          "enum": ["solo/freelance", "micro (<10)", "small (10-50)", "medium (50-200)", "large (200-1000)", "enterprise (1000+)", "not_applicable"],
+          "note": "Farmers, street vendors, retirees = not_applicable. Factory workers in Dong Nai = large/enterprise."
+        },
+        {
+          "name": "education_level",
+          "type": "string",
+          "enum": ["no_formal", "primary", "secondary", "vocational", "university", "postgraduate"],
+          "note": "GSO: ~28% of labor force holds training certificates. University concentrated in Hanoi, HCMC, Da Nang. Rural provinces much lower."
+        },
+        {
+          "name": "income_bracket",
+          "type": "string",
+          "enum": ["<3M VND/month", "3-7M", "7-15M", "15-30M", "30M+"],
+          "note": "GSO 2024: average monthly salary ~7.7M VND. Agriculture workers earn lowest (~4-5M). Urban tech workers can reach 30M+."
+        },
+        {
+          "name": "primary_platform",
+          "type": "string",
+          "examples": ["Zalo", "Facebook", "TikTok", "Google", "YouTube", "Shopee", "Coc Coc", "none/offline"],
+          "note": "Facebook 95%, Zalo 86%, YouTube 80%, TikTok 53% among internet users. 21% of population still offline. Older rural skews Zalo. Young urban skews TikTok."
+        },
+        {
+          "name": "search_language",
+          "type": "string",
+          "enum": ["vietnamese", "english", "mixed"],
+          "note": "Vast majority Vietnamese. English for tech workers, university-educated urban youth, international-facing roles."
+        },
+        {
+          "name": "top_3_frustrations",
+          "type": "string[]",
+          "examples": [
+            "Can't find a reliable supplier for my shop",
+            "Shrimp prices dropped but feed costs went up",
+            "My kids' school is 15km away with no bus",
+            "Too much paperwork at the bank branch",
+            "Factory overtime is mandatory but barely pays more"
+          ],
+          "note": "CORE of the simulation. Must be specific to this person's actual life. A shrimp farmer in Ca Mau has completely different problems than a software engineer in HCMC."
+        }
+      ]
     },
   
-    "batching_strategy": {
-      "description": "To generate 100K personas efficiently on Modal:",
-      "personas_per_call": 10,
-      "total_calls": 10000,
-      "estimated_tokens_per_call": 800,
-      "parallelism": "100+ concurrent requests on Modal vLLM",
-      "estimated_time": "10-15 minutes",
-      "estimated_cost": "$5-8 one-time on Modal (Qwen2.5-7B-Instruct, A10G GPU)"
+    "generation_prompt_template": {
+      "system": "You are generating realistic Vietnamese personas for market research. Each persona must be a coherent, believable person. All fields must be consistent with each other and with the anchor demographics provided. Output valid JSON only, no explanation.",
+      "user": "Generate a realistic Vietnamese persona.\n\nAnchors:\n- Age: {age}\n- Gender: {gender}\n- Province: {province} ({region})\n\nFill in:\n{\n  \"job_title\": \"\",\n  \"industry\": \"\",\n  \"company_size\": \"\",\n  \"education_level\": \"\",\n  \"income_bracket\": \"\",\n  \"primary_platform\": \"\",\n  \"search_language\": \"\",\n  \"top_3_frustrations\": [\"\", \"\", \"\"]\n}",
+      "batch_note": "Batch 5-10 personas per call for efficiency. Include region in the prompt so Qwen knows the economic context."
     },
   
     "output_schema": {
-      "description": "Final persona as stored in personas.json. Every field is directly usable in the report.",
       "example": {
         "id": 47832,
         "age": 34,
         "gender": "female",
-        "city": "Da Nang",
+        "province": "Da Nang",
+        "region": "South Central",
         "job_title": "Hotel front desk manager",
         "industry": "Tourism & hospitality",
         "company_size": "medium (50-200)",
@@ -141,51 +149,82 @@
           "I manually update room availability across 3 booking platforms",
           "Staff scheduling is done on paper and always has conflicts"
         ]
+      },
+      "example_2": {
+        "id": 82104,
+        "age": 52,
+        "gender": "male",
+        "province": "Ca Mau",
+        "region": "Mekong Delta",
+        "job_title": "Shrimp farmer",
+        "industry": "Agriculture & aquaculture",
+        "company_size": "solo/freelance",
+        "education_level": "secondary",
+        "income_bracket": "3-7M",
+        "primary_platform": "Zalo",
+        "search_language": "vietnamese",
+        "top_3_frustrations": [
+          "Shrimp prices dropped 20% but feed costs went up",
+          "Saltwater intrusion is getting worse every dry season",
+          "I can't get a loan without complicated paperwork at the bank"
+        ]
+      },
+      "example_3": {
+        "id": 3917,
+        "age": 23,
+        "gender": "female",
+        "province": "Ho Chi Minh City",
+        "region": "Southeast",
+        "job_title": "Junior software engineer",
+        "industry": "Technology",
+        "company_size": "small (10-50)",
+        "education_level": "university",
+        "income_bracket": "15-30M",
+        "primary_platform": "Google",
+        "search_language": "english",
+        "top_3_frustrations": [
+          "Our codebase has zero documentation and the senior dev just quit",
+          "I spend half my day in meetings instead of coding",
+          "The company uses 5 different tools and none of them talk to each other"
+        ]
       }
     },
   
-    "report_output": {
-      "description": "When segments are formed from matching personas, the report labels use THESE fields — not abstract characteristics. Every segment name is actionable.",
-      "example_segments": [
+    "report_output_examples": {
+      "description": "Segments in the final report are labeled with human-readable demographics. Every word is actionable.",
+      "segments": [
         {
-          "name": "Hotel managers in Da Nang (25-44, university-educated)",
+          "name": "Hotel managers in Da Nang & Khanh Hoa (25-44, university)",
           "size": 3200,
+          "top_frustration": "No system to track guest complaints and room availability",
           "top_query": "phần mềm quản lý khách sạn",
           "rank": null,
           "competitor": "Cloudbeds, ezCloud"
         },
         {
-          "name": "Bank tellers in HCMC (25-34, frustrated with paperwork)",
-          "size": 8100,
-          "top_query": "công cụ tự động hóa tài liệu ngân hàng",
-          "rank": 7,
-          "competitor": "Jira, Confluence"
+          "name": "Shrimp farmers in Mekong Delta (35-64, Zalo-primary)",
+          "size": 5800,
+          "top_frustration": "Volatile prices and no market information",
+          "top_query": "giá tôm hôm nay Cà Mau",
+          "rank": null,
+          "competitor": "Facebook groups, local traders"
         },
         {
-          "name": "Young Shopee sellers nationwide (18-24, TikTok-primary)",
-          "size": 12400,
-          "top_query": "cách tăng đơn hàng Shopee",
-          "rank": null,
-          "competitor": "Shopee University, YouTube tutorials"
+          "name": "Junior devs in HCMC (22-28, English-searching)",
+          "size": 4100,
+          "top_frustration": "Poor documentation, too many disconnected tools",
+          "top_query": "best project management tool for startups",
+          "rank": 5,
+          "competitor": "Notion, Linear, Jira"
         }
       ]
     },
   
-    "pipeline_summary": {
-      "pre_computed_once": [
-        "1. Sample 100K (age, gender, city) triplets from anchor distributions",
-        "2. Qwen generates full personas with frustrations (Modal, ~$5-8, ~15 min)",
-        "3. Embed all frustrations using multilingual-e5-small (Modal, ~$0.50)",
-        "4. Store: personas.json + persona_embeddings.npy"
-      ],
-      "per_product_run": [
-        "1. Claude generates product problem space (~20-30 problems) — 1 API call",
-        "2. Embed product problems — milliseconds",
-        "3. Cosine similarity: 100K persona embeddings × 30 product embeddings — <1 second",
-        "4. Filter qualifying personas by threshold — instant",
-        "5. Qwen generates search queries for qualifying personas only — Modal, ~$1-3",
-        "6. TinyFish runs real Google searches — ~$13.50, ~2 minutes",
-        "7. Generate report with human-readable segment labels — instant"
-      ]
+    "generation_cost": {
+      "personas_per_call": 10,
+      "total_calls": 10000,
+      "model": "Qwen2.5-7B-Instruct via vLLM on Modal",
+      "estimated_time": "10-15 minutes with 100+ concurrent GPU workers",
+      "estimated_cost": "$5-8 one-time, cached forever"
     }
   }
