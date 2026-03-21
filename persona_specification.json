@@ -1,10 +1,14 @@
 {
-    "name": "TinyUser Vietnamese Persona Specification",
+    "name": "TinyUser Vietnamese Persona Specification v2",
+    "approach": "3 anchor fields sampled from real census data, then Qwen generates the remaining fields as a coherent persona. No abstract behavioral characteristics — every field is human-readable and directly reportable.",
     "sample_size": 100000,
     "population": 101000000,
   
-    "demographics": {
-      "age_brackets": {
+    "anchor_distributions": {
+      "description": "These 3 fields are sampled from real GSO/census data. They are the ONLY fields generated statistically. Everything else is LLM-generated conditioned on these anchors.",
+  
+      "age_bracket": {
+        "source": "UN World Population Prospects 2024, GSO 2024 census. Restricted to adults 18+.",
         "18-24": 0.145,
         "25-34": 0.220,
         "35-44": 0.205,
@@ -12,230 +16,176 @@
         "55-64": 0.140,
         "65+": 0.120
       },
-      "location": {
-        "urban": 0.405,
-        "rural": 0.595
+  
+      "gender": {
+        "source": "GSO 2024: sex ratio 0.96 overall, DataReportal 2025",
+        "male": 0.49,
+        "female": 0.51
       },
-      "occupation": {
-        "agriculture": 0.27,
-        "manufacturing": 0.23,
-        "retail_services": 0.15,
-        "construction": 0.09,
-        "white_collar": 0.12,
-        "self_employed": 0.08,
-        "student": 0.04,
-        "retired_unemployed": 0.02
+  
+      "city": {
+        "source": "GSO 2024 intercensal census, Wikipedia provinces of Vietnam (2024 population data). Top 20 cities/provinces by population, plus a 'rural_other' bucket for remaining ~40% of population.",
+        "distribution": {
+          "Ho Chi Minh City": 0.135,
+          "Hanoi": 0.087,
+          "Hai Phong": 0.021,
+          "Da Nang": 0.013,
+          "Can Tho": 0.013,
+          "Thanh Hoa": 0.036,
+          "Nghe An": 0.033,
+          "Dong Nai": 0.032,
+          "Binh Duong": 0.027,
+          "Ha Tinh": 0.013,
+          "An Giang": 0.019,
+          "Quang Ninh": 0.014,
+          "Thai Nguyen": 0.013,
+          "Khanh Hoa": 0.013,
+          "Dak Lak": 0.019,
+          "Long An": 0.016,
+          "Tien Giang": 0.018,
+          "Binh Thuan": 0.013,
+          "Lam Dong": 0.013,
+          "Quang Nam": 0.015,
+          "rural_other": 0.337
+        },
+        "note": "For 'rural_other', Qwen should generate a plausible smaller province/town name from remaining provinces."
       }
     },
   
-    "characteristics": {
-      "C1_digital_fluency": {
-        "name": "Digital Fluency & Platform Affinity",
-        "controls": "How a persona discovers products — which channels and platforms they use",
-        "levels": {
-          "1_offline_primary": {
-            "pct": 0.18,
-            "behavior": "Uses phone for calls and Zalo messaging only. Discovers products through TV, neighbors, local markets. Never searches Google. May use Facebook passively."
-          },
-          "2_social_passive": {
-            "pct": 0.32,
-            "behavior": "Scrolls Facebook and Zalo daily. Watches YouTube. Discovers products through friends' posts and Facebook/Zalo group recommendations. Rarely uses Google Search. Might click a Facebook ad."
-          },
-          "3_platform_savvy": {
-            "pct": 0.30,
-            "behavior": "Active on Facebook, TikTok, Shopee, YouTube. Uses Google Search for specific queries. Compares products on e-commerce apps. Follows some KOLs. Comfortable with app-based shopping."
-          },
-          "4_digital_native": {
-            "pct": 0.20,
-            "behavior": "Power user across all platforms. Uses Google, TikTok, YouTube as search engines interchangeably. Reads reviews, watches unboxing videos. Discovers products through algorithms and targeted ads. May use English-language sources."
-          }
-        }
-      },
+    "llm_generated_fields": {
+      "description": "Given the 3 anchors (age, gender, city), Qwen generates ALL of the following as one coherent persona. These fields are directly reportable — a marketing team can read and act on every one.",
   
-      "C2_collective_trust": {
-        "name": "Collective Trust & Social Validation",
-        "controls": "Whose opinion a persona needs before purchasing — whether they believe product claims",
-        "levels": {
-          "1_family_dependent": {
-            "pct": 0.25,
-            "behavior": "Only buys what family or close friends recommend. Deeply skeptical of online advertising and unknown brands. Needs multiple touchpoints from trusted people."
-          },
-          "2_community_validated": {
-            "pct": 0.35,
-            "behavior": "Trusts Zalo groups, Facebook community groups, and local KOCs. Buys if multiple people in their circle have positive experiences. Reads reviews and comments carefully."
-          },
-          "3_kol_influenced": {
-            "pct": 0.25,
-            "behavior": "Follows specific KOLs and trusts their recommendations. Will try new products based on influencer content alone. Engages with branded content on TikTok and Instagram."
-          },
-          "4_independent_evaluator": {
-            "pct": 0.15,
-            "behavior": "Makes decisions based on own research — reads specs, compares features, checks official websites. Social proof is nice-to-have but not required."
-          }
-        }
-      },
-  
-      "C3_price_value": {
-        "name": "Pragmatic Price-Value Orientation",
-        "controls": "When and if a persona converts — how much price, promotions, and deals drive timing",
-        "levels": {
-          "1_subsistence_buyer": {
-            "pct": 0.20,
-            "behavior": "Buys only essentials. Extremely price-sensitive. Rarely purchases non-essential products online. Budget is the primary constraint."
-          },
-          "2_deal_hunter": {
-            "pct": 0.35,
-            "behavior": "Actively seeks promotions, vouchers, and flash sales. Times purchases around Double Day events (11.11, 12.12). Compares prices across Shopee, Lazada, TikTok Shop. Will abandon cart without discount."
-          },
-          "3_value_conscious": {
-            "pct": 0.30,
-            "behavior": "Willing to pay more for perceived quality or convenience. Appreciates promotions but doesn't depend on them. Evaluates cost-benefit ratio."
-          },
-          "4_premium_buyer": {
-            "pct": 0.15,
-            "behavior": "Price is secondary to quality and brand. Shops at official brand stores. Early adopter of new products regardless of promotions."
-          }
-        }
-      },
-  
-      "C4_ethnocentricity": {
-        "name": "Ethno-Centricity (Vocal for Local)",
-        "controls": "Which products a persona would even consider — filters by origin/brand nationality",
-        "levels": {
-          "1_strong_local": {
-            "pct": 0.30,
-            "behavior": "Actively seeks Vietnamese products. Chooses VinFast, Biti's, local brands first. Skeptical of foreign products. May distrust English-language products."
-          },
-          "2_local_leaning": {
-            "pct": 0.35,
-            "behavior": "Prefers Vietnamese brands when quality is comparable. Will switch to foreign if local option is clearly inferior. Appreciates localized international brands."
-          },
-          "3_brand_agnostic": {
-            "pct": 0.25,
-            "behavior": "Doesn't care about origin. Evaluates purely on quality, price, features. Comfortable with both Vietnamese and international products."
-          },
-          "4_international_preferring": {
-            "pct": 0.10,
-            "behavior": "Perceives foreign brands as higher quality. Actively seeks imported products. Comfortable with English-language interfaces."
-          }
-        }
-      },
-  
-      "C5_risk_aversion": {
-        "name": "Risk Aversion & Transactional Security",
-        "controls": "The conversion mechanism — will the persona buy online directly, or need human mediation / COD",
-        "levels": {
-          "1_cash_only": {
-            "pct": 0.25,
-            "behavior": "Strongly prefers in-person purchases or COD. Won't enter card details online. May browse online but buys in physical stores."
-          },
-          "2_chat_to_buy": {
-            "pct": 0.30,
-            "behavior": "Will buy online but needs human interaction first — messages seller on Zalo/Messenger, asks questions, negotiates. Uses COD or bank transfer after chat."
-          },
-          "3_platform_trusting": {
-            "pct": 0.30,
-            "behavior": "Comfortable buying through Shopee, Lazada, TikTok Shop with buyer protection. Uses e-wallets (MoMo, ZaloPay) or bank apps."
-          },
-          "4_frictionless": {
-            "pct": 0.15,
-            "behavior": "Pays with credit card, e-wallet, or BNPL without hesitation. Comfortable with international payment gateways. Will sign up for SaaS with card on file."
-          }
+      "fields": {
+        "job_title": {
+          "type": "string",
+          "examples": ["BA Lead", "Grab driver", "Rice farmer", "Garment factory worker", "High school teacher", "Shopee seller", "Bank teller", "Software engineer", "Street food vendor", "Retired"],
+          "note": "Must be realistic for the age + city combination. A 22-year-old in rural Ha Tinh is not a 'VP of Engineering'."
+        },
+        "industry": {
+          "type": "string",
+          "examples": ["Banking & finance", "Agriculture", "Manufacturing", "Education", "Retail & e-commerce", "Technology", "Healthcare", "Tourism & hospitality", "Government", "Construction", "Transportation"],
+          "note": "Must match job title and city. Da Nang skews tourism, Binh Duong skews manufacturing, HCMC is diverse."
+        },
+        "company_size": {
+          "type": "string",
+          "enum": ["solo/freelance", "micro (<10)", "small (10-50)", "medium (50-200)", "large (200-1000)", "enterprise (1000+)", "not_applicable"],
+          "note": "Farmers, street vendors, retirees = 'not_applicable'. Factory workers = 'large' or 'enterprise'."
+        },
+        "education_level": {
+          "type": "string",
+          "enum": ["no_formal", "primary", "secondary", "vocational", "university", "postgraduate"],
+          "note": "GSO 2024: ~28% of labor force holds training certificates. University education concentrated in urban areas."
+        },
+        "income_bracket": {
+          "type": "string",
+          "enum": ["<3M VND/month", "3-7M", "7-15M", "15-30M", "30M+"],
+          "note": "GSO 2024: average monthly salary ~7.7M VND. Agriculture workers earn lowest. Must correlate with job + city."
+        },
+        "primary_platform": {
+          "type": "string",
+          "examples": ["Zalo", "Facebook", "TikTok", "Google", "YouTube", "Shopee", "none/offline"],
+          "note": "DataReportal 2025: Facebook 95.4% of internet users, Zalo 86%, YouTube 80%, TikTok 53%. Older rural = Zalo/Facebook. Young urban = TikTok/Google."
+        },
+        "search_language": {
+          "type": "string",
+          "enum": ["vietnamese", "english", "mixed"],
+          "note": "Vast majority search in Vietnamese. English mainly for tech workers, educated urban youth, international-facing roles."
+        },
+        "top_3_frustrations": {
+          "type": "string[]",
+          "examples": [
+            "Can't find a reliable supplier for my shop",
+            "Too much paperwork at the bank branch",
+            "My kids' school fees keep going up",
+            "Commute from Binh Duong to HCMC takes 2 hours",
+            "I don't understand the new tax regulations"
+          ],
+          "note": "These are the CORE of the simulation. They must be specific, realistic, and tied to this person's actual life — not generic. A farmer's frustrations are completely different from a software engineer's."
         }
       }
     },
   
-    "sampling": {
-      "chain_order": ["C1_digital_fluency", "C2_collective_trust", "C3_price_value", "C4_ethnocentricity", "C5_risk_aversion"],
-      "method": "Autoregressive: sample C1 from demographic priors, then each subsequent characteristic conditioned on previous ones.",
+    "generation_prompt_template": {
+      "description": "This is the prompt sent to Qwen for each persona. The 3 anchors are filled in, Qwen generates the rest as JSON.",
+      "system": "You are generating realistic Vietnamese personas for market research. Each persona must be a coherent, believable person. All fields must be consistent with each other and with the anchor demographics provided. Output valid JSON only, no explanation.",
+      "user": "Generate a realistic Vietnamese persona.\n\nAnchors:\n- Age: {age}\n- Gender: {gender}\n- City: {city}\n\nFill in:\n{\n  \"job_title\": \"\",\n  \"industry\": \"\",\n  \"company_size\": \"\",\n  \"education_level\": \"\",\n  \"income_bracket\": \"\",\n  \"primary_platform\": \"\",\n  \"search_language\": \"\",\n  \"top_3_frustrations\": [\"\", \"\", \"\"]\n}",
+      "note": "Batch 5-10 personas per call for efficiency. Qwen should output a JSON array."
+    },
   
-      "C1_priors_by_age_location": {
-        "18-24_urban":  [0.02, 0.15, 0.40, 0.43],
-        "18-24_rural":  [0.08, 0.35, 0.40, 0.17],
-        "25-34_urban":  [0.03, 0.18, 0.38, 0.41],
-        "25-34_rural":  [0.10, 0.38, 0.35, 0.17],
-        "35-44_urban":  [0.08, 0.30, 0.35, 0.27],
-        "35-44_rural":  [0.20, 0.40, 0.28, 0.12],
-        "45-54_urban":  [0.15, 0.38, 0.30, 0.17],
-        "45-54_rural":  [0.35, 0.38, 0.20, 0.07],
-        "55-64_urban":  [0.25, 0.40, 0.25, 0.10],
-        "55-64_rural":  [0.50, 0.32, 0.13, 0.05],
-        "65+_urban":    [0.40, 0.35, 0.18, 0.07],
-        "65+_rural":    [0.65, 0.25, 0.08, 0.02]
-      },
+    "batching_strategy": {
+      "description": "To generate 100K personas efficiently on Modal:",
+      "personas_per_call": 10,
+      "total_calls": 10000,
+      "estimated_tokens_per_call": 800,
+      "parallelism": "100+ concurrent requests on Modal vLLM",
+      "estimated_time": "10-15 minutes",
+      "estimated_cost": "$5-8 one-time on Modal (Qwen2.5-7B-Instruct, A10G GPU)"
+    },
   
-      "C1_occupation_modifier": {
-        "agriculture":        [0.10, 0.05, -0.08, -0.07],
-        "manufacturing":      [0.03, 0.05, -0.03, -0.05],
-        "retail_services":    [-0.02, 0.03, 0.02, -0.03],
-        "construction":       [0.05, 0.05, -0.05, -0.05],
-        "white_collar":       [-0.10, -0.08, 0.05, 0.13],
-        "self_employed":      [-0.03, 0.00, 0.03, 0.00],
-        "student":            [-0.10, -0.05, 0.05, 0.10],
-        "retired_unemployed": [0.10, 0.05, -0.08, -0.07]
-      },
+    "output_schema": {
+      "description": "Final persona as stored in personas.json. Every field is directly usable in the report.",
+      "example": {
+        "id": 47832,
+        "age": 34,
+        "gender": "female",
+        "city": "Da Nang",
+        "job_title": "Hotel front desk manager",
+        "industry": "Tourism & hospitality",
+        "company_size": "medium (50-200)",
+        "education_level": "university",
+        "income_bracket": "7-15M",
+        "primary_platform": "Zalo",
+        "search_language": "mixed",
+        "top_3_frustrations": [
+          "Guest complaints pile up and there's no system to track them",
+          "I manually update room availability across 3 booking platforms",
+          "Staff scheduling is done on paper and always has conflicts"
+        ]
+      }
+    },
   
-      "conditionals": {
-        "C2_given_C1": {
-          "L1": [0.55, 0.30, 0.05, 0.10],
-          "L2": [0.30, 0.40, 0.20, 0.10],
-          "L3": [0.10, 0.35, 0.35, 0.20],
-          "L4": [0.05, 0.20, 0.35, 0.40]
+    "report_output": {
+      "description": "When segments are formed from matching personas, the report labels use THESE fields — not abstract characteristics. Every segment name is actionable.",
+      "example_segments": [
+        {
+          "name": "Hotel managers in Da Nang (25-44, university-educated)",
+          "size": 3200,
+          "top_query": "phần mềm quản lý khách sạn",
+          "rank": null,
+          "competitor": "Cloudbeds, ezCloud"
         },
-        "C3_given_C1": {
-          "L1": [0.50, 0.30, 0.15, 0.05],
-          "L2": [0.20, 0.40, 0.30, 0.10],
-          "L3": [0.10, 0.35, 0.35, 0.20],
-          "L4": [0.05, 0.25, 0.35, 0.35]
+        {
+          "name": "Bank tellers in HCMC (25-34, frustrated with paperwork)",
+          "size": 8100,
+          "top_query": "công cụ tự động hóa tài liệu ngân hàng",
+          "rank": 7,
+          "competitor": "Jira, Confluence"
         },
-        "C3_shift_if_C2_L1": [0.05, 0.05, -0.05, -0.05],
-        "C3_shift_if_C2_L4": [-0.05, -0.05, 0.05, 0.05],
-  
-        "C4_given_C1": {
-          "L1": [0.50, 0.35, 0.12, 0.03],
-          "L2": [0.35, 0.38, 0.22, 0.05],
-          "L3": [0.20, 0.35, 0.32, 0.13],
-          "L4": [0.15, 0.25, 0.35, 0.25]
-        },
-  
-        "C5_given_C1": {
-          "L1": [0.60, 0.25, 0.10, 0.05],
-          "L2": [0.30, 0.35, 0.25, 0.10],
-          "L3": [0.10, 0.30, 0.40, 0.20],
-          "L4": [0.05, 0.15, 0.35, 0.45]
-        },
-        "C5_shift_if_C3_L1": [0.10, 0.00, -0.05, -0.05],
-        "C5_shift_if_C3_L4": [-0.05, -0.05, 0.00, 0.10]
-      },
-  
-      "algorithm": [
-        "1. Draw age from demographics.age_brackets weights",
-        "2. Draw location from demographics.location weights",
-        "3. Draw occupation from demographics.occupation weights",
-        "4. Look up C1 prior from C1_priors_by_age_location[age_location]",
-        "5. Add C1_occupation_modifier[occupation], clamp >= 0.01, renormalize",
-        "6. Sample C1 level (1-4) from adjusted prior",
-        "7. Sample C2 from conditionals.C2_given_C1[C1_level]",
-        "8. Get C3 base from conditionals.C3_given_C1[C1_level]",
-        "9. If C2 == L1, add C3_shift_if_C2_L1. If C2 == L4, add C3_shift_if_C2_L4. Clamp >= 0.01, renormalize",
-        "10. Sample C3 from adjusted distribution",
-        "11. Sample C4 from conditionals.C4_given_C1[C1_level]",
-        "12. Get C5 base from conditionals.C5_given_C1[C1_level]",
-        "13. If C3 == L1, add C5_shift_if_C3_L1. If C3 == L4, add C5_shift_if_C3_L4. Clamp >= 0.01, renormalize",
-        "14. Sample C5 from adjusted distribution",
-        "15. Return persona: { id, age, location, occupation, C1, C2, C3, C4, C5 }"
+        {
+          "name": "Young Shopee sellers nationwide (18-24, TikTok-primary)",
+          "size": 12400,
+          "top_query": "cách tăng đơn hàng Shopee",
+          "rank": null,
+          "competitor": "Shopee University, YouTube tutorials"
+        }
       ]
     },
   
-    "example_persona": {
-      "id": 47832,
-      "age": "25-34",
-      "location": "urban",
-      "occupation": "white_collar",
-      "C1_digital_fluency": 3,
-      "C2_collective_trust": 2,
-      "C3_price_value": 3,
-      "C4_ethnocentricity": 2,
-      "C5_risk_aversion": 3
+    "pipeline_summary": {
+      "pre_computed_once": [
+        "1. Sample 100K (age, gender, city) triplets from anchor distributions",
+        "2. Qwen generates full personas with frustrations (Modal, ~$5-8, ~15 min)",
+        "3. Embed all frustrations using multilingual-e5-small (Modal, ~$0.50)",
+        "4. Store: personas.json + persona_embeddings.npy"
+      ],
+      "per_product_run": [
+        "1. Claude generates product problem space (~20-30 problems) — 1 API call",
+        "2. Embed product problems — milliseconds",
+        "3. Cosine similarity: 100K persona embeddings × 30 product embeddings — <1 second",
+        "4. Filter qualifying personas by threshold — instant",
+        "5. Qwen generates search queries for qualifying personas only — Modal, ~$1-3",
+        "6. TinyFish runs real Google searches — ~$13.50, ~2 minutes",
+        "7. Generate report with human-readable segment labels — instant"
+      ]
     }
   }
