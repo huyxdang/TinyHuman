@@ -22,6 +22,7 @@ Humans discover products, then gossip about them — TinyUser simulates that dyn
 # Backend
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
+python scripts/server.py --port 8000
 
 # Deploy Modal endpoints
 modal deploy modal_app/embed.py
