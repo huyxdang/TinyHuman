@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 const EXAMPLES = [
-  'Notion',
-  'TinyFish.ai',
-  'Shopee seller tools',
-  'VIB mobile banking',
+  'TinyFish',
+  'Tasco',
+  'AWS',
+  'ETEST',
 ];
 
-export default function HeroOverlay({ visible, onRun }) {
+export default function HeroOverlay({ visible, onRun, grouped, onToggleGroup }) {
   const [value, setValue] = useState('');
 
   function handleRun() {
@@ -25,15 +25,16 @@ export default function HeroOverlay({ visible, onRun }) {
 
   return (
     <div className={`hero-overlay ${visible ? '' : 'hidden'}`}>
-      <img src="/assets/TinyHuman.png" alt="TinyHuman" className="hero-logo-img" />
-      <p className="hero-subtext">
-        <span className="hero-highlight">From gossips to insights.</span>
-      </p>
-      <div className="hero-input-bar">
+      <img src="/assets/Tiny.png" alt="TinyHuman" className="hero-logo-img" />
+      <div className="hero-lockup">
+        <p className="hero-subtext">
+          <span className="hero-highlight">From Gossips to <span style={{color: 'var(--accent)'}}>Insights</span></span>
+        </p>
+        <div className="hero-input-bar">
         <input
           type="text"
           className="hero-input"
-          placeholder="Enter your product name..."
+          placeholder="Enter your product..."
           value={value}
           onChange={e => setValue(e.target.value)}
           onKeyDown={handleKeyDown}
@@ -43,15 +44,15 @@ export default function HeroOverlay({ visible, onRun }) {
           onClick={handleRun}
           disabled={!value.trim()}
         >
-          Run &rarr;
+          &rarr;
         </button>
       </div>
-      <div className="hero-chips">
-        {EXAMPLES.map(ex => (
-          <button key={ex} className="hero-chip" onClick={() => setValue(ex)}>
-            {ex}
-          </button>
-        ))}
+        <button
+          className="hero-group-btn"
+          onClick={onToggleGroup}
+        >
+          {grouped ? 'Spread Out' : 'Group by Similarities'}
+        </button>
       </div>
     </div>
   );

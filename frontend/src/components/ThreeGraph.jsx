@@ -39,9 +39,7 @@ const NODE_FRAGMENT = `
     float edge = smoothstep(strokeOuter, strokeOuter - 0.02, dist); // anti-alias outer
     float strokeMask = smoothstep(strokeInner, strokeInner + 0.04, dist);
 
-    vec3 fill = vColor * 0.85 + 0.15; // slightly lifted, not pure saturated
-    vec3 stroke = vec3(0.15); // dark border
-    vec3 color = mix(fill, stroke, strokeMask * 0.85);
+    vec3 color = vColor * 0.85 + 0.15; // slightly lifted, not pure saturated
 
     gl_FragColor = vec4(color, edge * vAlpha);
   }
@@ -58,6 +56,8 @@ export default function ThreeGraph({
   hoveredClusterId,
   onNodeClick,
   onNodeHover,
+  grouped,
+  chatPanelOpen,
 }) {
   const containerRef = useRef(null);
   const stateRef = useRef({
@@ -68,6 +68,8 @@ export default function ThreeGraph({
     selectedNodeId: null,
     hoveredClusterId: null,
     hoveredNodeIndex: null,
+    grouped: false,
+    chatPanelOpen: false,
   });
 
   // --- Initialize Three.js ---
@@ -84,7 +86,7 @@ export default function ThreeGraph({
 
     // Camera
     const camera = new THREE.PerspectiveCamera(60, width / height, 0.1, 1000);
-    camera.position.set(0, 0, 30);
+    camera.position.set(0, 0, 26);
 
     // Renderer
     const renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -292,19 +294,86 @@ export default function ThreeGraph({
       const count = Math.min(nodeList.length, maxNodes);
 
       if (s.phase === 'hero') {
-        for (let i = 0; i < count; i++) {
-          const n = nodeList[i];
-          const i3 = i * 3;
-          targetPos[i3] = basePos[i3];
-          targetPos[i3 + 1] = basePos[i3 + 1];
-          targetPos[i3 + 2] = basePos[i3 + 2];
-          targetColor[i3] = n.color[0];
-          targetColor[i3 + 1] = n.color[1];
-          targetColor[i3 + 2] = n.color[2];
-          targetAlpha[i] = n.alpha;
-          targetSize[i] = n.size;
+        if (s.grouped && s.clusters.length > 0) {
+          // Grouped mode: move nodes to cluster centers
+          const clusterMap = {};
+          s.clusters.forEach(c => { clusterMap[c.id] = c; });
+
+          for (let i = 0; i < count; i++) {
+            const n = nodeList[i];
+            const i3 = i * 3;
+
+            if (n.clusterId !== null && n.clusterId !== undefined && clusterMap[n.clusterId]) {
+              const cluster = clusterMap[n.clusterId];
+              const center = cluster.center;
+              const cc = hexToRgb(cluster.color);
+              const jitter = 5;
+
+              targetPos[i3] = center.x + (Math.random() - 0.5) * jitter * 2;
+              targetPos[i3 + 1] = center.y + (Math.random() - 0.5) * jitter * 2;
+              targetPos[i3 + 2] = center.z + (Math.random() - 0.5) * jitter * 2;
+
+              targetColor[i3] = cc[0];
+              targetColor[i3 + 1] = cc[1];
+              targetColor[i3 + 2] = cc[2];
+              targetAlpha[i] = 0.85;
+              targetSize[i] = n.size;
+            } else {
+              targetPos[i3] = basePos[i3] * 1.8;
+              targetPos[i3 + 1] = basePos[i3 + 1] * 1.8;
+              targetPos[i3 + 2] = basePos[i3 + 2] * 1.8;
+              targetColor[i3] = 0.8;
+              targetColor[i3 + 1] = 0.78;
+              targetColor[i3 + 2] = 0.75;
+              targetAlpha[i] = 0.06;
+              targetSize[i] = n.size;
+            }
+          }
+
+          // Color edges by cluster
+          const edgeList = s.edges;
+          const edgeCount = Math.min(edgeList.length, maxEdges);
+          for (let i = 0; i < edgeCount; i++) {
+            const [a, b] = edgeList[i];
+            const na = nodeList[a];
+            const nb = nodeList[b];
+            if (!na || !nb) continue;
+            const i6 = i * 6;
+            if (na.clusterId !== null && na.clusterId === nb.clusterId && clusterMap[na.clusterId]) {
+              const cc = hexToRgb(clusterMap[na.clusterId].color);
+              edgeColorAttr.array[i6] = cc[0]; edgeColorAttr.array[i6+1] = cc[1]; edgeColorAttr.array[i6+2] = cc[2];
+              edgeColorAttr.array[i6+3] = cc[0]; edgeColorAttr.array[i6+4] = cc[1]; edgeColorAttr.array[i6+5] = cc[2];
+            } else {
+              for (let c = 0; c < 6; c++) edgeColorAttr.array[i6+c] = 0.0;
+            }
+          }
+          edgeColorAttr.needsUpdate = true;
+          edgeMaterial.opacity = 0.5;
+        } else {
+          // Spread out mode (default hero)
+          for (let i = 0; i < count; i++) {
+            const n = nodeList[i];
+            const i3 = i * 3;
+            targetPos[i3] = basePos[i3];
+            targetPos[i3 + 1] = basePos[i3 + 1];
+            targetPos[i3 + 2] = basePos[i3 + 2];
+            targetColor[i3] = n.color[0];
+            targetColor[i3 + 1] = n.color[1];
+            targetColor[i3 + 2] = n.color[2];
+            targetAlpha[i] = n.alpha;
+            targetSize[i] = n.size;
+          }
+
+          // Reset edge colors to black
+          const edgeList = s.edges;
+          const edgeCount = Math.min(edgeList.length, maxEdges);
+          for (let i = 0; i < edgeCount; i++) {
+            const i6 = i * 6;
+            for (let c = 0; c < 6; c++) edgeColorAttr.array[i6+c] = 0.0;
+          }
+          edgeColorAttr.needsUpdate = true;
+          edgeMaterial.opacity = 0.12;
         }
-        edgeMaterial.opacity = 0.12;
       } else if (s.phase === 'clustering' || s.phase === 'scanning' || s.phase === 'results') {
         const clusterList = s.clusters;
         if (!clusterList.length) return;
@@ -474,6 +543,17 @@ export default function ThreeGraph({
         }
       }
 
+      // Node shaking during chat phase (when drawer is closed)
+      if (s.phase === 'results' && !s.chatPanelOpen) {
+        const shakeAmp = 0.04;
+        for (let i = 0; i < count; i++) {
+          const i3 = i * 3;
+          positionAttr.array[i3] += Math.sin(time * 8 + i * 1.7) * shakeAmp;
+          positionAttr.array[i3 + 1] += Math.cos(time * 7 + i * 2.3) * shakeAmp;
+          positionAttr.array[i3 + 2] += Math.sin(time * 9 + i * 0.9) * shakeAmp;
+        }
+      }
+
       // Selected node pulse
       if (s.selectedNodeId !== null) {
         const idx = s.nodes.findIndex(n => n.id === s.selectedNodeId);
@@ -509,6 +589,7 @@ export default function ThreeGraph({
 
       controls.update();
       renderer.render(scene, camera);
+      if (stateRef.current.three?.updateLabels) stateRef.current.three.updateLabels();
     }
 
     // --- Event handlers ---
@@ -549,7 +630,7 @@ export default function ThreeGraph({
       if (intersects.length > 0) {
         const idx = intersects[0].index;
         const n = stateRef.current.nodes[idx];
-        if (onNodeClick) onNodeClick(n);
+        if (onNodeClick) onNodeClick(n, event.clientX, event.clientY);
       }
     }
 
@@ -575,6 +656,85 @@ export default function ThreeGraph({
       syncNodes, syncEdges, applyPhaseTargets, applyHighlights, spawnEmoji,
     };
 
+    // --- Name labels overlay ---
+    const labelsDiv = document.createElement('div');
+    labelsDiv.style.cssText = 'position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:1;';
+    container.appendChild(labelsDiv);
+
+    let labelEls = [];
+    let lastLabelUpdateMs = 0;
+    let labelsShown = false;
+    const vec = new THREE.Vector3();
+
+    function rebuildLabels() {
+      labelsDiv.innerHTML = '';
+      labelEls = [];
+      const nodeList = stateRef.current.nodes;
+      for (let i = 0; i < nodeList.length; i++) {
+        const el = document.createElement('div');
+        el.textContent = nodeList[i].label || nodeList[i].persona?.name || '';
+        el.style.cssText = [
+          'position:absolute',
+          'left:0',
+          'top:0',
+          'font-size:9px',
+          'line-height:1',
+          'color:#2d241d',
+          'font-family:DM Sans,sans-serif',
+          'white-space:nowrap',
+          'padding:2px 6px',
+          'border:1px solid rgba(45,36,29,0.08)',
+          'border-radius:999px',
+          'background:rgba(248,246,242,0.72)',
+          'opacity:0',
+          'will-change:transform,opacity',
+          'contain:layout style paint',
+        ].join(';');
+        labelsDiv.appendChild(el);
+        labelEls.push(el);
+      }
+    }
+
+    function updateLabels(nowMs = performance.now()) {
+      const showLabels = stateRef.current.phase === 'hero' || stateRef.current.phase === 'input';
+      if (!showLabels) {
+        if (labelsShown) {
+          labelsDiv.style.opacity = '0';
+          labelsShown = false;
+        }
+        return;
+      }
+
+      if (!labelsShown) {
+        labelsDiv.style.opacity = '1';
+        labelsShown = true;
+      }
+
+      if (nowMs - lastLabelUpdateMs < 33) return;
+      lastLabelUpdateMs = nowMs;
+
+      const w = renderer.domElement.clientWidth;
+      const h = renderer.domElement.clientHeight;
+      for (let i = 0; i < labelEls.length; i++) {
+        const i3 = i * 3;
+        vec.set(positionAttr.array[i3], positionAttr.array[i3 + 1], positionAttr.array[i3 + 2]);
+        vec.project(camera);
+        const x = (vec.x * 0.5 + 0.5) * w;
+        const y = (-vec.y * 0.5 + 0.5) * h;
+        const el = labelEls[i];
+        if (!el.textContent || vec.z > 1 || x < -120 || x > w + 120 || y < -40 || y > h + 40) {
+          el.style.opacity = '0';
+        } else {
+          el.style.transform = `translate3d(${Math.round(x)}px, ${Math.round(y + 8)}px, 0) translate(-50%, 0)`;
+          el.style.opacity = vec.z > 0.7 ? '0.35' : '0.9';
+        }
+      }
+    }
+
+    stateRef.current.three.updateLabels = updateLabels;
+    stateRef.current.three.rebuildLabels = rebuildLabels;
+    stateRef.current.three.labelsDiv = labelsDiv;
+
     animate();
 
     return () => {
@@ -590,6 +750,7 @@ export default function ThreeGraph({
       emojiSprites.length = 0;
       heartTexture.dispose();
       thumbsDownTexture.dispose();
+      if (labelsDiv.parentNode) labelsDiv.parentNode.removeChild(labelsDiv);
       renderer.dispose();
       nodeGeometry.dispose();
       nodeMaterial.dispose();
@@ -607,6 +768,7 @@ export default function ThreeGraph({
     if (!nodes || !stateRef.current.three) return;
     stateRef.current.nodes = nodes;
     stateRef.current.three.syncNodes(nodes);
+    stateRef.current.three.rebuildLabels();
   }, [nodes]);
 
   useEffect(() => {
@@ -624,40 +786,6 @@ export default function ThreeGraph({
     if (stateRef.current.three) {
       stateRef.current.three.applyPhaseTargets();
 
-      // Spawn emojis when entering clustering phase
-      if (phase === 'clustering' && prevPhase !== 'clustering') {
-        // Clear any previous emoji timers
-        emojiTimersRef.current.forEach(clearTimeout);
-        emojiTimersRef.current = [];
-
-        const nodeList = stateRef.current.nodes;
-        const posAttr = stateRef.current.three.positionAttr;
-
-        // Sample a subset of nodes for emojis (not all 1500 — ~150 for performance)
-        const sampleRate = Math.max(1, Math.floor(nodeList.length / 150));
-        const sampled = nodeList.filter((_, i) => i % sampleRate === 0);
-
-        // Stagger spawning over ~8 seconds, trickling in naturally
-        // Early: sparse, then a wave in the middle, then trailing off
-        sampled.forEach((node, i) => {
-          // Use a skewed distribution — most answers come in the middle
-          const r = Math.random();
-          const skewed = Math.pow(r, 0.6); // front-loads slightly but spreads out
-          const jitter = (Math.random() - 0.5) * 800; // +/- 400ms noise
-          const delay = skewed * 7000 + jitter + 500; // 0.5s to ~8s
-
-          const t = setTimeout(() => {
-            if (!stateRef.current.three) return;
-            const i3 = node.id * 3;
-            const x = posAttr.array[i3];
-            const y = posAttr.array[i3 + 1];
-            const z = posAttr.array[i3 + 2];
-            const accepted = node.matchScore > 0.55;
-            stateRef.current.three.spawnEmoji(x, y, z, accepted);
-          }, Math.max(100, delay));
-          emojiTimersRef.current.push(t);
-        });
-      }
     }
   }, [phase, clusters]);
 
@@ -679,6 +807,17 @@ export default function ThreeGraph({
       stateRef.current.three.applyHighlights();
     }
   }, [hoveredClusterId]);
+
+  useEffect(() => {
+    stateRef.current.grouped = grouped;
+    if (stateRef.current.three && stateRef.current.phase === 'hero') {
+      stateRef.current.three.applyPhaseTargets();
+    }
+  }, [grouped]);
+
+  useEffect(() => {
+    stateRef.current.chatPanelOpen = chatPanelOpen;
+  }, [chatPanelOpen]);
 
   return (
     <div

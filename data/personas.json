@@ -16,7 +16,8 @@
       "Khó khăn khi mua sắm thực phẩm vì phải chờ đợi nhiều nhân viên bán hàng",
       "Thời gian di chuyển từ nơi làm việc đến nhà mất quá nhiều",
       "Chuỗi cung ứng bị gián đoạn do thiên tai"
-    ]
+    ],
+    "name": "Trương Hữu An"
   },
   {
     "id": 1,
@@ -35,7 +36,8 @@
       "Thời gian phải chờ đợi quá lâu khi gọi điện đến nhà hàng",
       "Khó khăn trong việc liên lạc với nhân viên nhà hàng",
       "Thực phẩm không đạt chất lượng như mong đợi"
-    ]
+    ],
+    "name": "Cao Phương Hoa"
   },
   {
     "id": 2,
@@ -54,7 +56,8 @@
       "Chu kỳ xử lý đơn vị tín dụng quá lâu",
       "Thị trường tín dụng không linh hoạt",
       "Khó khăn khi chuyển tiền giữa các ngân hàng"
-    ]
+    ],
+    "name": "Vũ Thanh Trúc"
   },
   {
     "id": 3,
@@ -73,7 +76,8 @@
       "Không tìm được thông tin du lịch cập nhật về các điểm đến mới ở Hue",
       "Đối thủ cạnh tranh không chịu giảm giá để thu hút khách hàng",
       "Khách hàng khó tính không hài lòng với dịch vụ chăm sóc khách hàng"
-    ]
+    ],
+    "name": "Phạm Thúy Diễm"
   },
   {
     "id": 4,
@@ -92,7 +96,8 @@
       "Difficulty finding reliable job opportunities in the tech sector",
       "Inconsistent internet connectivity affecting remote work",
       "High cost of living and transportation to commute"
-    ]
+    ],
+    "name": "Lương Công Bình"
   },
   {
     "id": 5,
@@ -111,7 +116,8 @@
       "Thời tiết khắc nghiệt làm ảnh hưởng đến hoạt động taxi",
       "Nhiều cơn mưa lớn khiến xe phải dừng hoạt động",
       "Hệ thống đèn tín hiệu giao thông chậm trễ, gây tắc đường"
-    ]
+    ],
+    "name": "Nguyễn Hữu Hào"
   },
   {
     "id": 6,
@@ -130,7 +136,8 @@
       "Difficulty accessing modern agricultural technologies and tools",
       "Inconsistent weather patterns affecting crop yields",
       "High transportation costs for selling farm products"
-    ]
+    ],
+    "name": "Vũ Xuân Thiện"
   },
   {
     "id": 7,
@@ -149,7 +156,8 @@
       "Khó tìm được thực phẩm sạch và chất lượng tốt ở các cửa hàng nhỏ",
       "Không thể cập nhật thông tin nhanh chóng về giá cả hàng hóa",
       "Di chuyển từ một cửa hàng sang cửa hàng khác để mua hàng mất thời gian"
-    ]
+    ],
+    "name": "Nguyễn Thúy Hạnh"
   },
   {
     "id": 8,
@@ -168,7 +176,8 @@
       "Thời tiết nắng nóng và mưa to làm hỏng hàng hóa tươi sống",
       "Khó tìm được nguồn cung ổn định cho cửa hàng",
       "Phải đối mặt với tình trạng thiếu nhân công vào những lúc cao điểm"
-    ]
+    ],
+    "name": "Tô Thúy Ngân"
   },
   {
     "id": 9,
@@ -187,7 +196,8 @@
       "Không thể cập nhật thông tin sản phẩm mới trên website công ty",
       "Chu kỳ bảo hành quá dài, khiến tôi lo lắng về chất lượng sản phẩm",
       "Khó khăn khi liên hệ với nhân viên hỗ trợ khách hàng"
-    ]
+    ],
+    "name": "Vũ Đình Thành"
   },
   {
     "id": 10,
@@ -206,7 +216,8 @@
       "Không có dịch vụ hỗ trợ khách hàng trực tuyến trong thời gian mở cửa cửa hàng",
       "Giá cả của các mặt hàng nhập khẩu thường cao hơn nhiều so với mặt hàng địa phương",
       "Thời tiết nóng bức và mưa lớn gây ảnh hưởng đến việc vận chuyển hàng hóa"
-    ]
+    ],
+    "name": "Võ Thị Tuyết"
   },
   {
     "id": 11,
@@ -225,7 +236,8 @@
       "Học tiếng Anh không hiệu quả",
       "Trung tâm tin học thiếu nguồn tài nguyên",
       "Lack of job opportunities in the tech industry"
-    ]
+    ],
+    "name": "Huỳnh Công Khoa"
   },
   {
     "id": 12,
@@ -244,7 +256,8 @@
       "Difficulty finding part-time jobs in Hung Yen despite being a university student",
       "Inconsistent internet connectivity making online classes difficult",
       "High costs of living in urban areas of Hung Yen"
-    ]
+    ],
+    "name": "Võ Thanh Hạnh"
   },
   {
     "id": 13,
@@ -263,7 +276,8 @@
       "Thời gian chờ đợi khi tải ứng dụng từ Google Play Store",
       "Khó tìm kiếm các ứng dụng phù hợp với nhu cầu công việc",
       "Hiệu suất của ứng dụng di động giảm khi sử dụng trên thiết bị cũ của tôi"
-    ]
+    ],
+    "name": "Bùi Hữu Cường"
   },
   {
     "id": 14,
@@ -282,7 +296,8 @@
       "Difficulty finding affordable housing near campus",
       "Inconsistent internet connection at home",
       "Limited transportation options for extracurricular activities"
-    ]
+    ],
+    "name": "Hồ Hữu Kiên"
   },
   {
     "id": 15,
@@ -301,7 +316,8 @@
       "Chứng từ kế toán bị thất lạc thường xuyên do lưu trữ thủ công",
       "Thời gian chờ đợi từ đơn tố cáo đến khi có phản hồi từ cơ quan chức năng",
       "Công việc khó khăn khi phải đối mặt với các quy định mới trong ngành kiểm toán"
-    ]
+    ],
+    "name": "Đỗ Kim Hương"
   },
   {
     "id": 16,
@@ -320,7 +336,8 @@
       "Không tìm được chỗ để xe khi ra vào khách sạn",
       "Khó khăn trong việc liên lạc với nhân viên khách sạn",
       "Thời tiết thay đổi nhanh, ảnh hưởng đến khách sạn"
-    ]
+    ],
+    "name": "Trần Diệu Thảo"
   },
   {
     "id": 17,
@@ -339,7 +356,8 @@
       "Constantly having to adjust ad campaigns due to changing social media algorithms",
       "Difficulty in reaching a specific target audience within the city",
       "High competition for ad placements and low click-through rates"
-    ]
+    ],
+    "name": "Phạm Bích Diễm"
   },
   {
     "id": 18,
@@ -358,7 +376,8 @@
       "Khó tìm kiếm dự án phù hợp với tài chính",
       "Khó giao tiếp với nhiều đối tác địa phương",
       "Thời gian di chuyển từ nhà tới văn phòng dài"
-    ]
+    ],
+    "name": "Đinh Phương Vân"
   },
   {
     "id": 19,
@@ -377,7 +396,8 @@
       "Khó tìm kiếm sản phẩm phù hợp với nhu cầu cụ thể",
       "Khó khăn trong việc kiểm tra và xác nhận thông tin về sản phẩm",
       "Thời gian chờ đợi lâu khi liên hệ với hỗ trợ khách hàng"
-    ]
+    ],
+    "name": "Trương Kim Yến"
   },
   {
     "id": 20,
@@ -396,7 +416,8 @@
       "Difficulty finding part-time jobs that match my studies",
       "Internet connectivity issues during exam periods",
       "High prices of local food and basic necessities"
-    ]
+    ],
+    "name": "Đỗ Ngọc Hào"
   },
   {
     "id": 21,
@@ -415,7 +436,8 @@
       "Difficulty finding part-time jobs that match my studies",
       "High costs of living in Ho Chi Minh City",
       "Traffic congestion during rush hour"
-    ]
+    ],
+    "name": "Tô Hữu Bình"
   },
   {
     "id": 22,
@@ -434,7 +456,8 @@
       "Difficulty finding affordable and reliable transportation to campus",
       "Limited access to public Wi-Fi on campus",
       "High cost of living in Dong Thap compared to other provinces"
-    ]
+    ],
+    "name": "Mai Minh Vinh"
   },
   {
     "id": 23,
@@ -453,7 +476,8 @@
       "Long wait times when using public transportation during peak hours in Hanoi",
       "Difficulty finding parking in the city center",
       "Traffic congestion, especially during rush hour"
-    ]
+    ],
+    "name": "Đặng Hữu Đức"
   },
   {
     "id": 24,
@@ -472,7 +496,8 @@
       "Không có thông tin chi tiết về nguồn gốc và chất lượng sản phẩm trên các trang web bán hàng trực tuyến",
       "Trung bình giá cả cao hơn so với các tỉnh lân cận",
       "Di chuyển đến nơi làm việc bằng xe bus thường xuyên bị tắc đường"
-    ]
+    ],
+    "name": "Vũ Hữu Long"
   },
   {
     "id": 25,
@@ -491,7 +516,8 @@
       "High tuition fees",
       "Limited part-time job opportunities",
       "Difficulty finding affordable accommodations"
-    ]
+    ],
+    "name": "Võ Đình Toàn"
   },
   {
     "id": 26,
@@ -510,7 +536,8 @@
       "Thời gian chờ đợi để được hỗ trợ qua điện thoại quá lâu",
       "Không tìm thấy thông tin chi tiết về các sản phẩm trên trang web công ty",
       "Chất lượng dịch vụ không đồng đều giữa các nhân viên"
-    ]
+    ],
+    "name": "Đỗ Đức Kiên"
   },
   {
     "id": 27,
@@ -529,7 +556,8 @@
       "Khó khăn trong việc tìm kiếm việc làm phù hợp",
       "Thời tiết thất thường gây khó khăn cho việc di chuyển",
       "Phần lớn dịch vụ công cộng thiếu sự tiện lợi và hiệu quả"
-    ]
+    ],
+    "name": "Đỗ Minh Trang"
   },
   {
     "id": 28,
@@ -548,7 +576,8 @@
       "Difficulty finding scholarships for tuition fees",
       "Limited part-time job opportunities on campus",
       "Language barriers in extracurricular activities"
-    ]
+    ],
+    "name": "Võ Ngọc Thu"
   },
   {
     "id": 29,
@@ -567,7 +596,8 @@
       "Chậm trễ trong việc giao hàng từ nhà cung cấp",
       "Khó khăn trong việc tìm kiếm các nguồn nguyên liệu chất lượng",
       "Thời tiết khắc nghiệt ảnh hưởng đến sản xuất"
-    ]
+    ],
+    "name": "Trương Đức Sơn"
   },
   {
     "id": 30,
@@ -586,7 +616,8 @@
       "Difficulty finding reliable and up-to-date information about job opportunities in Da Nang",
       "Long commute to work, especially during rush hour traffic",
       "Constant stress from managing multiple projects simultaneously"
-    ]
+    ],
+    "name": "Cao Minh Hải"
   },
   {
     "id": 31,
@@ -605,7 +636,8 @@
       "Thời gian giao tiếp quá nhiều với người ngoài nơi làm việc trong môi trường làm việc ồn ào tại tòa nhà cũ của công ty",
       "Khó khăn khi tìm kiếm thông tin liên quan đến việc mua sắm đồ nội thất cho văn phòng",
       "Hệ thống mạng nội bộ chậm và không ổn định, làm ảnh hưởng đến hiệu suất công việc"
-    ]
+    ],
+    "name": "Dương Bích Hương"
   },
   {
     "id": 32,
@@ -624,7 +656,8 @@
       "Inconsistent Wi-Fi speed in the office",
       "Long commute from Hanoi to the suburban office",
       "Finding reliable parking in the downtown area"
-    ]
+    ],
+    "name": "Trương Xuân Hiếu"
   },
   {
     "id": 33,
@@ -643,7 +676,8 @@
       "Long commute to work in the Mekong Delta",
       "Inadequate parking facilities at the factory",
       "Limited access to professional development opportunities"
-    ]
+    ],
+    "name": "Mai Thanh Tùng"
   },
   {
     "id": 34,
@@ -662,7 +696,8 @@
       "Difficulty finding quality products in the crowded retail market",
       "Inconsistent delivery times from suppliers",
       "High employee turnover leading to inconsistent service"
-    ]
+    ],
+    "name": "Trần Minh Tùng"
   },
   {
     "id": 35,
@@ -681,7 +716,8 @@
       "High cost of living in the Central Highlands",
       "Difficulty finding part-time jobs due to limited social networks",
       "Long commute to and from university in a remote area"
-    ]
+    ],
+    "name": "Trần Hoàng My"
   },
   {
     "id": 36,
@@ -700,7 +736,8 @@
       "Difficulty finding part-time jobs in my area due to limited job opportunities",
       "High cost of living and transportation fees",
       "Inconsistent internet connectivity affecting online learning"
-    ]
+    ],
+    "name": "Võ Ngọc Hạnh"
   },
   {
     "id": 37,
@@ -719,7 +756,8 @@
       "Difficulty finding part-time jobs in Nghe An that match my skills",
       "Inconsistent Wi-Fi connectivity makes online classes and job applications difficult",
       "High cost of living, especially for food and transportation"
-    ]
+    ],
+    "name": "Lương Hoàng Hạnh"
   },
   {
     "id": 38,
@@ -738,7 +776,8 @@
       "Inefficient banking systems that delay transaction processing",
       "Limited availability of reliable parking spaces near the office",
       "Long commute times to and from work"
-    ]
+    ],
+    "name": "Trương Diệu My"
   },
   {
     "id": 39,
@@ -757,7 +796,8 @@
       "Khó tìm mua các loại trái cây đặc sản Lam Dong chất lượng cao",
       "Thời tiết nắng nóng gây khó khăn khi vận chuyển nông sản",
       "Giá cả các loại thực phẩm tăng nhanh vào mùa lễ"
-    ]
+    ],
+    "name": "Trương Diệu Giang"
   },
   {
     "id": 40,
@@ -776,7 +816,8 @@
       "Không thể tìm kiếm thông tin tài chính một cách nhanh chóng và chính xác",
       "Đối mặt với nhiều hồ sơ giấy tờ và thủ tục hành chính",
       "Thời gian giao thông trở nên tốn kém và mất thời gian hơn"
-    ]
+    ],
+    "name": "Võ Thanh Hoa"
   },
   {
     "id": 41,
@@ -795,7 +836,8 @@
       "Having to deal with slow internet speed which affects work efficiency",
       "Limited access to professional development resources within the company",
       "Difficulty finding accurate job information on social media platforms"
-    ]
+    ],
+    "name": "Cao Xuân Sơn"
   },
   {
     "id": 42,
@@ -814,7 +856,8 @@
       "Thời gian mất nhiều vào việc tìm kiếm tài liệu cần thiết từ internet",
       "Khó khăn trong việc quản lý ngân sách cho các khoản chi phí không thể tránh khỏi",
       "Chu kỳ thanh toán hóa đơn lâu dài gây áp lực tài chính"
-    ]
+    ],
+    "name": "Võ Kim Ngân"
   },
   {
     "id": 43,
@@ -833,7 +876,8 @@
       "Không thể tìm kiếm thông tin về các dịch vụ y tế ở Da Nang một cách hiệu quả",
       "Chưa thể tự cập nhật thông tin về các chương trình giảm giá và ưu đãi của các cửa hàng gần nhà",
       "Khó khăn trong việc tìm kiếm và liên lạc với các dịch vụ hỗ trợ người già ở Da Nang"
-    ]
+    ],
+    "name": "Lương Bích Mai"
   },
   {
     "id": 44,
@@ -852,7 +896,8 @@
       "Không thể tìm thấy sản phẩm mà mình cần trên các trang web bán hàng trực tuyến",
       "Thời gian giao hàng lâu hơn so với quảng cáo",
       "Số lượng sản phẩm tại cửa hàng không đa dạng"
-    ]
+    ],
+    "name": "Vũ Đức Quân"
   },
   {
     "id": 45,
@@ -871,7 +916,8 @@
       "Không tìm thấy các mẫu sản phẩm cụ thể trên website công ty",
       "Không thể liên hệ với nhân viên bán hàng qua điện thoại",
       "Thời gian giao hàng chậm hơn dự kiến"
-    ]
+    ],
+    "name": "Lý Ngọc Tuyết"
   },
   {
     "id": 46,
@@ -890,7 +936,8 @@
       "Không tìm thấy thông tin cập nhật về công việc hàng ngày",
       "Đường đi tới công ty bị ngập nước do mưa lớn",
       "Khó mua được thực phẩm sạch ở các chợ gần nhà"
-    ]
+    ],
+    "name": "Trần Ngọc Giang"
   },
   {
     "id": 47,
@@ -909,7 +956,8 @@
       "Khó tìm kiếm nguồn nguyên liệu chất lượng tại Mekong Delta",
       "Thời tiết khắc nghiệt ảnh hưởng đến hoạt động sản xuất hàng hóa",
       "Chi phí vận chuyển cao do vị trí địa lý xa trung tâm thành phố"
-    ]
+    ],
+    "name": "Trương Thanh Uyên"
   },
   {
     "id": 48,
@@ -928,7 +976,8 @@
       "Difficulty in accessing reliable information about local employment opportunities",
       "High cost of transportation to commute to work",
       "Inadequate public transportation options"
-    ]
+    ],
+    "name": "Mai Công Thiện"
   },
   {
     "id": 49,
@@ -947,7 +996,8 @@
       "Thiếu nhân lực trẻ, không đủ người để thay thế các đồng nghiệp nghỉ hưu",
       "Thời tiết khắc nghiệt ở Mekong Delta làm tăng nguy cơ cháy nổ",
       "Công nghệ thông tin lạc hậu, khó cập nhật thông tin mới về cháy nổ"
-    ]
+    ],
+    "name": "Lê Công Long"
   },
   {
     "id": 50,
@@ -966,7 +1016,8 @@
       "Difficulty finding reliable job information during job search",
       "High cost of living in Ho Chi Minh City",
       "Limited public transportation options during peak hours"
-    ]
+    ],
+    "name": "Tạ Diệu Quỳnh"
   },
   {
     "id": 51,
@@ -985,7 +1036,8 @@
       "Chưa tìm được sản phẩm chính xác ngay trên Google Maps",
       "Có quá nhiều lựa chọn khiến khó khăn trong việc lựa chọn sản phẩm phù hợp",
       "Không thể theo dõi được các chương trình khuyến mãi từ các cửa hàng trực tuyến"
-    ]
+    ],
+    "name": "Võ Thúy Xuân"
   },
   {
     "id": 52,
@@ -1004,7 +1056,8 @@
       "Difficulty finding part-time jobs that match my studies",
       "High cost of living in a university town",
       "Limited transportation options during late nights"
-    ]
+    ],
+    "name": "Nguyễn Hữu Trí"
   },
   {
     "id": 53,
@@ -1023,7 +1076,8 @@
       "Chăm sóc khách hàng không chuyên nghiệp từ nhân viên bán hàng",
       "Không tìm thấy mẫu phù hợp với sở thích",
       "Giá cả không ổn định, biến động thường xuyên"
-    ]
+    ],
+    "name": "Đinh Phương Tuyết"
   },
   {
     "id": 54,
@@ -1042,7 +1096,8 @@
       "Khó tìm việc làm phù hợp với kỹ năng",
       "Sức ép về tiền lương và phúc lợi từ nhà tuyển dụng",
       "Thời gian làm thêm nhiều để tăng thu nhập"
-    ]
+    ],
+    "name": "Trương Thanh Đạt"
   },
   {
     "id": 55,
@@ -1061,7 +1116,8 @@
       "Thời gian di chuyển từ nhà đến văn phòng quá lâu do giao thông拥挤",
       "Khó tìm kiếm cơ hội học hỏi và nâng cao kỹ năng trong môi trường làm việc",
       "Cạnh tranh công việc cao giữa các đồng nghiệp"
-    ]
+    ],
+    "name": "Đặng Bích Hà"
   },
   {
     "id": 56,
@@ -1080,7 +1136,8 @@
       "Không thể tìm thấy thông tin về các dịch vụ chăm sóc sức khỏe cộng đồng trong mạng xã hội",
       "Khó khăn trong việc cập nhật thông tin về các chính sách thuế mới",
       "Sự chậm trễ trong việc nhận hàng từ nhà cung cấp"
-    ]
+    ],
+    "name": "Dương Thị Trúc"
   },
   {
     "id": 57,
@@ -1099,7 +1156,8 @@
       "Thời gian giao dịch bị拖延",
       "Sự không ổn định của mạng di động",
       "Số lượng quảng cáo quá nhiều"
-    ]
+    ],
+    "name": "Cao Quốc Quân"
   },
   {
     "id": 58,
@@ -1118,7 +1176,8 @@
       "Chứng khó khăn trong việc tìm kiếm dự án phù hợp với ngân sách và nhu cầu của khách hàng",
       "Thời gian phải dành nhiều cho giao tiếp qua điện thoại và email với các đối tác",
       "Đối mặt với áp lực từ việc phải đạt mục tiêu kinh doanh hàng tháng"
-    ]
+    ],
+    "name": "Huỳnh Xuân Nghĩa"
   },
   {
     "id": 59,
@@ -1137,7 +1196,8 @@
       "Difficulty finding part-time jobs in Thanh Hoa despite good grades",
       "Expensive transportation costs to and from university",
       "Limited access to high-speed internet at home"
-    ]
+    ],
+    "name": "Phạm Quốc Tùng"
   },
   {
     "id": 60,
@@ -1156,7 +1216,8 @@
       "Difficulty finding part-time jobs near campus",
       "High cost of living in Thanh Hoa compared to Hanoi",
       "Limited access to public transportation for commuting"
-    ]
+    ],
+    "name": "Trương Thúy Thu"
   },
   {
     "id": 61,
@@ -1175,7 +1236,8 @@
       "Không tìm được thông tin chi tiết về dự án xây dựng trong thời gian ngắn",
       "Thời tiết khắc nghiệt ảnh hưởng đến tiến độ công việc",
       "Khó khăn trong việc liên lạc với đối tác từ xa"
-    ]
+    ],
+    "name": "Phan Thanh Mai"
   },
   {
     "id": 62,
@@ -1194,7 +1256,8 @@
       "Difficulty finding reliable information about job opportunities in technology companies in Nghe An",
       "Long commute to work due to Nghe An's location far from major cities",
       "Inadequate access to professional development resources within small technology companies in Nghe An"
-    ]
+    ],
+    "name": "Huỳnh Xuân Vinh"
   },
   {
     "id": 63,
@@ -1213,7 +1276,8 @@
       "Difficulty finding reliable job listings in the tech sector",
       "Inconsistent internet connectivity during work hours",
       "Excessive traffic during rush hour commuting to Hanoi"
-    ]
+    ],
+    "name": "Đào Văn Thiện"
   },
   {
     "id": 64,
@@ -1232,7 +1296,8 @@
       "Difficulty finding reliable information on local government services",
       "Limited access to online job listings",
       "High cost of transportation to attend company meetings"
-    ]
+    ],
+    "name": "Bùi Đình An"
   },
   {
     "id": 65,
@@ -1251,7 +1316,8 @@
       "Difficulty finding part-time jobs in the city due to limited options",
       "High cost of living and student loans",
       "Limited access to public transportation during peak hours"
-    ]
+    ],
+    "name": "Phạm Hoàng Yến"
   },
   {
     "id": 66,
@@ -1270,7 +1336,8 @@
       "Slow internet speed affecting online marketing campaigns",
       "Finding qualified developers for my tech projects",
       "Limited local talent pool for creative roles"
-    ]
+    ],
+    "name": "Đặng Minh Bình"
   },
   {
     "id": 67,
@@ -1289,7 +1356,8 @@
       "Không thể tìm kiếm hàng hóa cần mua trên ứng dụng di động",
       "Vận chuyển chậm và mất nhiều thời gian",
       "Số lượng hàng hóa thiếu tại các cửa hàng nhỏ lẻ"
-    ]
+    ],
+    "name": "Vũ Ngọc Cường"
   },
   {
     "id": 68,
@@ -1308,7 +1376,8 @@
       "Difficulties in accessing healthcare facilities due to remote location",
       "Limited availability of necessary medical supplies",
       "Inconsistent communication between healthcare providers and patients"
-    ]
+    ],
+    "name": "Lê Diệu Vân"
   },
   {
     "id": 69,
@@ -1327,7 +1396,8 @@
       "Không tìm được thông tin về thị trường bất động sản mới ở Quang Tri",
       "Rất khó để liên hệ với các nhà đầu tư tiềm năng trong khu vực",
       "Thời gian giao dịch kéo dài quá nhiều trong các giao dịch lớn"
-    ]
+    ],
+    "name": "Lê Xuân Vinh"
   },
   {
     "id": 70,
@@ -1346,7 +1416,8 @@
       "Difficulty in optimizing ad campaigns for local holidays and events in Khanh Hoa",
       "Inconsistent ad performance metrics across different platforms",
       "Lack of targeted data on local consumer behavior"
-    ]
+    ],
+    "name": "Hoàng Thanh Trang"
   },
   {
     "id": 71,
@@ -1365,7 +1436,8 @@
       "Thiếu nguồn nước để tưới cho cây trồng vào mùa khô",
       "Khó khăn trong việc liên lạc với người bán hàng",
       "Giá nông sản biến động theo thị trường quốc tế"
-    ]
+    ],
+    "name": "Lý Xuân Hải"
   },
   {
     "id": 72,
@@ -1384,7 +1456,8 @@
       "Đường đi vào công ty bị tắc vào giờ cao điểm",
       "Lack of professional development opportunities",
       "Không có tiện ích dịch vụ tích hợp trong ứng dụng văn phòng"
-    ]
+    ],
+    "name": "Tạ Bích Hạnh"
   },
   {
     "id": 73,
@@ -1403,7 +1476,8 @@
       "Having to navigate through long and confusing payment procedures at the grocery store",
       "Difficulty finding specific products due to limited store signage",
       "Long lines at the checkout counter, especially during holiday seasons"
-    ]
+    ],
+    "name": "Đinh Minh Trinh"
   },
   {
     "id": 74,
@@ -1422,7 +1496,8 @@
       "Difficulty finding reliable job information online due to the abundance of irrelevant content",
       "Long commute to work in the city center, which consumes a lot of time and energy",
       "Limited access to professional development resources in my hometown"
-    ]
+    ],
+    "name": "Đặng Công Trí"
   },
   {
     "id": 75,
@@ -1441,7 +1516,8 @@
       "Thời gian di chuyển từ nhà đến văn phòng quá lâu",
       "Không có khả năng nâng cao kiến thức chuyên môn qua các khóa học trực tuyến",
       "Sự không ổn định trong thị trường bất động sản"
-    ]
+    ],
+    "name": "Trương Thanh Nam"
   },
   {
     "id": 76,
@@ -1460,7 +1536,8 @@
       "Difficulty finding affordable accommodations in the city center",
       "Long commuting time to university",
       "Limited public transportation options in rural areas"
-    ]
+    ],
+    "name": "Đào Đình Đạt"
   },
   {
     "id": 77,
@@ -1479,7 +1556,8 @@
       "Sức khỏe cơ thể và tinh thần vì phải thức khuya chạy xe trong điều kiện thời tiết khắc nghiệt ở Gia Lai",
       "Thời gian biểu của công việc không ổn định, đôi khi phải làm thêm giờ",
       "Thiếu nguồn hỗ trợ từ chính phủ hoặc các tổ chức xã hội dành cho tài xế công nghệ"
-    ]
+    ],
+    "name": "Vũ Minh Cường"
   },
   {
     "id": 78,
@@ -1498,7 +1576,8 @@
       "Finding reliable job leads in the technology sector",
       "Difficulty in maintaining work-life balance due to long working hours",
       "Limited opportunities for professional development within the mid-size company"
-    ]
+    ],
+    "name": "Bùi Thị Thi"
   },
   {
     "id": 79,
@@ -1517,7 +1596,8 @@
       "Difficulty accessing information about market prices for local crops",
       "Limited access to irrigation systems during dry seasons",
       "Healthcare facilities far from home"
-    ]
+    ],
+    "name": "Đinh Minh Thành"
   },
   {
     "id": 80,
@@ -1536,7 +1616,8 @@
       "Difficulty finding reliable job opportunities in Phu Tho",
       "Inconsistent internet connectivity affects work productivity",
       "High cost of living in a rural area"
-    ]
+    ],
+    "name": "Vũ Văn Cường"
   },
   {
     "id": 81,
@@ -1555,7 +1636,8 @@
       "Không tìm thấy mẫu đồ lưu niệm phù hợp với mong đợi",
       "Chủ shop không sẵn lòng lắng nghe ý kiến khách hàng",
       "Số lượng khách hàng giảm do dịch bệnh"
-    ]
+    ],
+    "name": "Tô Văn Hiếu"
   },
   {
     "id": 82,
@@ -1574,7 +1656,8 @@
       "Sự bất ổn về thời tiết gây ra sự thất vọng trong mùa màng",
       "Vấn đề về giá cả tăng liên tục của các nguyên liệu nông nghiệp",
       "Khó khăn trong việc tiếp cận thông tin về thị trường và công nghệ mới trong nông nghiệp"
-    ]
+    ],
+    "name": "Lê Văn Đức"
   },
   {
     "id": 83,
@@ -1593,7 +1676,8 @@
       "Difficulty in coordinating with suppliers in the Mekong Delta due to communication barriers",
       "Inconsistent quality control across different factories",
       "Long commute from An Giang to Ho Chi Minh City for meetings"
-    ]
+    ],
+    "name": "Bùi Hữu Quân"
   },
   {
     "id": 84,
@@ -1612,7 +1696,8 @@
       "Difficulty accessing reliable health information due to language barriers",
       "Limited availability of qualified healthcare professionals in the area",
       "High cost of medications and medical treatments"
-    ]
+    ],
+    "name": "Vũ Phương Trang"
   },
   {
     "id": 85,
@@ -1631,7 +1716,8 @@
       "Difficulty finding reliable financial information in the digital age",
       "High transaction fees when making international payments",
       "Long processing times for tax returns"
-    ]
+    ],
+    "name": "Lý Minh Sơn"
   },
   {
     "id": 86,
@@ -1650,7 +1736,8 @@
       "Difficult transportation to and from work due to poor road conditions in the Central Highlands",
       "Lack of resources for teaching innovative educational methods in remote areas",
       "Infrequent professional development opportunities for teachers in my region"
-    ]
+    ],
+    "name": "Hoàng Kim Thi"
   },
   {
     "id": 87,
@@ -1669,7 +1756,8 @@
       "Slow internet speed in Hai Phong makes online marketing tasks take longer than expected",
       "Difficulty finding qualified IT professionals in Hai Phong for project requirements",
       "Lack of local training resources for technology skills in Hai Phong"
-    ]
+    ],
+    "name": "Lý Minh Uyên"
   },
   {
     "id": 88,
@@ -1688,7 +1776,8 @@
       "Không tìm được thông tin về các sản phẩm nông nghiệp Mekong Delta",
       "Có quá nhiều quảng cáo trên Facebook",
       "Trong quá trình mua sắm, khó tìm được thông tin về nguồn gốc sản phẩm"
-    ]
+    ],
+    "name": "Lý Bích Hạnh"
   },
   {
     "id": 89,
@@ -1707,7 +1796,8 @@
       "Difficulty finding affordable and high-quality part-time jobs to support myself while studying",
       "Slow internet speeds and unreliable mobile data during exam periods",
       "High cost of living and difficulty accessing affordable accommodation in Da Nang"
-    ]
+    ],
+    "name": "Phạm Hữu Trí"
   },
   {
     "id": 90,
@@ -1726,7 +1816,8 @@
       "High tuition fees for university",
       "Limited transportation options to university from rural areas",
       "Difficulty finding part-time jobs due to lack of experience"
-    ]
+    ],
+    "name": "Ngô Hoàng Ngân"
   },
   {
     "id": 91,
@@ -1745,7 +1836,8 @@
       "Khó tìm kiếm thông tin về các dự án bất động sản mới",
       "Chưa thể quản lý được các giao dịch qua điện thoại",
       "Khó khăn trong việc tương tác với khách hàng qua email"
-    ]
+    ],
+    "name": "Ngô Diệu Xuân"
   },
   {
     "id": 92,
@@ -1764,7 +1856,8 @@
       "Difficulty finding affordable and quality food options in crowded Hanoi neighborhoods",
       "Inconsistent Wi-Fi coverage in university dorms",
       "Traffic congestion during peak university commute times"
-    ]
+    ],
+    "name": "Cao Văn Trí"
   },
   {
     "id": 93,
@@ -1783,7 +1876,8 @@
       "Inefficient communication with international clients leading to project delays",
       "Limited access to high-speed internet in rural areas affecting remote work",
       "Finding reliable and affordable local suppliers for tech products"
-    ]
+    ],
+    "name": "Trương Hữu Bình"
   },
   {
     "id": 94,
@@ -1802,7 +1896,8 @@
       "Difficulty finding reliable financial information online",
       "Inefficient banking processes",
       "Slow internet speed"
-    ]
+    ],
+    "name": "Hồ Thanh Vương"
   },
   {
     "id": 95,
@@ -1821,7 +1916,8 @@
       "Khó khăn khi sử dụng công nghệ trong việc tìm kiếm thông tin từ Internet",
       "Thời gian giao dịch bị拖延",
       "Khó khăn trong việc liên lạc với các đối tác từ xa"
-    ]
+    ],
+    "name": "Phạm Minh Hào"
   },
   {
     "id": 96,
@@ -1840,7 +1936,8 @@
       "Difficulty finding reliable IT support during office hours",
       "Limited availability of skilled local IT professionals",
       "High costs of importing IT equipment"
-    ]
+    ],
+    "name": "Phan Xuân Nam"
   },
   {
     "id": 97,
@@ -1859,7 +1956,8 @@
       "Difficulty finding reliable information on job opportunities in my area",
       "Inconsistent internet connectivity affecting remote work",
       "High cost of living in the city"
-    ]
+    ],
+    "name": "Hoàng Công Hải"
   },
   {
     "id": 98,
@@ -1878,7 +1976,8 @@
       "Khó khăn trong việc tìm kiếm thông tin kỹ thuật chính xác và cập nhật",
       "Thời gian di chuyển xa đến văn phòng làm việc",
       "Khó khăn trong việc giao tiếp với đối tác nước ngoài"
-    ]
+    ],
+    "name": "Võ Đình Hiếu"
   },
   {
     "id": 99,
@@ -1897,7 +1996,8 @@
       "Difficulty finding affordable accommodations near campus",
       "Long commute times from rural areas to universities in Phu Tho",
       "Limited access to career counseling services for students"
-    ]
+    ],
+    "name": "Lê Diệu Uyên"
   },
   {
     "id": 100,
@@ -1916,7 +2016,8 @@
       "Difficulty finding accurate health information online due to mixed quality of content",
       "Long wait times for prescription refills at local clinics",
       "Limited availability of some medications in the region"
-    ]
+    ],
+    "name": "Đinh Ngọc Chi"
   },
   {
     "id": 101,
@@ -1935,7 +2036,8 @@
       "Difficulty finding part-time jobs near campus",
       "Expensive transportation costs to and from Dak Lak",
       "Limited access to affordable food options"
-    ]
+    ],
+    "name": "Trương Xuân Tùng"
   },
   {
     "id": 102,
@@ -1954,7 +2056,8 @@
       "Khó tìm kiếm các dịch vụ y tế chất lượng tại các bệnh viện xa",
       "Rất khó để tìm hiểu thông tin về các chương trình trợ cấp từ chính phủ",
       "Chưa thể dễ dàng cập nhật thông tin về các chương trình khuyến mãi từ các cửa hàng gần nhà"
-    ]
+    ],
+    "name": "Nguyễn Ngọc Vy"
   },
   {
     "id": 103,
@@ -1973,7 +2076,8 @@
       "Không thể tìm được đồ gỗ có chất lượng tốt với giá cả hợp lý",
       "Chuỗi cung ứng gặp khó khăn do thiên tai",
       "Thời tiết khắc nghiệt ảnh hưởng đến quá trình sản xuất"
-    ]
+    ],
+    "name": "Vũ Thanh Ngân"
   },
   {
     "id": 104,
@@ -1992,7 +2096,8 @@
       "Không tìm được thông tin chi tiết về các chương trình ưu đãi du lịch trong khu vực",
       "Chuẩn bị hồ sơ cho các tour du lịch kéo dài thời gian dài",
       "Khó khăn trong việc cập nhật thông tin du lịch mới và cập nhật giá tour mỗi ngày"
-    ]
+    ],
+    "name": "Lý Đình Hào"
   },
   {
     "id": 105,
@@ -2011,7 +2116,8 @@
       "Slow internet speed affecting remote work efficiency",
       "Limited availability of tech support during office hours",
       "Difficulty finding compatible software for project management"
-    ]
+    ],
+    "name": "Hồ Văn Hải"
   },
   {
     "id": 106,
@@ -2030,7 +2136,8 @@
       "Constantly dealing with slow internet speeds that disrupt project deadlines",
       "Finding accurate and reliable tech information among numerous advertisements",
       "Difficulty in finding local job opportunities in my area"
-    ]
+    ],
+    "name": "Hồ Thị My"
   },
   {
     "id": 107,
@@ -2049,7 +2156,8 @@
       "Không thể tìm kiếm được thông tin bất động sản phù hợp trong thời gian ngắn",
       "Sự cạnh tranh gay gắt từ các đối thủ trong ngành",
       "Chu kỳ giao dịch kéo dài quá lâu"
-    ]
+    ],
+    "name": "Võ Diệu Lan"
   },
   {
     "id": 108,
@@ -2068,7 +2176,8 @@
       "Khó khăn trong việc tìm kiếm tài xế có giấy phép lái xe hợp lệ",
       "Thời tiết khắc nghiệt ảnh hưởng đến hoạt động vận chuyển",
       "Việc thanh toán và thanh toán hóa đơn thường chậm"
-    ]
+    ],
+    "name": "Ngô Thúy Trang"
   },
   {
     "id": 109,
@@ -2087,7 +2196,8 @@
       "Difficulty finding affordable and reliable transportation to and from campus",
       "Long lines at the university library during peak hours",
       "Limited availability of tech support for online classes"
-    ]
+    ],
+    "name": "Tô Đình Dũng"
   },
   {
     "id": 110,
@@ -2106,7 +2216,8 @@
       "Thời gian di chuyển đến công ty quá lâu do tắc đường",
       "Khó khăn trong việc cập nhật thông tin tài chính do không hiểu được các báo cáo kinh doanh",
       "Rất khó khăn để tìm được người giúp việc chu đáo và đáng tin cậy"
-    ]
+    ],
+    "name": "Phan Phương Hạnh"
   },
   {
     "id": 111,
@@ -2125,7 +2236,8 @@
       "Công việc thường xuyên phải di chuyển giữa các thị trấn của tỉnh",
       "Thị trường đồ gỗ nội thất cạnh tranh gay gắt",
       "Thời tiết khắc nghiệt ảnh hưởng đến công việc vận chuyển"
-    ]
+    ],
+    "name": "Trần Kim Trúc"
   },
   {
     "id": 112,
@@ -2144,7 +2256,8 @@
       "Thời tiết khắc nghiệt ảnh hưởng đến việc điều khiển tàu thuyền",
       "Khó khăn trong việc trao đổi thông tin với đồng nghiệp ở các đơn vị khác nhau",
       "Thiếu nguồn lực về nhân lực và vật tư bảo dưỡng tàu thuyền"
-    ]
+    ],
+    "name": "Đinh Văn Tuấn"
   },
   {
     "id": 113,
@@ -2163,7 +2276,8 @@
       "Inefficient CRM system making it hard to track sales leads",
       "Lack of technical support for mobile apps during work hours",
       "Difficulty finding relevant job openings in the tech industry"
-    ]
+    ],
+    "name": "Bùi Văn Bình"
   },
   {
     "id": 114,
@@ -2182,7 +2296,8 @@
       "Điện thoại di động hay gặp sự cố khi giao dịch với khách hàng",
       "Không tìm được thông tin sản phẩm cụ thể trên mạng xã hội",
       "Đối thủ cạnh tranh thông tin trên mạng xã hội và không gian mạng xã hội"
-    ]
+    ],
+    "name": "Lương Đình Quân"
   },
   {
     "id": 115,
@@ -2201,7 +2316,8 @@
       "Difficulty in finding reliable local suppliers for products",
       "High operational costs due to high transportation fees",
       "Lack of awareness among younger customers about the unique benefits of local products"
-    ]
+    ],
+    "name": "Đào Đức Bình"
   },
   {
     "id": 116,
@@ -2220,7 +2336,8 @@
       "Hệ thống POS chậm, gây khó khăn cho việc tính tiền tại các cửa hàng",
       "Sự đa dạng hóa của các loại thực phẩm từ các quốc gia khác nhau khiến việc lựa chọn khó khăn",
       "Đi lại khó khăn do hệ thống giao thông công cộng tại Lam Dong thường xuyên quá tải"
-    ]
+    ],
+    "name": "Đào Hữu Đức"
   },
   {
     "id": 117,
@@ -2239,7 +2356,8 @@
       "Difficulty finding reliable suppliers in the region due to language barriers",
       "Long commute to work which affects punctuality and productivity",
       "High cost of living and lack of affordable housing options"
-    ]
+    ],
+    "name": "Huỳnh Hữu Thiện"
   },
   {
     "id": 118,
@@ -2258,7 +2376,8 @@
       "Khó khăn khi cập nhật dữ liệu thuế hàng ngày do công việc bận rộn",
       "Không thể tìm kiếm thông tin sản phẩm cụ thể trên website của công ty",
       "Thời gian giao hàng chậm hơn mong đợi, đặc biệt là vào ngày nghỉ lễ"
-    ]
+    ],
+    "name": "Lê Minh My"
   },
   {
     "id": 119,
@@ -2277,7 +2396,8 @@
       "Thời gian truy cập internet bị giới hạn do chi phí cước cao",
       "Khó tìm hiểu thông tin y tế do ngôn ngữ chuyên ngành phức tạp",
       "Chuẩn bị tài liệu cho các cuộc họp gặp mặt khó khăn do thiếu kỹ năng văn phòng"
-    ]
+    ],
+    "name": "Phạm Kim Hoa"
   },
   {
     "id": 120,
@@ -2296,7 +2416,8 @@
       "Difficulty finding reliable tax information online",
       "Slow response times from accounting software",
       "Constant need to navigate different tax regulations"
-    ]
+    ],
+    "name": "Lương Ngọc Bình"
   },
   {
     "id": 121,
@@ -2315,7 +2436,8 @@
       "Thời tiết khắc nghiệt ảnh hưởng đến mùa vụ",
       "Chất lượng giống cây trồng kém",
       "Khó khăn trong việc trao đổi thông tin với các nhà cung cấp"
-    ]
+    ],
+    "name": "Tạ Hữu Minh"
   },
   {
     "id": 122,
@@ -2334,7 +2456,8 @@
       "Phải chờ đợi lâu khi gọi điện cho bộ phận thuế",
       "Khó tìm kiếm thông tin thuế và quy định pháp luật",
       "Nếu có vấn đề với thuế, quá trình giải quyết kéo dài và không rõ ràng"
-    ]
+    ],
+    "name": "Mai Kim Thi"
   },
   {
     "id": 123,
@@ -2353,7 +2476,8 @@
       "Difficulty finding reliable suppliers in Hai Phong",
       "Inconsistent quality control measures across different manufacturing sites",
       "Limited access to up-to-date technology and training programs"
-    ]
+    ],
+    "name": "Đào Hoàng Vy"
   },
   {
     "id": 124,
@@ -2372,7 +2496,8 @@
       "Slow internet speed hinders productivity during work hours",
       "Difficulty finding reliable and secure software for business use",
       "Lack of customer support for local technology products"
-    ]
+    ],
+    "name": "Võ Minh Trí"
   },
   {
     "id": 125,
@@ -2391,7 +2516,8 @@
       "Difficulty finding reliable and localized information about local technology events in Dak Lak",
       "High costs of marketing materials due to long-distance shipping from other provinces",
       "Limited access to advanced technology training in the rural areas of Dak Lak"
-    ]
+    ],
+    "name": "Tô Hoàng Hoa"
   },
   {
     "id": 126,
@@ -2410,7 +2536,8 @@
       "Thời tiết nắng nóng khắc nghiệt gây khó khăn trong việc vệ sinh và bảo quản đồ đạc trong khách sạn",
       "Thiếu nguồn cung cấp nước sạch trong mùa mưa",
       "Phân biệt đối xử khi làm việc với đối tác nước ngoài"
-    ]
+    ],
+    "name": "Võ Bích Giang"
   },
   {
     "id": 127,
@@ -2429,7 +2556,8 @@
       "Difficulty finding reliable information about job opportunities in my field",
       "Limited access to affordable health insurance options",
       "Long commute to work in the city center"
-    ]
+    ],
+    "name": "Mai Quốc Nam"
   },
   {
     "id": 128,
@@ -2448,7 +2576,8 @@
       "Khó khăn trong việc tìm kiếm thông tin chi tiết về dịch vụ tư vấn đầu tư từ các công ty khác nhau trên Facebook",
       "Thời gian phải dành quá nhiều để trao đổi với khách hàng qua điện thoại và email",
       "Thiếu các chương trình đào tạo chuyên sâu từ công ty về kỹ năng giao tiếp và tư vấn đầu tư"
-    ]
+    ],
+    "name": "Bùi Ngọc Anh"
   },
   {
     "id": 129,
@@ -2467,7 +2596,8 @@
       "Thời gian làm việc quá tải, phải chạy đua với deadline",
       "Khó khăn trong việc cập nhật những xu hướng công nghệ mới nhất",
       "Lack of marketing strategies for mobile apps in Hung Yen"
-    ]
+    ],
+    "name": "Dương Ngọc Thành"
   },
   {
     "id": 130,
@@ -2486,7 +2616,8 @@
       "Thời tiết nắng nóng làm giảm hiệu suất làm việc",
       "Khó khăn trong việc cập nhật thông tin về dịch vụ mới",
       "Chất lượng nước không ổn định gây mất mát tài sản"
-    ]
+    ],
+    "name": "Phạm Ngọc Thảo"
   },
   {
     "id": 131,
@@ -2505,7 +2636,8 @@
       "Inconsistent ad targeting on social media platforms, leading to wasted time and money",
       "Difficulty finding reliable information on new technologies due to rapid changes",
       "Poor customer service from tech companies, especially when contacting through email"
-    ]
+    ],
+    "name": "Phan Xuân Hoàng"
   },
   {
     "id": 132,
@@ -2524,7 +2656,8 @@
       "Finding affordable and quality education resources in Can Tho",
       "Limited access to transportation to attend university in Ho Chi Minh City",
       "High cost of living in Can Tho compared to other cities"
-    ]
+    ],
+    "name": "Hoàng Hoàng Yến"
   },
   {
     "id": 133,
@@ -2543,7 +2676,8 @@
       "Khó tìm kiếm nguồn hàng chất lượng từ các nhà cung cấp ở Vinh Long",
       "Tiền mặt bị mất do các mối quan hệ phức tạp trong ngành thực phẩm",
       "Chất lượng dịch vụ khách hàng ở các cửa hàng thực phẩm gần nơi làm việc không ổn định"
-    ]
+    ],
+    "name": "Lê Minh Mai"
   },
   {
     "id": 134,
@@ -2562,7 +2696,8 @@
       "Difficulty finding affordable accommodation near campus",
       "Inconsistent schedules for extracurricular activities and part-time jobs",
       "Struggling to balance social life and academic workload"
-    ]
+    ],
+    "name": "Đặng Thanh Nhung"
   },
   {
     "id": 135,
@@ -2581,7 +2716,8 @@
       "Thời gian giao tiếp với cấp trên chậm chạp và không rõ ràng",
       "Chu kỳ trả lương dài hạn gây lo lắng về tài chính",
       "Lack of flexibility trong lịch làm việc dẫn đến việc phải sắp xếp công việc cá nhân không thuận tiện"
-    ]
+    ],
+    "name": "Đinh Phương Thu"
   },
   {
     "id": 136,
@@ -2600,7 +2736,8 @@
       "Không thể tìm kiếm thông tin về các sản phẩm công nghệ mới cập nhật từ các nhà cung cấp trực tuyến",
       "Vấn đề về internet thường xuyên gây gián đoạn công việc",
       "Khó khăn trong việc trao đổi và hợp tác với các đối tác công nghệ từ các tỉnh khác trong khu vực"
-    ]
+    ],
+    "name": "Trương Thúy Anh"
   },
   {
     "id": 137,
@@ -2619,7 +2756,8 @@
       "Difficulty finding affordable accommodation near universities",
       "Long bus rides to and from university in Khanh Hoa province",
       "Limited availability of part-time jobs that fit university schedules"
-    ]
+    ],
+    "name": "Mai Xuân Hùng"
   },
   {
     "id": 138,
@@ -2638,7 +2776,8 @@
       "Difficulty finding qualified candidates for tech positions in Bac Ninh",
       "High costs of internet and mobile data in my area",
       "Limited access to professional development resources in my workplace"
-    ]
+    ],
+    "name": "Mai Hữu Khải"
   },
   {
     "id": 139,
@@ -2657,7 +2796,8 @@
       "Difficulty finding reliable information on technology products due to mixed reviews online",
       "Long commute to work in the city from her rural village in Lam Dong",
       "Limited access to professional development opportunities in her remote area"
-    ]
+    ],
+    "name": "Hoàng Phương Dung"
   },
   {
     "id": 140,
@@ -2676,7 +2816,8 @@
       "Difficulty finding reliable information on the latest marketing trends and tools",
       "Constantly dealing with slow internet speeds during work hours",
       "Finding local marketing partners who understand both the local and global market"
-    ]
+    ],
+    "name": "Phạm Xuân Dũng"
   },
   {
     "id": 141,
@@ -2695,7 +2836,8 @@
       "Trung tâm thương mại gần nhà thường xuyên đóng cửa vào cuối tuần",
       "Thị trường điện tử tại An Giang chưa phát triển mạnh",
       "Thời tiết nắng nóng kéo dài ảnh hưởng đến giao dịch trực tuyến"
-    ]
+    ],
+    "name": "Võ Phương Thu"
   },
   {
     "id": 142,
@@ -2714,7 +2856,8 @@
       "Difficulty finding reliable information on new technology trends",
       "Long commute to work due to Tay Ninh's location",
       "Finding qualified candidates for tech roles"
-    ]
+    ],
+    "name": "Phan Thanh Hào"
   },
   {
     "id": 143,
@@ -2733,7 +2876,8 @@
       "Trung tâm dữ liệu kế toán bị mất liên lạc",
       "Khó khăn khi chuyển đổi dữ liệu giữa các ứng dụng kế toán khác nhau",
       "Thời gian chờ đợi khi liên hệ với đội ngũ hỗ trợ khách hàng"
-    ]
+    ],
+    "name": "Mai Phương Quỳnh"
   },
   {
     "id": 144,
@@ -2752,7 +2896,8 @@
       "Không thể tìm thấy mẫu đồ gỗ phù hợp với sở thích tại các cửa hàng",
       "Chính sách bảo hành và đổi trả khó hiểu",
       "Thời gian giao hàng thường bị trễ"
-    ]
+    ],
+    "name": "Lý Phương Yến"
   },
   {
     "id": 145,
@@ -2771,7 +2916,8 @@
       "Không thể truy cập Internet Banking khi di chuyển từ một nhà trọ nhỏ sang một khu nhà khác trong thành phố Ninh Bình",
       "Lỗi liên tục khi chuyển tiền từ tài khoản cá nhân sang tài khoản doanh nghiệp",
       "Thời gian chờ đợi lâu khi gọi điện đến bộ phận hỗ trợ khách hàng"
-    ]
+    ],
+    "name": "Trần Hữu Toàn"
   },
   {
     "id": 146,
@@ -2790,7 +2936,8 @@
       "Không thể tìm kiếm thông tin về các quy định thuế mới một cách dễ dàng",
       "Thời gian làm việc bị thu hẹp do yêu cầu phải xử lý nhiều công việc trong cùng một ngày",
       "Khó khăn trong việc theo dõi chi tiêu hàng ngày do công việc bận rộn"
-    ]
+    ],
+    "name": "Ngô Phương Chi"
   },
   {
     "id": 147,
@@ -2809,7 +2956,8 @@
       "Không tìm được công việc phù hợp với kỹ năng trong môi trường làm việc hiện tại",
       "Đi lại khó khăn do hệ thống giao thông tại Vinh Long thường xuyên ùn tắc",
       "Thời tiết nắng nóng khắc nghiệt trong mùa hè làm giảm hiệu suất làm việc"
-    ]
+    ],
+    "name": "Nguyễn Hoàng Tuyết"
   },
   {
     "id": 148,
@@ -2828,7 +2976,8 @@
       "Khó tìm kiếm nguyên liệu chất lượng cao cho sản phẩm từ Thái Nguyên",
       "Thời gian giao hàng lâu do lượng hàng hóa nhiều",
       "Đối thủ cạnh tranh từ các tỉnh lân cận"
-    ]
+    ],
+    "name": "Hoàng Phương Hà"
   },
   {
     "id": 149,
@@ -2847,7 +2996,8 @@
       "Thời tiết xấu làm tắc đường và ảnh hưởng đến thời gian làm việc",
       "Chưa có ứng dụng trực tuyến hỗ trợ thanh toán tiền taxi",
       "Khó khăn trong việc tìm kiếm vị trí đậu xe thuận tiện"
-    ]
+    ],
+    "name": "Cao Đình Sơn"
   },
   {
     "id": 150,
@@ -2866,7 +3016,8 @@
       "Inconsistent product availability on online platforms",
       "Inefficient customer service during busy sales periods",
       "Limited customization options for personalized marketing campaigns"
-    ]
+    ],
+    "name": "Tô Bích Thảo"
   },
   {
     "id": 151,
@@ -2885,7 +3036,8 @@
       "Khó tìm kiếm thông tin tài chính chính xác và cập nhật",
       "Trung tâm kế toán quá tải công việc, dẫn đến chậm trễ trong việc giải quyết các vấn đề của công ty",
       "Thời gian làm việc kéo dài và thiếu tính linh hoạt trong giờ hành chính"
-    ]
+    ],
+    "name": "Nguyễn Ngọc Diễm"
   },
   {
     "id": 152,
@@ -2904,7 +3056,8 @@
       "Thời gian làm việc không linh hoạt",
       "Đối tác không giao hàng đúng giờ",
       "Nhận hàng bị hỏng"
-    ]
+    ],
+    "name": "Tô Đức Sơn"
   },
   {
     "id": 153,
@@ -2923,7 +3076,8 @@
       "Sản phẩm ở nhà thường hết hàng, phải đi xa để mua",
       "Trang web của công ty chậm và không ổn định",
       "Số điện thoại hỗ trợ khách hàng không được liên lạc được"
-    ]
+    ],
+    "name": "Trần Hoàng Thi"
   },
   {
     "id": 154,
@@ -2942,7 +3096,8 @@
       "Difficulty accessing reliable weather information to plan crop planting seasons",
       "High transportation costs for bringing produce to market in cities",
       "Limited access to advanced farming technologies"
-    ]
+    ],
+    "name": "Đinh Đức Minh"
   },
   {
     "id": 155,
@@ -2961,7 +3116,8 @@
       "Khó tìm kiếm thông tin về giá cả và lợi ích của các dự án bất động sản",
       "Thời gian di chuyển đến các dự án từ xa làm tăng chi phí",
       "Lack of timely updates on project progress"
-    ]
+    ],
+    "name": "Hoàng Thị Lan"
   },
   {
     "id": 156,
@@ -2980,7 +3136,8 @@
       "Lag mạng khi truy cập dữ liệu chứng khoán từ nhà đầu tư quốc tế",
       "Khó tìm kiếm thông tin cập nhật về thị trường chứng khoán",
       "Thị trường chứng khoán không linh hoạt và biến động quá nhanh"
-    ]
+    ],
+    "name": "Đỗ Thị Yến"
   },
   {
     "id": 157,
@@ -2999,7 +3156,8 @@
       "Difficulty finding reliable tech news in Vietnamese",
       "High cost of data plans",
       "Limited access to professional development courses"
-    ]
+    ],
+    "name": "Vũ Ngọc Mai"
   },
   {
     "id": 158,
@@ -3018,7 +3176,8 @@
       "Difficulty finding specific products in crowded supermarkets",
       "Long lines at the checkout counters",
       "High energy costs for running air conditioners in the heat"
-    ]
+    ],
+    "name": "Đinh Công Thiện"
   },
   {
     "id": 159,
@@ -3037,7 +3196,8 @@
       "Difficulty finding reliable job opportunities in my field",
       "Long commute to work due to the city's traffic",
       "Limited public transportation options during rush hour"
-    ]
+    ],
+    "name": "Cao Đức Nghĩa"
   },
   {
     "id": 160,
@@ -3056,7 +3216,8 @@
       "Difficulty finding reliable information about new technologies",
       "Inconsistent internet connectivity affecting work progress",
       "Long commute time to the office"
-    ]
+    ],
+    "name": "Vũ Đức Vương"
   },
   {
     "id": 161,
@@ -3075,7 +3236,8 @@
       "Thời gian làm việc không ổn định do các dự án công nghệ",
       "Khó tìm kiếm nguồn tài chính cho các dự án mới",
       "Chưa có cơ hội thăng tiến rõ ràng trong công ty"
-    ]
+    ],
+    "name": "Huỳnh Công An"
   },
   {
     "id": 162,
@@ -3094,7 +3256,8 @@
       "Khó khăn trong việc tìm hiểu lãi suất và phí dịch vụ ngân hàng",
       "Rất khó để cập nhật thông tin tài chính từ các ngân hàng",
       "Bất tiện khi chuyển tiền giữa các ngân hàng khác nhau"
-    ]
+    ],
+    "name": "Huỳnh Hoàng Uyên"
   },
   {
     "id": 163,
@@ -3113,7 +3276,8 @@
       "Difficulty finding affordable accommodation in the city center",
       "Long commute to campus from rural areas",
       "Language barriers in academic and administrative communications"
-    ]
+    ],
+    "name": "Ngô Minh Hoàng"
   },
   {
     "id": 164,
@@ -3132,7 +3296,8 @@
       "Thời gian chờ đợi khi mở tài khoản online",
       "Khó hiểu thông tin chi tiết từ email ngân hàng",
       "Chu kỳ xử lý đơn vị cho vay lâu dài"
-    ]
+    ],
+    "name": "Huỳnh Ngọc My"
   },
   {
     "id": 165,
@@ -3151,7 +3316,8 @@
       "Slow internet speed affecting remote work efficiency",
       "Finding reliable and affordable tech support services",
       "Limited availability of local IT professionals"
-    ]
+    ],
+    "name": "Trần Đình Hiếu"
   },
   {
     "id": 166,
@@ -3170,7 +3336,8 @@
       "Không có thông tin về các loại cây trồng mới và kỹ thuật mới",
       "Sự thất thoát thức ăn do sâu bệnh",
       "Thời tiết thay đổi quá nhiều ảnh hưởng đến mùa vụ"
-    ]
+    ],
+    "name": "Phan Đình Kiên"
   },
   {
     "id": 167,
@@ -3189,7 +3356,8 @@
       "Difficulty finding affordable accommodation near campus in the city center",
       "Long and crowded bus rides from the city to the countryside during exams",
       "Limited access to quality healthcare in rural areas"
-    ]
+    ],
+    "name": "Đặng Minh Hoa"
   },
   {
     "id": 168,
@@ -3208,7 +3376,8 @@
       "Difficulty finding affordable and nutritious food in the city center",
       "Traffic congestion during commute to university",
       "Limited public transportation options during evening hours"
-    ]
+    ],
+    "name": "Nguyễn Minh My"
   },
   {
     "id": 169,
@@ -3227,7 +3396,8 @@
       "Không tìm được thông tin sản phẩm chính xác khi mua sắm trực tuyến",
       "Hệ thống trả hàng và đổi trả chậm trễ",
       "Chất lượng sản phẩm không như quảng cáo"
-    ]
+    ],
+    "name": "Bùi Phương Xuân"
   },
   {
     "id": 170,
@@ -3246,7 +3416,8 @@
       "Difficulty finding reliable suppliers in the Mekong Delta due to transportation issues",
       "Inconsistent power supply affecting production schedules",
       "Lack of access to advanced machinery for quality improvement"
-    ]
+    ],
+    "name": "Lê Quốc Kiên"
   },
   {
     "id": 171,
@@ -3265,7 +3436,8 @@
       "Không thể cập nhật thông tin nhanh chóng về thị trường nông sản",
       "Địa hình phức tạp làm khó việc vận chuyển nông sản",
       "Thời tiết khắc nghiệt ảnh hưởng đến mùa vụ"
-    ]
+    ],
+    "name": "Trương Xuân Long"
   },
   {
     "id": 172,
@@ -3284,7 +3456,8 @@
       "Khó tìm kiếm khách sạn có dịch vụ miễn phí wifi",
       "Rất tốn kém để đi lại giữa thị trấn và các điểm du lịch ở Lao Cai",
       "Không dễ dàng tìm kiếm thông tin về các món ăn địa phương"
-    ]
+    ],
+    "name": "Mai Thúy Linh"
   },
   {
     "id": 173,
@@ -3303,7 +3476,8 @@
       "Khó khăn trong việc tra cứu thông tin về dịch vụ y tế địa phương",
       "Khó khăn khi sử dụng các ứng dụng ngân hàng trên điện thoại di động",
       "Khó khăn trong việc tìm kiếm nhà cung cấp dịch vụ sửa chữa điện tử ở gần nhà"
-    ]
+    ],
+    "name": "Nguyễn Ngọc Yến"
   },
   {
     "id": 174,
@@ -3322,7 +3496,8 @@
       "Difficulty finding affordable and quality food options near campus",
       "Constant internet connectivity issues at university dorms",
       "Long commute to and from university in heavy traffic"
-    ]
+    ],
+    "name": "Võ Đức Thành"
   },
   {
     "id": 175,
@@ -3341,7 +3516,8 @@
       "Không thể tìm kiếm thông tin về các dịch vụ y tế gần nhà",
       "Thời gian giao hàng quá chậm khi mua hàng online",
       "Thời tiết nắng nóng khiến việc di chuyển trong khu vực nông thôn trở nên khó khăn"
-    ]
+    ],
+    "name": "Võ Thị Dung"
   },
   {
     "id": 176,
@@ -3360,7 +3536,8 @@
       "Thời gian giao hàng chậm ở Tuyên Quang",
       "Khó tìm kiếm sản phẩm phù hợp với mong muốn",
       "Chất lượng dịch vụ chăm sóc khách hàng không tốt"
-    ]
+    ],
+    "name": "Tạ Công Kiên"
   },
   {
     "id": 177,
@@ -3379,7 +3556,8 @@
       "Không tìm được nguồn hàng chất lượng với giá hợp lý",
       "Hệ thống phân phối chậm, khó theo dõi tiến độ",
       "Khó khăn trong việc quảng bá sản phẩm trên mạng xã hội"
-    ]
+    ],
+    "name": "Cao Hoàng Ngân"
   },
   {
     "id": 178,
@@ -3398,7 +3576,8 @@
       "Khó tìm kiếm sản phẩm phù hợp với sở thích tại cửa hàng nhỏ",
       "Thời gian giao hàng kéo dài do dịch bệnh",
       "Khó tìm kiếm thông tin về ưu đãi và chương trình khuyến mãi trên Facebook"
-    ]
+    ],
+    "name": "Tạ Xuân Đạt"
   },
   {
     "id": 179,
@@ -3417,7 +3596,8 @@
       "Difficulty accessing modern agricultural technology due to high costs and limited knowledge",
       "Inconsistent weather patterns affecting rice harvests",
       "Lack of transportation options to sell produce in nearby towns"
-    ]
+    ],
+    "name": "Hồ Ngọc Hào"
   },
   {
     "id": 180,
@@ -3436,7 +3616,8 @@
       "Khó khăn trong việc tìm kiếm thông tin về các tour du lịch tại Dak Lak",
       "Rất nhiều quảng cáo du lịch không liên quan đến tỉnh Dak Lak",
       "Thời gian không đủ để nghiên cứu kỹ về các tour và dịch vụ du lịch"
-    ]
+    ],
+    "name": "Võ Thị Trinh"
   },
   {
     "id": 181,
@@ -3455,7 +3636,8 @@
       "Difficulty finding specific medications due to supply chain disruptions",
       "Long wait times for prescriptions in the pharmacy",
       "Inconsistent availability of imported medications"
-    ]
+    ],
+    "name": "Ngô Thị Quỳnh"
   },
   {
     "id": 182,
@@ -3474,7 +3656,8 @@
       "Không thể tìm được việc làm phù hợp với kỹ năng",
       "Thời tiết khắc nghiệt ảnh hưởng đến việc di chuyển đến công ty",
       "Thị trường lao động không đủ linh hoạt để đáp ứng nhu cầu công việc"
-    ]
+    ],
+    "name": "Đinh Minh Kiên"
   },
   {
     "id": 183,
@@ -3493,7 +3676,8 @@
       "Lack of access to advanced farming technologies and equipment",
       "Difficulty in finding reliable suppliers for inputs",
       "High cost of transportation due to remote location"
-    ]
+    ],
+    "name": "Ngô Hữu Trí"
   },
   {
     "id": 184,
@@ -3512,7 +3696,8 @@
       "Không tìm được các sản phẩm theo yêu cầu nhanh chóng",
       "Thời gian chờ đợi quá lâu khi đến cửa hàng",
       "Khó tìm hiểu thông tin về các sản phẩm mới ra"
-    ]
+    ],
+    "name": "Bùi Kim Linh"
   },
   {
     "id": 185,
@@ -3531,7 +3716,8 @@
       "Khó tìm kiếm thông tin về các dịch vụ y tế và chăm sóc sức khỏe",
       "Có quá nhiều quảng cáo trên điện thoại di động",
       "Thời gian gửi và nhận email chậm"
-    ]
+    ],
+    "name": "Mai Hữu Tuấn"
   },
   {
     "id": 186,
@@ -3550,7 +3736,8 @@
       "Thời tiết nắng nóng kéo dài làm giảm hiệu suất làm việc",
       "Khó khăn khi sử dụng các ứng dụng và website vì ngôn ngữ",
       "Thị trường lao động thiếu việc làm phù hợp với trình độ của mình"
-    ]
+    ],
+    "name": "Đặng Xuân Hùng"
   },
   {
     "id": 187,
@@ -3569,7 +3756,8 @@
       "Đường cao tốc vào giờ cao điểm quá tải, thường phải chờ đợi lâu",
       "Đối tác chở khách không tuân thủ lịch trình, gây bất tiện",
       "Hệ thống ứng dụng không cập nhật thông tin về điểm đến nhanh chóng"
-    ]
+    ],
+    "name": "Mai Công Khoa"
   },
   {
     "id": 188,
@@ -3588,7 +3776,8 @@
       "Difficulty finding reliable job information on social media due to mixed content quality",
       "Inconsistent hours from remote work leading to unpredictable income",
       "Limited job opportunities for young professionals in my industry"
-    ]
+    ],
+    "name": "Hồ Quốc Sơn"
   },
   {
     "id": 189,
@@ -3607,7 +3796,8 @@
       "Difficulty finding reliable information about new production technologies",
       "Limited access to professional development workshops in rural areas",
       "Long commute to work, especially during rush hours"
-    ]
+    ],
+    "name": "Hoàng Minh Minh"
   },
   {
     "id": 190,
@@ -3626,7 +3816,8 @@
       "Difficulty finding reliable and relevant information on social media for business purposes",
       "High cost of digital marketing campaigns",
       "Lack of skilled digital marketing professionals in the local market"
-    ]
+    ],
+    "name": "Mai Bích Trang"
   },
   {
     "id": 191,
@@ -3645,7 +3836,8 @@
       "Difficulty finding part-time jobs in my area",
       "Inconsistent internet connectivity affects online learning",
       "Limited transportation options make it hard to attend university outside my province"
-    ]
+    ],
+    "name": "Cao Đức Thiện"
   },
   {
     "id": 192,
@@ -3664,7 +3856,8 @@
       "Difficulty finding reliable local SEO services for my small business",
       "Constantly having to deal with slow internet speeds affecting video quality and ad performance",
       "Inconsistent product delivery times from suppliers, impacting customer satisfaction"
-    ]
+    ],
+    "name": "Lương Quốc Long"
   },
   {
     "id": 193,
@@ -3683,7 +3876,8 @@
       "Không thể tìm kiếm thông tin về các loại vật liệu xây dựng mới và hiện đại trên internet dễ dàng",
       "Thời gian làm việc dài và mệt mỏi sau khi kết thúc ngày làm việc",
       "Chưa có dịch vụ taxi chuyên nghiệp tại địa phương, gây khó khăn cho việc di chuyển sau giờ làm việc"
-    ]
+    ],
+    "name": "Đinh Văn Hùng"
   },
   {
     "id": 194,
@@ -3702,7 +3896,8 @@
       "Slow internet speed affecting remote work and team collaboration",
       "Limited availability of English language resources for professional development",
       "Constant interruptions from family members while working"
-    ]
+    ],
+    "name": "Đặng Minh Ngân"
   },
   {
     "id": 195,
@@ -3721,7 +3916,8 @@
       "Slow internet speed affecting email marketing campaigns",
       "Finding reliable digital marketing resources in Vietnamese",
       "Limited local market research data"
-    ]
+    ],
+    "name": "Lương Ngọc Toàn"
   },
   {
     "id": 196,
@@ -3740,7 +3936,8 @@
       "Difficulty finding reliable job openings that match my skills",
       "Communication barriers with international clients",
       "Limited access to professional development resources"
-    ]
+    ],
+    "name": "Bùi Đình Nam"
   },
   {
     "id": 197,
@@ -3759,7 +3956,8 @@
       "Trái đất này có nhiều quá, việc di chuyển giữa các văn phòng của công ty rất khó khăn",
       "Công việc hàng ngày của tôi liên quan đến nhiều ngôn ngữ kỹ thuật, nhưng tôi không chắc chắn liệu mình có thể hiểu hết được",
       "Tôi cần cập nhật liên tục về những xu hướng mới trong ngành công nghệ để không bị tụt hậu"
-    ]
+    ],
+    "name": "Dương Minh Quỳnh"
   },
   {
     "id": 198,
@@ -3778,7 +3976,8 @@
       "Khó khăn trong việc tìm kiếm các dự án bất động sản chất lượng cao tại Hanoi",
       "Thời gian giao dịch với khách hàng kéo dài và phức tạp",
       "Thị trường bất động sản Hanoi hiện đang biến động khó lường"
-    ]
+    ],
+    "name": "Lý Đức Trí"
   },
   {
     "id": 199,
@@ -3797,6 +3996,7 @@
       "Chưa có phương tiện di chuyển thuận tiện giữa các cánh đồng",
       "Khó khăn trong việc trao đổi thông tin với người mua",
       "Thời tiết khắc nghiệt ảnh hưởng đến mùa màng"
-    ]
+    ],
+    "name": "Lê Quốc Quân"
   }
 ]

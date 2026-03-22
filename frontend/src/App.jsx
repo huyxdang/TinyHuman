@@ -1,13 +1,12 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import ThreeGraph from './components/ThreeGraph';
 import HeroOverlay from './components/HeroOverlay';
-import InputModal from './components/InputModal';
 import TopBar from './components/TopBar';
 import ProgressBar from './components/ProgressBar';
-import ClusterLegend from './components/ClusterLegend';
 import ChatPanel from './components/ChatPanel';
-import ReportPanel from './components/ReportPanel';
-import NodeDetailPanel from './components/NodeDetailPanel';
+import LeaderboardPanel from './components/LeaderboardPanel';
+import NodePopup from './components/NodePopup';
+import ResearchCard from './components/ResearchCard';
 import { generateEdges } from './data/mockData';
 import './App.css';
 
@@ -46,13 +45,15 @@ function personasToNodes(personas, clusters) {
 
     return {
       id: p.id,
-      x: r * 1.8 * Math.sin(phi) * Math.cos(theta) + (Math.random() - 0.5) * 5,
-      y: r * 0.8 * Math.sin(phi) * Math.sin(theta) + (Math.random() - 0.5) * 5,
-      z: r * Math.cos(phi) + (Math.random() - 0.5) * 5,
+      x: r * Math.sin(phi) * Math.cos(theta) + (Math.random() - 0.5) * 3,
+      y: r * Math.sin(phi) * Math.sin(theta) + (Math.random() - 0.5) * 3,
+      z: r * Math.cos(phi) + (Math.random() - 0.5) * 3,
+      label: p.name,
       color,
       size: 3,
       alpha: 0.8,
       persona: {
+        name: p.name,
         age: p.age,
         gender: p.gender,
         province: p.province,
@@ -80,16 +81,21 @@ export default function App() {
   const [edges, setEdges] = useState([]);
   const [clusters, setClusters] = useState([]);
   const [selectedNode, setSelectedNode] = useState(null);
-  const [hoveredCluster, setHoveredCluster] = useState(null);
+  const [popupPos, setPopupPos] = useState(null);
   const [tooltip, setTooltip] = useState(null);
+  const [grouped, setGrouped] = useState(false);
 
   // Pipeline state
   const [researchStatus, setResearchStatus] = useState('');
   const [competitors, setCompetitors] = useState([]);
+  const [showResearchCard, setShowResearchCard] = useState(false);
+  const [knowledge, setKnowledge] = useState(null);
   const [chatLogs, setChatLogs] = useState({});
   const [chatResults, setChatResults] = useState({});
+  const [waitingForChat, setWaitingForChat] = useState(false);
   const [chatRunning, setChatRunning] = useState(false);
   const [chatDone, setChatDone] = useState(false);
+  const [chatPanelOpen, setChatPanelOpen] = useState(false);
   const [report, setReport] = useState(null);
 
   const eventSourceRef = useRef(null);
@@ -147,7 +153,7 @@ export default function App() {
   async function handleRun(input) {
     setProductName(input);
     setSelectedNode(null);
-    setResearchStatus('Starting research...');
+    setResearchStatus('Researching your competitors...');
 
     // Set match scores for clustered nodes so ThreeGraph renders them
     setNodes(prev => prev.map(n => ({
@@ -156,11 +162,16 @@ export default function App() {
     })));
 
     setPhase('researching');
+    setGrouped(false);
     setCompetitors([]);
+    setShowResearchCard(false);
+    setKnowledge(null);
     setChatLogs({});
     setChatResults({});
+    setWaitingForChat(false);
     setChatRunning(false);
     setChatDone(false);
+    setChatPanelOpen(false);
     setReport(null);
 
     // Initialize empty chat logs for each cluster
@@ -172,7 +183,7 @@ export default function App() {
     await fetch('/api/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: input, description: input, url: '' }),
+      body: JSON.stringify({ name: input, description: input, url: '', demo: true }),
     });
 
     // Listen to SSE
@@ -193,6 +204,20 @@ export default function App() {
           } else if (data.step === 'competitors_found') {
             setCompetitors(data.competitors || []);
             setResearchStatus(`Found ${(data.competitors || []).length} competitors`);
+            // Show research card with competitor names as soon as they're found
+            const compNames = data.competitors || [];
+            setKnowledge(prev => {
+              if (prev) return prev; // don't overwrite if already loaded
+              const fallback = {
+                product: { name: input, description: input },
+                competitors: {},
+              };
+              compNames.forEach(name => {
+                fallback.competitors[name] = { name };
+              });
+              return fallback;
+            });
+            setShowResearchCard(true);
           } else if (data.step === 'researching_product') {
             setResearchStatus(`Researching ${data.name}...`);
           } else if (data.step === 'researching_competitor') {
@@ -202,12 +227,38 @@ export default function App() {
         case 'research_complete':
           setCompetitors(data.competitors || []);
           setResearchStatus('Research complete');
+          if (data.knowledge) {
+            setKnowledge(data.knowledge);
+          } else {
+            // Try multiple paths to load the full knowledge data
+            const tryFetch = async () => {
+              for (const url of ['/api/knowledge', '/output/knowledge.json']) {
+                try {
+                  const r = await fetch(url);
+                  if (r.ok) {
+                    const k = await r.json();
+                    setKnowledge(k);
+                    return;
+                  }
+                } catch {}
+              }
+            };
+            tryFetch();
+          }
+          setShowResearchCard(true);
+          break;
+
+        // Chat gate
+        case 'waiting_for_chat':
+          setWaitingForChat(true);
           break;
 
         // Chat events
         case 'chat_start':
           setPhase('chatting');
+          setWaitingForChat(false);
           setChatRunning(true);
+          setChatPanelOpen(true);
           break;
         case 'message':
           setChatLogs(prev => ({
@@ -275,9 +326,9 @@ export default function App() {
     };
   }
 
-  function handleNodeClick(node) {
-    if (phase === 'hero' || phase === 'input') return;
+  function handleNodeClick(node, screenX, screenY) {
     setSelectedNode(prev => prev?.id === node.id ? null : node);
+    setPopupPos({ x: screenX, y: screenY });
   }
 
   function handleNodeHover(node, x, y) {
@@ -292,19 +343,47 @@ export default function App() {
     });
   }
 
+  function handleStartGossip() {
+    fetch('/api/start-chat', { method: 'POST' });
+    setShowResearchCard(false);
+  }
+
   function handleCloseDetail() {
     setSelectedNode(null);
+  }
+
+  function handleHome() {
+    // Close SSE connection if active
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+      eventSourceRef.current = null;
+    }
+    // Reset all state back to landing page
+    setPhase('hero');
+    setProductName('');
+    setSelectedNode(null);
+    setPopupPos(null);
+    setTooltip(null);
+    setGrouped(false);
+    setResearchStatus('');
+    setCompetitors([]);
+    setShowResearchCard(false);
+    setKnowledge(null);
+    setChatLogs({});
+    setChatResults({});
+    setWaitingForChat(false);
+    setChatRunning(false);
+    setChatDone(false);
+    setChatPanelOpen(false);
+    setReport(null);
   }
 
   const selectedCluster = selectedNode?.clusterId != null
     ? clusters.find(c => c.id === selectedNode.clusterId)
     : null;
 
-  // Map phase for ThreeGraph (it expects clustering/scanning/results)
-  const graphPhase = phase === 'researching' ? 'clustering'
-    : phase === 'chatting' ? 'results'
-    : phase === 'report' ? 'results'
-    : phase;
+  // ThreeGraph always uses 'hero' phase — grouping is controlled by the toggle
+  const graphPhase = 'hero';
 
   return (
     <div className="app">
@@ -315,20 +394,34 @@ export default function App() {
         edges={edges}
         clusters={clusters}
         selectedNodeId={selectedNode?.id ?? null}
-        hoveredClusterId={hoveredCluster}
+        hoveredClusterId={null}
         onNodeClick={handleNodeClick}
         onNodeHover={handleNodeHover}
+        grouped={grouped}
+        chatPanelOpen={chatPanelOpen}
       />
 
       {/* Hero overlay with inline input */}
       <HeroOverlay
         visible={phase === 'hero'}
         onRun={handleRun}
+        grouped={grouped}
+        onToggleGroup={() => setGrouped(g => !g)}
       />
+
+      {/* Group toggle button (visible in non-hero phases) */}
+      {phase !== 'hero' && (
+        <button
+          className="group-toggle-floating"
+          onClick={() => setGrouped(g => !g)}
+        >
+          {grouped ? 'Spread Out' : 'Group by Similarities'}
+        </button>
+      )}
 
       {/* Top bar (after run) */}
       {phase !== 'hero' && phase !== 'input' && (
-        <TopBar productName={productName} />
+        <TopBar productName={productName} onHome={handleHome} />
       )}
 
       {/* Progress bar */}
@@ -336,17 +429,35 @@ export default function App() {
         <ProgressBar phase={phase} statusText={researchStatus} />
       )}
 
-      {/* Cluster legend */}
-      {(phase === 'researching' || phase === 'chatting' || phase === 'report') && (
-        <ClusterLegend
-          clusters={clusters}
-          onClusterHover={setHoveredCluster}
-        />
+
+      {/* Research loading overlay */}
+      {phase === 'researching' && !waitingForChat && !showResearchCard && (
+        <div className="research-loading">
+          <div className="research-loading-spinner" />
+          <div className="research-loading-text">{researchStatus || 'Researching your competitors...'}</div>
+        </div>
       )}
 
-      {/* Chat panel (fullscreen overlay during chatting phase) */}
+      {/* Research card (after research complete) */}
+      <ResearchCard
+        visible={showResearchCard}
+        knowledge={knowledge}
+        productName={productName}
+        onClose={() => setShowResearchCard(false)}
+      />
+
+      {/* Start Gossip button */}
+      {waitingForChat && (
+        <button className="start-gossip-btn" onClick={handleStartGossip}>
+          Start Gossip
+        </button>
+      )}
+
+      {/* Chat drawer */}
       <ChatPanel
-        visible={phase === 'chatting'}
+        visible={phase === 'chatting' || phase === 'report'}
+        open={chatPanelOpen}
+        onClose={() => setChatPanelOpen(false)}
         clusters={clusters}
         chatLogs={chatLogs}
         chatResults={chatResults}
@@ -354,18 +465,26 @@ export default function App() {
         done={chatDone}
       />
 
-      {/* Report panel */}
-      <ReportPanel
+      {/* Floating chat toggle button */}
+      {(phase === 'chatting' || phase === 'report') && !chatPanelOpen && (
+        <button className="chat-toggle-btn" onClick={() => setChatPanelOpen(true)}>
+          Chat
+        </button>
+      )}
+
+      {/* Leaderboard panel */}
+      <LeaderboardPanel
         visible={phase === 'report'}
         report={report}
         onBack={() => setPhase('chatting')}
       />
 
-      {/* Node detail panel */}
+      {/* Node popup card */}
       {selectedNode && (
-        <NodeDetailPanel
+        <NodePopup
           node={selectedNode}
           cluster={selectedCluster}
+          position={popupPos}
           onClose={handleCloseDetail}
         />
       )}

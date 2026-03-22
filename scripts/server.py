@@ -41,8 +41,10 @@ CHAT_LOGS = {}
 DECISIONS = {}
 REPORT = {}
 PIPELINE_RUNNING = False
+DEMO_MODE = False
 
 message_queue: asyncio.Queue = asyncio.Queue()
+chat_gate: asyncio.Event = asyncio.Event()
 
 app = FastAPI()
 app.add_middleware(
@@ -82,7 +84,7 @@ async def get_state():
 
 @app.post("/api/run")
 async def run_pipeline(body: dict):
-    global PIPELINE_RUNNING, PRODUCT, CHAT_LOGS, DECISIONS, REPORT
+    global PIPELINE_RUNNING, PRODUCT, CHAT_LOGS, DECISIONS, REPORT, DEMO_MODE
     if PIPELINE_RUNNING:
         return {"status": "already_running"}
 
@@ -91,6 +93,7 @@ async def run_pipeline(body: dict):
         "url": body.get("url", ""),
         "description": body.get("description", body.get("name", "")),
     }
+    DEMO_MODE = body.get("demo", False)
     CHAT_LOGS = {}
     DECISIONS = {}
     REPORT = {}
@@ -123,6 +126,24 @@ async def get_report():
     return REPORT if REPORT else {"error": "No report generated yet"}
 
 
+@app.get("/api/knowledge")
+async def get_knowledge():
+    if KNOWLEDGE:
+        return KNOWLEDGE
+    # Fall back to file
+    path = OUTPUT_DIR / "knowledge.json"
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {"error": "No knowledge available yet"}
+
+
+@app.post("/api/start-chat")
+async def start_chat():
+    chat_gate.set()
+    return {"status": "chat_started"}
+
+
 # ── Full Pipeline ────────────────────────────────────────────────────────
 
 async def _run_full_pipeline():
@@ -131,13 +152,46 @@ async def _run_full_pipeline():
     try:
         # Phase 1: Research
         await message_queue.put({"type": "research_start"})
-        loop = asyncio.get_running_loop()
-        knowledge = await asyncio.to_thread(_run_research, PRODUCT, loop)
+
+        if DEMO_MODE:
+            # Simulated research with hardcoded data
+            await message_queue.put({
+                "type": "research_progress",
+                "step": "discovering_competitors",
+            })
+            await asyncio.sleep(2)
+
+            demo_competitors = ["Claude", "Gemini", "Perplexity"]
+            await message_queue.put({
+                "type": "research_progress",
+                "step": "competitors_found",
+                "competitors": demo_competitors,
+            })
+            await asyncio.sleep(1)
+
+            for comp in [PRODUCT["name"]] + demo_competitors:
+                await message_queue.put({
+                    "type": "research_progress",
+                    "step": "researching_competitor" if comp != PRODUCT["name"] else "researching_product",
+                    "name": comp,
+                })
+                await asyncio.sleep(0.5)
+
+            knowledge = _build_demo_knowledge(PRODUCT, demo_competitors)
+        else:
+            loop = asyncio.get_running_loop()
+            knowledge = await asyncio.to_thread(_run_research, PRODUCT, loop)
+
         KNOWLEDGE = knowledge
         await message_queue.put({
             "type": "research_complete",
             "competitors": knowledge.get("competitor_names", []),
         })
+
+        # Wait for user to click "Start Gossip"
+        chat_gate.clear()
+        await message_queue.put({"type": "waiting_for_chat"})
+        await chat_gate.wait()
 
         # Phase 2: Chat simulation
         await message_queue.put({"type": "chat_start"})
@@ -159,6 +213,67 @@ async def _run_full_pipeline():
     finally:
         await message_queue.put({"type": "done"})
         PIPELINE_RUNNING = False
+
+
+# ── Demo Research ────────────────────────────────────────────────────────
+
+def _build_demo_knowledge(product: dict, competitor_names: list[str]) -> dict:
+    """Build hardcoded knowledge for demo mode."""
+    product_name = product["name"]
+
+    demo_competitors = {
+        "Claude": {
+            "overview": "AI assistant by Anthropic focused on safety, long-context understanding, and nuanced reasoning. Known for careful, detailed responses.",
+            "features": "200K token context window, extended thinking, Claude Code for development, Projects with file uploads, Google Workspace integration, artifacts for rich content",
+            "pricing": "Free: Sonnet access | Pro: $20/mo | Team: $25/user/mo | Max: $100/mo | Enterprise: Custom",
+        },
+        "Gemini": {
+            "overview": "Google's multimodal AI assistant with deep Search integration, native access to Gmail/Docs/Sheets, and the largest context window available.",
+            "features": "Deep Google Search with citations, multimodal (text/image/audio/video), Gems custom personas, Google Workspace integration, 1M token context (Gemini 1.5 Pro)",
+            "pricing": "Free: Gemini Flash | Advanced: $19.99/mo (bundled with Google One 2TB) | Business: $24/user/mo",
+        },
+        "Perplexity": {
+            "overview": "AI-powered answer engine combining real-time web search with LLM synthesis. Focuses on cited, factual, up-to-date answers.",
+            "features": "Real-time web search with source citations, focus modes (Web/Academic/Writing/Math), Collections for research, API access, multiple LLM backends",
+            "pricing": "Free: 5 Pro searches/day | Pro: $20/mo or $200/yr | Enterprise: Custom",
+        },
+        "ChatGPT": {
+            "overview": "AI chatbot by OpenAI for writing, coding, research, and everyday tasks. Powered by GPT-4o and GPT-5, with a large plugin and GPT Store ecosystem.",
+            "features": "Memory across sessions, code generation/debugging, DALL-E image generation, file uploads, web browsing, Custom GPTs, voice mode, mobile apps",
+            "pricing": "Free: Limited GPT-5 | Plus: $20/mo | Pro: $200/mo | Team: $25-30/user/mo | Enterprise: Custom",
+        },
+    }
+
+    # Build knowledge structure matching what the chat simulation expects
+    competitors_data = {}
+    summary_parts = [f"Product: {product_name} — {product.get('description', '')}"]
+
+    for comp_name in competitor_names:
+        comp = demo_competitors.get(comp_name, {
+            "overview": f"{comp_name} is a competitor product.",
+            "features": "Various AI features",
+            "pricing": "Contact for pricing",
+        })
+        competitors_data[comp_name] = comp
+        summary_parts.append(
+            f"\n{comp_name}: {comp['overview']} "
+            f"Features: {comp['features']}. "
+            f"Pricing: {comp['pricing']}"
+        )
+
+    knowledge = {
+        "product": {
+            "name": product_name,
+            "description": product.get("description", ""),
+            "overview": demo_competitors.get(product_name, {}).get("overview", f"{product_name} — {product.get('description', '')}"),
+            "features": demo_competitors.get(product_name, {}).get("features", ""),
+            "pricing": demo_competitors.get(product_name, {}).get("pricing", ""),
+        },
+        "competitors": competitors_data,
+        "competitor_names": competitor_names,
+        "summary_text": "\n".join(summary_parts),
+    }
+    return knowledge
 
 
 # ── Phase 1: Research (Exa) ──────────────────────────────────────────────
@@ -352,12 +467,17 @@ async def _run_chat_simulation(knowledge: dict):
 
     persona_map = {p["id"]: p for p in PERSONAS}
     knowledge_summary = knowledge.get("summary_text", f"No research data available about {PRODUCT['name']}.")
+    # Truncate knowledge to avoid exceeding model's 2048 token limit
+    if len(knowledge_summary) > 600:
+        knowledge_summary = knowledge_summary[:600] + "..."
     competitor_names = knowledge.get("competitor_names", [])
 
     for cluster in CLUSTERS:
         cid = cluster["cluster_id"]
         member_ids = cluster["persona_ids"]
-        members = [persona_map[pid] for pid in member_ids if pid in persona_map]
+        all_members = [persona_map[pid] for pid in member_ids if pid in persona_map]
+        # Limit to 8 members per cluster for manageable conversations
+        members = all_members[:8]
 
         await message_queue.put({
             "type": "system",
@@ -368,24 +488,27 @@ async def _run_chat_simulation(knowledge: dict):
         chat_history = []
         CHAT_LOGS[cid] = []
 
-        max_rounds = 10
+        max_rounds = 3
         for round_num in range(1, max_rounds + 1):
             history_text = "\n".join(
-                f"{m['name']}: {m['message']}" for m in chat_history[-30:]
+                f"{m['name']}: {m['message']}" for m in chat_history[-10:]
             )
+            # Truncate history to stay within token limits
+            if len(history_text) > 500:
+                history_text = history_text[-500:]
 
             conversations = []
             for p in members:
                 frustrations = ", ".join(p.get("top_3_frustrations", []))
 
                 system_msg = (
-                    f"You are {p.get('name', 'Unknown')}, a {p.get('age', '?')} year old "
+                    f"You are {p.get('name', 'Unknown')}, {p.get('age', '?')}yo "
                     f"{p.get('job_title', '?')} from {p.get('province', '?')}.\n"
-                    f"Your frustrations: {frustrations}\n\n"
-                    f"Here is real information about the products being discussed:\n{knowledge_summary}\n\n"
-                    f"You are in a group chat discussing {PRODUCT['name']} and alternatives.\n"
-                    f"Stay in character. Be natural. Write 1-2 sentences max in Vietnamese or English.\n"
-                    f"If you have nothing new to add, say exactly \"pass\"."
+                    f"Frustrations: {frustrations}\n"
+                    f"Product info:\n{knowledge_summary}\n"
+                    f"Group chat about {PRODUCT['name']} vs alternatives.\n"
+                    f"RESPOND IN ENGLISH ONLY. 1-2 sentences. Stay in character.\n"
+                    f"You MUST share an opinion. Ask questions, agree, disagree, or share your experience."
                 )
 
                 user_msg = (
@@ -406,9 +529,15 @@ async def _run_chat_simulation(knowledge: dict):
             pass_count = 0
             for p, raw_msg in zip(members, outputs):
                 msg = raw_msg.strip()
-                if msg.lower() == "pass" or not msg:
+                if not msg or msg.lower() == "pass":
                     pass_count += 1
                     continue
+                # Strip "pass" if model prepends it
+                if msg.lower().startswith("pass"):
+                    msg = msg[4:].strip().lstrip(".,;:-").strip()
+                    if not msg:
+                        pass_count += 1
+                        continue
 
                 entry = {
                     "name": p.get("name", "Unknown"),
@@ -427,6 +556,7 @@ async def _run_chat_simulation(knowledge: dict):
                     "job": p.get("job_title", ""),
                     "round": round_num,
                 })
+                await asyncio.sleep(0.4)  # stagger messages one-by-one
 
             await message_queue.put({
                 "type": "system",
@@ -434,13 +564,6 @@ async def _run_chat_simulation(knowledge: dict):
                 "message": f"Round {round_num} complete — {pass_count}/{len(members)} passed",
             })
 
-            if pass_count >= len(members) * 0.8:
-                await message_queue.put({
-                    "type": "system",
-                    "cluster_id": cid,
-                    "message": "Discussion ended — consensus reached",
-                })
-                break
 
         # Final vote
         await message_queue.put({
@@ -451,22 +574,21 @@ async def _run_chat_simulation(knowledge: dict):
 
         vote_conversations = []
         competitors_str = ", ".join(competitor_names)
-        history_text = "\n".join(f"{m['name']}: {m['message']}" for m in chat_history[-40:])
+        vote_history = "\n".join(f"{m['name']}: {m['message']}" for m in chat_history[-8:])
+        if len(vote_history) > 400:
+            vote_history = vote_history[-400:]
 
         for p in members:
             vote_conversations.append([
                 {"role": "system", "content": (
-                    f"You are {p.get('name', 'Unknown')}, a {p.get('age', '?')} year old "
+                    f"You are {p.get('name', 'Unknown')}, {p.get('age', '?')}yo "
                     f"{p.get('job_title', '?')} from {p.get('province', '?')}.\n"
-                    f"You just had a group discussion about {PRODUCT['name']}.\n"
-                    f"Based on the discussion, make your final decision.\n"
-                    f"Reply with EXACTLY this format:\n"
-                    f"CHOICE: [product name or 'pass']\n"
-                    f"REASON: [one sentence why]"
+                    f"Pick one product. Reply EXACTLY:\n"
+                    f"CHOICE: [product name]\nREASON: [one sentence]"
                 )},
                 {"role": "user", "content": (
-                    f"Discussion summary:\n{history_text}\n\n"
-                    f"Options: {PRODUCT['name']}, {competitors_str}, or pass.\n"
+                    f"Discussion:\n{vote_history}\n\n"
+                    f"Options: {PRODUCT['name']}, {competitors_str}\n"
                     f"Your final decision:"
                 )},
             ])
