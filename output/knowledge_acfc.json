@@ -1,0 +1,589 @@
+{
+  "product": {
+    "name": "Thời trang ACFC",
+    "input_name": "Thời trang ACFC",
+    "url": "",
+    "description": "Thời trang ACFC",
+    "overview": "ACFC Vietnam offers high-end fashion from international brands, serving as an official distributor of top fashion brands in Vietnam.",
+    "services": [
+      "Official distributor of international fashion brands",
+      "New collections updated weekly",
+      "Membership benefits including discounts"
+    ],
+    "features": [
+      "Official distributor of international fashion brands",
+      "New collections updated weekly",
+      "Membership benefits including discounts"
+    ],
+    "price_range": "Not specified",
+    "pricing": "Not specified",
+    "reviews": [
+      "Official distributor of international fashion brands",
+      "New collections updated weekly",
+      "Membership benefits including discounts"
+    ],
+    "recent_announcements": [
+      "Premium Privileges: Free shipping for ACFC members on qualifying purchases",
+      "New arrivals including Calvin Klein and Tommy Hilfiger collections"
+    ],
+    "recent_news": [
+      "Premium Privileges: Free shipping for ACFC members on qualifying purchases",
+      "New arrivals including Calvin Klein and Tommy Hilfiger collections"
+    ],
+    "sources": [
+      "https://www.acfc.com.vn/",
+      "https://www.acfc.com.vn/nam.html",
+      "https://www.acfc.com.vn/nu/trang-phuc-nu.html",
+      "https://www.acfc.com.vn/new-collection.html?attr_gender=15527&brand_id=5",
+      "https://www.acfc.com.vn/promotion.html",
+      "https://www.acfc.com.vn/blog"
+    ]
+  },
+  "competitors": {
+    "NEM": {
+      "name": "NEM",
+      "overview": "NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel.",
+      "services": [
+        "Wide range of stylish apparel for women",
+        "Empowering women through fashion and beauty",
+        "Various sizes and colors available"
+      ],
+      "features": [
+        "Wide range of stylish apparel for women",
+        "Empowering women through fashion and beauty",
+        "Various sizes and colors available"
+      ],
+      "price_range": "1,500,000₫ - 3,000,000₫",
+      "pricing": "1,500,000₫ - 3,000,000₫",
+      "recent_announcements": [
+        "Sale 50% on selected items",
+        "New arrivals including dresses and tops",
+        "Sale 70% on selected items"
+      ],
+      "recent_news": [
+        "Sale 50% on selected items",
+        "New arrivals including dresses and tops",
+        "Sale 70% on selected items"
+      ],
+      "reviews": [
+        "Wide range of stylish apparel for women",
+        "Empowering women through fashion and beauty",
+        "Various sizes and colors available"
+      ],
+      "sources": [
+        "https://nemshop.vn/collections/vendors?q=nem",
+        "https://nemfashionstore.com/",
+        "https://nemshop.vn/",
+        "https://nemshop.vn/collections/sale-50",
+        "https://nemshop.vn/collections/sale",
+        "https://nemshop.vn/collections/sale-82"
+      ],
+      "why_competitor": "NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel."
+    },
+    "Thời Trang Vanfa": {
+      "name": "Thời Trang Vanfa",
+      "overview": "Thời Trang Vanfa is a Retail Apparel and Fashion company based in Vietnam, specializing in manufacturing fashionable clothing including T-shirts, uniforms, and antibacterial masks.",
+      "services": [
+        "Manufacturing fashionable T-shirts",
+        "Uniforms",
+        "Antibacterial masks"
+      ],
+      "features": [
+        "Manufacturing fashionable T-shirts",
+        "Uniforms",
+        "Antibacterial masks"
+      ],
+      "price_range": "Up to 400,000 VND for T-shirts",
+      "pricing": "Up to 400,000 VND for T-shirts",
+      "recent_announcements": [
+        "New cotton T-shirts priced under 400,000 VND"
+      ],
+      "recent_news": [
+        "New cotton T-shirts priced under 400,000 VND"
+      ],
+      "reviews": [
+        "Manufacturing fashionable T-shirts",
+        "Uniforms",
+        "Antibacterial masks"
+      ],
+      "sources": [
+        "https://vanfa.vn/",
+        "https://www.vhg.com.vn/about-us/",
+        "https://vanfabeauty.com/collections/all",
+        "https://kenhsinhvien.vn/t/hot-ao-thun-nam-tay-ngan-cotton-100-khong-qua-400k-thuong-hieu-vanfa.733517/latest",
+        "https://kenhsinhvien.vn/t/hot-ao-thun-nam-tay-ngan-cotton-100-khong-qua-400k-thuong-hieu-vanfa.733517/",
+        "https://eva.vn/thoi-trang/luong-thuy-linh-dien-set-do-hon-860-trieu-dong-dao-pho-c36a665470.html"
+      ],
+      "why_competitor": "Thời Trang Vanfa specializes in fashionable clothing and has a strong presence in the Vietnamese market."
+    },
+    "Thời trang công sở Andora": {
+      "name": "Thời trang công sở Andora",
+      "overview": "Thời trang công sở Andora is a retail company specializing in modern and trendy office fashion for women, offering a wide range of products including dresses, pants, skirts, shoes, and accessories.",
+      "services": [
+        "Designs modern and trendy office wear for women",
+        "Wide range of products including dresses, pants, skirts, shoes, and accessories",
+        "Online retail platform for women's office fashion"
+      ],
+      "features": [
+        "Designs modern and trendy office wear for women",
+        "Wide range of products including dresses, pants, skirts, shoes, and accessories",
+        "Online retail platform for women's office fashion"
+      ],
+      "price_range": "Not specified",
+      "pricing": "Not specified",
+      "recent_announcements": [
+        "New bodycon dress - FLORA DRESS",
+        "Maxi dress with body-hugging design - A0404DB",
+        "Silk blouse with bow collar - DORIS TOP"
+      ],
+      "recent_news": [
+        "New bodycon dress - FLORA DRESS",
+        "Maxi dress with body-hugging design - A0404DB",
+        "Silk blouse with bow collar - DORIS TOP"
+      ],
+      "reviews": [
+        "Designs modern and trendy office wear for women",
+        "Wide range of products including dresses, pants, skirts, shoes, and accessories",
+        "Online retail platform for women's office fashion"
+      ],
+      "sources": [
+        "https://andora.com.vn/",
+        "https://andora.com.vn/set-do-cong-so-sanh-dieu/",
+        "https://andora.com.vn/thoi-trang-nu/",
+        "https://andora.com.vn/dam-body-flora/",
+        "https://andora.com.vn/dam-duoi-ca-maxi-2-day-om-body-ton-dang-quyen-ru-chat-thun-co-dan-tot-mac-di-choi-du-tiec-di-bien-a0404db/",
+        "https://andora.com.vn/doris-top/"
+      ],
+      "why_competitor": "Andora focuses on modern and trendy office wear for women, appealing to a similar customer segment."
+    }
+  },
+  "competitor_names": [
+    "NEM",
+    "Thời Trang Vanfa",
+    "Thời trang công sở Andora"
+  ],
+  "competitor_selection": [
+    {
+      "name": "NEM",
+      "why": "NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel."
+    },
+    {
+      "name": "Thời Trang Vanfa",
+      "why": "Thời Trang Vanfa specializes in fashionable clothing and has a strong presence in the Vietnamese market."
+    },
+    {
+      "name": "Thời trang công sở Andora",
+      "why": "Andora focuses on modern and trendy office wear for women, appealing to a similar customer segment."
+    }
+  ],
+  "research_trace": {
+    "search_1": {
+      "queries": [
+        "Thời trang ACFC",
+        "Thời trang ACFC official store services price range",
+        "Thời trang ACFC recent announcements news 2026"
+      ],
+      "results": [
+        {
+          "query": "Thời trang ACFC",
+          "hits": [
+            {
+              "title": "ACFC: Thời trang nữ đẹp, cao cấp từ thương hiệu quốc tế",
+              "url": "https://www.acfc.com.vn/",
+              "text": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image **Thương Hiệu**Phân Phối thpp_ax thpp_br thpp_ck thpp_coc thpp_dockers thpp_gap thpp_guess thpp_karl_1 thpp_levis thpp_mango thpp_mtc thpp_nike thpp_membur thpp_oldnavy thpp_ovs thpp_owndays thpp_parfois thpp_polo thpp_sisley logo_thpb thpp_sunnies thpp_swa thpp_tommy thpp_typo lgobene_thpb mobile-banner-image mobile-banner-image mobile-banner-image mobile-ba"
+            },
+            {
+              "title": "Thời trang nam đẹp, cao cấp từ thương hiệu quốc tế - ACFC",
+              "url": "https://www.acfc.com.vn/nam.html",
+              "text": "Thời trang nam đẹp, cao cấp từ thương hiệu quốc tế - ACFC The store will not work correctly in the case when cookies are disabled. Tài khoản Cài đặt 0 -- ‹› ‹› Thương hiệu Phân Phối ‹› ‹› Xu Hướng Mới Nhất ‹› ‹› ‹› Sản Phẩm Mới Nhất Kiểm tra trạng thái đơn hàng Nếu đã có tài khoản. Vui lòng đăng nhập để theo dõi chi tiết hơn ĐĂNG NHẬP NGAY Mã đơn hàng Địa chỉ email hoặc số điện thoại KIỂM TRA ĐƠN HÀNG CỦA BẠN Nếu đã có tài khoản. Vui lòng đăng nhập để theo dõi chi tiết hơn ĐĂNG NHẬP NGAY Trở lại Checkout as a new customer Tạo một tài khoản có nhiều lợi ích: - Kiểm tra nhanh hơn - Theo dõi lịch sử đặt hàng - Xem trạng thái đơn đặt hàng và vận chuyển Đăng ký tài khoản Checkout using your account Địa chỉ Email Mật khẩu Đăng nhập Bạn quên mật khẩu?"
+            },
+            {
+              "title": "Quần Áo Thời Trang Nữ Hàng Hiệu Quốc Tế | ACFC Việt Nam",
+              "url": "https://www.acfc.com.vn/nu/trang-phuc-nu.html",
+              "text": "Quần Áo Thời Trang Nữ Hàng Hiệu Quốc Tế | ACFC Việt Nam The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt * Trang chủ * Nữ * **Trang Phục** # Trang Phục Đang tải... **Trang** * **Bạn đang đọc trang1** * Trang2 * Trang3 * Trang4 * Trang5 * ... * Trang171 * Trang\\> **Xem dưới dạng****Lưới**Grid Two Column Hiển thị 364860 Trên một trang Sắp xếp theoMặc địnhSản phẩm mớiGiá tăng dầnGiá giảm dầnTỷ lệ % giảm thấp đến caoTỷ lệ % giảm cao đến thấp 1. **PARFOISÁo T1 Essentials** 999.000 đ 2. **UNITED COLORS OF BENETTONÁo Sơ Mi Nữ Long Shirt In Pure Linen** 2.090.000 đ 3. **UNITED COLORS OF BENET"
+            }
+          ]
+        },
+        {
+          "query": "Thời trang ACFC official store services price range",
+          "hits": [
+            {
+              "title": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế",
+              "url": "https://www.acfc.com.vn/",
+              "text": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image **Thương Hiệu**Phân Phối thpp_ax thpp_br thpp_ck thpp_coc thpp_dockers thpp_gap thpp_guess thpp_karl_1 thpp_levis thpp_mango thpp_mtc thpp_nike thpp_membur thpp_oldnavy thpp_ovs thpp_owndays thpp_parfois thpp_polo thpp_sisley logo_thpb thpp_sunnies thpp_swa thpp_tommy thpp_typo lgobene_thpb mobile-banner-image mobile-banner-image mobile-banner-image mobile-ba"
+            },
+            {
+              "title": "New Arrival",
+              "url": "https://www.acfc.com.vn/new-collection.html?attr_gender=15527&brand_id=5",
+              "text": "New Arrival ACFC - Các Bộ Sưu Tập Thời Trang Hàng Hiệu Mới Nhất The store will not work correctly in the case when cookies are disabled. Tài khoản Cài đặt # New Arrival 0 -- Đăng ký thành viên ACFC nhận ngay: 50.000Đ New Arrival Các BST/ Item mới được cập nhật hàng tuần Sành Điệu. Sang Trọng. Bắt Kịp Xu Hướng Calvin Klein BST LUNAR NEW YEAR 2026 MUA NGAY Parfois NEW COLLECTION Xem Thêm Tommy Hilfiger NEW ARRIVAL Mua Ngay United Colors Of Benetton NEW ARRIVAL Xem Thêm Polo Ralph Lauren NEW ARRIVAL Mua Ngay LEVI'S BST LUNAR NEW YEAR 2026 MUA NGAY Mango BST LUNAR NEW YEAR Xem Thêm Tommy Jeans NEW ARRIVAL Xem Thêm Cotton On BST LUCKY NEW YOU Xem Thêm New Era BST YEAR OF THE HORSE Mua Ngay GAP NEW ARRIVAL Xem Thêm Swarovski NEW ARRIVAL Mua Ngay Guess NEW STYLE AGENDA Xem Thêm OVS NEW COLLECTION Xem Thêm New ERA BST ONE PIECE Mua Ngay A|X Armani Exchange NEW ARRIVAL Xem Thêm mothercare NEW A"
+            },
+            {
+              "title": "Khuyến Mãi",
+              "url": "https://www.acfc.com.vn/promotion.html",
+              "text": "Chương Trình Khuyến Mãi Giảm 50%++ | ACFC Vietnam The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt * Trang chủ * **Khuyến Mãi** # Khuyến Mãi Đăng ký thành viên ACFC nhận ngay:50.000Đ mobile-banner-image mobile-banner-image mobile-banner-image Sản Phẩm Bán Chạy Nhất 100% cam kết hàng chính hãng Mua sắm tiện ích, nhanh chóng mobile-banner-image Mango GIẢM ĐẾN 50% Mua Ngay mobile-banner-image Tommy Hilfiger GIẢM ĐẾN 50%++ Mua Ngay mobile-banner-image Cotton On GIẢM ĐẾN 50% + EXTRA Mua Ngay mobile-banner-image Gap GIẢM ĐẾN 50%++ Mua Ngay mobile-banner-image Calvin Klein GIẢM ĐẾN 50%+ Mua "
+            }
+          ]
+        },
+        {
+          "query": "Thời trang ACFC recent announcements news 2026",
+          "hits": [
+            {
+              "title": "ACFC Blog: Tin Tức &amp; Xu Hướng Thời Trang Cao Cấp, Trendy",
+              "url": "https://www.acfc.com.vn/blog",
+              "text": "ACFC Blog: Tin Tức &amp; Xu Hướng Thời Trang Cao Cấp, Trendy The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC Tài khoản Cài đặt * Trang chủ * Blog Đang tải... Tin tức thời trang Premium Privileges: Freeship toàn quốc cho khách hàng thành viên ACFC khi mua hàng có giá trị từ 2,000,000 vnđ. I. Nội dung chương trình: ACFC mang đến Ưu đãi Premium Privileges - Miễn phí vận chuyển toàn quốc (Freeship toàn quốc) cho khách hàng là thành viên ACFC khi mua đơn hàng có giá trị từ 2,000,000 vnđ tại ACFC Online (web/app và mothercare.com.vn). II. Điều khoản và điều kiện: 1. Thời gian, đối tượng và phạm vi áp dụng chương... Xem thêm Tin tức thời trang Tommy Hilfiger Mid Season Sal"
+            },
+            {
+              "title": "ACFC: Thời trang nữ đẹp, cao cấp từ thương hiệu quốc tế",
+              "url": "https://www.acfc.com.vn/",
+              "text": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image **Thương Hiệu**Phân Phối thpp_ax thpp_br thpp_ck thpp_coc thpp_dockers thpp_gap thpp_guess thpp_karl_1 thpp_levis thpp_mango thpp_mtc thpp_nike thpp_membur thpp_oldnavy thpp_ovs thpp_owndays thpp_parfois thpp_polo thpp_sisley logo_thpb thpp_sunnies thpp_swa thpp_tommy thpp_typo lgobene_thpb mobile-banner-image mobile-banner-image mobile-banner-image mobile-ba"
+            },
+            {
+              "title": "CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ ÂU CHÂU (ACFC) Tuyển dụng mới nhất",
+              "url": "https://hrchannels.com/cong-ty-tnhh-thuong-mai-va-dich-vu-au-chau-acfc-24371-cpn",
+              "text": "CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ ÂU CHÂU (ACFC) Tuyển dụng mới nhất tags -- tags -- # CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ ÂU CHÂU (ACFC) - http://tuyendung.acfc.com.vn/ - Lầu 12, Tòa nhà Sonatus, 15 Lê Thánh Tôn, P. Bến Nghé, Q. 1, TP. Hồ Chí Minh View on Map Follow -- Add a review - Share: ## CÔNG TY TNHH THƯƠNG MẠI VÀ DỊCH VỤ ÂU CHÂU (ACFC) Components Overview Company Size 100 Posted Jobs 3 Viewed 560 Founded Since Sectors Mỹ phẩm/ Thời trang/ Hàng Cao cấp, ## Company Description Là công ty con thuộc Tập đoàn Liên Thái Bình Dương (Imex Pan Pacific Group - IPPG), được thành lập vào năm 2010, ACFC là nhà phân phối của những thương hiệu đẳng cấp thế giới như Nike, Levi’s, GAP, Tommy Hilfiger, Mango, Banana Republic, Old Navy, Calvin Klein, FCUK, Dune, Fitflop, Owndays, Cotton On, Typo, Parfois, Mother Care và OVS. Với chuỗi các cửa hàng bán lẻ nhượng quyền trên toàn quốc, ACFC được nhìn "
+            }
+          ]
+        }
+      ],
+      "label": "Search 1: product discovery"
+    },
+    "search_2": {
+      "queries": [
+        "Thời trang ACFC competitors",
+        "alternatives to Thời trang ACFC",
+        "brands like Thời trang ACFC",
+        "best Fashion retailers in Vietnam Vietnam"
+      ],
+      "results": [
+        {
+          "query": "Thời trang ACFC competitors",
+          "hits": [
+            {
+              "title": "Top 5 International Fashion Distribution Companies In Vietnam",
+              "url": "https://maisonrmi.com/top-fashion-distribution-companies-in-vietnam/",
+              "text": "Top 5 International Fashion Distribution Companies In Vietnam - Blog, Maison RMI, News # Top 5 International Fashion Distribution Companies In Vietnam - November 14, 2025 The Vietnamese fashion market is entering an explosive growth phase, with a plethora of international brands continuously expanding their presence and reshaping consumer shopping habits. Behind this rapid development lies the pivotal role of fashion distribution companies – the officially authorized entities that bring global products closer to Vietnamese customers. The article below by Maison RMI spotlights 5 representative names that are contributing to the market growth in 2025. ## I. The Landscape of Authentic Fashion Distribution in Vietnam Over the past decade, the Vietnamese fashion market has undergone a powerful transformation, moving from its nascent stage with just a few initial international brands to a peri"
+            },
+            {
+              "title": "ACFC Vietnam | LinkedIn",
+              "url": "https://www.linkedin.com/company/acfc-careers/?viewAsMember=true",
+              "text": "ACFC - Vietnam, the market leader in fashion retail. We are the sole distributors of global brands such as Nike, Tommy Hilfiger, Levi's, Gap, Mango, United Colors of Benetton, Sisley, Karl Lagerfeld, Guess, DKNY, Typo, OVS, Cotton:On,… with over 250 outlets in Vietnam's major cities. At ACFC, we put people at the center of everything we do. We believe in equal development for all our employees, providing competitive salaries, respectable benefits, and opportunities for career growth. We strive to provide a professional, dynamic, friendly working environment and a culture where all contributions are valued. If you're an exceptional individual looking for a great career opportunity, join our team in ACFC. Follow ACFC Careers to stay updated on vacancies and discover exciting career paths. Contact us now to become part of the ACFC family! Learn more about us and our business philosophy at h"
+            },
+            {
+              "title": "ACFC Vietnam",
+              "url": "https://acfc.com.vn/",
+              "text": "# ACFC Vietnam (ACFC - European Fashion & Cosmetics Company Limited.) ACFC Vietnam is a Apparel & Fashion company. ACFC Vietnam employs 291 people (+25.5% YoY, +163 people), founded in 2009. Headquartered in Ho Chi Minh City, Vietnam, with presence in Cambodia. ## About ACFC - Vietnam, the market leader in fashion retail. We are the sole distributors of global brands such as Nike, Tommy Hilfiger, Levi's, Gap, Mango, United Colors of Benetton, Sisley, Karl Lagerfeld, Guess, DKNY, Typo, OVS, Cotton:On,… with over 250 outlets in Vietnam's major cities. At ACFC, we put people at the center of everything we do. We believe in equal development for all our employees, providing competitive salaries, respectable benefits, and opportunities for career growth. We strive to provide a professional, dynamic, friendly working environment and a culture where all contributions are valued. If you're an ex"
+            },
+            {
+              "title": "NEM",
+              "url": "https://newnem.com/",
+              "text": "# NEM NEM is a Retail Apparel and Fashion company. NEM employs 8 people (+11.9% YoY), founded in 2002. Headquartered in Hanoi, Hanoi, Vietnam, with presence in Brazil and Nepal. ## About NEM fashion is the leading fashion brand in Vietnam. Founded in 2002, NEM has been stepping up its trust and standing in the hearts of the Vietnamese customers. NEM is present il all the main Vietnamese cities and provinces with more than 50 shops. Each month, NEM launches over 500 different clothes models. The fashion line of NEM is very diverse, from high-end products for men and women to middle-class products. The creations are based on market reviews, trends in world fashion and preferences of the Vietnamese consumers. Our collections are always very colourful, have diverse styles and different materials. We are proud to say that NEM became a focal point in the Vietnamese fashion panorama. Our shops "
+            }
+          ]
+        },
+        {
+          "query": "alternatives to Thời trang ACFC",
+          "hits": [
+            {
+              "title": "Thời Trang Vanfa",
+              "url": "https://vanfa.vn/",
+              "text": "# Thời Trang Vanfa Thời Trang Vanfa is a Retail Apparel and Fashion company. Headquartered in Vietnam. ## About Our company specializes in manufacturing all kinds of fashionable T-shirts, uniforms, antibacterial masks of export quality. ## Company Details - Industry: Retail Apparel and Fashion - Type: Public Company - Homepage: vanfa.vn - Aliases: thời trang vanfa - LinkedIn: linkedin.com/company/thoitrangvanfa - Linkedin Followers: 1 ## Workforce - Employees: 6 - Monthly Growth: +20.0% - Yearly Growth: +50.0% ## Recent News - [2026-02-16] Vietnam.vn: Vietnam viert oudejaarsavond en verwelkomt het Jaar van het Paard 2026. - [2026-02-13] - Báo Tuổi Trẻ: James Van Der Beek, ngôi sao của Dawson’s Creek, qua đời - Vietnam+ (VietnamPlus): Party chief offers incense in tribute to late PM Pham Van Dong - [2026-02-12] - Tatler Asia: Châu Tuyết Vân - Znews: Van Dijk làm nên lịch sử - [2026-02-10]"
+            },
+            {
+              "title": "Thời trang công sở Andora",
+              "url": "https://andora.com.vn/",
+              "text": "# Thời trang công sở Andora Thời trang công sở Andora is a Retail company. Andora is a fashion brand that designs modern, trendy, and trendy fashion for women. They provide a wide range of products including dresses, pants, skirts, shoes, and accessories. Founded in 2022. Headquartered in Vietnam. ## About Andora.com.vn là website bán lẻ thời trang công sở trực tuyến dành cho chị em phái nữ với những mẫu thiết kế thanh lịch, hiện đại, trẻ trung phù hợp với xu hướng hiện nay. Thương hiệu thời trang công sở Andora ra đời nhằm đồng hành cùng phái nữ khẳng định phong cách thanh lịch, nhẹ nhàng và tinh tế. Andora là một Local Brand (thương hiệu địa phương) xuất hiện trên thị trường từ đầu tháng 01/2022, thuộc thế hệ sinh sau đẻ muộn trong làng thời trang trong nước nhưng lại có một cách chọn thị trường ngách đầy tinh tế và quyết liệt. Andora cam kết đồng hành & truyền cảm hứng sống tích cực c"
+            },
+            {
+              "title": "Thời Trang 3C",
+              "url": "https://thoitrang3c.com/",
+              "text": "# Thời Trang 3C Thời Trang 3C. ## Company Details - Homepage: thoitrang3c.com - Aliases: thời trang 3c - LinkedIn: linkedin.com/company/th%e1%bb%9di-trang-3c ## Workforce - Employees: 8 ## Competitors vi-vn.facebook.com, fashionquangchau.com, manduyen.com"
+            },
+            {
+              "title": "Top 5 International Fashion Distribution Companies In Vietnam",
+              "url": "https://maisonrmi.com/top-fashion-distribution-companies-in-vietnam/",
+              "text": "Top 5 International Fashion Distribution Companies In Vietnam - Blog, Maison RMI, News # Top 5 International Fashion Distribution Companies In Vietnam - November 14, 2025 The Vietnamese fashion market is entering an explosive growth phase, with a plethora of international brands continuously expanding their presence and reshaping consumer shopping habits. Behind this rapid development lies the pivotal role of fashion distribution companies – the officially authorized entities that bring global products closer to Vietnamese customers. The article below by Maison RMI spotlights 5 representative names that are contributing to the market growth in 2025. ## I. The Landscape of Authentic Fashion Distribution in Vietnam Over the past decade, the Vietnamese fashion market has undergone a powerful transformation, moving from its nascent stage with just a few initial international brands to a peri"
+            }
+          ]
+        },
+        {
+          "query": "brands like Thời trang ACFC",
+          "hits": [
+            {
+              "title": "ACFC Vietnam",
+              "url": "https://acfc.com.vn/",
+              "text": "# ACFC Vietnam (ACFC - European Fashion & Cosmetics Company Limited.) ACFC Vietnam is a Apparel & Fashion company. ACFC Vietnam employs 291 people (+25.5% YoY, +163 people), founded in 2009. Headquartered in Ho Chi Minh City, Vietnam, with presence in Cambodia. ## About ACFC - Vietnam, the market leader in fashion retail. We are the sole distributors of global brands such as Nike, Tommy Hilfiger, Levi's, Gap, Mango, United Colors of Benetton, Sisley, Karl Lagerfeld, Guess, DKNY, Typo, OVS, Cotton:On,… with over 250 outlets in Vietnam's major cities. At ACFC, we put people at the center of everything we do. We believe in equal development for all our employees, providing competitive salaries, respectable benefits, and opportunities for career growth. We strive to provide a professional, dynamic, friendly working environment and a culture where all contributions are valued. If you're an ex"
+            },
+            {
+              "title": "‎ACFC - Online Fashion Shopping",
+              "url": "https://apps.apple.com/vn/app/acfc-online-fashion-shopping/id6443804271",
+              "text": "‎ACFC - Online Fashion Shopping on the App Store # ACFC - Online Fashion Shopping17+ ## ACFC ### Designed for iPhone * #80 in Shopping * * 3.3 •245 Ratings * * Free ## iPhone Screenshots * * * * * * * ## Description ACFC - Nền tảng mua sắm CHÍNH HÃNG các thương hiệu thời trang quốc tế với ƯU ĐÃI ĐẶC QUYỀN​. TÍNH NĂNG NỔI BẬT: - Mua sắm chính hãng với hơn 20 thương hiệu nổi tiếng trên thế giới như Nike, Mango, Levi&#39;s, Gap, Calvin Klein, Tommy Hilfiger, Old Navy, Banana Republic, Mothercare, OVS, Owndays, French Connection, Parfois, Fitflop, Cotton:On, Typo, Polo, Dockers, Sunnies Studios, Swarovski, United Colors of Benetton, Karl Lagerfeld, Sisley, Guess,... - Đa dạng lựa chọn với hơn 30.000 sản phẩm được cập nhật liên tục theo xu hướng mới nhất trên thế giới. - Ưu đãi độc quyền dành riêng cho khách hàng mua sắm trên app ACFC. - Tích điểm đổi ưu đãi dành riêng cho Khách Hàng Thân Thi"
+            },
+            {
+              "title": "Acfc A.c.f.c - Thương Hiệu Thời Trang Quốc Tế Hàng Đầu Số 1 Việt Nam Hơn 200 Cửa Hàng Tại Các Trung Tâm Thành Phố Lớn Trên Toàn Quốc, Acfc Mang Sứ Mệnh Đưa Người Việt Đến Gần Hơn V",
+              "url": "https://www.shopmagiamgia.com/acfc/",
+              "text": "Acfc A.c.f.c - Thương Hiệu Thời Trang Quốc Tế Hàng Đầu Số 1 Việt Nam Hơn 200 Cửa Hàng Tại Các Trung Tâm Thành Phố Lớn Trên Toàn Quốc, Acfc Mang Sứ Mệnh Đưa Người Việt Đến Gần Hơn Với Kinh Đô Thời Trang Hàng Hiệu. - SHOP MÃ GIẢM GIÁ Tổng Hợp Khuyến Mãi ACFC Thành viên thuộc tập đoàn Imex Pan Pacific Group (IPPG), là nhà phân phối và quản lý các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Qua 11 năm hình thành và phát triển với hệ thống hơn 200 cửa hàng tại các trung tâm thành phố lớn trên toàn quốc, ACFC mang sứ mệnh đưa người Việt đến gần hơn với kinh đô thời trang hàng hiệu. GIAN HÀNG TMĐT ACFC : – Website: www.acfc.com.vn – Shopee: shopee.vn/calvinklein_acfc – Lazada: www.lazada.vn/shop/calvin-klein-vietnam/ – Tiki: tiki.vn/search?q=ACFC ACFC– Nhà phân phối thương hiệu thời trang quốc tế hàng đầu Việt Nam với hơn 200 cửa hàng trên toàn quốc, 22 thương hiệu thời trang quốc tế đình"
+            },
+            {
+              "title": "Top 5 International Fashion Distribution Companies In Vietnam",
+              "url": "https://maisonrmi.com/top-fashion-distribution-companies-in-vietnam/",
+              "text": "Top 5 International Fashion Distribution Companies In Vietnam - Blog, Maison RMI, News # Top 5 International Fashion Distribution Companies In Vietnam - November 14, 2025 The Vietnamese fashion market is entering an explosive growth phase, with a plethora of international brands continuously expanding their presence and reshaping consumer shopping habits. Behind this rapid development lies the pivotal role of fashion distribution companies – the officially authorized entities that bring global products closer to Vietnamese customers. The article below by Maison RMI spotlights 5 representative names that are contributing to the market growth in 2025. ## I. The Landscape of Authentic Fashion Distribution in Vietnam Over the past decade, the Vietnamese fashion market has undergone a powerful transformation, moving from its nascent stage with just a few initial international brands to a peri"
+            }
+          ]
+        },
+        {
+          "query": "best Fashion retailers in Vietnam Vietnam",
+          "hits": [
+            {
+              "title": "Finding the Best Clothing Stores in Vietnam: Your Ultimate ...",
+              "url": "https://valovietnam.com/blog/clothing-stores-vietnam-guide",
+              "text": "Our Blog # Finding the Best Clothing Stores in Vietnam: Your Ultimate Shopping Guide Arjen RuggenbergCEO of VALO Vietnam 12 September 2025 body {font-family: sans-serif !important;line-height: 1.6 !important;color: #333 !important;} h1,h2,h3,h4,h5,h6 {color: #1a1a1a !important;margin-top: 1.5em !important;margin-bottom: 0.5em !important;} h1.wp-block-heading {font-size: 2.5em !important;text-align: center !important;} h2.wp-block-heading {font-size: 2em !important;border-bottom: 2px solid #eee !important;padding-bottom: 0.5em !important;} h3.wp-block-heading {font-size: 1.5em !important;} p.wp-block-paragraph {margin-bottom: 1em !important;} ul.wp-block-list {list-style-type: disc !important;margin-left: 20px !important;margin-bottom: 1em !important;} ol.wp-block-list {list-style-type: decimal !important;margin-left: 20px !important;margin-bottom: 1em !important;} a {text-decoration: non"
+            },
+            {
+              "title": "Levita Official Fashion Shop",
+              "url": "https://levitaofficial.com/",
+              "text": "Levita Official Fashion Shop# Levita Official Fashion Shop January Pre-Order Delivery Schedule Notice * BỘ SƯU TẬP MỚI * BÁN CHẠY NHẤT * MODEST GLAMOUR * FASHION SHOW * READY TO WEAR** * SHOP ALL * VÁY * ÁO * CHÂN VÁY & QUẦN * ÁO KHOÁC * ÁO CHOÀNG * ÁO LIỀN QUẦN * ÁO DÀI * PHỤ KIỆN * HỖ TRỢ** * VỀ CHÚNG TÔI * LIÊN HỆ HỢP TÁC * ĐẶT HÀNG VÀ THANH TOÁN * GIAO HÀNG * ĐỔI TRẢ * BẢNG SIZE Image * Image * Image * Image ImageImageImage0 Image SHOP ALLShop now Image BỘ SƯU TẬP MỚIShop now Image VÁYShop now Latest on SALES, new releases, GIFT card and more VỀ CHÚNG TÔI * Giới thiệu * Liên hệ chúng tôi LEVITA OFFICIAL FASHION SHOP **SHOWROOM:** 36A Mai Hắc Đế, Q. Hai B&agrave&agrave; Trưng,H&agrave&agrave; Nội Thứ 2 - Chủ nhật: 9h30 - 21h00 **DỊCH VỤ KH&Aacute;CH H&Agrave;NG** Hotline: 1900.9988.03 MẠNG XÃ HỘI * ** * ** * ** * @ Levita Official Shop **"
+            },
+            {
+              "title": "The Best Vietnamese Fashion Brands, According To Vogue Editors",
+              "url": "https://www.vogue.com.au/fashion/trends/vietnamese-fashion-brands/image-gallery/cdca9df85a3c73474de29d6eb9897382",
+              "text": "The Best Vietnamese Fashion Brands, According To Vogue Editors | Vogue Australia 4:34AM Tuesday, March 17th, 2026 # Vietnam is fashion’s newest capital—and these are its most exciting designers Check out what the fashion set is wearing these days and you’ll find that a significant proportion of their clothing hails from Hoi An and Saigon. Here, we unpack the emergence of the industry’s newest hotspot—and let you in on some of our favourite Vietnamese fashion labels. Above: Jennie and Dua Lipa wear Fancì Club. Each year, fashion month cycles through the four designated capitals of the world: Milan, Paris, London and New York. But style, of course, is generated in places far beyond those shores, and over the last decade, a handful of cities have been thrust into the international spotlight, and hailed as pioneers of a more experimental, indubitably modern sense of style. That shortlist inc"
+            },
+            {
+              "title": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế",
+              "url": "https://www.acfc.com.vn/",
+              "text": "ACFC Vietnam: Đẳng cấp thời trang từ các thương hiệu quốc tế The store will not work correctly in the case when cookies are disabled. Hệ thống cửa hàng Nhà phân phối chính hãng các thương hiệu thời trang quốc tế hàng đầu Việt Nam. Toggle NavCh&#xE0;o&#x20;m&#x1EEB;ng&#x20;b&#x1EA1;n&#x20;&#x0111;&#x1EBF;n&#x20;v&#x1EDB;i&#x20;ACFC **Tìm kiếm** Tìm kiếm Search ** * Đăng Nhập * Đăng ký ** Cart Tài khoản Cài đặt mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image mobile-banner-image **Thương Hiệu**Phân Phối thpp_ax thpp_br thpp_ck thpp_coc thpp_dockers thpp_gap thpp_guess thpp_karl_1 thpp_levis thpp_mango thpp_mtc thpp_nike thpp_membur thpp_oldnavy thpp_ovs thpp_owndays thpp_parfois thpp_polo thpp_sisley logo_thpb thpp_sunnies thpp_swa thpp_tommy thpp_typo lgobene_thpb mobile-banner-image mobile-banner-image mobile-banner-image mobile-ba"
+            }
+          ]
+        }
+      ],
+      "label": "Search 2: competitor discovery",
+      "selected_competitors": [
+        {
+          "name": "NEM",
+          "why": "NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel."
+        },
+        {
+          "name": "Thời Trang Vanfa",
+          "why": "Thời Trang Vanfa specializes in fashionable clothing and has a strong presence in the Vietnamese market."
+        },
+        {
+          "name": "Thời trang công sở Andora",
+          "why": "Andora focuses on modern and trendy office wear for women, appealing to a similar customer segment."
+        }
+      ]
+    },
+    "search_3": {
+      "NEM": {
+        "queries": [
+          "NEM Fashion Vietnam services products categories",
+          "NEM Fashion Vietnam price range pricing",
+          "NEM recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "NEM Fashion Vietnam services products categories",
+            "hits": [
+              {
+                "title": "NEM - NEM FASHION",
+                "url": "https://nemshop.vn/collections/vendors?q=nem",
+                "text": "NEM - NEM FASHION cart.general.title \"cart.general.close_cart\" Trang chủ NEM - NEM FASHION # NEM Kích cỡ - Free size - Size 14 - Size 12 - Size 10 - Size 8 - Size 6 - Size 4 - Size 2 Màu sắc - Kẻ - Hồng - Cam - Xanh lá - Xám - Hỗn hợp - Nâu - Đen - Trắng - Vàng - Tím - Đỏ - Xanh Giá - =3000000))\" Lớn hơn 3,000,000₫ - =2000000)&&(price:product Từ 2,000,000₫ - 3,000,000₫ - =1500000)&&(price:product Từ 1,500,000₫ - 2,000,000₫ - =1000000)&&(price:product Từ 1,000,000₫ - 1,500,000₫ - =500000)&&(price:product Từ 500,000₫ - 1,000,000₫ - Nhỏ hơn 500,000₫ - =0))\" Tất cả Xem thêm ĐẦM REN TRẮNG D09502 1,799,000₫ Xem thêm ĐẦM TIỆC TRỄ VAI D08982 1,799,000₫ Xem thêm ĐẦM TWEED HỒNG D09162 1,399,000₫ Xem thêm ĐẦM TAY XẺ D09192 1,399,000₫ Xem thêm ĐẦM TIỆC ĐÍNH KIM SA D09062 1,799,000₫ Xem thêm ÁO THIẾT KẾ TAY LÔNG SM09002 1,099,000₫ Xem thêm ÁO KHOÁC DẠ TWEED AK09172 1,399,000₫ Xem thêm ĐẦM TIỆC LỤA XA"
+              },
+              {
+                "title": "NEM FASHION",
+                "url": "https://nemfashionstore.com/",
+                "text": "# NEM FASHION NEM FASHION. NEM Fashion is a company that focuses on empowering women through fashion and beauty. Headquartered in Santa Ana, California, United States. ## Company Details - Headquarters: Santa Ana, United States - Homepage: nemfashionstore.com - Aliases: nem fashion, nem fashion store - LinkedIn: linkedin.com/company/nem-fashion - Linkedin Followers: 5 (Yearly: +150.0%) - SIC Codes: 56, 562 - NAICS Codes: 44, 448 ## Categories fashion, empower women, acetate frames, beauty, sunglass boxes ## Locations (2 offices across 1 country) - United States (2 offices) - Santa Ana, California 92705 - 1627 E Edinge Ave Ste A; Santa Ana, California 92705, United States"
+              },
+              {
+                "title": "THỜI TRANG CÔNG SỞ – NEM FASHION",
+                "url": "https://nemshop.vn/",
+                "text": "THỜI TRANG CÔNG SỞ – NEM FASHION cart.general.title \"cart.general.close_cart\" DRESS SHOP NOW TOP SHOP NOW ## SẢN PHẨM MỚI Xem thêm ĐẦM MIDI XẾP LI D09492 1,799,000₫ Xem thêm ÁO PEPLUM HỒNG AK09122 1,399,000₫ Xem thêm ÁO THIẾT KẾ ĐÍNH KHUY ĐÁ AK09202 1,399,000₫ Xem thêm ĐẦM XẾP LI THIẾT KẾ D09482 1,799,000₫ Xem thêm ĐẦM TAY XẺ D09192 1,399,000₫ Xem thêm ĐẦM ÔM THIẾT KẾ D09142 1,599,000₫ Xem thêm ĐẦM LIỀN PEPLUM D09462 1,399,000₫ Xem thêm CHÂN VÁY DÁNG A Z09092 999,000₫ Xem thêm CHÂN VÁY MIDI Z09132 999,000₫ Xem thêm ÁO DÀI GẤM HỒNG AD08792 1,899,000₫ Xem thêm ĐẦM TIỆC GẤM ÁNH NHŨ D08992 1,799,000₫ Xem thêm ÁO DÀI THÊU HOA AD08752 1,799,000₫ ## SẢN PHẨM BÁN CHẠY Xem thêm ĐẦM TIỆC THIẾT KẾ D09472 1,799,000₫ Xem thêm ĐẦM TIỆC LỤA XANH D08972 1,599,000₫ Xem thêm CHÂN VÁY ĐÍNH HOA NỔI Z09042 999,000₫ Xem thêm ĐẦM TIỆC GẤM ĐỎ D09012 1,799,000₫ Xem thêm ÁO THIẾT KẾ TAY LÔNG SM09002 1,099,000₫ Xe"
+              }
+            ]
+          },
+          {
+            "query": "NEM Fashion Vietnam price range pricing",
+            "hits": [
+              {
+                "title": "Sale 50% – NEM FASHION",
+                "url": "https://nemshop.vn/collections/sale-50",
+                "text": "Sale 50% – NEM FASHION cart.general.title \"cart.general.close_cart\" Trang chủ SALE 50% # SALE 50% Kích cỡ - Free size - Size 14 - Size 12 - Size 10 - Size 8 - Size 6 - Size 4 - Size 2 Màu sắc - Kẻ - Hồng - Cam - Xanh lá - Xám - Hỗn hợp - Nâu - Đen - Trắng - Vàng - Tím - Đỏ - Xanh Giá - =3000000))\" Lớn hơn 3,000,000₫ - =2000000)&&(price:product Từ 2,000,000₫ - 3,000,000₫ - =1500000)&&(price:product Từ 1,500,000₫ - 2,000,000₫ - =1000000)&&(price:product Từ 1,000,000₫ - 1,500,000₫ - =500000)&&(price:product Từ 500,000₫ - 1,000,000₫ - Nhỏ hơn 500,000₫ - =0))\" Tất cả -50% Xem thêm ĐẦM ÔM HOẠ TIẾT D07682 799,500₫ 1,599,000₫ -50% Xem thêm SƠ MI TƠ HOA SM06812 499,500₫ 999,000₫ -50% Xem thêm SƠ MI LỤA ĐÍNH NGỌC SM05052 499,500₫ 999,000₫ -50% Xem thêm SƠ MI HOA XANH SM07202 499,500₫ 999,000₫ -50% Xem thêm SƠ MI TƠ NÂU SM06222 499,500₫ 999,000₫ -50% Xem thêm SƠ MI HOA SM08372 499,500₫ 999,000₫ -50"
+              },
+              {
+                "title": "Sale – NEM FASHION",
+                "url": "https://nemshop.vn/collections/sale",
+                "text": "Sale – NEM FASHION cart.general.title \"cart.general.close_cart\" Trang chủ SALE # SALE Kích cỡ - Free size - Size 14 - Size 12 - Size 10 - Size 8 - Size 6 - Size 4 - Size 2 Màu sắc - Kẻ - Hồng - Cam - Xanh lá - Xám - Hỗn hợp - Nâu - Đen - Trắng - Vàng - Tím - Đỏ - Xanh Giá - =3000000))\" Lớn hơn 3,000,000₫ - =2000000)&&(price:product Từ 2,000,000₫ - 3,000,000₫ - =1500000)&&(price:product Từ 1,500,000₫ - 2,000,000₫ - =1000000)&&(price:product Từ 1,000,000₫ - 1,500,000₫ - =500000)&&(price:product Từ 500,000₫ - 1,000,000₫ - Nhỏ hơn 500,000₫ - =0))\" Tất cả -70% Xem thêm ĐẦM VOAN HOA D02242 479,700₫ 1,599,000₫ -71% Xem thêm ÁO KHOÁC CỔ BẺ ĐÍNH NƠ AK15912 399,000₫ 1,399,000₫ Xem thêm MĂNG TÔ DẠ CAO CẤP AK68022 3,499,000₫ Xem thêm MĂNG TÔ DẠ ĐEN AK68042 3,599,000₫ -50% Xem thêm MĂNG TÔ DẠ CAO CẤP AK06332 1,199,500₫ 2,399,000₫ -50% Xem thêm MĂNG TÔ TRẦN TRÁM AK07332 1,299,500₫ 2,599,000₫ -50% Xem "
+              },
+              {
+                "title": "SALE 70% - nem fashion",
+                "url": "https://nemshop.vn/collections/sale-82",
+                "text": "SALE 70% – NEM FASHION cart.general.title \"cart.general.close_cart\" Trang chủ SALE 70% # SALE 70% Kích cỡ - Free size - Size 14 - Size 12 - Size 10 - Size 8 - Size 6 - Size 4 - Size 2 Màu sắc - Kẻ - Hồng - Cam - Xanh lá - Xám - Hỗn hợp - Nâu - Đen - Trắng - Vàng - Tím - Đỏ - Xanh Giá - =3000000))\" Lớn hơn 3,000,000₫ - =2000000)&&(price:product Từ 2,000,000₫ - 3,000,000₫ - =1500000)&&(price:product Từ 1,500,000₫ - 2,000,000₫ - =1000000)&&(price:product Từ 1,000,000₫ - 1,500,000₫ - =500000)&&(price:product Từ 500,000₫ - 1,000,000₫ - Nhỏ hơn 500,000₫ - =0))\" Tất cả -70% Xem thêm ĐẦM VOAN HOA D02242 479,700₫ 1,599,000₫ -50% Xem thêm ĐẦM HOA PHỐI BÈO D40392 349,500₫ 699,000₫ -70% Xem thêm ÁO HOA TRỄ VAI SM02612 239,700₫ 799,000₫ -70% Xem thêm CHÂN VÁY DẠ TWEED Z12682 269,700₫ 899,000₫ -70% Xem thêm ÁO THIẾT KẾ CỔ BẺ SM15512 239,700₫ 799,000₫ -70% Xem thêm CHÂN VÁY BÚT CHÌ Z10692 269,700₫ 899,"
+              }
+            ]
+          },
+          {
+            "query": "NEM recent announcements news 2026",
+            "hits": [
+              {
+                "title": "Newmont Reports Fourth Quarter and Full Year 2025 Results ...",
+                "url": "https://www.newmont.com/investors/news-release/news-details/2026/Newmont-Reports-Fourth-Quarter-and-Full-Year-2025-Results-Provides-2026-Guidance-and-Announces-Enhanced-Capital-Allocation-Framework/default.aspx",
+                "text": "Newmont Corporation - Newmont Reports Fourth Quarter and Full Year 2025 Results, Provides 2026 Guidance, and Announces Enhanced Capital Allocation Framework Skip to main content NYSE: NEM$106.54-4.05% Spot Gold: $5,001.000.14% ASX: NEM$155.22-0.74% -- - Document Library - Newmont News - Careers View All News ### Newmont Reports Fourth Quarter and Full Year 2025 Results, Provides 2026 Guidance, and Announces Enhanced Capital Allocation Framework February 19, 2026 - Download (opens in new window) DENVER--(BUSINESS WIRE)-- Newmont Corporation (NYSE: NEM, ASX: NEM, PNGX: NEM) (Newmont or the Company) today announced its fourth quarter and full year 2025 results, declared a fourth quarter dividend of $0.261 and provided guidance for the full year of 2026. \"2025 was a milestone year for Newmont, as we delivered on our full-year guidance, strengthened our financial position and made meaningful "
+              },
+              {
+                "title": "How Stronger 2025 Earnings and 2026 Output Plan At Newmont ...",
+                "url": "https://www.sahmcapital.com/news/content/how-stronger-2025-earnings-and-2026-output-plan-at-newmont-nem-has-changed-its-investment-story-2026-03-02",
+                "text": "How Stronger 2025 Earnings and 2026 Output Plan At Newmont (NEM) Has Changed Its Investment Story How Stronger 2025 Earnings and 2026 Output Plan At Newmont (NEM) Has Changed Its Investment Story Like Facebook Twitter Email Link Share Facebook Twitter Email Link Cancel Newmont Corporation -4.28% Pre Newmont Corporation NEM 109.58 107.20 -4.28% -2.17% Pre - We’ll now examine how Newmont’s stronger 2025 earnings and confirmed 2026 production guidance may influence its existing investment narrative. - The company also confirmed 2026 attributable gold production guidance of about 5.3 million ounces and completed a US$548.18 million share buyback, signaling continued capital returns while it funds mine-life extensions such as Cerro Negro. - Newmont Corporation recently reported fourth-quarter and full-year 2025 results showing higher annual sales of US$22.67 billion and net income of US$7.09 "
+              },
+              {
+                "title": "Nvidia's Nemotron Super 3 model for agentic systems launches with five times higher throughput - SiliconANGLE",
+                "url": "https://siliconangle.com/2026/03/11/nvidias-nemotron-super-3-model-agentic-systems-launches-five-times-higher-throughput/",
+                "text": "Nvidia's Nemotron Super 3 model for agentic systems launches with five times higher throughput - SiliconANGLE SHARE - AWARDS UPDATED 21:04 EDT / MARCH 11 2026 AI ### Nvidia’s Nemotron Super 3 model for agentic systems launches with five times higher throughput SHARE With so much talk about its upcoming Vera Rubin graphics processing units, it’s easy to forget that Nvidia Corp. doesn’t just supply the hardware for artificial intelligence. It also develops its own series of AI models, and today it announced the availability of its most capable model so far. The company said Nemotron Super 3 is aimed at running complex agentic AI systems at large scale, combining advanced reasoning skills with rapid processing speeds to efficiently perform tasks that require extreme accuracy. Nemotron Super 3 is a 120 billion-parameter open model based on a hybrid mixture-of-experts architecture. It combine"
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: NEM competitor deep dive"
+      },
+      "Thời Trang Vanfa": {
+        "queries": [
+          "Thời Trang Vanfa Fashion Vietnam services products categories",
+          "Thời Trang Vanfa Fashion Vietnam price range pricing",
+          "Thời Trang Vanfa recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "Thời Trang Vanfa Fashion Vietnam services products categories",
+            "hits": [
+              {
+                "title": "Thời Trang Vanfa",
+                "url": "https://vanfa.vn/",
+                "text": "# Thời Trang Vanfa Thời Trang Vanfa is a Retail Apparel and Fashion company. Headquartered in Vietnam. ## About Our company specializes in manufacturing all kinds of fashionable T-shirts, uniforms, antibacterial masks of export quality. ## Company Details - Industry: Retail Apparel and Fashion - Type: Public Company - Homepage: vanfa.vn - Aliases: thời trang vanfa - LinkedIn: linkedin.com/company/thoitrangvanfa - Linkedin Followers: 1 ## Workforce - Employees: 6 - Monthly Growth: +20.0% - Yearly Growth: +50.0% ## Recent News - [2026-02-16] Vietnam.vn: Vietnam viert oudejaarsavond en verwelkomt het Jaar van het Paard 2026. - [2026-02-13] - Báo Tuổi Trẻ: James Van Der Beek, ngôi sao của Dawson’s Creek, qua đời - Vietnam+ (VietnamPlus): Party chief offers incense in tribute to late PM Pham Van Dong - [2026-02-12] - Tatler Asia: Châu Tuyết Vân - Znews: Van Dijk làm nên lịch sử - [2026-02-10]"
+              },
+              {
+                "title": "Van Ha Garment - Leading in complete garment solutions",
+                "url": "https://www.vhg.com.vn/about-us/",
+                "text": "Van Ha Garment - Leading in complete garment solutions - https://vhg.com.vn/ - 0912910022 - VAN HA GARMENT JOINT STOCK COMPANY - VAN HA GARMENT JOINT STOCK COMPANY # Van Ha Garment - Leading in complete garment solutions Index Who We are? Established in 1992, Van Ha Garment Jsc - We are a leading company in the field of outerwear and sportswear design and garment manufacturing for export, with a strong focus on the European market. Our company specializes in a wide range of apparel products, including: Outerwear, Sportswear, Hitech casual wear, Hitech underwear Worldwide Partners: Active Brands, NewWave, Hema, Kari Traa, Fuctional Sportswear, Cutter & Buck…. Our Vision is ‘Van Ha – With dedication comes vision, reaching out to the world Our Mission At Van Ha, we are committed to: - Inspiring and implementing end-to-end innovation across the entire value chain - Providing best-in-class se"
+              },
+              {
+                "title": "Products – Vanfa Beauty",
+                "url": "https://vanfabeauty.com/collections/all",
+                "text": "Products – Vanfa Beauty Free shipping on U.S. $150+ Nếu Không hài lòng với sản phẩm, chúng tôi sẽ nhận lại. Shop - French Brush - Nail Accessory - Nail Clipper - Gel Cat Eye - Gel Art Liner - Cuticle Nipper - Acrylic Brush Skip to content -- 221 products Stainless Steel Nail Clipper - #212AB Curved 40% off Add Quick View ### Stainless Steel Nail Clipper - #212AB Curved $2.95 $4.95 Stainless Steel Nail Clipper - #212AB Curved (Pack of 6) 43% off Add Quick View ### Stainless Steel Nail Clipper - #212AB Curved (Pack of 6) $16.95 $29.95 Stainless Steel Nail Clipper - #225B Curved 40% off Add Quick View ### Stainless Steel Nail Clipper - #225B Curved $2.95 $4.95 Stainless Steel Nail Clipper - #225B-1 Black Straight 40% off Add Quick View ### Stainless Steel Nail Clipper - #225B-1 Black Straight $2.95 $4.95 Stainless Steel Nail Clipper - #225B-1 Black Straight (Pack of 6) 43% off Add Quick Vie"
+              }
+            ]
+          },
+          {
+            "query": "Thời Trang Vanfa Fashion Vietnam price range pricing",
+            "hits": [
+              {
+                "title": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên",
+                "url": "https://kenhsinhvien.vn/t/hot-ao-thun-nam-tay-ngan-cotton-100-khong-qua-400k-thuong-hieu-vanfa.733517/latest",
+                "text": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên Chưa giải quyết Đăng ký thành viên - Rao vặt - Cộng Đồng You are using an out of date browser. It may not display this or other websites correctly.You should upgrade or use an alternative browser. # Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa - Ngày đăng 26/9/2019 - Tác giả thoitrangvanfa #### thoitrangvanfa ##### Thành viên Tham gia 12/9/2019 Bài viết 0 Hi chào mọi người, hiện bên em đang bán áo thun nam thời trang với cam kết 100% cotton thương hiệu Vanfa với giá không quá 400k Bên mình còn có chính sách cam kết với khách hàng như sau mọi người nhé. - Khuyến mãi cho khách hàng cứng - Tặng quà cho thành viên mới - Giao hàng toàn quốc. - Bảo Hành 369 ngày - Đổi trả trong vòng 10 ngày; - Bồi thường gấp 10 lần nếu sai chất Thuần cotton - Đảm bảo sản phẩm này là áo thun Cotton 10"
+              },
+              {
+                "title": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên",
+                "url": "https://kenhsinhvien.vn/t/hot-ao-thun-nam-tay-ngan-cotton-100-khong-qua-400k-thuong-hieu-vanfa.733517/",
+                "text": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên Chưa giải quyết Đăng ký thành viên - Rao vặt - Cộng Đồng You are using an out of date browser. It may not display this or other websites correctly.You should upgrade or use an alternative browser. # Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa - Ngày đăng 26/9/2019 - Tác giả thoitrangvanfa #### thoitrangvanfa ##### Thành viên Tham gia 12/9/2019 Bài viết 0 Hi chào mọi người, hiện bên em đang bán áo thun nam thời trang với cam kết 100% cotton thương hiệu Vanfa với giá không quá 400k Bên mình còn có chính sách cam kết với khách hàng như sau mọi người nhé. - Khuyến mãi cho khách hàng cứng - Tặng quà cho thành viên mới - Giao hàng toàn quốc. - Bảo Hành 369 ngày - Đổi trả trong vòng 10 ngày; - Bồi thường gấp 10 lần nếu sai chất Thuần cotton - Đảm bảo sản phẩm này là áo thun Cotton 10"
+              },
+              {
+                "title": "Lương Thùy Linh diện set đồ hơn 860 triệu đồng dạo phố",
+                "url": "https://eva.vn/thoi-trang/luong-thuy-linh-dien-set-do-hon-860-trieu-dong-dao-pho-c36a665470.html",
+                "text": "Lương Thùy Linh diện set đồ hơn 860 triệu đồng dạo phố Thời trang Lương Thùy Linh diện set đồ hơn 860 triệu đồng dạo phố Fanpage Eva Ngày 19/03/2026 08:43 AM (GMT+7) Lương Thùy Linh Sành điệu cùng hàng hiệu Soi hàng hiệu của sao ## Hoa hậu Lương Thùy Linh phối dây chuyền Van Cleef & Arpels, túi Dior phiên bản giới hạn dạo phố hôm 17/3. Người đẹp theo đuổi xu hướng ‘đồ ngủ xuống phố’ với áo bandeau satin phối ren từ nhà mốt Zara. Cô phối cùng quần jeans sáng màu và giày lưới đế thấp dạo phố cùng bạn bè. Thiết kế làm từ polyester tái chế theo xu hướng thời trang bền vững có giá 999 nghìn đồng. Lương Thùy Linh tạo điểm nhấn tổng thể bằng túi Dior phiên bản giới hạn, giá hơn 300 triệu đồng. Trước đó, cô từng sử dụng thiết kế này khi dạo phố tại Pháp trong thời gian tham dự Tuần lễ Thời trang Paris hồi tháng 9/2025. Hoa hậu hoàn thiện tổng thể bằng dây chuyền Alhambra cổ điển của Van Cleef & "
+              }
+            ]
+          },
+          {
+            "query": "Thời Trang Vanfa recent announcements news 2026",
+            "hits": [
+              {
+                "title": "Tổng hợp tin tức, video hình ảnh về vanfa | Báo Dân trí",
+                "url": "https://dantri.com.vn/tim-kiem/vanfa.htm",
+                "text": "Tổng hợp tin tức, video hình ảnh về vanfa | Báo Dân trí Tìm kiếm nâng cao Có 1 tin tức, video về \" # vanfa \" ### Nhà thơ Đoàn Thị Lam Luyến giữ chức Chủ tịch Hiệp hội Tác giả phi hư cấu Sáng 30/9, Đại hội Hiệp hội Tác giả phi hư cấu Việt Nam lần thứ 2 nhiệm kỳ (2022-2027) đã diễn ra tại Hà Nội. Đại hội đã thống nhất bầu nhà thơ Đoàn Thị Lam Luyến giữ chức Chủ tịch Hiệp hội."
+              },
+              {
+                "title": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên",
+                "url": "https://kenhsinhvien.vn/t/hot-ao-thun-nam-tay-ngan-cotton-100-khong-qua-400k-thuong-hieu-vanfa.733517/latest",
+                "text": "Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa | Kênh Sinh Viên Chưa giải quyết Đăng ký thành viên - Rao vặt - Cộng Đồng You are using an out of date browser. It may not display this or other websites correctly.You should upgrade or use an alternative browser. # Hot Áo Thun Nam Tay Ngắn Cotton 100% Không Quá 400k Thương Hiệu Vanfa - Ngày đăng 26/9/2019 - Tác giả thoitrangvanfa #### thoitrangvanfa ##### Thành viên Tham gia 12/9/2019 Bài viết 0 Hi chào mọi người, hiện bên em đang bán áo thun nam thời trang với cam kết 100% cotton thương hiệu Vanfa với giá không quá 400k Bên mình còn có chính sách cam kết với khách hàng như sau mọi người nhé. - Khuyến mãi cho khách hàng cứng - Tặng quà cho thành viên mới - Giao hàng toàn quốc. - Bảo Hành 369 ngày - Đổi trả trong vòng 10 ngày; - Bồi thường gấp 10 lần nếu sai chất Thuần cotton - Đảm bảo sản phẩm này là áo thun Cotton 10"
+              },
+              {
+                "title": "Gel Cat Eye – Vanfa Beauty",
+                "url": "https://vanfabeauty.com/collections/gel-cat-eye",
+                "text": "Gel Cat Eye – Vanfa Beauty Free shipping on U.S. $150+ Nếu Không hài lòng với sản phẩm, chúng tôi sẽ nhận lại. Shop - French Brush - Nail Accessory - Nail Clipper - Gel Cat Eye - Gel Art Liner - Cuticle Nipper - Acrylic Brush Skip to content -- 46 products Vanfa Soak Off Gel Polish Holographic Glitter 9D Cateye - Rainbow Cat Eye 0.5 Oz 30% off Add Quick View ### Vanfa Soak Off Gel Polish Holographic Glitter 9D Cateye - Rainbow Cat Eye 0.5 Oz $6.99 $9.99 Vanfa Soak off Gel Nail Polish Cat Eye 0.5 Oz (Aurora #02) 38% off Add Quick View ### Vanfa Soak off Gel Nail Polish Cat Eye 0.5 Oz (Aurora #02) $7.99 $12.99 Vanfa Soak off Gel Nail Polish Cat Eye 0.5 Oz (Aurora #09) 38% off Add Quick View ### Vanfa Soak off Gel Nail Polish Cat Eye 0.5 Oz (Aurora #09) $7.99 $12.99 Vanfa Soak off Gel Nail Polish Cat Eye 0.5 Oz (Holograph #11) 38% off Add Quick View ### Vanfa Soak off Gel Nail Polish Cat Ey"
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: Thời Trang Vanfa competitor deep dive"
+      },
+      "Thời trang công sở Andora": {
+        "queries": [
+          "Thời trang công sở Andora Fashion Vietnam services products categories",
+          "Thời trang công sở Andora Fashion Vietnam price range pricing",
+          "Thời trang công sở Andora recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "Thời trang công sở Andora Fashion Vietnam services products categories",
+            "hits": [
+              {
+                "title": "Thời trang công sở Andora",
+                "url": "https://andora.com.vn/",
+                "text": "# Thời trang công sở Andora Thời trang công sở Andora is a Retail company. Andora is a fashion brand that designs modern, trendy, and trendy fashion for women. They provide a wide range of products including dresses, pants, skirts, shoes, and accessories. Founded in 2022. Headquartered in Vietnam. ## About Andora.com.vn là website bán lẻ thời trang công sở trực tuyến dành cho chị em phái nữ với những mẫu thiết kế thanh lịch, hiện đại, trẻ trung phù hợp với xu hướng hiện nay. Thương hiệu thời trang công sở Andora ra đời nhằm đồng hành cùng phái nữ khẳng định phong cách thanh lịch, nhẹ nhàng và tinh tế. Andora là một Local Brand (thương hiệu địa phương) xuất hiện trên thị trường từ đầu tháng 01/2022, thuộc thế hệ sinh sau đẻ muộn trong làng thời trang trong nước nhưng lại có một cách chọn thị trường ngách đầy tinh tế và quyết liệt. Andora cam kết đồng hành & truyền cảm hứng sống tích cực c"
+              },
+              {
+                "title": "6 set đồ công sở sành điệu đi làm cực trendy",
+                "url": "https://andora.com.vn/set-do-cong-so-sanh-dieu/",
+                "text": "6 set đồcông sở sành điệu đi làm cực trendy &bull; Andora Bỏ qua nội dung * HỆ THỐNG SHOWROOM * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** AndoraAndoraAndora * ** * Áo** Áo sơ mi Áo thun Áo kiểu Áo blazer Áo vest Andora Fashion Collection New Top 2022 * Quần** Quần tây Quần jean Quần bò Quần short Andora Fashion Collection New Pants 2022 * Chân váy** Chân váy chữ A Chân váy xoè Chân váy xếp ly Chân váy ôm Andora Fashion Collection New Skirt 2022 * Đầm** Đầm suông Đầm body Đầm sơ mi Đầm chữ A Đầm thun Andora Fashion Collection New Dress 2022 * Giày dép** Giày búp bê Giày cao gót Sandal Boot Andora Fashion Collection New Shoes 2022 * ** * Tìm kiếm: ** * ** * Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng * ** * ** Giỏ hàng Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng ###### Phong cách thời trang # 6 "
+              },
+              {
+                "title": "Thời trang nữ ĐẸP dễ thương cá tính 2026 tại TPHCM • Andora",
+                "url": "https://andora.com.vn/thoi-trang-nu/",
+                "text": "Thời trang nữ ĐẸP dễ thương cá tính 2025 tại TPHCM &bull; Andora Bỏ qua nội dung * HỆ THỐNG SHOWROOM * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** AndoraAndoraAndora * ** * Áo** Áo sơ mi Áo thun Áo kiểu Áo blazer Áo vest Andora Fashion Collection New Top 2022 * Quần** Quần tây Quần jean Quần bò Quần short Andora Fashion Collection New Pants 2022 * Chân váy** Chân váy chữ A Chân váy xoè Chân váy xếp ly Chân váy ôm Andora Fashion Collection New Skirt 2022 * Đầm** Đầm suông Đầm body Đầm sơ mi Đầm chữ A Đầm thun Andora Fashion Collection New Dress 2022 * Giày dép** Giày búp bê Giày cao gót Sandal Boot Andora Fashion Collection New Shoes 2022 * ** * Tìm kiếm: ** * ** * Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng * ** * ** Giỏ hàng Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng Thương hiệu thời trang côn"
+              }
+            ]
+          },
+          {
+            "query": "Thời trang công sở Andora Fashion Vietnam price range pricing",
+            "hits": [
+              {
+                "title": "Thời trang công sở Andora: Thanh lịch, hiện đại, trẻ trung",
+                "url": "https://andora.com.vn/",
+                "text": "Thời trang công sở Andora: Thanh lịch, hiện đại, trẻ trung"
+              },
+              {
+                "title": "6 set đồ công sở sành điệu đi làm cực trendy",
+                "url": "https://andora.com.vn/set-do-cong-so-sanh-dieu/",
+                "text": "6 set đồcông sở sành điệu đi làm cực trendy &bull; Andora Bỏ qua nội dung * HỆ THỐNG SHOWROOM * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** AndoraAndoraAndora * ** * Áo** Áo sơ mi Áo thun Áo kiểu Áo blazer Áo vest Andora Fashion Collection New Top 2022 * Quần** Quần tây Quần jean Quần bò Quần short Andora Fashion Collection New Pants 2022 * Chân váy** Chân váy chữ A Chân váy xoè Chân váy xếp ly Chân váy ôm Andora Fashion Collection New Skirt 2022 * Đầm** Đầm suông Đầm body Đầm sơ mi Đầm chữ A Đầm thun Andora Fashion Collection New Dress 2022 * Giày dép** Giày búp bê Giày cao gót Sandal Boot Andora Fashion Collection New Shoes 2022 * ** * Tìm kiếm: ** * ** * Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng * ** * ** Giỏ hàng Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng ###### Phong cách thời trang # 6 "
+              },
+              {
+                "title": "Thời trang nữ ĐẸP dễ thương cá tính 2026 tại TPHCM • Andora",
+                "url": "https://andora.com.vn/thoi-trang-nu/",
+                "text": "Thời trang nữ ĐẸP dễ thương cá tính 2025 tại TPHCM &bull; Andora Bỏ qua nội dung * HỆ THỐNG SHOWROOM * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** * Hotline:**0901651406**| Hỗ trợ:**support@andora.com.vn** AndoraAndoraAndora * ** * Áo** Áo sơ mi Áo thun Áo kiểu Áo blazer Áo vest Andora Fashion Collection New Top 2022 * Quần** Quần tây Quần jean Quần bò Quần short Andora Fashion Collection New Pants 2022 * Chân váy** Chân váy chữ A Chân váy xoè Chân váy xếp ly Chân váy ôm Andora Fashion Collection New Skirt 2022 * Đầm** Đầm suông Đầm body Đầm sơ mi Đầm chữ A Đầm thun Andora Fashion Collection New Dress 2022 * Giày dép** Giày búp bê Giày cao gót Sandal Boot Andora Fashion Collection New Shoes 2022 * ** * Tìm kiếm: ** * ** * Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng * ** * ** Giỏ hàng Chưa có sản phẩm trong giỏ hàng. Quay trở lại cửa hàng Thương hiệu thời trang côn"
+              }
+            ]
+          },
+          {
+            "query": "Thời trang công sở Andora recent announcements news 2026",
+            "hits": [
+              {
+                "title": "Đầm body trễ vai đuôi cá - FLORA DRESS | Đầm body mới nhất 2026 • Andora",
+                "url": "https://andora.com.vn/dam-body-flora/",
+                "text": "Đầm body trễ vai đuôi cá - FLORA DRESS | Đầm body mới nhất 2026 • Andora"
+              },
+              {
+                "title": "Đầm đuôi cá maxi 2 dây ôm body tôn dáng, quyến rũ chất thun co dãn tốt mặc đi chơi, dự tiệc, đi biển - A0404DB | Đầm body mới nhất 2026 • Andora",
+                "url": "https://andora.com.vn/dam-duoi-ca-maxi-2-day-om-body-ton-dang-quyen-ru-chat-thun-co-dan-tot-mac-di-choi-du-tiec-di-bien-a0404db/",
+                "text": "Đầm đuôi cá maxi 2 dây ôm body tôn dáng, quyến rũ chất thun co dãn tốt mặc đi chơi, dự tiệc, đi biển - A0404DB | Đầm body mới nhất 2026 • Andora # Đầm đuôi cá maxi 2 dây ôm body tôn dáng, quyến rũ chất thun co dãn tốt mặc đi chơi, dự tiệc, đi biển – A0404DB 210,000VNĐ Đầm đuôi cá maxi ôm body Andora váy 2 dây tôn dáng, quyến rũ chất thun co dãn tốt mặc đi chơi, dự tiệc, đi biển A0404DB. - Sản phẩm kết hợp: giày dép – túi xách - Thông tin mẫu: Cao 1m65 – Nặng 45kg – Mặc size S - Thương hiệu sản phẩm: Andora - Phù hợp: đi chơi, dự tiệc, tham dự sự kiện hay đi dạo phố, kết hợp giày dép cùng tông tạo vẻ trẻ trung hiện đại cho người mặc - Kiểu dáng: Đầm đuôi cá dáng ôm body form cực tôn dáng dành cho nàng yêu thích vẻ đẹp quyến rũ, kiểu váy đầm giúp nàng phối cùng với giày dép cao gót, sandals tôn vẻ đẹp siêu xinh cho nàng - Chất liệu: vải thun mềm mịn, mát Chọn một tùy chọnĐenHồng Đen Hồng C"
+              },
+              {
+                "title": "Áo sơ mi lụa thắt nơ cổ - DORIS TOP | Áo sơ mi mới nhất 2026 • Andora",
+                "url": "https://andora.com.vn/doris-top/",
+                "text": "Áo sơ mi lụa thắt nơ cổ - DORIS TOP | Áo sơ mi mới nhất 2026 • Andora"
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: Thời trang công sở Andora competitor deep dive"
+      }
+    }
+  },
+  "summary_text": "=== Thời trang ACFC ===\nOverview: ACFC Vietnam offers high-end fashion from international brands, serving as an official distributor of top fashion brands in Vietnam.\nServices: Official distributor of international fashion brands; New collections updated weekly; Membership benefits including discounts\nPrice range: Not specified\nRecent announcements: Premium Privileges: Free shipping for ACFC members on qualifying purchases; New arrivals including Calvin Klein and Tommy Hilfiger collections\n\n=== NEM ===\nWhy this competitor: NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel.\nOverview: NEM is a leading fashion brand in Vietnam, offering a wide range of stylish apparel.\nServices: Wide range of stylish apparel for women; Empowering women through fashion and beauty; Various sizes and colors available\nPrice range: 1,500,000₫ - 3,000,000₫\nRecent announcements: Sale 50% on selected items; New arrivals including dresses and tops; Sale 70% on selected items\n\n=== Thời Trang Vanfa ===\nWhy this competitor: Thời Trang Vanfa specializes in fashionable clothing and has a strong presence in the Vietnamese market.\nOverview: Thời Trang Vanfa is a Retail Apparel and Fashion company based in Vietnam, specializing in manufacturing fashionable clothing including T-shirts, uniforms, and antibacterial masks.\nServices: Manufacturing fashionable T-shirts; Uniforms; Antibacterial masks\nPrice range: Up to 400,000 VND for T-shirts\nRecent announcements: New cotton T-shirts priced under 400,000 VND\n\n=== Thời trang công sở Andora ===\nWhy this competitor: Andora focuses on modern and trendy office wear for women, appealing to a similar customer segment.\nOverview: Thời trang công sở Andora is a retail company specializing in modern and trendy office fashion for women, offering a wide range of products including dresses, pants, skirts, shoes, and accessories.\nServices: Designs modern and trendy office wear for women; Wide range of products including dresses, pants, skirts, shoes, and accessories; Online retail platform for women's office fashion\nPrice range: Not specified\nRecent announcements: New bodycon dress - FLORA DRESS; Maxi dress with body-hugging design - A0404DB; Silk blouse with bow collar - DORIS TOP"
+}

@@ -28,7 +28,7 @@ export default function HeroOverlay({ visible, onRun, grouped, onToggleGroup }) 
       <img src="/assets/Tiny.png" alt="TinyHuman" className="hero-logo-img" />
       <div className="hero-lockup">
         <p className="hero-subtext">
-          <span className="hero-highlight">From Gossips to <span style={{color: 'var(--accent)'}}>Insights</span></span>
+          <span className="hero-highlight">Humans, <span style={{color: 'var(--accent)'}}>Simulated</span></span>
         </p>
         <div className="hero-input-bar">
         <input

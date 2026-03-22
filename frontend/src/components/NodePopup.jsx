@@ -64,6 +64,17 @@ export default function NodePopup({ node, cluster, position, onClose }) {
           </div>
         </div>
 
+        {p.interests && p.interests.length > 0 && (
+          <div className="node-popup-section">
+            <div className="node-popup-section-title">Interests</div>
+            <div className="node-popup-interests">
+              {p.interests.map((interest, i) => (
+                <span key={i} className="node-popup-interest-tag">{interest}</span>
+              ))}
+            </div>
+          </div>
+        )}
+
         {p.frustrations && p.frustrations.length > 0 && (
           <div className="node-popup-section">
             <div className="node-popup-section-title">Frustrations</div>

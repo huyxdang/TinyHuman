@@ -1,73 +1,593 @@
 {
   "product": {
-    "name": "chatgpt",
+    "name": "Nike shoes",
+    "input_name": "Nike shoes",
     "url": "",
-    "description": "chatgpt",
-    "pricing": {
-      "raw_text": "# ChatGPT pricing in 2025: which plan is worth it? #Shorts\n\n- Channel: eesel AI\n- Length: 01:05\n- Views: 509\n- Likes: 0\n- Published: 2026-03-05T20:39:25-08:00\n- Category: Science & Technology\n- Keywords: ai pricing, ai tools 2025, chatgpt, chatgpt enterprise, chatgpt plus, chatgpt pricing, chatgpt team, eesel, eesel ai, openai pricing\n- Language: en\n\n## Description\n\nChatGPT pricing ranges from free to $200/month per user, but most teams pick the wrong plan. This guide breaks down every tier so you know exactly what you're paying for.\n\nWe'll cover:\n* Free, Plus, Pro, Team, and Enterprise plan features compared\n* Per-seat costs and what each tier actually unlocks\n* Usage limits and rate caps on each plan\n* Which plan fits solo users vs business teams\n* Why ChatGPT's pricing doesn't work for customer support\n\nChatGPT is great for general AI tasks, but its per-seat pricing adds up fast for support teams and it doesn't connect to your helpdesk. eesel AI offers predictable flat pricing and works inside Zendesk, Freshdesk, Slack, and 100+ other tools.\n\nRead the full guide: https://eesel.ai/blog/chatgpt-pricing\n\nLearn more and start your free trial today at https://www.eesel.ai no credit card required.\n\n## Transcript\n\nChat GPT pricing is amaze and your bill still surprises you at the end of the month. For individuals, you get free with limited GPT5 plus at $20 and pro at $200 per month. The free plan has message caps, slower speeds during busy hours, and your conversations train open AI models by default. Plus gives you higher limits for $20, but pro costs 200 and neither plan includes any team features. The team plan at $25 to $30 per user still requires you to copy paste between chat GPT [music] and your help desk all day. Enterprise runs around $60 per user per month with an annual contract and it is still a generalpurpose tool. The API charges per token for both input and output. So a sudden support spike can send your bill through the roof. On free and plus, your conve\n---\nChatGPT Pricing 2025: Find the Right Plan for You\n\nHome\n\nChatGPT Pricing 2025: Find the Right Plan for You\n\nArticle language:\n\nEnglish\n\nAI ChatGPT\n\n# ChatGPT Pricing 2025: Find the Right Plan for You\n\nGamsGo Team\n\nPublished 2026-03-11 11:02\n\nAfter GPT-5 launched, both free and paid users now access the same core model. So here’s the big question: if the model is the same, is a paid subscription still worth it?\n\nFrom the free Basic plan to ChatGPT Plus at $20/month and Pro at $200/month, there are more options than ever. What’s the real difference?\n\nIn this guide, I’ll break down ChatGPT’s latest 2025 plans and pricing, compare value for money, and help you pick the plan that fits your needs and budget best.\n\n## ChatGPT Subscription Plans & Pricing (2025)\n\nIn 2025, OpenAI offers three subscription tiers for individual users: Free, Plus, and Pro. Each tier comes with slightly different features based on price. The table below gives you a clear breakdown of what sets them apart:\n\nPlan\n\nGPT-5 Free\n\nGPT-5 Plus\n\nGPT-5 Pro\n\nPrice\n\nFree\n\n$20/month\n\n$200/month\n\nAvailable Model\n\nGPT-5 (basic access, rate-limited)\n\nGPT-5 (full features, multimodal)\n\nGPT-5 (advanced, pro-level features)\n\nDaily Message Limit\n\nAround 30–50 messages\n\nNo clear limit\n\nHigh-volume, concurrent use supported\n\nContext Window\n\n~8K–16K tokens\n\n~128K tokens\n\n~256K+ tokens\n\nBest For\n\nCasual users, occasional use\n\nStudents, individual creators, professionals\n\nBusinesses, teams, developers, researchers\n\nEven though GPT-5 now runs on a unified core model, OpenAI still offers different thinking modes you can switch between: Fast, Thinking, and the Pro-exclusive Pro Mode. This shows that while the underlying model is the same, your subscription tier still affects how you can actually use it.\n\n## What are the limitations of ChatGPT’s free version?\n\nGPT-5 is now open to everyone with a free entry point—you can try it directly on the web or mobile app. It works well for everyday conversations like writing articles,\n---\nChatGPT: The Complete Guide to Features, Pricing, Tips & More [2026]\n\nMarch 18, 2026 · 8:20 PM EDT\n\nJazib Zaman\n\n• 42 min read\n\nFollow us on Google News Report Post\n\nChatGPT is unlocking new possibilities in AI productivity, from simple conversations to advanced business automation.\n\n### ChatGPT Quick Reference\n\n| Developer | OpenAI |\n| --- | --- |\n| Latest Model | GPT-5(Aug 2025) |\n| Weekly Users | 800M+ |\n| Free Tier | Yes (GPT-4o mini) |\n| Plus Price | $20/month |\n| Pro Price | $200/month |\n| Team Price | $25/user/month |\n| Enterprise | Custom pricing |\n| Available On | Web, iOS, Android, Desktop, API |\n\n## Table of Contents 🔗\n\n## What Is ChatGPT? — The 30-Second Answer\n\nImagine you have an assistant who can help you brainstorm, write, code, analyze data, or just chat — all in real time. That is exactly what ChatGPT offers, and hundreds of millions of people are already using it every single day.\n\nChatGPT is a large language model (LLM) developed by OpenAI. Unlike traditional search engines that return links, ChatGPT generates original, human-like text responses by predicting the most likely next word in a sequence, drawing on patterns learned from vast amounts of text data. It was fine-tuned using a technique called Reinforcement Learning from Human Feedback (RLHF), which is why its responses feel remarkably natural and helpful rather than robotic.\n\nBut calling ChatGPT “an AI chatbot” drastically undersells what it has become. In 2026, ChatGPT is a platform — a productivity engine, a research assistant, a coding companion, an image generator, a shopping advisor, and increasingly, the central operating system for digital work. With 800 million weekly active users and over 2 billion queries processed daily, it is the fastest-growing consumer application in history. No product — not Instagram, not TikTok, not even Google Search — reached this scale this quickly.\n\nThe story of ChatGPT started with a daring experiment by OpenAI, a research lab that aims to ensure art",
-      "sources": [
-        "https://www.youtube.com/shorts/TFRzyZBIr3Y",
-        "https://www.gamsgo.com/blog/chatgpt-prices",
-        "https://www.techi.com/chatgpt-pricing-plans-comparison/"
-      ]
-    },
-    "reviews": {
-      "raw_text": "Pros and Cons of ChatGPT in 2025: What Businesses Should Know - The HOTH\n\n## HOTH Blog\n\nHomepage/ Pros and Cons of ChatGPT in 2025: What Businesses Should Know\n\nSEO\n\n# Pros and Cons of ChatGPT in 2025: What Businesses Should Know\n\nRachel Hernandez September 23, 2025\n\nTable of contents\n\n/\n\nChatGPT has become nothing short of a phenomenon since its release in late 2022.\n\nBy the end of 2025, it’s set to hit 1 billion users.\n\nPeople use ChatGPT for pretty much everything now, from aiding with content generation to analyzing users’ dreams (there’s even an official dream decoder).\n\nDespite its enormous popularity, it’s not perfect.\n\nThis is especially true when using ChatGPT for business purposes, like creating SEO content.\n\nInaccuracies, hallucinations, and bias still remain serious challenges for the platform, so you shouldn’t view it as an infallible tool.\n\nIf you aren’t careful, you may publish something ChatGPT simply made up out of thin air, which can negatively impact your brand’s reputation (not to mention the harm providing false information can cause to the general public).\n\nThe truth is there are things that ChatGPT excels at and things that it struggles with.\n\nAs a marketer, the best thing you can do is familiarize yourself with both.\n\nThe result?\n\nYou’ll always know when it’s appropriate to use ChatGPT, and when it’s best to hold off.\n\nThis guide will teach you the main advantages and disadvantages of using AI tools for marketing.\n\nKeep reading to learn how to get the \n---\nChatGPT Review 2025: Complete Guide to Features, Pricing &amp; Performance | Find Your Best AI\nShow table of contents\nBack to Blog\nIllustration: beginner guide to ChatGPT\nProductivity\nWriting\nReading level:medium\n# ChatGPT Review 2025: Complete Guide to Features, Pricing &amp; Performance\nBeginner-friendly review of ChatGPT in 2025 —covering features, pricing tiers, pros &amp; cons, and how it performs in real work.\nHarry Xiong avatarByHarry Xiong\nSep 30, 2025\n12min read\nFYBAI delivers unbiased insights—affiliations never influence our verdicts.\nShare\n# ChatGPT Review 2025: Complete Guide to Features, Pricing &amp; Performance\n***> FYBAI Affiliate Disclosure:\n**> This review may contain affiliate links. If you purchase through our links, we may earn a commission at no extra cost to you.\n*\n## Table of Contents\n* What is ChatGPT?\n* Key Features\n* Pros &amp; Cons\n* Pricing Plans\n* ChatGPT vs. Competitors\n* Detailed Scorecard\n* FAQ\n* Final Verdict\n## Introduction\nIn this ChatGPT review 2025, I will walk you through what ChatGPT does, who it&#x27;s for, and how it performs in everyday work. In 2025 it&#x27;s powered by GPT-5 and comes in Free, Plus, Pro, Business, and Enterprise plans. I will keep things simple and practical so beginners can follow along while still providing value to those looking for a more in-depth review.\nAI Agent Writing - ChatGPT in action\n## What is ChatGPT?\nChatGPT is OpenAI&#x27;s conversational AI that can help you write, edit, research, code, and analyz\n---\nChatGPT Pros and Cons (Features) in 2025\n\nLena\n\nGlobal AI entrepreneur, passionate about taking innovations overseas, blending vision with execution to shape the future of intelligent marketing.\n\n\n\nLast updated at August 14, 2025\n\n# ChatGPT Pros and Cons (2025): GPT-5 Features, Real Gains vs. Hype, and Pricing Compared (O3, GPT-4.5, Copilot, Gemini, Claude) ​\n\nGPT-5 did move the needle on reliability, long-context retrieval, and unified routing—but it’s not AGI, it doesn’t run fully offline, and cost/context trade-offs still matter. If you’re deciding between O3, GPT-4.5, or GPT-5—and between ChatGPT vs. Copilot/Gemini/Claude—this guide gives practical, citation-backed answers.\n\n## 1. Context: What OpenAI Actually Shipped with GPT-5 (and Why) ​\n\nWhen Sam Altman talked publicly about GPT-5, one theme kept repeating: reliability, especially reducing hallucinations. That framing matters: instead of flashy, speculative features, OpenAI signaled “get the basics right” for professional work. Tweet by Sam Altman\n\nWhat we got at launch aligns with that message:\n\nA unified system that stops asking you to hand-pick “which model” (GPT-4, Turbo, o-series, etc.). GPT-5 in ChatGPT is presented as a router-backed “super system” that automatically switches between fast and deep-thinking modes. OpenAI’s developer materials describe GPT-5 as a coordinated system of reasoning-models plus router logic; the public API now exposes gpt-5, gpt-5-mini, and gpt-5-nano options for performance/cost trad",
-      "sources": [
-        "https://www.thehoth.com/blog/pros-and-cons-of-chatgpt/",
-        "https://www.findyourbestai.com/blog/chatgpt-review-2025",
-        "https://familypro.io/en/blog/chatgpt-pros-and-cons"
-      ]
-    }
+    "description": "Nike shoes",
+    "overview": "Nike offers a wide range of shoes and sneakers for men, women, and kids, featuring various styles and colors.",
+    "services": [
+      "Custom shoe options available",
+      "Wide range of sizes and colors",
+      "Sale and offers on selected items"
+    ],
+    "features": [
+      "Custom shoe options available",
+      "Wide range of sizes and colors",
+      "Sale and offers on selected items"
+    ],
+    "price_range": "$0 - Over $150",
+    "pricing": "$0 - Over $150",
+    "reviews": [
+      "Custom shoe options available",
+      "Wide range of sizes and colors",
+      "Sale and offers on selected items"
+    ],
+    "recent_announcements": [
+      "Launch of Nike KD19, Kevin Durant's 19th signature shoe",
+      "Release of Nike Air Rejuven8 in Sequoia/Light Khaki",
+      "Announcement of Nike Giannis Freak 8 scheduled for August 2026"
+    ],
+    "recent_news": [
+      "Launch of Nike KD19, Kevin Durant's 19th signature shoe",
+      "Release of Nike Air Rejuven8 in Sequoia/Light Khaki",
+      "Announcement of Nike Giannis Freak 8 scheduled for August 2026"
+    ],
+    "sources": [
+      "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+      "https://www.nike.com/w/shoes-y7ok",
+      "https://www.nike.com/w/womens-shoes-5e1x6zy7ok",
+      "https://www.nike.com/t/pegasus-41-by-you-custom-road-running-shoes-wide-dzzPLS",
+      "https://hypebeast.com/2026/3/nike-kd19-kevin-durant-19th-signature-shoe-official-reveal",
+      "https://hypebeast.com/2026/3/nike-air-rejuven8-sequoia-light-khaki-iq0310-355-release-info"
+    ]
   },
   "competitors": {
-    "Claude": {
-      "raw_text": "Claude Pro Pricing in 2025: Plans, Limits, and How It Compares\n\n# Claude Pro Pricing in 2025: Plans, Limits, and How It Compares\n\nNovember 19, 2025\n\n## Get Started with Pricing Strategy Consulting\n\nJoin companies like Zoom, DocuSign, and Twilio using our systematic pricing approach to increase revenue by 12-40% year-over-year.\n\nThank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.\n\nClaude Pro in 2025 is offered on a subscription basis (Claude Pro) and via usage-based API pricing (Claude API), with subscription plans giving predictable monthly costs and usage limits, while API pricing scales with consumption for product and workflow integration. The best choice depends on whether you primarily need a personal assistant-style tool (subscription) or to embed Claude into apps and workflows at scale (API).\n\nImportant disclaimer: Anthropic Claude pricing changes frequently. Treat any pricing structure or example here as illustrative, not authoritative. Always verify current Anthropic Claude pricing on Anthropic’s official website and in your account dashboard before making budget decisions.\n\n---\n\n## Overview of Claude Pro and Anthropic’s Pricing Model (2025 Snapshot)\n\nFrom a SaaS executive’s perspective, Claude Pro pricing 2025 breaks into two distinct models:\n\n- Claude API – usage-based pricing for integrating Claude into products, workflows, and internal tools at scale.\n- Claude Pro subscription – a fixed monthly fee per user for access via web/app, optimized for individual “assistant” style usage.\n\nAt a high level:\n\n- Suited for SaaS products, internal tools, and automation\n- Different rates by model (e.g., general vs higher-performance models)\n- Pay-per-usage (typically per-token or per-input/output unit)\n- Claude API\n- Priority access to newer models and features\n- Higher and more consistent usage limits\n- Paid monthly subscription (per user)\n- Claude Pro\n- Lower priority during peak times\n- Access to core models\n- Limit\n---\n-- Claude Pricing 2025: full guide to Free, Pro, Team, and Max plans with updated limits\n\ntop of page\n\nSearch\n\nClaude’s pricing structure in late 2025 is built around four application-level plans—Free, Pro, Team, and Max—each defining access to models, usage capacity, collaboration features, and priority during peak demand. All plans use session-based limits that reset every five hours, but the depth of access within each session changes significantly depending on the subscription. Free provides light usage with soft daily caps; Pro unlocks high-end models and more stable capacity; Team introduces pooled quotas and admin control; and Max delivers extremely high usage for individuals who rely on Claude as a continuous professional tool. These tiers are separate from API pricing and focus on the claude.ai experience across web, desktop, and mobile.\n\n·····\n\n.....\n\n## Claude Free provides basic access with rotating five-hour sessions that refresh throughout the day.\n\nThe Free plan grants direct access to Claude Sonnet 4 and similar mid-range models, offering a recurring five-hour session that resets automatically. Usage inside each session is not defined by a fixed message number; instead, the limit varies depending on system load, message length, file size, and model chosen. As load increases globally, the number of free interactions per session can shrink, creating a flexible but unpredictable ceiling that fits occasional use. Users can reach practical daily limits quickly when working with long documents, code files, or repeated regenerations, making Free suitable for simple tasks or lightweight productivity without sustained workloads.\n\n........\n\n........Claude Free — late 2025\n\nFeature\n\nBehavior\n\nLimit structure\n\nTypical usage\n\nModels available\n\nSonnet-grade access\n\nVaries with load\n\nGeneral questions and short tasks\n\nSession window\n\n5-hour rotating\n\nResets automatically\n\nDistributed usage across day\n\nMessage capacity\n\nDynamic\n\nSoft caps fluctuate\n\nOccasional workf\n---\nClaude Pro Features: Complete List & Guide (2025)\n\n# Claude Pro: features complete list – Complete Guide\n\nGeorge Mitchell\n\n- Updated on March 5, 2026\n\n## What You Get with Claude Pro in 2026\n\nClaude Pro costs $20 per month ($17/month with annual billing) and provides access to Anthropic’s most advanced AI models, including Claude Opus 4.6 released in February 2026. Beyond just faster models, Pro subscribers gain access to Claude Code, Cowork for multi-step task automation, extended usage limits, and priority server access. This complete guide breaks down every feature, capability, and limit so you can decide if the upgrade is worth it.\n\nKey Takeaways: Claude Pro ($20/month) provides 5x more usage than free tier (approximately 45 messages per 5-hour window), access to Claude Opus 4.6 and all model tiers, Claude Code for terminal-based development, Cowork for autonomous multi-step tasks across applications, Projects with unlimited storage, extended thinking with adaptive mode, Google Workspace integration, and priority access during peak times. Annual billing reduces cost to $17/month (15% savings).\n\n## Complete Feature List: What’s Included in Claude Pro\n\nClaude Pro subscribers get access to a comprehensive suite of features that extend far beyond the free tier’s basic chat capabilities. According to IntuitionLabs’ 2026 pricing analysis, Pro represents the best value tier for professionals who use AI daily. Here’s the complete breakdown based on Anthropic’s official documentation and March 2026 updates.\n\n### Model Access and Intelligence\n\nPro subscribers get full access to Anthropic’s entire model lineup, while free tier users are limited to Sonnet 4.5:\n\n- Claude Haiku 4.5: The fastest option for simple queries requiring rapid responses.\n- Claude Sonnet 4.5: Faster responses for tasks that don’t require Opus-level reasoning.\n- Claude Opus 4.5: The previous flagship model, still available for compatibility with existing workflows.\n- Claude Sonnet 4.6: A faster, more c",
+    "Puma": {
+      "name": "Puma",
+      "overview": "Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings.",
+      "services": [
+        "Wide range of shoes and sneakers for men, women, and kids",
+        "Custom shoe options available",
+        "Sale and offers on selected items"
+      ],
+      "features": [
+        "Wide range of shoes and sneakers for men, women, and kids",
+        "Custom shoe options available",
+        "Sale and offers on selected items"
+      ],
+      "price_range": "$0 - Over $150",
+      "pricing": "$0 - Over $150",
+      "recent_announcements": [
+        "Long term partnership with VfL Gummersbach",
+        "Official outfitter for 2026 Basketball Africa League"
+      ],
+      "recent_news": [
+        "Long term partnership with VfL Gummersbach",
+        "Official outfitter for 2026 Basketball Africa League"
+      ],
+      "reviews": [
+        "Wide range of shoes and sneakers for men, women, and kids",
+        "Custom shoe options available",
+        "Sale and offers on selected items"
+      ],
       "sources": [
-        "https://www.getmonetizely.com/articles/claude-pro-pricing-in-2025-plans-limits-and-how-it-compares",
-        "https://www.datastudios.org/post/claude-pricing-2025-full-guide-to-free-pro-team-and-max-plans-with-updated-limits",
-        "https://aionx.co/chatgpt-reviews/claude-pro-features-complete-list/"
-      ]
+        "https://us.puma.com/us/en/puma/shop-all-shoes",
+        "https://us.puma.com/us/en/men/shoes",
+        "https://go.puma.com/ee/en/men/shoes",
+        "https://www.shoecarnival.com/puma",
+        "https://www.runningwarehouse.com/catpage-PUMAMS.html",
+        "https://footwearmagazine.com/puma-announces-long-term-partnership-vfl-gummersbach-ceo-arthur-hoeld-advisory-board/"
+      ],
+      "why_competitor": "Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings."
     },
-    "Pi": {
-      "raw_text": "Pi (Presentation Intelligence) Review 2025: Features & Honest Comparison\n\n# Pi (Presentation Intelligence) Review (2025): Where It Shines—and What’s Still Unclear\n\nIf you’re wondering whether an AI-first tool can take you from a blank page to a polished presentation in minutes, Pi (Presentation Intelligence) is squarely in that conversation. This review focuses on what Pi publicly promises, what we could verify from official materials, and how it compares to peers like Beautiful.ai, Pitch, and Gamma. We’ll also flag areas where information is missing so you can evaluate risk before you switch workflows.\n\nDisclosure and methodology notes: This review is not sponsored. We validated claims against Pi’s official website and documentation and compared them with competitor product pages and help centers. Where Pi has no public documentation (e.g., pricing, specific export formats, privacy), we label it as “Insufficient public detail” and avoid assumptions. Links in this article point to primary sources and include the publisher and (when relevant) year for transparency.\n\n---\n\n## How we evaluated Pi\n\nRather than drown you in specs, we centered on real buyer questions: How fast is prompt-to-deck? Can I set and lock branding? How reliable are exports to PowerPoint/PDF? Will collaboration hold up for teams? And what does mobile actually mean here?\n\nTo make this practical, we define a reproducible checklist you can use in your own trial:\n\n- Mobile: Open and lightly edit on a phone; assess layout responsiveness and text legibility.\n- Exports: Export to PPTX and PDF; open in Microsoft PowerPoint; rate layout fidelity and font substitution.\n- Collaboration: Invite two collaborators; try simultaneous edits, comments, and version review.\n- Themes and brand: Create a custom theme with brand colors, fonts, and logo; apply across the deck; check consistency when regenerating or inserting new slides.\n- Document-to-deck: Upload a short report (PDF/Word) and note how headings, bullets, c\n---\nPi Review 2025: Your Personal AI Companion for Thoughtful Conversation - AI Founder Kit\n\n## Pi\n\n## Personal AI Conversation Partner\n\nNo image found.\n\n# Pi Review 2025: Your Personal AI Companion for Thoughtful Conversation\n\n## 🤔 Quick Verdict\n\nPi is a fascinating and genuinely useful AI tool that carves out a unique niche as a personal, conversational companion. Unlike powerhouse models like ChatGPT that are built for productivity and task completion, Pi excels at being a supportive, intelligent, and empathetic sounding board. Its greatest strength is its personality; it feels less like a tool and more like talking to a patient, wise friend. This makes it incredibly effective for brainstorming, talking through problems, or simply practicing social interaction. However, its focus on conversation means it lacks the advanced features, integrations, and raw data-processing power of its main competitors. It’s completely free, which is its most compelling offering. If you need an AI to write code, analyze complex data, or integrate with your workflow, look elsewhere. But if you’re looking for a free, personal AI to help you think, Pi is an outstanding choice and a refreshing change of pace.\n\n| Key Info | Details |\n| --- | --- |\n| Overall Rating | 7.5/10 |\n| Best For | Individuals seeking a personal AI for brainstorming, coaching, and conversation. |\n| Starting Price | Free |\n| Main Strength | Empathetic personality and natural conversational flow. |\n| Main Weakness | Lacks advanced productivity features and integrations. |\n\n## 🧠 What Is Pi?\n\nPi, which stands for “personal intelligence,” is a conversational AI designed to be your personal assistant and companion. It’s not built to be a workhorse for complex business tasks but rather a supportive partner for your personal and professional life. The primary problem Pi solves is the human need for a non-judgmental, always-available entity to bounce ideas off of, practice difficult conversations with, or simply talk things thr\n---\nPi Ai review 2026 - features, pricing & deals | ToolsForHumans\n\nAi Content Generation Tool+2 more\n\nAi Writing AssistantPersonal & Professional Organization Software\n\n## Pi Ai\n\nvisit website\n\nbest dealTry Pi AI for free with core conversational AI, voice answers, and multilingual support at no costredeem now\n\n# Pi Ai review 2026 - features, pricing & deals\n\npublished 7 april 2025last updated 13 february 2026\n\nhow we review\n\nwe track global search demand across every software category, monitor what real users are saying online, identify which professions rely on each tool, and surface the questions people are actually asking. reviews are consistently updated and reviewed for reliability.\n\nPi AI is a personal AI assistant created by Inflection AI that offers personalized conversations and support. This chatbot combines natural language processing with machine learning to provide guidance and hold discussions.\n\nYou can interact with Pi AI through its website at pi.ai, iOS and Android apps, and Apple Messages. The assistant uses the same Pi model (such as Pi-3.1) across all platforms, providing text and voice-based dialogue. Pi handles emotional support, advice, and entertainment like games and ongoing conversations.\n\nThe platform operates on a freemium model with a generous free tier. Pi AI focuses on supportive conversations and emotional intelligence rather than productivity tools or task automation. Conversations are cloud-based and session-based without memory carryover between sessions, which means it won't remember what you discussed last time.\n\n## who is Pi Ai for?\n\nPi AI works for anyone seeking a digital assistant that adapts to their communication style and provides empathetic responses. If you value natural conversations with technology while getting practical help with daily tasks, Pi delivers.\n\n- Multi-taskers who prefer voice interaction while handling other activities and need hands-free assistance\n- Non-technical users who want AI benefits without needin",
+    "Reebok": {
+      "name": "Reebok",
+      "overview": "Reebok offers a variety of athletic shoes, including options for running, training, and basketball, appealing to a wide range of customers.",
+      "services": [
+        "Free shipping with membership on orders over $75",
+        "Discounts up to 60% off on selected items",
+        "15% off first purchase through app download"
+      ],
+      "features": [
+        "Free shipping with membership on orders over $75",
+        "Discounts up to 60% off on selected items",
+        "15% off first purchase through app download"
+      ],
+      "price_range": "Under $100 for many styles",
+      "pricing": "Under $100 for many styles",
+      "recent_announcements": [
+        "Launch of Reebok Engine A 26 basketball sneaker",
+        "Signing of Aneesah Morrow as new face of women's basketball",
+        "Expansion of football roster with Trevoh Chalobah"
+      ],
+      "recent_news": [
+        "Launch of Reebok Engine A 26 basketball sneaker",
+        "Signing of Aneesah Morrow as new face of women's basketball",
+        "Expansion of football roster with Trevoh Chalobah"
+      ],
+      "reviews": [
+        "Free shipping with membership on orders over $75",
+        "Discounts up to 60% off on selected items",
+        "15% off first purchase through app download"
+      ],
       "sources": [
-        "https://skywork.ai/blog/pi-presentation-intelligence-review-2025/",
-        "https://aifounderkit.com/ai-tools/pi-review-features-pricing-alternatives/",
-        "https://toolsforhumans.ai/ai-tools/pi-ai"
-      ]
+        "https://www.reebok.com/",
+        "https://www.reebok.com/collections/all",
+        "https://www.reebok.com/collections/shoes",
+        "https://www.reebok.com/collections/mens-shoes-under-100",
+        "http://www.reebok.com/collections/women-s-shoes-under-100",
+        "https://www.reebok.com/collections/sale"
+      ],
+      "why_competitor": "Reebok provides a range of athletic shoes that appeal to similar customer segments as Nike."
     },
-    "Gemini": {
-      "raw_text": "Google Gemini Cost (2026 Complete Pricing Guide)\n\n# Google Gemini Cost (2026 Complete Pricing Guide)\n\n- Marcus Reed\n- September 29, 2025\n- Technology Guides Reviews\n\nI spent the last three months tracking every penny of my Google Gemini usage across different plans and models.\n\nGoogle’s AI pricing structure confused me initially – between free tiers, Gemini Advanced at $20/month, API token costs, and enterprise options, it felt like navigating a maze.\n\nAfter testing all available options and burning through $1,200 in API credits for research, I’ve mapped out exactly what you’ll pay.\n\nThis guide breaks down every Google Gemini pricing tier, compares costs with ChatGPT and Claude, and shows you how to cut your AI expenses by up to 50%.\n\n## What is Google Gemini?\n\nGoogle Gemini is Google’s family of multimodal AI models that process text, images, audio, and video through a unified architecture.\n\nThe Gemini family includes multiple models optimized for different use cases and budgets.\n\nGemini 2.5 Pro handles complex reasoning tasks with up to 2 million token context windows. Gemini 2.0 Flash offers faster responses at lower costs for everyday tasks.\n\n⚠️ Important: Google offers Gemini through three different platforms – consumer (gemini.google.com), developer (AI Studio), and enterprise (Vertex AI). Each has different pricing.\n\nFlash-Lite provides the cheapest option for simple queries at $0.02 per million tokens.\n\nUnlike ChatGPT’s simple subscription model, Gemini uses a hybrid approach. You can access it free with limits, pay $20/month for advanced features, or use pay-per-token API pricing.\n\nI’ve used Gemini for content creation, code debugging, data analysis, and research assistance. The model choice significantly impacts both performance and cost.\n\n## Google Gemini Free Tier: What’s Included\n\nGoogle offers generous free access to Gemini through multiple channels.\n\nAt gemini.google.com, you get unlimited free access to the basic Gemini model. I’ve used this for quic\n---\nA complete guide to Google Gemini 3 pricing in 2025\n\nAll Posts\n\nBlogs/ Guides\n\n# A complete guide to Google Gemini 3 pricing in 2025\n\nWritten by\n\nKenneth Pangan\n\nReviewed by\n\nKatelin Teen\n\nLast edited November 18, 2025\n\nExpert Verified\n\nThere’s a ton of buzz around Google's new Gemini 3 models, and it makes sense. They're seriously powerful, capable of tackling everything from tricky coding problems to analyzing video footage. But once the excitement dies down, the practical question always follows: \"Okay, but how much is this actually going to cost me?\"\n\nThat's exactly what we're going to clear up here. This guide will give you a straight-up, no-fluff breakdown of how you pay for Gemini 3. Whether you're a heavy-duty individual user, a developer, or a business leader trying to figure out a budget, you'll find the numbers you need.\n\nBut here’s a little insider tip: the API price tag is just the beginning. The real cost of building a genuinely useful AI tool involves a lot more than token fees, and we’ll get into that too.\n\n## What is Google Gemini 3?\n\nIn a nutshell, Gemini 3 is Google's newest and smartest family of AI models. Unlike older models that were stuck just working with text, Gemini 3 is what's called \"multimodal.\" This just means it can understand and juggle text, images, audio, and even video all at the same time.\n\nGoogle has rolled out a few different versions, like Gemini 3 Pro, each fine-tuned for certain jobs. According to Google's announcement, these models are built for a huge range of tasks, from complex reasoning to creative brainstorming and writing code.\n\nYou can access Gemini 3 in two main ways: through consumer products like the Gemini app (where you pay a monthly subscription) or through an API, which lets developers plug the model's brain into their own applications.\n\n## A complete breakdown of Google Gemini 3 pricing models\n\nThe amount you'll pay for Gemini 3 really boils down to how you plan to use it. Are you using it for your own person\n---\nGemini 3 Flash Pro Review: Best All-Rounder in 2026? | Serenities AI\n\n---\n\nTable of Contents\n\n- What is Gemma 3n?\n- Can I use Gemini 3 Flash for free?\n- What is Gemini 3 Pro's context window?\n- Is Gemini 3 Pro better than Claude Opus 4.6?\n- How much does Gemini 3 Flash cost?\n- Frequently Asked Questions\n- What This Means for the AI Landscape in 2026\n- When Should You Use Gemini 3 Flash vs. Pro?\n- Availability\n- Nano Banana Pro: Image Generation\n- Gemma 3n: On-Device AI\n- The Broader Gemini 3 Ecosystem\n- Gemini 3 Pro vs. Claude Opus 4.6 vs. GPT-5.2: Head-to-Head\n- Pricing Comparison: Gemini 3 vs. the Competition\n- Speed and Efficiency\n- Gemini 3 Flash: Pro-Grade Intelligence at Flash Speed\n- Benchmark Performance\n- Key Features\n- Gemini 3 Pro: Google's Most Powerful Reasoning Model\n- What Are Google Gemini 3 Flash and Gemini 3 Pro?\n\n## What Are Google Gemini 3 Flash and Gemini 3 Pro?\n\nGoogle's Gemini 3 family represents the biggest leap in AI model capabilities since the original GPT-4 moment. Released in late 2025, Gemini 3 Pro (November 18, 2025) and Gemini 3 Flash (December 17, 2025) are Google DeepMind's most intelligent models to date — and they're shaking up the competitive landscape against Claude Opus 4.6 and GPT-5.2.\n\nGemini 3 Pro is Google's flagship reasoning model, designed for complex tasks requiring broad world knowledge and advanced multi-step reasoning. Gemini 3 Flash delivers Pro-grade intelligence at Flash-level speed and a fraction of the cost. Together, they cover everything from enterprise-grade agentic workflows to high-volume, cost-sensitive API applications.\n\nIn this comprehensive guide, we break down the benchmarks, pricing, features, and real-world performance of both models — and help you decide which one fits your workflow in 2026.\n\n## Gemini 3 Pro: Google's Most Powerful Reasoning Model\n\nGemini 3 Pro is the first model in the Gemini 3 series and currently sits at or near the top of virtually every major AI benchmark. It features a 1 milli",
+    "Adidas": {
+      "name": "Adidas",
+      "overview": "Adidas offers a variety of shoes, sneakers, and slides for men, women, and kids, focusing on innovative designs and styles.",
+      "services": [
+        "Wide range of shoes, sneakers, and slides",
+        "Custom options available",
+        "Sale items under $100"
+      ],
+      "features": [
+        "Wide range of shoes, sneakers, and slides",
+        "Custom options available",
+        "Sale items under $100"
+      ],
+      "price_range": "$0 - Over $100",
+      "pricing": "$0 - Over $100",
+      "recent_announcements": [
+        "Superstar relaunch featuring Samuel L. Jackson",
+        "Global release of 3D printed CLIMACOOL LACED",
+        "Collaboration with Thug Club for new collection"
+      ],
+      "recent_news": [
+        "Superstar relaunch featuring Samuel L. Jackson",
+        "Global release of 3D printed CLIMACOOL LACED",
+        "Collaboration with Thug Club for new collection"
+      ],
+      "reviews": [
+        "Wide range of shoes, sneakers, and slides",
+        "Custom options available",
+        "Sale items under $100"
+      ],
       "sources": [
-        "https://www.ofzenandcomputing.com/google-gemini-cost/",
-        "https://www.eesel.ai/blog/google-gemini-3-pricing",
-        "https://serenitiesai.com/articles/gemini-3-flash-pro-review-2026"
-      ]
-    },
-    "Grok": {
-      "raw_text": "Is Grok Worth It? Honest Review, Pricing & Features (2026)\n\nWith so many AI models available today, the question on everyone’s mind is: Is Grok Worth It? After testing it extensively against competitors for my daily workflow, I’ve broken down the pricing, features, and real user experience so you don’t have to guess.\n\nThree months ago, I canceled my ChatGPT Plus subscription and went all-in on Grok. Not because Grok is objectively better—it isn’t for everything—but because for my specific work (market research, content creation, trend analysis), Grok’s real-time X integration and lower cost delivered more value per dollar.\n\nTwo weeks ago, I reactivated ChatGPT Plus. Turns out I need both.\n\nThat experience captures the fundamental challenge evaluating Grok: it’s simultaneously overpriced for some use cases and underpriced for others. Whether it’s “worth it” depends entirely on what you need an AI assistant to do and how much you currently pay for alternatives.\n\nThis review cuts through marketing claims and tribal takes to answer one question: should you actually pay for Grok? We’ll cover real-world performance across common use cases, honest comparison of subscription tiers and what you actually get, ROI calculation for different user types, what Grok does better than alternatives (and worse), and who should absolutely use Grok versus who should save their money.\n\nUnlike typical reviews that test for a few hours and declare victory, this comes from three months of daily use across business work, creative projects, research, and casual queries. For comprehensive context on what Grok is and how it works, see our complete Grok AI guide.\n\n## The Subscription Tiers: What You Actually Get\n\nLet’s break down each access level and what it realistically provides.\n\nFree Access via X (Twitter)\n\nAvailable to anyone with an X account, the free tier includes basic chatbot functionality with Grok-3 Mini model, limited to around 10 queries daily, responses during off-peak hours prior\n---\n-- Grok premium tiers: advanced pricing, features, and access in 2025\n\ntop of page\n\nSearch\n\nThe Grok ecosystem, developed by xAI, has established a clear premium structure that sets it apart from other large language models. As of September 2025, Grok offers both consumer and professional tiers—SuperGrok and SuperGrok Heavy—with transparent pricing, priority compute, and exclusive access to new multimodal tools. These plans have become central for power users seeking early access to Grok 4’s full capabilities, including video generation and advanced workspace features.\n\n## SuperGrok delivers full Grok 4 access, multimodal tools, and high context limits for a flat fee.\n\nSuperGrok is positioned as Grok’s default premium plan, aimed at enthusiasts, researchers, and professionals who want unrestricted model access and the latest features.\n\nFeature\n\nSuperGrok\n\nPrice\n\n$30/month or $300/year\n\nModel access\n\nGrok 4, Aurora image model\n\nContext window\n\n128,000 tokens\n\nImage generation\n\nUnlimited (Aurora engine)\n\nVoice + vision input\n\nYes\n\nProjects workspace\n\nIncluded\n\nGrok Imagine\n\nBeta access (text-to-video)\n\nPriority compute\n\nYes (low queue times)\n\nSupport\n\nCommunity + chat\n\nSuperGrok’s 128 K-token window enables long document analysis and code audits, while the Aurora engine supports on-demand image creation without daily caps. Users receive Projects—a workspace system for managing prompts, files, and outputs—enabling repeatable research or workflow automation. The plan also includes early beta access to Grok Imagine, a text-to-video tool with “Spicy Mode” for creative and NSFW content.\n\n## SuperGrok Heavy unlocks the highest performance models, enterprise-grade support, and feature exclusivity.\n\nLaunched in July 2025, SuperGrok Heavy is designed for power users, studios, and early adopters requiring maximal performance and premium support.\n\nFeature\n\nSuperGrok Heavy\n\nPrice\n\n$300/month\n\nModel access\n\nGrok 4 Heavy (pre-release)\n\nContext window\n\n256,000 tokens (dynamic)\n\nVide\n---\nIs Grok 4.1 Worth It in 2026? Honest Review After 3 Months | Shiori\n\nShiori· GPT-5.2, Claude Opus 4.5 & more\n\nTry free →\n\n# Is Grok 4.1 Worth It in 2026? Honest Review After 3 Months\n\nReal talk: Is Grok 4.1 worth your money in 2026? We tested it for 3 months. Here's what we found about pricing, features, and whether you should subscribe.\n\nQuick answer: Grok 4.1 is now #1 on LMArena with 1483 Elo. Worth it if you want cutting-edge AI with real-time X data. But $30-40/mo is steep when alternatives exist.\n\n🎯 Find Out if Grok is Right for You\n\n## 💸 The Money Question\n\nLet's cut to the chase. Here's what Grok 4.1 actually costs:\n\n$40\n\nX Premium+\n\nBasic Grok 4.1\n\n$30\n\nSuperGrok\n\nStandalone app\n\n$300\n\nSuperGrok Heavy\n\nHighest limits\n\nGood news: SuperGrok ($30/mo) is now standalone. No X subscription required.\n\n## ✅ What We Loved\n\n🏆\n\n#1 on LMArena (1483 Elo)\n\nThis isn't marketing fluff. Grok 4.1 genuinely beats GPT-5, Claude, and Gemini in blind human evaluations.\n\n🎯\n\n65% fewer hallucinations\n\n4.22% hallucination rate is the lowest we've seen. When accuracy matters, Grok 4.1 delivers.\n\n📰\n\nReal-time X integration\n\nBreaking news within minutes. No other AI has this depth of social media awareness.\n\n🧠\n\nDual thinking modes\n\n\"Thinking\" mode (quasarflux) for deep reasoning, non-thinking (tensor) for quick responses. Pick what fits the task.\n\n## ❌ What Frustrated Us\n\n💸\n\nPrice jumped significantly\n\nX Premium+ is now $40/mo (was $16). That's steep when ChatGPT Plus is $20 and Claude Pro is $20.\n\n💻\n\nCoding still behind Claude\n\nDespite the improvements, Claude Opus 4.5 still writes cleaner, more maintainable code for production work.\n\n📄\n\nContext window unclear\n\nxAI doesn't publish context limits. Claude's 200K is transparent. We hit limits on large documents without warning.\n\n🔮\n\nGrok 5 coming in weeks\n\nxAI announced Grok 5 for late Jan 2026. If you subscribe now, you might want to wait for the next version.\n\n## 📊 Our Verdict by Use Case\n\n| Use Case | Worth It? | Why |\n| --- | --- | --",
-      "sources": [
-        "https://aiwiner.com/is-grok-worth-it/",
-        "https://www.datastudios.org/post/grok-premium-tiers-advanced-pricing-features-and-access-in-2025",
-        "https://www.shiori.ai/blog/is-grok-worth-it-2026"
-      ]
-    },
-    "Perplexity": {
-      "raw_text": "Perplexity Review 2026 | AI:PRODUCTIVITY\n\nPerplexity Research Research-oriented work requ... 4.3 ✓ Free 20h/wk saved From $20 4 plans\n\n\n\n# Perplexity Review\n\n// Research Updated: Dec 2026\n\nResearch Leader\n\nPerplexity has fundamentally changed how researchers gather information. With the recent addition of frontier AI models, plus the new Comet browser and Perplexity Assistant, this is the most powerful AI research platform available.\n\n01\n\n## Pricing Breakdown\n\nFree\n\n$0 /month\n\nUnlimited basic searches, 5 Pro searches per day\n\n- Unlimited quick searches\n- Standard AI model\n- Basic citations\n\nMax\n\n$200 /month\n\nUnlimited everything\n\n- All Pro features\n- Unlimited Labs usage per month\n- Access to o3-pro, GPT-5 Thinking, and Claude Opus 4.5\n- First access to Comet browser\n- Priority support\n- First access to new frontier models\n\ni\n\nMore plans are available, see our detailed Pricing Page for more information.\n\n02\n\n## Feature Analysis\n\nEvery major feature was evaluated, including the new Max-tier additions. Here is where Perplexity genuinely excels - and where it still needs work.\n\n### Source Citations\n\nExcellent\n\nEvery answer includes inline citations. Click any [1], [2], [3] to verify. This alone saves hours of fact-checking and is the killer feature that separates Perplexity from every competitor.\n\n### Frontier Model Access\n\nExcellent\n\nMax tier users get o3-pro, GPT-5 Thinking, and Claude Opus 4.5-the most powerful AI models available. Pro users get GPT-5, Claude 4, and Gemini 2.5. This is unmatched model diversity.\n\n### Research Depth\n\nExcellent\n\nPro Search synthesizes 20+ sources into coherent answers. Deep Research mode creates comprehensive reports with 50+ citations. Unlimited Labs usage on Max tier enables extended research sessions.\n\n### Perplexity Assistant\n\nGood\n\nNew multi-app task automation feature. Can execute searches, pull data, and interact with other tools. Still in early days but shows serious promise for workflow automation.\n\n### Speed\n\nGood\n\nQuick sea\n---\nPerplexity Pro — Complete 2025 Review, Pricing & Workflows\n\n# Introduction\n\nIn 2025, Synthetic brilliance tools are no longer just absorbing gadgets; they have become an integral generator for research, writing, productivity, important planning, and critical thinking. Students use these systems to solve intricate assignments and explore complex projects. Researchers strap them for literature surveys and domain studies. Analysts and corporate teams employ AI to make faster, more informed decisions and to incorporate multiple data points. AI has subordinate into a versatile collaborator that can process vast knowledge quickly and accurately.\n\nHowever, most traditional AI chatbots continue to rely on historical training data, meaning they lack awareness of the latest developments. They often cannot verify real-time advice from cyberspace or cross-check claims across multiple sources. This limitation is important when accuracy and citations matter, such as in academic work, regulatory compliance, or business intelligence. Using outdated or hallucinated outputs can waste hours or even lead to demanding mistakes.\n\nThis is where Perplexity Pro differentiates itself. Perplexity Pro is a real-time AI research assistant that merges the reasoning capabilities of large language models (LLMs) with live information retrieval from the web. dissimilar standard chatbots, it can read PDFs, CSVs, DOCX files, images, compare multiple sources, summarize documents, and give proper citations. It acts together as a search engine, research analyst, and AI assistant, allowing purchasers to extract a verified, structured, and actionable understanding.\n\n## Worth Of Perplexity Pro\n\nThe basic question arises: Is Perplexity Pro worth $20 per month? For millions of students, researchers, business analysts, and comfortable creators, selecting the wrong AI tool can result in wasted achievement, misleading conclusions, and deferred decisions. Choosing a system capable of live research, reliable citat\n---\nPerplexity pricing in 2025: A complete guide for businesses\n\nAll Posts\n\nBlogs/ Guides\n\n# Perplexity pricing in 2025: A complete guide for businesses\n\nWritten by\n\nStevia Putri\n\nLast edited October 5, 2025\n\nPicking the right AI tools for your company can be a headache, especially when you get to the pricing page. The plans change, features get moved around, and figuring out what you’ll actually pay versus what you get is often a puzzle.\n\nPerplexity AI has been making waves as a smart \"answer engine,\" and a lot of people are curious about it. But what’s the real cost, and does it actually make sense for your business?\n\nThis guide is here to give you a straightforward look at Perplexity pricing. We'll walk through each plan, what’s included, and, more importantly, what the pricing really means for businesses, especially if you're in customer support or managing internal knowledge.\n\n## What is Perplexity AI?\n\nAt its heart, Perplexity is an AI-powered search engine designed to give you direct answers with sources. Instead of just a list of links, it reads them and gives you a summary. Think of it as a research assistant that’s always on call. This makes it different from a generative AI chatbot like ChatGPT, which is more for brainstorming and creating new content. Perplexity is all about finding and summarizing factual information.\n\nA screenshot of the Perplexity answer engine, illustrating the features included in the Perplexity pricing plans.\n\nIt’s also not the same as a specialized AI support agent. Those are built to handle entire workflows from start to finish. Perplexity's main gig is finding information fast, which is great for anyone who needs accurate, up-to-date answers without digging through pages of search results.\n\n## A complete guide to Perplexity pricing in 2025\n\nPerplexity splits its pricing into plans for individuals and plans for businesses. Let’s break down what you get with each one and who they’re really for.\n\n### Individual plans: Free, Pro, and Ma",
-      "sources": [
-        "https://aiproductivity.ai/tools/perplexity",
-        "https://toolkitbyai.com/perplexity-pro-complete-review-guide/",
-        "https://www.eesel.ai/blog/perplexity-pricing"
-      ]
+        "https://www.adidas.com/us/shoes",
+        "https://www.adidas.com/us/originals",
+        "https://www.adidas.com/us/men",
+        "https://www.adidas.com/us/men-under_100-shoes",
+        "https://www.adidas.com/us/men-shoes",
+        "https://www.adidas.com/us/men-shoes_under_80-running"
+      ],
+      "why_competitor": "Adidas is a leading sportswear brand known for its innovative footwear and strong market presence."
     }
   },
   "competitor_names": [
-    "Claude",
-    "Pi",
-    "Gemini",
-    "Grok",
-    "Perplexity"
+    "Adidas",
+    "Puma",
+    "Reebok"
   ],
-  "summary_text": "=== chatgpt ===\nDescription: chatgpt\nPricing info: # ChatGPT pricing in 2025: which plan is worth it? #Shorts\n\n- Channel: eesel AI\n- Length: 01:05\n- Views: 509\n- Likes: 0\n- Published: 2026-03-05T20:39:25-08:00\n- Category: Science & Technology\n- Keywords: ai pricing, ai tools 2025, chatgpt, chatgpt enterprise, chatgpt plus, chatgpt pricing, chatgpt team, eesel, eesel ai, openai pricing\n- Language: en\n\n## Description\n\nChatGPT pricing ranges from free to $200/month per user, but most teams pick the wrong plan. This guide breaks down every tier so y\nReviews: Pros and Cons of ChatGPT in 2025: What Businesses Should Know - The HOTH\n\n## HOTH Blog\n\nHomepage/ Pros and Cons of ChatGPT in 2025: What Businesses Should Know\n\nSEO\n\n# Pros and Cons of ChatGPT in 2025: What Businesses Should Know\n\nRachel Hernandez September 23, 2025\n\nTable of contents\n\n/\n\nChatGPT has become nothing short of a phenomenon since its release in late 2022.\n\nBy the end of 2025, it’s set to hit 1 billion users.\n\nPeople use ChatGPT for pretty much everything now, from aiding with conten\n\n=== Claude ===\nClaude Pro Pricing in 2025: Plans, Limits, and How It Compares\n\n# Claude Pro Pricing in 2025: Plans, Limits, and How It Compares\n\nNovember 19, 2025\n\n## Get Started with Pricing Strategy Consulting\n\nJoin companies like Zoom, DocuSign, and Twilio using our systematic pricing approach to increase revenue by 12-40% year-over-year.\n\nThank you! Your submission has been received!\n\nOops! Something went wrong while submitting the form.\n\nClaude Pro in 2025 is offered on a subscription basis (Claude Pro) a\n\n=== Pi ===\nPi (Presentation Intelligence) Review 2025: Features & Honest Comparison\n\n# Pi (Presentation Intelligence) Review (2025): Where It Shines—and What’s Still Unclear\n\nIf you’re wondering whether an AI-first tool can take you from a blank page to a polished presentation in minutes, Pi (Presentation Intelligence) is squarely in that conversation. This review focuses on what Pi publicly promises, what we could verify from official materials, and how it compares to peers like Beautiful.ai, Pitch, and G\n\n=== Gemini ===\nGoogle Gemini Cost (2026 Complete Pricing Guide)\n\n# Google Gemini Cost (2026 Complete Pricing Guide)\n\n- Marcus Reed\n- September 29, 2025\n- Technology Guides Reviews\n\nI spent the last three months tracking every penny of my Google Gemini usage across different plans and models.\n\nGoogle’s AI pricing structure confused me initially – between free tiers, Gemini Advanced at $20/month, API token costs, and enterprise options, it felt like navigating a maze.\n\nAfter testing all available options and bur\n\n=== Grok ===\nIs Grok Worth It? Honest Review, Pricing & Features (2026)\n\nWith so many AI models available today, the question on everyone’s mind is: Is Grok Worth It? After testing it extensively against competitors for my daily workflow, I’ve broken down the pricing, features, and real user experience so you don’t have to guess.\n\nThree months ago, I canceled my ChatGPT Plus subscription and went all-in on Grok. Not because Grok is objectively better—it isn’t for everything—but because for my specific work (\n\n=== Perplexity ===\nPerplexity Review 2026 | AI:PRODUCTIVITY\n\nPerplexity Research Research-oriented work requ... 4.3 ✓ Free 20h/wk saved From $20 4 plans\n\n\n\n# Perplexity Review\n\n// Research Updated: Dec 2026\n\nResearch Leader\n\nPerplexity has fundamentally changed how researchers gather information. With the recent addition of frontier AI models, plus the new Comet browser and Perplexity Assistant, this is the most powerful AI research platform available.\n\n01\n\n## Pricing Breakdown\n\nFree\n\n$0 /month\n\nUnlimited basic se"
+  "competitor_selection": [
+    {
+      "name": "Adidas",
+      "why": "Adidas is a leading sportswear brand known for its innovative footwear and strong market presence."
+    },
+    {
+      "name": "Puma",
+      "why": "Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings."
+    },
+    {
+      "name": "Reebok",
+      "why": "Reebok provides a range of athletic shoes that appeal to similar customer segments as Nike."
+    }
+  ],
+  "research_trace": {
+    "search_1": {
+      "queries": [
+        "Nike shoes",
+        "Nike shoes official store services price range",
+        "Nike shoes recent announcements news 2026"
+      ],
+      "results": [
+        {
+          "query": "Nike shoes",
+          "hits": [
+            {
+              "title": "Men's Shoes & Sneakers. Nike.com",
+              "url": "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+              "text": "Men's Shoes & Sneakers. Nike.com Gender (1) Men Women Unisex Sale & Offers (0) Sale Color (0) Black Blue Brown Green Grey Multi-Color Orange Pink Purple Red White Yellow Shop by Price (0) $0 - $25 $25 - $50 $50 - $100 $100 - $150 + More Over $150 Size (0) 0.511.522.533.544.555.566.577.588.599.51010.51111.51212.51313.51414.51516171821 Brand (0) Nike Sportswear Jordan Kobe Nike By You + More Converse NikeLab ACG Collections (0) Nike Court Vision Nike Ava Nike Total 90 Nike Juniper Trail + More Nike Ultrafly Nike Zegama Nike Streakfly Nike Vomero Nike Gato Jordan 4 RM Nike Offcourt Nike Rejuven8 Jordan Spizike Nike Calm Nike P-6000 Nike V2K Winflo Nike G.T. Series Foamposite Air Force 1 Air Max Benassi Blazer Cortez Elite Huarache Nike Alphafly Nike Vaporfly Nike Zoom Fly Mercurial Metcon Monarch Nike Dunk Nike Free RN Nike Pegasus Presto Roshe Special Field Boot Structure Nike Kiger Tiempo"
+            },
+            {
+              "title": "Nike Shoes & Sneakers",
+              "url": "https://www.nike.com/w/shoes-y7ok",
+              "text": "Nike Shoes & Sneakers. Nike.com Gender (0) Men Women Unisex Kids (0) Boys Girls Kids Age (0) Babies & Toddlers (0-3 yrs) Little Kids (3-7 yrs) Big Kids (7-15 yrs) Sale & Offers (0) Sale Color (0) Black Blue Brown Green Grey Multi-Color Orange Pink Purple Red White Yellow Shop by Price (0) $0 - $25 $25 - $50 $50 - $100 $100 - $150 + More Over $150 Brand (0) Nike Sportswear Jordan Kobe Nike By You + More Converse NikeLab ACG Collections (0) Nike Motiva Nike Court Vision Nike Ava Nike Total 90 + More Nike Juniper Trail Nike Ultrafly Nike Zegama Nike Streakfly Nike Vomero Sonic Fly Nike Gato Jordan 4 RM Nike Team Hustle Nike Terra Manta Nike Offcourt Nike Rejuven8 Jordan Spizike Nike Calm Nike P-6000 Nike V2K Winflo Nike G.T. Series Foamposite Air Force 1 Air Max Benassi Blazer Cortez Elite Huarache Nike Alphafly Nike Vaporfly Nike Zoom Fly Mercurial Metcon Monarch Nike Dunk Nike Free RN Nik"
+            },
+            {
+              "title": "Women's Sneakers & Shoes",
+              "url": "https://www.nike.com/w/womens-shoes-5e1x6zy7ok",
+              "text": "Women's Sneakers & Shoes. Nike.com Gender (1) Men Women Unisex Sale & Offers (0) Sale Color (0) Black Blue Brown Green Grey Multi-Color Orange Pink Purple Red White Yellow Shop by Price (0) $0 - $25 $25 - $50 $50 - $100 $100 - $150 + More Over $150 Size (0) 22.533.544.555.566.577.588.599.51010.51111.51212.51313.51414.51515.51616.517 Brand (0) Nike Sportswear Jordan Kobe Nike By You + More Converse NikeLab ACG Collections (0) Nike Motiva Nike Court Vision Nike Total 90 Nike Ultrafly + More Nike Zegama Nike Streakfly Nike Vomero Nike Gato Jordan 4 RM Nike Terra Manta Nike Offcourt Nike Rejuven8 Jordan Spizike Nike Calm Nike P-6000 Nike V2K Winflo Nike G.T. Series Air Force 1 Air Max Blazer Cortez Elite Huarache Nike Alphafly Nike Vaporfly Nike Zoom Fly Mercurial Metcon Nike Dunk Nike Free RN Nike Pegasus Presto Roshe Structure Nike Kiger Tiempo Nike Zoom Rival Jordan Editions Nike Mind Spo"
+            }
+          ]
+        },
+        {
+          "query": "Nike shoes official store services price range",
+          "hits": [
+            {
+              "title": "Nike Shoes & Sneakers",
+              "url": "https://www.nike.com/w/shoes-y7ok",
+              "text": "Nike Shoes & Sneakers. Nike.com Gender (0) Men Women Unisex Kids (0) Boys Girls Kids Age (0) Babies & Toddlers (0-3 yrs) Little Kids (3-7 yrs) Big Kids (7-15 yrs) Sale & Offers (0) Sale Color (0) Black Blue Brown Green Grey Multi-Color Orange Pink Purple Red White Yellow Shop by Price (0) $0 - $25 $25 - $50 $50 - $100 $100 - $150 + More Over $150 Brand (0) Nike Sportswear Jordan Kobe Nike By You + More Converse NikeLab ACG Collections (0) Nike Motiva Nike Court Vision Nike Ava Nike Total 90 + More Nike Juniper Trail Nike Ultrafly Nike Zegama Nike Streakfly Nike Vomero Sonic Fly Nike Gato Jordan 4 RM Nike Team Hustle Nike Terra Manta Nike Offcourt Nike Rejuven8 Jordan Spizike Nike Calm Nike P-6000 Nike V2K Winflo Nike G.T. Series Foamposite Air Force 1 Air Max Benassi Blazer Cortez Elite Huarache Nike Alphafly Nike Vaporfly Nike Zoom Fly Mercurial Metcon Monarch Nike Dunk Nike Free RN Nik"
+            },
+            {
+              "title": "Men's Shoes & Sneakers. Nike.com",
+              "url": "https://www.nike.com/w/mens-shoes-nik1zy7ok",
+              "text": "Men's Shoes & Sneakers. Nike.com Gender (1) Men Women Unisex Sale & Offers (0) Sale Color (0) Black Blue Brown Green Grey Multi-Color Orange Pink Purple Red White Yellow Shop by Price (0) $0 - $25 $25 - $50 $50 - $100 $100 - $150 + More Over $150 Size (0) 0.511.522.533.544.555.566.577.588.599.51010.51111.51212.51313.51414.51516171821 Brand (0) Nike Sportswear Jordan Kobe Nike By You + More Converse NikeLab ACG Collections (0) Nike Court Vision Nike Ava Nike Total 90 Nike Juniper Trail + More Nike Ultrafly Nike Zegama Nike Streakfly Nike Vomero Nike Gato Jordan 4 RM Nike Offcourt Nike Rejuven8 Jordan Spizike Nike Calm Nike P-6000 Nike V2K Winflo Nike G.T. Series Foamposite Air Force 1 Air Max Benassi Blazer Cortez Elite Huarache Nike Alphafly Nike Vaporfly Nike Zoom Fly Mercurial Metcon Monarch Nike Dunk Nike Free RN Nike Pegasus Presto Roshe Special Field Boot Structure Nike Kiger Tiempo"
+            },
+            {
+              "title": "Nike Pegasus 41 By You Custom Road Running Shoes (Wide)",
+              "url": "https://www.nike.com/t/pegasus-41-by-you-custom-road-running-shoes-wide-dzzPLS",
+              "text": "Nike Pegasus 41 By You Custom Road Running Shoes (Wide). Nike.com Nike Pegasus 41 By You Custom Road Running Shoes (Wide) - Multi-Color/Multi-Color Sustainable Materials # Nike Pegasus 41 By You ## Custom Road Running Shoes (Wide) $160 * Nike Pegasus 41 By You Custom Road Running Shoes (Wide) - Multi-Color/Multi-Color * * * * * * * Favoritenon-filled This product is made with at least 20% recycled content by weight Responsive cushioning in the Pegasus provides an energized ride for everyday road running. Experience lighter-weight energy return with dual Air Zoom units and a ReactX foam midsole. Plus, improved engineered mesh on the upper decreases weight and increases breathability. With bold and bright colors to choose from and a trio of performance alternatives, this shoe is prepared for your special touch. * Shown:Multi-Color/Multi-Color * Style:HF3939-900 View Product Details Nike Pe"
+            }
+          ]
+        },
+        {
+          "query": "Nike shoes recent announcements news 2026",
+          "hits": [
+            {
+              "title": "Nike KD19 Kevin Durant's 19th Signature Shoe | Hypebeast",
+              "url": "https://hypebeast.com/2026/3/nike-kd19-kevin-durant-19th-signature-shoe-official-reveal",
+              "text": "Nike KD19 Kevin Durant's 19th Signature Shoe | Hypebeast - Fashion - Footwear - Art - Design - Music - Lifestyle - Videos - Brands - Magazine - Hypebeast 20 - Hypebeast100 - Store 1 of 3 Nike Footwear Mar 16, 2026 3.9K Views 0 Comments Comments Save Summary - Nike Basketball and Kevin Durant have officially introduced the KD19, engineered for ultimate responsiveness, comfort, and containment - The design is highlighted by a dual-injected exterior TPU dagger inspired by Durant’s “Slim Reaper” persona and the return of the full-length Zoom Strobel - Following an on-court debut this week, the performance model will launch exclusively on SNKRS on June 13 before a wider global release on June 17 Nike Basketball and Kevin Durant are back to unveil the next chapter of the superstar’s signature athlete journey with the introduction of the KD19. Built with equal attention to head-turning style an"
+            },
+            {
+              "title": "Nike Refreshes Air Rejuven8 In \"Sequoia/Light Khaki\" | Hypebeast",
+              "url": "https://hypebeast.com/2026/3/nike-air-rejuven8-sequoia-light-khaki-iq0310-355-release-info",
+              "text": "Nike Refreshes Air Rejuven8 In \"Sequoia/Light Khaki\" | Hypebeast - Store - Hypebeast100 - Hypebeast 20 - Magazine - Brands - Videos - Lifestyle - Music - Design - Art - Footwear - Fashion 1 of 9 Nike 2 of 9 Nike 3 of 9 Nike 4 of 9 Nike 5 of 9 Nike 6 of 9 Nike 7 of 9 Nike 8 of 9 Nike 9 of 9 Nike Footwear Mar 12, 2026 1.6K Views 0 Comments Comments Save Name: Nike Air Rejuven8 “Sequoia/Light Khaki” Colorway: Sequoia/Light Khaki SKU: IQ0310-355 MSRP: $135 USD Release Date: Summer 2026 Where to Buy: Nike Nike is leaning heavily into modern comfort with the upcoming release of the Nike Air Rejuven8 in a versatile “Sequoia/Light Khaki” colorway. Originally introduced as a post-performance recovery shoe, the latest iteration continues to prioritize plush cushioning and lightweight breathability for everyday wear. The slip-on model is defined by its Light Khaki molded cage, which wraps the foot "
+            },
+            {
+              "title": "Nike Giannis Freak 8 Announcement | Hypebeast",
+              "url": "https://hypebeast.com/2026/3/nike-giannis-antetokounmpo-freak-8-announcement-first-images",
+              "text": "Nike Giannis Freak 8 Announcement | Hypebeast - Store - Hypebeast100 - Hypebeast 20 - Magazine - Brands - Videos - Lifestyle - Music - Design - Art - Footwear - Fashion 1 of 3 Nike 2 of 3 Nike 3 of 3 Nike Footwear Mar 3, 2026 1.1K Views 0 Comments Comments Save Summary - A global launch is officially scheduled for August 2026 - The updated silhouette features a full-length ReactX midsole and a reinforced heel counter designed in a swooping feather pattern - Nike unveils the Giannis Freak 8 to honor the physical dominance and work ethic of the basketball superstar The Nike Giannis Freak 8 has officially arrived, bringing a new level of containment and explosive energy return to the court. Designed to channel the physical dominance and unending work ethic of Giannis Antetokounmpo, the latest signature model prioritizes high-performance tooling for the modern game while honoring the champio"
+            }
+          ]
+        }
+      ],
+      "label": "Search 1: product discovery"
+    },
+    "search_2": {
+      "queries": [
+        "Nike shoes competitors",
+        "alternatives to Nike shoes",
+        "top Nike shoes competitors Online Store",
+        "Nike shoes alternatives"
+      ],
+      "results": [
+        {
+          "query": "Nike shoes competitors",
+          "hits": [
+            {
+              "title": "Top Nike Competitors & Similar Companies | MBA Skool",
+              "url": "https://www.mbaskool.com/competitors/companies/18423-nike.html",
+              "text": "Top Nike Competitors & Similar Companies | MBA Skool Courses - Competitors - Business Lists - Five Forces - PESTLE - Marketing Mix Strategy - SWOT - Concepts - Courses - Home # Top Nike Competitors & Similar Companies Published by MBA Skool Team in Companies category Read time: Nike competitors include Adidas, Reebok, New Balance, Converse, Puma, Fila, Bata, Liberty Shoes, Under Armour, Umbro, Woodland, and ASICS. This article covers details about these competitors. Found in 1964, Nike is an American conglomerate has its presence in engaged in manufacturing, design, development, and worldwide marketing and sales of apparel, footwear, equipment, accessories and services. It is one of the world's largest manufacturers and suppliers of athletic shoes, sportswear and a major manufacturer of sports equipment. With its presence worldwide Nike markets its products under its own brand, as well a"
+            },
+            {
+              "title": "Top 20 Nike Competitors & Alternatives | Business Strategy Hub",
+              "url": "https://bstrategyhub.com/top-nike-competitors-alternatives/",
+              "text": "Top 20 Nike Competitors & Alternatives | Business Strategy Hub -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - Search Competitors # Top 20 Nike Competitors & Alternatives NIKE, Inc. was founded in 1964 by William Bowerman and Philip Knight and is headquartered in Beaverton, Oregon. It is the most valuable sportswear brand in the world ahead of its fierce rival Adidas. Nike manufactures and sells a wide collection of sportswear and casual wear, including athletic footwear, casual sneakers, sports apparel, accessories, and equipment. It also offers a variety of sport-related services. In FY 2020, Nike made $41.3 billion in revenue, net income of $4.3 billion, and has over 76,000 employees. Nike’s equipment revenue in the U.S. has been declining steadily since 2014 and was down 14% year-over-year from 2019. It generates around 43% of total revenue from North America, which "
+            },
+            {
+              "title": "My Top 5 Nike Competitors in 2025",
+              "url": "https://kartikahuja.com/nike-competitors/",
+              "text": "My Top 5 Nike Competitors in 2025 Nike holds a strong lead in the sportswear world with about 28% of the global market share. But its Nike competitors push hard, especially as sales data shows a running shoe boom in 2025. Adidas trails close at 18% share, while others gain ground through smart moves in tech and style. I've tested gear from all these brands over years of runs and workouts. My top five Nike competitors are Adidas, Under Armour, Puma, New Balance, and Skechers. Each one challenges Nike in key ways and offers real value if you shop smart. Adidas shines in soccer and streetwear; it grabbed $23 billion in revenue last year. Under Armour bets big on training apparel and holds a solid U.S. base with athlete endorsements. Puma mixes retro vibes with performance, pulling in younger crowds fast. New Balance wins on comfort for runners; its sales jumped 15% in stability shoes alone."
+            },
+            {
+              "title": "10 top brands like Nike for quality sneakers and sportswear | ThredUp",
+              "url": "https://www.thredup.com/bg/p/brands-like-nike",
+              "text": "10 top brands like Nike for quality sneakers and sportswear | ThredUp # Ace Your Workout: 10 Brands Like Nike for Top-Notch Sportswear March 7, 2025 ‍ Nike is renowned for iconic running shoes and athletic apparel. Their high-quality sportswear is ubiquitous, whether you’re running a marathon, getting in your reps at the gym, or just chilling at home. There are new and old brands among Nike’s competitors, with familiar challengers like Adidas and Reebok, and new contenders like ASICS and Lululemon. Check out these and other brands like Nike and stock your closet with top-tier sneakers, jackets, and leggings. ## Nike’s biggest competition: 10 sportswear brands for your wardrobe As great as Nike is, browse these 10 alternatives to open the door to fresh looks and fits. ### 1. ASICS ASICS windbreaker$26.99 SHOP NOW ASICS is a Japanese sportswear brand famous for sneakers. They also offer co"
+            }
+          ]
+        },
+        {
+          "query": "alternatives to Nike shoes",
+          "hits": [
+            {
+              "title": "Anta: A Cheaper Brand With Premium Shoes for Runners",
+              "url": "http://www.runnersworld.com/gear/a70244930/anta-running-shoes/",
+              "text": "Anta: A Cheaper Brand With Premium Shoes for Runners Skip to Content Two years ago, I’d never even heard of the Chinese footwear brand, Anta. Then I got my hands on a pair of Anta’s cushioned trainer, the PG7, last year, and I’ve been an Anta acolyte ever since. The PG7 falls into the same class as the Brooks Glycerin, Saucony Triumph, and Hoka Clifton; well-known daily trainers that feel plush and comfy around your foot. These max-cushioned, slightly firm shoes deliver high energy return so your run doesn’t feel like an obligatory slog. It’s the kind of ride that has me lacing up in the PG7 when I need to log 3 to 4 miles just to reach my weekly mileage. Putting on the shoe turns my attitude around quickly, making a run I needed to do into something I actually wanted. The kicker: the Anta PG7 costs just $80. No, I’m not kidding. That price is the kind you find in a discount pile, when a"
+            },
+            {
+              "title": "I'm tired of the poor quality of Nike shoes. What are some ...",
+              "url": "https://www.reddit.com/r/Sneakers/comments/18p3mbq/im_tired_of_the_poor_quality_of_nike_shoes_what/",
+              "text": "I'm tired of the poor quality of Nike shoes. What are some alternatives? : r/Sneakers Skip to main content I'm tired of the poor quality of Nike shoes. What are some alternatives? : r/Sneakers Go to Sneakers r/Sneakers 2y ago [deleted] # I'm tired of the poor quality of Nike shoes. What are some alternatives? When it comes to shoes, I've always worn Nike. Now I don't know if it's because I'm an adult or the Nike brand has really changed, but after dozens of orders I have to say: Nike shoes are overpriced shoes with cheap quality that quickly break. And yes, there are certainly Nike shoes that are better, but I don't feel like looking for them. So my question is: Is there any good quality sneaker brand that produces unique sneakers that I can bond with? (Adidas quality is even worse in my experience) Read more Share --- • Promoted Pedälhead Cycling Cap by TRVE.STUDIO --- InternationalPick"
+            },
+            {
+              "title": "Top 12 Puma Competitors & Alternatives [2026] - Latterly.org",
+              "url": "https://www.latterly.org/puma-competitors/",
+              "text": "Top 12 Puma Competitors & Alternatives [2026] - Latterly.org Contact About # Top 12 Puma Competitors & Alternatives [2026] Puma grew from a small workshop in Herzogenaurach in 1948 into one of the world’s most recognized sports and lifestyle brands. Founded by Rudolf Dassler, the company built its reputation by pairing athletic performance with bold, fashion-forward design. Today, Puma products are seen on tracks, pitches, streets, and runways around the globe. The brand targets athletes who demand reliable performance and consumers who want sport credibility with contemporary style. Puma’s presence in football, running, motorsport, basketball, and training has cemented it as a major player. Its global reach and consistent storytelling help it connect with youth culture and lifelong sports fans alike. Puma is popular for eye-catching silhouettes, comfortable cushioning, and collaboration"
+            },
+            {
+              "title": "17 Best Shoes Similar to Nike – Affordable Alternatives",
+              "url": "https://footwearhaven.com/shoes-similar-to-nike/",
+              "text": "17 Best Shoes Similar to Nike – Affordable Alternatives # 17 Shoes Similar To Nike But Cheaper: Alternatives That Deliver Style & Performance - Saeed Anwar - December 31, 2024 - Socks & Shoes Nike has long been celebrated for its comfort, performance, and iconic designs — but not everyone wants to pay the premium price. That’s why many shoppers search for shoes similar to Nike that offer the same quality, cushioning, and durability at a more affordable cost. Whether you’re a runner, a gym enthusiast, or a casual sneaker lover, brands like Adidas, Skechers, and New Balance provide stylish and reliable alternatives that let you enjoy the Nike experience without overspending. Keep reading to explore shoes that are excellent substitutes for Nike. These reliable options will elevate your style and performance without draining your bank account. Table of Contents Toggle ## Shoes Similar To Nik"
+            }
+          ]
+        },
+        {
+          "query": "top Nike shoes competitors Online Store",
+          "hits": [
+            {
+              "title": "Top 20 Nike Competitors & Alternatives | Business Strategy Hub",
+              "url": "https://bstrategyhub.com/top-nike-competitors-alternatives/",
+              "text": "Top 20 Nike Competitors & Alternatives | Business Strategy Hub -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- - Search Competitors # Top 20 Nike Competitors & Alternatives NIKE, Inc. was founded in 1964 by William Bowerman and Philip Knight and is headquartered in Beaverton, Oregon. It is the most valuable sportswear brand in the world ahead of its fierce rival Adidas. Nike manufactures and sells a wide collection of sportswear and casual wear, including athletic footwear, casual sneakers, sports apparel, accessories, and equipment. It also offers a variety of sport-related services. In FY 2020, Nike made $41.3 billion in revenue, net income of $4.3 billion, and has over 76,000 employees. Nike’s equipment revenue in the U.S. has been declining steadily since 2014 and was down 14% year-over-year from 2019. It generates around 43% of total revenue from North America, which "
+            },
+            {
+              "title": "My Top 5 Nike Competitors in 2025",
+              "url": "https://kartikahuja.com/nike-competitors/",
+              "text": "My Top 5 Nike Competitors in 2025 Nike holds a strong lead in the sportswear world with about 28% of the global market share. But its Nike competitors push hard, especially as sales data shows a running shoe boom in 2025. Adidas trails close at 18% share, while others gain ground through smart moves in tech and style. I've tested gear from all these brands over years of runs and workouts. My top five Nike competitors are Adidas, Under Armour, Puma, New Balance, and Skechers. Each one challenges Nike in key ways and offers real value if you shop smart. Adidas shines in soccer and streetwear; it grabbed $23 billion in revenue last year. Under Armour bets big on training apparel and holds a solid U.S. base with athlete endorsements. Puma mixes retro vibes with performance, pulling in younger crowds fast. New Balance wins on comfort for runners; its sales jumped 15% in stability shoes alone."
+            },
+            {
+              "title": "Nike's Top 10 Footwear Only Competitors",
+              "url": "https://footwearmagazine.com/nikes-top-10-footwear-only-competitors/",
+              "text": "Nike’s Top 10 Footwear Only Competitors Search Subscribe - Lifestyle - Retail - Celebrity - Shopping - Innovations - Strategy - Innovations - Technology - Events - Sports - Fashion - Business - Partner with Us # Nike’s Top 10 Footwear Only Competitors by Alyssa J. Mann January 21, 2026 Credit: Adidas Nike does not compete in a single sector. It competes across performance, culture, and scale, and that means its true rivals are not just the loudest or most visible brands, but the ones quietly taking share in specific categories, regions, and use cases. From global giants with end to end footwear portfolios to specialists reshaping running, basketball, and comfort, the competitive landscape has become more fragmented and more sophisticated. This ranking reflects the brands that pose the most meaningful footwear only pressure on Nike today. Some challenge it directly on volume and global di"
+            },
+            {
+              "title": "Top 5 adidas.com Alternatives & Competitors",
+              "url": "https://www.semrush.com/website/adidas.com/competitors/",
+              "text": "Top 5 adidas.com Alternatives & Competitors ### Start Here - Talk to Sales - Request a Demo - Features - Enterprise - Semrush One ### Find the Right Tools - AI PR Toolkit - Advertising Toolkit - Social Toolkit - Local Toolkit - Content Toolkit - Traffic & Market Toolkit - SEO Toolkit - AI Visibility Toolkit ### Platform - Data Sources - API - App Center - Integrations ### Top Apps - Other apps - Exploding Topics - AdClarity Try Semrush One for Free The leading platform that unifies SEO authority and AI visibility. ### Grow with Semrush - News - Webinars - AI Visibility Index - Success Stories - Academy - Knowledge Base - Blog ### Explore Free Tools - Explore Other Free Tools - Top Websites by Traffic - Backlink Checker - Keyword Tool - Website Traffic Checker - SEO Checker - AI Visibility Checker ### About Semrush - Contact Us - Affiliate Program - Stats and Facts - About Us Get Your Tic"
+            }
+          ]
+        },
+        {
+          "query": "Nike shoes alternatives",
+          "hits": [
+            {
+              "title": "17 Best Shoes Similar to Nike – Affordable Alternatives",
+              "url": "https://footwearhaven.com/shoes-similar-to-nike/",
+              "text": "17 Best Shoes Similar to Nike – Affordable Alternatives # 17 Shoes Similar To Nike But Cheaper: Alternatives That Deliver Style & Performance - Saeed Anwar - December 31, 2024 - Socks & Shoes Nike has long been celebrated for its comfort, performance, and iconic designs — but not everyone wants to pay the premium price. That’s why many shoppers search for shoes similar to Nike that offer the same quality, cushioning, and durability at a more affordable cost. Whether you’re a runner, a gym enthusiast, or a casual sneaker lover, brands like Adidas, Skechers, and New Balance provide stylish and reliable alternatives that let you enjoy the Nike experience without overspending. Keep reading to explore shoes that are excellent substitutes for Nike. These reliable options will elevate your style and performance without draining your bank account. Table of Contents Toggle ## Shoes Similar To Nik"
+            },
+            {
+              "title": "10 Alternatives To The Nike Panda Dunks - YouTube",
+              "url": "https://www.youtube.com/watch?v=VyxwcrC_wZo",
+              "text": "# 10 Alternatives To The Nike Panda Dunks - Channel: Jacques Slade - Length: 08:58 - Views: 28.5K - Likes: 582 - Published: 2023-05-06T09:49:36-07:00 - Category: Entertainment - Keywords: sneaker, sneakers, Kicks, sneaker shopping, nike, adidas, Yeezy, sneaker collection, Complex, Nice Kicks, unboxing, jacques slade, kustoo - Language: en ## Description Thanks for watching. Subscribe for more. The Nike Panda Dunk is the biggest sneaker in the world right now., Form runways to beaters, the Nike Dunk has become the most loved shoe over theist few years. However, if you are looking to expand on the nike dunk black and white sneaker concept, here are 10 alternatives you can pick up that will have you looking just as fresh with just a small bit of individuality. Here are 10 alternatives sneakers you can buy instead of the Panda Nike Dunks. ►SUBSCRIBE: http://www.youtube.com/user/kustoo?sub_co"
+            },
+            {
+              "title": "10 top brands like Nike for quality sneakers and sportswear | ThredUp",
+              "url": "https://www.thredup.com/bg/p/brands-like-nike",
+              "text": "10 top brands like Nike for quality sneakers and sportswear | ThredUp # Ace Your Workout: 10 Brands Like Nike for Top-Notch Sportswear March 7, 2025 ‍ Nike is renowned for iconic running shoes and athletic apparel. Their high-quality sportswear is ubiquitous, whether you’re running a marathon, getting in your reps at the gym, or just chilling at home. There are new and old brands among Nike’s competitors, with familiar challengers like Adidas and Reebok, and new contenders like ASICS and Lululemon. Check out these and other brands like Nike and stock your closet with top-tier sneakers, jackets, and leggings. ## Nike’s biggest competition: 10 sportswear brands for your wardrobe As great as Nike is, browse these 10 alternatives to open the door to fresh looks and fits. ### 1. ASICS ASICS windbreaker$26.99 SHOP NOW ASICS is a Japanese sportswear brand famous for sneakers. They also offer co"
+            },
+            {
+              "title": "I'm tired of the poor quality of Nike shoes. What are some alternatives?",
+              "url": "https://www.reddit.com/r/Sneakers/comments/18p3mbq/im_tired_of_the_poor_quality_of_nike_shoes_what/",
+              "text": "I'm tired of the poor quality of Nike shoes. What are some alternatives? : r/Sneakers Skip to main content I'm tired of the poor quality of Nike shoes. What are some alternatives? : r/Sneakers Go to Sneakers r/Sneakers 2y ago [deleted] # I'm tired of the poor quality of Nike shoes. What are some alternatives? When it comes to shoes, I've always worn Nike. Now I don't know if it's because I'm an adult or the Nike brand has really changed, but after dozens of orders I have to say: Nike shoes are overpriced shoes with cheap quality that quickly break. And yes, there are certainly Nike shoes that are better, but I don't feel like looking for them. So my question is: Is there any good quality sneaker brand that produces unique sneakers that I can bond with? (Adidas quality is even worse in my experience) Read more Share --- • Promoted Pedälhead Cycling Cap by TRVE.STUDIO --- InternationalPick"
+            }
+          ]
+        }
+      ],
+      "label": "Search 2: competitor discovery",
+      "selected_competitors": [
+        {
+          "name": "Adidas",
+          "why": "Adidas is a leading sportswear brand known for its innovative footwear and strong market presence."
+        },
+        {
+          "name": "Puma",
+          "why": "Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings."
+        },
+        {
+          "name": "Reebok",
+          "why": "Reebok provides a range of athletic shoes that appeal to similar customer segments as Nike."
+        }
+      ]
+    },
+    "search_3": {
+      "Puma": {
+        "queries": [
+          "Puma Footwear Online Store services products categories",
+          "Puma Footwear Online Store price range pricing",
+          "Puma recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "Puma Footwear Online Store services products categories",
+            "hits": [
+              {
+                "title": "Shop All Shoes - PUMA",
+                "url": "https://us.puma.com/us/en/puma/shop-all-shoes",
+                "text": "Shop All Shoes | PUMA Skip to content # Shop All Shoes 2 Colors 11 Colors 3 Colors 1 Color 12 Colors 12 Colors 1 Color 11 Colors 1 Color 4 Colors 11 Colors 12 Colors 1 Color 1 Color 1 Color 1 Color 2 Colors 11 Colors 2 Colors 2 Colors 12 Colors 1 Color 1 Color 14 Colors GET 20% OFF Location Selector Close"
+              },
+              {
+                "title": "Men's Shoes and Sneakers - PUMA",
+                "url": "https://us.puma.com/us/en/men/shoes",
+                "text": "Men's Shoes and Sneakers | PUMA Skip to content # Men's Shoes and Sneakers 1 Color 14 Colors 14 Colors 9 Colors 9 Colors 9 Colors 1 Color 4 Colors 10 Colors 10 Colors 1 Color 1 Color 14 Colors 1 Color 1 Color 2 Colors 1 Color 1 Color 1 Color 1 Color 1 Color 14 Colors 14 Colors 10 Colors Designed for style, engineered for performance and built for your active lifestyle, PUMA's collection of men's sneakers are ready to take you through your day. Whether you need a pair of training shoes for the gym or you need an everyday shoe to elevate your outfit, PUMA's sneakers for men offer comfort and versatility for every occasion. Explore running shoes for men with the latest cutting-edge PUMA performance tech. Shock-absorbent and highly-cushioned midsoles deliver optimal support while durable outsoles provide maximum traction and superior grip, with breathable, retro-inspired uppers for unbeatabl"
+              },
+              {
+                "title": "PUMA.com | Clothing, Shoes, Accessories | PUMA US",
+                "url": "https://go.puma.com/ee/en/men/shoes",
+                "text": "PUMA.com | Clothing, Shoes, Accessories | PUMA US Skip to content # PUMA x MADHAPPY OPTIMISM IN BLOOM. A curated pastel palette, romantic lace motifs, and the updated Speedcat Plus come together with premium materials and Madhappy’s iconic stitch details for a collection that blends classic style with forward-looking designs — all while holding true to PUMA’s sport heritage. SHOP NOW ## EXPLORE THE COLLECTION Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out Sold Out ### WELCOME TO H-STREET MEN'S LIFESTYLE WOMEN'S LIFESTYLE #### STEP UP YOUR SHOE GAME SPEEDCAT SUEDE MOSTRO H-STREET FADE PALERMO #### UP TO 50% OFF SELECT STYLES IT'S YOUR LUCKY DAY EXCLUSIONS APPLY. LIMITED TIME ONLY. MEN'S SALE WOMEN'S SALE KIDS' SALE #### FRESH IN SPORT ## MB.05 SHOP THE COLLECTION SHOP NEW IN BASKETBALL ## MAGMAX 2 MEN'S RUNNING SHOES WO"
+              }
+            ]
+          },
+          {
+            "query": "Puma Footwear Online Store price range pricing",
+            "hits": [
+              {
+                "title": "Shop All Shoes - PUMA",
+                "url": "https://us.puma.com/us/en/puma/shop-all-shoes",
+                "text": "Shop All Shoes | PUMA Skip to content # Shop All Shoes 2 Colors 11 Colors 3 Colors 1 Color 12 Colors 12 Colors 1 Color 11 Colors 1 Color 4 Colors 11 Colors 12 Colors 1 Color 1 Color 1 Color 1 Color 2 Colors 11 Colors 2 Colors 2 Colors 12 Colors 1 Color 1 Color 14 Colors GET 20% OFF Location Selector Close"
+              },
+              {
+                "title": "PUMA Shoes & Sneakers",
+                "url": "https://www.shoecarnival.com/puma",
+                "text": "PUMA Shoes | Sneakers & Tennis Shoes | Shoe Carnival Skip to Content Sorry, your browser is no longer supported. Please update your browser to have a better shopping experience. Find a Store Find a Store FREE Shipping for Members Free In-Store Pickup Now Trending Order Status --- Chat with Us --- Gift Cards # PUMA Shoes, Sneakers, and Accessories NEW ARRIVALS SPORTY STYLES PUMA KIDS In Stock at Store In Stock at Store Gender Price Brand Size Color On Sale On Sale View All Filters Filter Sort By: Best Match Best MatchPrice Low-HighPrice High-LowNew ArrivalsMost PopularTop Rated 186 Total Items Sort By: Best Match Best MatchPrice Low-HighPrice High-LowNew ArrivalsMost PopularTop Rated 186 Total Items +4 Colors ###### Puma ###### $84.99 ###### $64.98 ###### $84.99 ###### $64.98 Men's Puma Voltaic Evo Sneakers +3 Colors ###### Puma ###### $84.99 ###### $79.98 ###### $84.99 ###### $79.98 Wome"
+              },
+              {
+                "title": "PUMA Men's Running Shoes - Running Warehouse",
+                "url": "https://www.runningwarehouse.com/catpage-PUMAMS.html",
+                "text": "PUMA Men's Running Shoes - Running Warehouse Skip to footer Deviate Nitro Deviate Nitro Elite MagMax Nitro Fast-R Nitro Elite Magnify Nitro Deviate Nitro Elite Trail Velocity Nitro ForeverRun Nitro Voyage Nitro Track & Field Cross Country On This Page Deviate NitroDeviate Nitro EliteMagMax NitroFast-R Nitro EliteMagnify NitroDeviate Nitro Elite TrailVelocity NitroForeverRun NitroVoyage NitroTrack & FieldCross Country Sort Filter Sort Filter The PUMA Deviate Nitro is an uptempo performance trainer that delivers a fast and smooth ride on speed days with enough comfort to take on daily training runs as well. NewPUMA Deviate Nitro 4Men's Shoes - Apple Spritz/Lux Lime $169.95 Video NewPUMA Deviate Nitro 4Men's Shoes - Black/White/Silver $169.95 Video NewPUMA Deviate Nitro 4Men's Shoes - HYROX $169.95 Video NewPUMA Deviate Nitro 4Men's Shoes - Silver/Lux Lime $169.95 Video NewPUMA Deviate Nitr"
+              }
+            ]
+          },
+          {
+            "query": "Puma recent announcements news 2026",
+            "hits": [
+              {
+                "title": "PUMA Announces Long Term Partnership VfL Gummersbach with CEO Arthur Hoeld joining Advisory Board",
+                "url": "https://footwearmagazine.com/puma-announces-long-term-partnership-vfl-gummersbach-ceo-arthur-hoeld-advisory-board/",
+                "text": "PUMA Announces Long Term Partnership VfL Gummersbach with CEO Arthur Hoeld joining Advisory Board Search Subscribe - Lifestyle - Retail - Celebrity - Shopping - Innovations - Strategy - Innovations - Technology - Events - Sports - Fashion - Business - Partner with Us # PUMA Announces Long Term Partnership VfL Gummersbach with CEO Arthur Hoeld joining Advisory Board by Aashir Ashfaq March 18, 2026 Credit: Puma PUMA announces a long term partnership with VfL Gummersbach, aligning the global sports brand with one of European handball’s most decorated clubs ahead of the 2026/27 season. The agreement adds a governance layer as PUMA CEO Arthur Hoeld joins the club’s Advisory Board, signaling a deeper strategic role beyond standard kit supply. ### Handball heritage meets global brand VfL Gummersbach is described as one of the biggest names in European handball, with a legacy that matches PUMA’s"
+              },
+              {
+                "title": "PUMA named official outfitter for 2026 Basketball Africa League | Ghana News Agency",
+                "url": "https://gna.org.gh/2026/03/puma-named-official-outfitter-for-2026-basketball-africa-league/",
+                "text": "PUMA named official outfitter for 2026 Basketball Africa League | Ghana News Agency Accra, March.18, GNA-The Basketball Africa League (BAL) and PUMA, one of the world’s leading sports brands have announced a multiyear collaboration that makes PUMA the Official Outfitter for the new season. The collaboration would see PUMA supply all official BAL teams, fans and referees with game uniforms, warm-up gear, practice wear, accessories, and branded tops. The fanwear, a reflection of the energy, diversity and creativity of African basketball culture would also be available this season at BAL arenas, the BAL’s e-commerce store at BALstore.NBA.com Mr. Amadou Gallo Fall, President of Basketball Africa League in his statement said the collaboration with PUMA reflected the shared commitment to elevate African sports, most especially basketball. “PUMA’s innovation, creativity and deep connection to t"
+              },
+              {
+                "title": "Regarding the recent announcement by ANTA Sports ... - PUMA",
+                "url": "https://about.puma.com/en/newsroom/corporate-news/2026/27-01-2026-statement-puma-ceo-arthur-hoeld-regarding-recent",
+                "text": "Statement by PUMA CEO Arthur Hoeld regarding the recent announcement by ANTA Sports Products Limited | PUMA® Herzogenaurach, January 27, 2026 Statement by PUMA CEO Arthur Hoeld regarding the recent announcement by ANTA Sports Products Limited Regarding the recent announcement by ANTA Sports Products Limited, PUMA CEO Arthur Hoeld comments: “PUMA SE acknowledges that ANTA Sports has agreed to acquire a 29.06% stake in the company. PUMA’s strategic priorities are clear. We are focused on strengthening our global brand, delivering compelling products, and engaging consumers worldwide to become a Top 3 global sports brand. ANTA aims to empower PUMA to fully realise its brand potential and its heritage to create long-term value for global consumers and stakeholders. We see this as a vote of confidence in PUMA and its strategic direction.” Share it on"
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: Puma competitor deep dive"
+      },
+      "Reebok": {
+        "queries": [
+          "Reebok Footwear Online Store services products categories",
+          "Reebok Footwear Online Store price range pricing",
+          "Reebok recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "Reebok Footwear Online Store services products categories",
+            "hits": [
+              {
+                "title": "Reebok® Official Site | Life is Not a Spectator Sport",
+                "url": "https://www.reebok.com/",
+                "text": "Reebok® Official Site | Life is Not a Spectator Sport JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW Download Our App for 15% Off Your First Purchase Download Our App for 15% Off Your First Purchase MAJOR SPRING SAVINGS # UP TO 60% OFF # + $30 OFF WITH CODE: BMSM Savings on savings, just in time for your spring wardrobe Ree-fresh Shop Now JUST DROPPED: FUTURE PEACH ### ENGINE A Bring vibrant energy to the court & the concrete Shop Now SET THE TREND ## BORN CLASSIC. WORN IN LOS ANGELES. Fashion creator & designer Kai Maniego in premium Classics Shop Now NEW COLORWAYS ## CRUSH YOUR CARDIO GOALS Pierre Gasly powers his treadmill workouts in the FloatZig Tread Shop Now TRAINING RUNNING CLASSICS BASKETBALL ## RECENTLY VIEWED SHOP OUR FEED ## Follow Us Privacy Policy Terms & Conditions Mobile Alerts Policy Do Not Sell or Share My Personal Information Ac"
+              },
+              {
+                "title": "Products - Reebok",
+                "url": "https://www.reebok.com/collections/all",
+                "text": "Products – Reebok JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 👀 JUST DROPPED: ENGINE A SHOP NOW END OF SEASON CLEAR-OUT UP TO 65% Off SHOP NOW Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Download Our App for 15% Off Your First Purchase JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 👀 JUST DROPPED: ENGINE A SHOP NOW END OF SEASON CLEAR-OUT UP TO 65% Off SHOP NOW Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Back To Page # Products 1039 products ## RECENTLY VIEWED ## Follow Us Privacy Policy Terms & Conditions Mobile Alerts Policy Do Not Sell or Share My Personal Information Accessibility Statement Accessibility Toolbar Reebok® is a trademark of Reebok International Limited. ©2025 Reebok International Limited. All Rights Reserved. This website uses cookies to ensure "
+              },
+              {
+                "title": "Shop All Shoes | Running, Training & Basketball Sneakers | Reebok",
+                "url": "https://www.reebok.com/collections/shoes",
+                "text": "Shop All Shoes | Running, Training & Basketball Sneakers | Reebok JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 👀 JUST DROPPED: ENGINE A SHOP NOW END OF SEASON CLEAR-OUT UP TO 65% Off SHOP NOW Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Download Our App for 15% Off Your First Purchase JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 👀 JUST DROPPED: ENGINE A SHOP NOW END OF SEASON CLEAR-OUT UP TO 65% Off SHOP NOW Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Back To Page # Shoes New Classics Men Women Kids Sport Coming Soon Sale 527 products ## RECENTLY VIEWED ### Athletic Shoes If you’re ready to put in the miles, work up a sweat or get active, Reebok has gym shoes that can live up to the task. Whether you love kickboxing, yoga, running, barre, boxing, training, weight"
+              }
+            ]
+          },
+          {
+            "query": "Reebok Footwear Online Store price range pricing",
+            "hits": [
+              {
+                "title": "Men's Shoes Under $100",
+                "url": "https://www.reebok.com/collections/mens-shoes-under-100",
+                "text": "Men&#39;s Shoes Under $100 &ndash; Reebok Skip to content Our Privacy Policy Changed Learn More Your order qualifies for free shippingSpend$100.00 USDmore for free shipping REEBOK x ANGEL REESE: COMING SOON LEARN MORE Bryson DeChambeau & Reebo& Reebok Golf Shop Now SPRING CLOSEOUT SALE SHOP NOW Reebok Cart$0.00(0) Reebok My Account Search Cart$0.00(0) # Men's Shoes Under $100 All ShoesNano GymClassicsRunningGym & TrainingBasketballPickleball, Tennis & PadelWalkingShoes Under $100 **264**products Filter Club C 85 Vintage Shoes Flexagon Force 3 Wide 4E Men&#39;s Training Shoes Club C 85 Vintage Shoes Flexagon Force 3 Wide 4E Men&#39;s Training Shoes Club C Revenge Vintage Club C 85 Vintage Shoes Classic Leather Shoes Club C 85 Vintage Shoes Zig Dynamica STR Shoes Zig Dynamica STR Shoes Club C Revenge Vintage Shoes Classic Leather Shoes ## Follow Us FacebookTwitterTiktokInstagramYouTube Pri"
+              },
+              {
+                "title": "Women’s Shoes Under $100 – Reebok",
+                "url": "http://www.reebok.com/collections/women-s-shoes-under-100",
+                "text": "Women’s Shoes Under $100 – Reebok JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 😇 A HEAVENLY NEW ANGEL REESE 1 SHOP NOW BUY MORE, SAVE UP TO $30 Code: BMSM SHOP NOW FEELING LUCKY? ☘️ UNLOCK SURPRISE SAVINGS Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Download Our App for 15% Off Your First Purchase JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 😇 A HEAVENLY NEW ANGEL REESE 1 SHOP NOW BUY MORE, SAVE UP TO $30 Code: BMSM SHOP NOW FEELING LUCKY? ☘️ UNLOCK SURPRISE SAVINGS Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Back To Page # Women’s Shoes Under $100 All Shoes Classics Reebok x Angel Reese Running Gym & Training Walking Basketball Wide Shoes Shoes Under $100 256 products ## RECENTLY VIEWED ## Follow Us Privacy Policy Terms & Conditions Mobile Alerts Policy Do Not "
+              },
+              {
+                "title": "Shoes, Clothing & Accessories on Sale - Reebok",
+                "url": "https://www.reebok.com/collections/sale",
+                "text": "Shoes, Clothing & Accessories on Sale | Reebok JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 😇 A HEAVENLY NEW ANGEL REESE 1 PREVIEW NOW 🍑 A PEACHY NEW HUE PREVIEW THE ENGINE A FEELING LUCKY? ☘️ UNLOCK SURPRISE SAVINGS ⚽️ Reebok x Dušan Vlahović LEARN MORE Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Download Our App for 15% Off Your First Purchase JUST DROPPED: CLASSICS FT. KAROL G SHOP NOW 😇 A HEAVENLY NEW ANGEL REESE 1 PREVIEW NOW 🍑 A PEACHY NEW HUE PREVIEW THE ENGINE A FEELING LUCKY? ☘️ UNLOCK SURPRISE SAVINGS ⚽️ Reebok x Dušan Vlahović LEARN MORE Your order qualifies for free shipping Free Shipping with Membership Spend $75.00 USD More for Free Shipping Back To Page # Sale Feeling Lucky Event Men Women Kids Shoes Clothing Accessories Save on iconic Reebok sneakers, fitness apparel & more. Explore classic sneakers, training"
+              }
+            ]
+          },
+          {
+            "query": "Reebok recent announcements news 2026",
+            "hits": [
+              {
+                "title": "Reebok Engine A 26 Basketball Sneaker Available Now - WWD",
+                "url": "https://wwd.com/footwear-news/sneaker-news/reebok-engine-a-26-basketball-available-now-1238643647/",
+                "text": "Reebok Engine A 26 Basketball Sneaker Available Now Skip to main content Reebok Engine A 26. Reebok Reebok’s return to performance basketball happened just over a year ago to the day and now, the brand is back with a sequel. After delivering the Engine A in February 2025, Reebok has followed it up with the Engine A 26, the Boston-based footwear brand’s newest addition to its on-court lineup. The model is available now in three debut colorways and is notable for building on Reebok’s patented Energy Return System cushioning, the same technology featured on the Angel Reese 1. The Engine A 26 adds an updated drop-in forefoot SuperFloat Pod, which heightens the responsive cushioning even more. ### Related Stories ### Reebok Signs Soccer Star Duśan Vlahović as It Prepares Its Return to the Sport ### Nike Is Reportedly Giving Ja Morant's New Signature Sneaker a Major Update Reebok also focused "
+              },
+              {
+                "title": "Reebok Signs Aneesah Morrow as the New Face of Women's Basketball",
+                "url": "https://footwearmagazine.com/reebok-aneesah-morrow-womens-basketball/",
+                "text": "Reebok Signs Aneesah Morrow as the New Face of Women's Basketball Search Subscribe - Lifestyle - Retail - Celebrity - Shopping - Innovations - Strategy - Innovations - Technology - Events - Sports - Fashion - Business - Partner with Us # Reebok Signs Aneesah Morrow as the New Face of Women’s Basketball by Aashir Ashfaq March 1, 2026 Credit: Reebok Reebok has officially welcomed Aneesah Morrow to the Reebok Basketball family, positioning the rising WNBA forward as a key face in the brand’s renewed push into women’s performance basketball. The announcement went live on February 10, 2026, through the brand’s social channels as part of its growing roster of women’s hoop talent. ### New chapter for Reebok Basketball The signing of Aneesah Morrow extends Reebok’s current strategy of rebuilding its basketball identity around elite women players, alongside names like Angel Reese and DiJonai Carr"
+              },
+              {
+                "title": "Reebok Expands Football Roster with Signing of Elite European Defender Trevoh Chalobah — Authentic Brands Group",
+                "url": "https://corporate.authentic.com/press-releases/reebok-football-roster-elite-european-defender-trevoh-chalobah",
+                "text": "Reebok Expands Football Roster with Signing of Elite European Defender Trevoh Chalobah — Authentic Brands Group # Reebok Expands Football Roster with Signing of Elite European Defender Trevoh Chalobah ### Chalobah debuted Reebok’s new Sidewinder performance football boot during knockout match Reebok, the iconic and irreverent sports culture brand, today announced a partnership with professional footballer Trevoh Chalobah, further strengthening the brand’s commitment to the global game. The signing builds on Reebok’s expanding presence in elite football following the recently announced partnership with Dušan Vlahović, as the brand continues to assemble a new generation of athletes ahead of its upcoming performance football launch. “Reebok is a brand with a deep history in sport, and being part of its return to football is exciting,” said Trevoh Chalobah. “The vision for the next chapter o"
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: Reebok competitor deep dive"
+      },
+      "Adidas": {
+        "queries": [
+          "Adidas Footwear Online Store services products categories",
+          "Adidas Footwear Online Store price range pricing",
+          "Adidas recent announcements news 2026"
+        ],
+        "results": [
+          {
+            "query": "Adidas Footwear Online Store services products categories",
+            "hits": [
+              {
+                "title": "adidas Shoes, Sneakers & Slides",
+                "url": "https://www.adidas.com/us/shoes",
+                "text": "Powered and protected by Privacy Powered and protected by Akamai Privacy"
+              },
+              {
+                "title": "Originals Sneakers & Clothing | adidas US",
+                "url": "https://www.adidas.com/us/originals",
+                "text": "Originals Sneakers & Clothing | adidas US # SUPERSTAR The Original Icon. Use left and right arrow keys to navigate between items. Previous Next #### BRING OUT VINTAGE VIBES #### UNFILTERED FLORAL FUN #### HANDBALL SPEZIAL #### ADISTAR XLG 2.0 - Designed with bold proportions for those who dare to stand out.SHOP NOW - Classic, sport-inspired style.SHOP NOW - Discover team adidas x Liberty London.SHOP NOW - Embrace the history of global sport with low-profile shoes from adidas.SHOP NOW Showing items 0 to 0 of 0 Pause video # ENTER THE WORLD OF CONFIRMED Explore a tailored selection of Originals products and limited releases from adidas partnerships. #### RELATED RESOURCES How To Clean ShoesGet down and dirty with adidas and learn how to clean your sneakers the right way. The adidas Samba Size GuideTired of asking are Sambas true to size? Check out our official adidas Samba size chart for a"
+              },
+              {
+                "title": "Men's Sneakers and Activewear | adidas US",
+                "url": "https://www.adidas.com/us/men",
+                "text": "Powered and protected by Privacy Powered and protected by Akamai Privacy"
+              }
+            ]
+          },
+          {
+            "query": "Adidas Footwear Online Store price range pricing",
+            "hits": [
+              {
+                "title": "adidas Men's Shoes Under $100 | adidas US",
+                "url": "https://www.adidas.com/us/men-under_100-shoes",
+                "text": "Powered and protected by Privacy Powered and protected by Akamai Privacy"
+              },
+              {
+                "title": "Men's Shoes | adidas US",
+                "url": "https://www.adidas.com/us/men-shoes",
+                "text": "Powered and protected by Privacy Powered and protected by Akamai Privacy"
+              },
+              {
+                "title": "Shop Men - Shoes Under 80 - Running | adidas US",
+                "url": "https://www.adidas.com/us/men-shoes_under_80-running",
+                "text": "Powered and protected by Privacy Powered and protected by Akamai Privacy"
+              }
+            ]
+          },
+          {
+            "query": "Adidas recent announcements news 2026",
+            "hits": [
+              {
+                "title": "Adidas Originals Taps Samuel L. Jackson and a Star Studded Cast for Superstar Relaunch",
+                "url": "https://footwearmagazine.com/adidas-originals-samuel-jackson-superstar-relaunch/",
+                "text": "Adidas Originals Taps Samuel L. Jackson and a Star Studded Cast for Superstar Relaunch Search Subscribe - Lifestyle - Retail - Celebrity - Shopping - Innovations - Strategy - Innovations - Technology - Events - Sports - Fashion - Business - Partner with Us # Adidas Originals Taps Samuel L. Jackson and a Star Studded Cast for Superstar Relaunch by Aashir Ashfaq March 10, 2026 Credit: Adidas adidas Originals is opening a new chapter for the Superstar, framing the shell toe as The Original Icon in a star packed Spring 2026 campaign and refreshed apparel lineup. ### Hotel Superstar, New era The new chapter centers on a cinematic Hotel Superstar campaign led by Samuel L. Jackson, with each room revealing a different cultural figure wearing the shoe in their own way. The cast spans music, sport, and fashion, including JENNIE, Kendall Jenner, James Harden, Lamine Yamal, Baby Keem, and others, p"
+              },
+              {
+                "title": "Adidas Scales New 3D Printed CLIMACOOL LACED Globally for Post-Game Comfort - 3D Printing Industry",
+                "url": "https://3dprintingindustry.com/news/adidas-scales-new-3d-printed-climacool-laced-globally-for-post-game-comfort-249658/",
+                "text": "Adidas Scales New 3D Printed CLIMACOOL LACED Globally for Post-Game Comfort - 3D Printing Industry Adidas Scales New 3D Printed CLIMACOOL LACED Globally for Post-Game Comfort Two years after a limited release, German sportswear brand adidas is putting the CLIMACOOL LACED into wide circulation, available globally from March 3, 2026 online and in stores. The shoe is built using Digital Light Synthesis (DLS) 3D printing process, allowing each pair to be assembled in approximately 24 hours into a seamless, joint-free structure with no edges or pressure points. The sportswear brand frames the manufacturing process as a deliberate departure from conventional footwear construction, where structural, material, and aesthetic decisions are typically made in isolation rather than developed as a single, integrated system from the ground up. The shoe is priced at €160, $160, £140, and available in un"
+              },
+              {
+                "title": "adidas x Thug Club Second Collab Collection Full Lineup | Hypebeast",
+                "url": "https://hypebeast.com/2026/3/adidas-thug-club-second-collaboration-collection-full-lineup-release-info",
+                "text": "adidas x Thug Club Second Collab Collection Full Lineup | Hypebeast - Fashion - Footwear - Art - Design - Music - Lifestyle - Videos - Brands - Magazine - Hypebeast 20 - Hypebeast100 - Store 1 of 17 Adidas 2 of 17 Adidas 3 of 17 Adidas 4 of 17 Adidas 5 of 17 Adidas 6 of 17 Adidas 7 of 17 Adidas 8 of 17 Adidas 9 of 17 Adidas 10 of 17 Adidas 11 of 17 Adidas 12 of 17 Adidas 13 of 17 Adidas 14 of 17 Adidas 15 of 17 Adidas 16 of 17 Adidas 17 of 17 Adidas Fashion Mar 18, 2026 5.3K Views 0 Comments Comments Save Summary - adidas and Thug Club have unveiled the official campaign of their upcoming collaboration, featuring apparel, footwear and accessories - Releasing on March 25, key pieces include the TC SST Jacket, SWEAT HD hoodie to bold iterations of the Superstar Vintage, adiFOM Megaride and IIInfinity Mule Following images of the footwear from adidas and Thug Club‘s collaboration surfacing "
+              }
+            ]
+          }
+        ],
+        "label": "Search 3: Adidas competitor deep dive"
+      }
+    }
+  },
+  "summary_text": "=== Nike shoes ===\nOverview: Nike offers a wide range of shoes and sneakers for men, women, and kids, featuring various styles and colors.\nServices: Custom shoe options available; Wide range of sizes and colors; Sale and offers on selected items\nPrice range: $0 - Over $150\nRecent announcements: Launch of Nike KD19, Kevin Durant's 19th signature shoe; Release of Nike Air Rejuven8 in Sequoia/Light Khaki; Announcement of Nike Giannis Freak 8 scheduled for August 2026\n\n=== Adidas ===\nWhy this competitor: Adidas is a leading sportswear brand known for its innovative footwear and strong market presence.\nOverview: Adidas offers a variety of shoes, sneakers, and slides for men, women, and kids, focusing on innovative designs and styles.\nServices: Wide range of shoes, sneakers, and slides; Custom options available; Sale items under $100\nPrice range: $0 - Over $100\nRecent announcements: Superstar relaunch featuring Samuel L. Jackson; Global release of 3D printed CLIMACOOL LACED; Collaboration with Thug Club for new collection\n\n=== Puma ===\nWhy this competitor: Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings.\nOverview: Puma offers stylish and performance-driven shoes that compete directly with Nike's offerings.\nServices: Wide range of shoes and sneakers for men, women, and kids; Custom shoe options available; Sale and offers on selected items\nPrice range: $0 - Over $150\nRecent announcements: Long term partnership with VfL Gummersbach; Official outfitter for 2026 Basketball Africa League\n\n=== Reebok ===\nWhy this competitor: Reebok provides a range of athletic shoes that appeal to similar customer segments as Nike.\nOverview: Reebok offers a variety of athletic shoes, including options for running, training, and basketball, appealing to a wide range of customers.\nServices: Free shipping with membership on orders over $75; Discounts up to 60% off on selected items; 15% off first purchase through app download\nPrice range: Under $100 for many styles\nRecent announcements: Launch of Reebok Engine A 26 basketball sneaker; Signing of Aneesah Morrow as new face of women's basketball; Expansion of football roster with Tre..."
 }

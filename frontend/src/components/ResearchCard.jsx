@@ -1,66 +1,16 @@
 import { useState } from 'react';
 
-// Demo data used when real knowledge isn't available yet
-const DEMO_KNOWLEDGE = {
-  product: {
-    name: 'ChatGPT',
-    overview: 'AI chatbot by OpenAI for writing, coding, research, and everyday tasks. Powered by GPT-4o and GPT-5.',
-    features: [
-      'Conversational AI with memory across sessions',
-      'Code generation, debugging, and explanation',
-      'Image generation (DALL-E), file uploads, web browsing',
-      'Custom GPTs and GPT Store',
-      'Voice mode and mobile apps',
-    ],
-    pricing: 'Free: Limited GPT-5 access | Plus: $20/mo | Pro: $200/mo | Team: $25-30/user/mo | Enterprise: Custom',
-  },
-  competitors: {
-    'Claude': {
-      name: 'Claude',
-      overview: 'AI assistant by Anthropic focused on safety, long-context understanding, and nuanced reasoning.',
-      features: [
-        '200K token context window',
-        'Extended thinking for complex reasoning',
-        'Claude Code for terminal-based development',
-        'Projects with file uploads and knowledge bases',
-        'Google Workspace integration',
-      ],
-      pricing: 'Free: Sonnet access | Pro: $20/mo | Team: $25/user/mo | Max: $100/mo | Enterprise: Custom',
-    },
-    'Gemini': {
-      name: 'Gemini',
-      overview: 'Google\'s multimodal AI assistant integrated with Search, Gmail, Docs, and the Google ecosystem.',
-      features: [
-        'Deep Google Search integration with citations',
-        'Multimodal: text, image, audio, video understanding',
-        'Gems (custom AI personas)',
-        'Google Workspace integration (Gmail, Docs, Sheets)',
-        '1M token context window (Gemini 1.5 Pro)',
-      ],
-      pricing: 'Free: Gemini with Flash | Advanced: $19.99/mo (bundled with Google One 2TB) | Business: $24/user/mo',
-    },
-    'Perplexity': {
-      name: 'Perplexity',
-      overview: 'AI-powered answer engine that combines search with LLM synthesis. Focuses on cited, factual answers.',
-      features: [
-        'Real-time web search with source citations',
-        'Focus modes: Web, Academic, Writing, Math, Video',
-        'Collections for organizing research',
-        'API access for developers',
-        'Supports multiple LLM backends (GPT-4, Claude, etc.)',
-      ],
-      pricing: 'Free: 5 Pro searches/day | Pro: $20/mo or $200/yr | Enterprise: Custom',
-    },
-  },
-};
-
 export default function ResearchCard({ visible, knowledge, productName, onClose }) {
   const [expanded, setExpanded] = useState(0); // first item expanded by default
 
   if (!visible) return null;
 
-  // Use real knowledge if it has structured data, otherwise fall back to demo
-  const effectiveKnowledge = hasStructuredData(knowledge) ? knowledge : DEMO_KNOWLEDGE;
+  const effectiveKnowledge = knowledge || (
+    productName
+      ? { product: { name: productName, input_name: productName }, competitors: {} }
+      : null
+  );
+  const searchStages = extractSearchStages(effectiveKnowledge?.research_trace);
 
   // Build company list: product first, then competitors
   const companies = [];
@@ -82,6 +32,23 @@ export default function ResearchCard({ visible, knowledge, productName, onClose 
         </div>
 
         <div className="research-body">
+          {searchStages.length > 0 && (
+            <div className="research-search-flow">
+              {searchStages.map((stage, i) => (
+                <div key={`${stage.label}-${i}`} className="research-search-stage">
+                  <div className="research-search-label">{stage.label}</div>
+                  <div className="research-search-queries">
+                    {stage.queries.slice(0, 4).map((query, j) => (
+                      <div key={`${query}-${j}`} className="research-search-query">
+                        {query}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
           {companies.map((company, i) => (
             <div
               key={company.name}
@@ -100,6 +67,13 @@ export default function ResearchCard({ visible, knowledge, productName, onClose 
 
               {expanded === i && (
                 <div className="research-company-detail">
+                  {!company.isProduct && company.why_competitor && (
+                    <div className="research-section">
+                      <div className="research-section-label">Why This Competitor</div>
+                      <div className="research-section-text">{company.why_competitor}</div>
+                    </div>
+                  )}
+
                   {/* Overview */}
                   {company.overview && (
                     <div className="research-section">
@@ -108,43 +82,44 @@ export default function ResearchCard({ visible, knowledge, productName, onClose 
                     </div>
                   )}
 
-                  {/* Features */}
-                  {company.features && (
+                  {/* Services / Features */}
+                  {(company.services || company.features || company.reviews) && (
                     <div className="research-section">
-                      <div className="research-section-label">Key Features</div>
-                      <ul className="research-features">
-                        {(Array.isArray(company.features)
-                          ? company.features
-                          : company.features.split(/,\s*/)
-                        ).map((f, j) => (
-                          <li key={j}>{f.trim()}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )}
-
-                  {/* Pricing */}
-                  {company.pricing && (
-                    <div className="research-section">
-                      <div className="research-section-label">Pricing</div>
-                      <div className="research-section-text">
-                        {typeof company.pricing === 'string'
-                          ? company.pricing
-                          : company.pricing.raw_text
-                            ? company.pricing.raw_text.split('\n').filter(l => l.trim()).slice(0, 6).join('\n')
-                            : ''}
+                      <div className="research-section-label">
+                        {company.services ? 'Services' : company.features ? 'Key Features' : 'Features & Reviews'}
                       </div>
+                      {renderListOrText(company.services || company.features || company.reviews)}
                     </div>
                   )}
 
-                  {/* Sources (if from real data) */}
-                  {company.pricing?.sources?.length > 0 && (
+                  {/* Price Range */}
+                  {(company.price_range || company.pricing) && (
+                    <div className="research-section">
+                      <div className="research-section-label">Price Range</div>
+                      <div className="research-section-text">{renderText(company.price_range || company.pricing)}</div>
+                    </div>
+                  )}
+
+                  {/* Recent Announcements */}
+                  {(company.recent_announcements || company.recent_news) && (
+                    <div className="research-section">
+                      <div className="research-section-label">Recent Announcements</div>
+                      {renderListOrText(company.recent_announcements || company.recent_news, 4)}
+                    </div>
+                  )}
+
+                  {/* Sources */}
+                  {company.sources?.length > 0 && (
                     <div className="research-sources">
-                      {company.pricing.sources.map((s, j) => (
-                        <a key={j} href={s} target="_blank" rel="noopener noreferrer" className="research-source">
-                          {new URL(s).hostname}
-                        </a>
-                      ))}
+                      {company.sources.slice(0, 5).map((s, j) => {
+                        try {
+                          return (
+                            <a key={j} href={s} target="_blank" rel="noopener noreferrer" className="research-source">
+                              {new URL(s).hostname}
+                            </a>
+                          );
+                        } catch { return null; }
+                      })}
                     </div>
                   )}
                 </div>
@@ -157,15 +132,63 @@ export default function ResearchCard({ visible, knowledge, productName, onClose 
   );
 }
 
-function hasStructuredData(knowledge) {
-  if (!knowledge) return false;
-  const p = knowledge.product;
-  // Check if the knowledge has overview/features (structured) or at least pricing.raw_text (from backend)
-  if (p?.overview || p?.features || p?.pricing?.raw_text) return true;
-  // Check competitors
-  const comps = knowledge.competitors || {};
-  for (const v of Object.values(comps)) {
-    if (v.overview || v.features || v.pricing?.raw_text) return true;
+function extractSearchStages(trace) {
+  if (!trace) return [];
+
+  const stages = [];
+  ['search_1', 'search_2'].forEach(key => {
+    const entry = trace[key];
+    if (entry?.queries?.length) {
+      stages.push({
+        label: entry.label || key,
+        queries: entry.queries,
+      });
+    }
+  });
+
+  if (trace.search_3 && typeof trace.search_3 === 'object') {
+    Object.values(trace.search_3).forEach(entry => {
+      if (entry?.queries?.length) {
+        stages.push({
+          label: entry.label || 'Search 3',
+          queries: entry.queries,
+        });
+      }
+    });
   }
-  return false;
+
+  return stages;
+}
+
+function renderListOrText(value, maxItems = 6) {
+  const items = normalizeList(value).slice(0, maxItems);
+  if (items.length > 1) {
+    return (
+      <ul className="research-features">
+        {items.map((item, index) => (
+          <li key={`${item}-${index}`}>{item}</li>
+        ))}
+      </ul>
+    );
+  }
+
+  return <div className="research-section-text">{renderText(items[0] || value)}</div>;
+}
+
+function normalizeList(value) {
+  if (Array.isArray(value)) return value.map(v => `${v}`.trim()).filter(Boolean);
+  if (typeof value === 'string') {
+    return value
+      .split(/\n|;/)
+      .map(v => v.trim())
+      .filter(Boolean);
+  }
+  return [];
+}
+
+function renderText(value) {
+  if (Array.isArray(value)) return value.join('\n');
+  if (typeof value === 'string') return value;
+  if (value?.raw_text) return value.raw_text;
+  return '';
 }

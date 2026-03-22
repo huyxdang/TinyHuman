@@ -66,11 +66,37 @@ function personasToNodes(personas, clusters) {
         primaryPlatform: p.primary_platform,
         searchLanguage: p.search_language,
         frustrations: p.top_3_frustrations,
+        interests: p.interests || [],
       },
       matchScore: 0,
       clusterId: personaCluster[p.id] ?? null,
     };
   });
+}
+
+function normalizeProductLabel(value) {
+  return `${value || ''}`
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/đ/g, 'd')
+    .replace(/Đ/g, 'D')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '');
+}
+
+function knowledgeMatchesInput(knowledge, input) {
+  if (!knowledge?.product || !input) return false;
+
+  const requested = normalizeProductLabel(input);
+  const candidates = [
+    normalizeProductLabel(knowledge.product.input_name),
+    normalizeProductLabel(knowledge.product.name),
+    ...((knowledge.product.input_aliases || []).map(normalizeProductLabel)),
+  ].filter(Boolean);
+
+  return candidates.some(candidate => (
+    candidate === requested || candidate.includes(requested) || requested.includes(candidate)
+  ));
 }
 
 export default function App() {
@@ -151,7 +177,14 @@ export default function App() {
   }
 
   async function handleRun(input) {
-    setProductName(input);
+    const requestedProduct = input.trim();
+
+    if (eventSourceRef.current) {
+      eventSourceRef.current.close();
+      eventSourceRef.current = null;
+    }
+
+    setProductName(requestedProduct);
     setSelectedNode(null);
     setResearchStatus('Researching your competitors...');
 
@@ -183,7 +216,7 @@ export default function App() {
     await fetch('/api/run', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name: input, description: input, url: '', demo: true }),
+      body: JSON.stringify({ name: requestedProduct, description: requestedProduct, url: '' }),
     });
 
     // Listen to SSE
@@ -196,11 +229,11 @@ export default function App() {
       switch (data.type) {
         // Research events
         case 'research_start':
-          setResearchStatus('Discovering competitors...');
+          setResearchStatus('Starting web research...');
           break;
         case 'research_progress':
           if (data.step === 'discovering_competitors') {
-            setResearchStatus('Discovering competitors...');
+            setResearchStatus('Analyzing search results for competitors...');
           } else if (data.step === 'competitors_found') {
             setCompetitors(data.competitors || []);
             setResearchStatus(`Found ${(data.competitors || []).length} competitors`);
@@ -209,7 +242,7 @@ export default function App() {
             setKnowledge(prev => {
               if (prev) return prev; // don't overwrite if already loaded
               const fallback = {
-                product: { name: input, description: input },
+                product: { name: requestedProduct, input_name: requestedProduct, description: requestedProduct },
                 competitors: {},
               };
               compNames.forEach(name => {
@@ -219,28 +252,32 @@ export default function App() {
             });
             setShowResearchCard(true);
           } else if (data.step === 'researching_product') {
-            setResearchStatus(`Researching ${data.name}...`);
+            setResearchStatus(`Searching the web for ${data.name}...`);
           } else if (data.step === 'researching_competitor') {
-            setResearchStatus(`Researching ${data.name}...`);
+            setResearchStatus(`Deep-diving competitor: ${data.name}...`);
+          } else if (data.step === 'web_search_query') {
+            const prefix = data.label || 'Searching the web';
+            const count = data.current && data.total ? ` (${data.current}/${data.total})` : '';
+            setResearchStatus(`${prefix}${count}: ${data.query}`);
           }
           break;
         case 'research_complete':
           setCompetitors(data.competitors || []);
           setResearchStatus('Research complete');
-          if (data.knowledge) {
+          if (knowledgeMatchesInput(data.knowledge, requestedProduct)) {
             setKnowledge(data.knowledge);
           } else {
-            // Try multiple paths to load the full knowledge data
+            // Fall back to the API only if it matches the current request.
             const tryFetch = async () => {
-              for (const url of ['/api/knowledge', '/output/knowledge.json']) {
-                try {
-                  const r = await fetch(url);
-                  if (r.ok) {
-                    const k = await r.json();
-                    setKnowledge(k);
-                    return;
-                  }
-                } catch {}
+              try {
+                const r = await fetch('/api/knowledge');
+                if (!r.ok) return;
+                const k = await r.json();
+                if (knowledgeMatchesInput(k, requestedProduct)) {
+                  setKnowledge(k);
+                }
+              } catch {
+                // Keep the in-progress fallback card if fresh knowledge is unavailable.
               }
             };
             tryFetch();

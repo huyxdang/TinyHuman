@@ -9,7 +9,7 @@ function getRankIcon(rank) {
   return `#${rank + 1}`;
 }
 
-function LeaderboardTable({ entries, maxVotes }) {
+function LeaderboardTable({ entries, maxVotes, impressions }) {
   return (
     <div className="lb-table">
       {entries.map((entry, i) => (
@@ -19,6 +19,12 @@ function LeaderboardTable({ entries, maxVotes }) {
             {entry.name}
             {entry.isProduct && <span className="lb-you-badge">You</span>}
           </div>
+          {impressions && impressions[entry.name] != null && (
+            <div className="lb-impression" title="Impression score (1-5)">
+              {'★'.repeat(Math.round(impressions[entry.name]))}
+              <span className="lb-impression-num">{impressions[entry.name]}</span>
+            </div>
+          )}
           <div className="lb-bar-wrap">
             <div
               className="lb-bar"
@@ -29,7 +35,6 @@ function LeaderboardTable({ entries, maxVotes }) {
             />
           </div>
           <div className="lb-pct">{entry.pct}%</div>
-          <div className="lb-votes">{entry.count} votes</div>
         </div>
       ))}
     </div>
@@ -44,6 +49,20 @@ export default function LeaderboardPanel({ visible, report, onBack }) {
 
   const s = report.summary;
   const ov = s.overall_votes;
+  const knownCompetitors = Object.keys(report.competitor_analysis || {});
+
+  function mergeCompetitors(voteData) {
+    const breakdown = voteData.competitors?.breakdown || [];
+    const byName = new Map(breakdown.map(comp => [comp.name, comp]));
+
+    knownCompetitors.forEach(name => {
+      if (!byName.has(name)) {
+        byName.set(name, { name, count: 0, pct: 0 });
+      }
+    });
+
+    return Array.from(byName.values());
+  }
 
   // Build overall entries
   function buildEntries(voteData) {
@@ -58,17 +77,15 @@ export default function LeaderboardPanel({ visible, report, onBack }) {
       });
     }
 
-    if (voteData.competitors?.breakdown) {
-      voteData.competitors.breakdown.forEach((comp, i) => {
-        entries.push({
-          name: comp.name,
-          count: comp.count,
-          pct: comp.pct,
-          isProduct: false,
-          color: CLUSTER_COLORS[(i + 1) % CLUSTER_COLORS.length],
-        });
+    mergeCompetitors(voteData).forEach((comp, i) => {
+      entries.push({
+        name: comp.name,
+        count: comp.count,
+        pct: comp.pct,
+        isProduct: false,
+        color: CLUSTER_COLORS[(i + 1) % CLUSTER_COLORS.length],
       });
-    }
+    });
 
     // Sort by pct descending
     entries.sort((a, b) => b.pct - a.pct);
@@ -76,7 +93,7 @@ export default function LeaderboardPanel({ visible, report, onBack }) {
   }
 
   const overallEntries = buildEntries(ov);
-  const maxVotes = Math.max(...overallEntries.map(e => e.count));
+  const maxVotes = overallEntries.length ? Math.max(...overallEntries.map(e => e.count)) : 0;
 
   const clusterList = report.clusters || [];
   const currentCluster = clusterList[selectedCluster];
@@ -109,12 +126,18 @@ export default function LeaderboardPanel({ visible, report, onBack }) {
 
         {view === 'overall' && (
           <div className="lb-content">
-            <div className="lb-summary">
-              <span>{s.total_personas} personas</span>
-              <span className="lb-dot-sep">&middot;</span>
-              <span>{s.total_votes} total votes</span>
-            </div>
-            <LeaderboardTable entries={overallEntries} maxVotes={maxVotes} />
+            <LeaderboardTable entries={overallEntries} maxVotes={maxVotes} impressions={s.impressions} />
+
+            {report.top_reasons && report.top_reasons.length > 0 && (
+              <div className="lb-reasons">
+                <div className="lb-reasons-label">Top reasons</div>
+                <div className="lb-reasons-tags">
+                  {report.top_reasons.map((r, i) => (
+                    <span key={i} className="lb-reason-tag">{r}</span>
+                  ))}
+                </div>
+              </div>
+            )}
           </div>
         )}
 
@@ -138,11 +161,6 @@ export default function LeaderboardPanel({ visible, report, onBack }) {
 
             {currentCluster && (
               <>
-                <div className="lb-summary">
-                  <span>{currentCluster.size} personas</span>
-                  <span className="lb-dot-sep">&middot;</span>
-                  <span>{currentCluster.total_votes} votes</span>
-                </div>
                 <LeaderboardTable entries={clusterEntries} maxVotes={maxVotes} />
               </>
             )}

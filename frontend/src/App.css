@@ -770,6 +770,22 @@
   opacity: 0.5;
 }
 
+/* Interest tags in NodePopup */
+.node-popup-interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.node-popup-interest-tag {
+  font-size: 11px;
+  padding: 2px 8px;
+  border-radius: 10px;
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--accent);
+  font-weight: 500;
+}
+
 /* ============================================================
    Animations
    ============================================================ */
@@ -1186,6 +1202,43 @@
   padding: 16px 24px 24px;
 }
 
+.research-search-flow {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.research-search-stage {
+  padding: 12px 14px;
+  border: 1px solid var(--panel-border);
+  border-radius: 10px;
+  background: #faf8f4;
+}
+
+.research-search-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.research-search-queries {
+  display: grid;
+  gap: 6px;
+}
+
+.research-search-query {
+  font-size: 12px;
+  line-height: 1.45;
+  color: var(--text);
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: white;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
 .research-company {
   border: 1px solid var(--panel-border);
   border-radius: 10px;
@@ -1520,6 +1573,54 @@
   color: var(--text-muted);
   width: 60px;
   text-align: right;
+}
+
+/* Leaderboard impressions */
+.lb-impression {
+  font-size: 12px;
+  color: #f59e0b;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 70px;
+}
+
+.lb-impression-num {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+/* Leaderboard reasons */
+.lb-reasons {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--panel-border);
+}
+
+.lb-reasons-label {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+.lb-reasons-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.lb-reason-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 12px;
+  background: rgba(255, 107, 53, 0.1);
+  color: var(--accent);
+  font-weight: 500;
 }
 
 /* ============================================================
