@@ -1,7 +1,7 @@
 """
-TinyUser — Unified Backend Server
+TinyHuman — Unified Backend Server
 
-Serves the full pipeline: research (Exa) → chat (Qwen on Modal) → report.
+Serves the full pipeline: research (TinyFish) → chat (Qwen on Modal) → report.
 Single SSE stream for all phases.
 
 Usage:
@@ -14,13 +14,14 @@ import json
 import os
 import re
 import sys
+import time
 from collections import Counter
 from pathlib import Path
 
 import modal
+import requests
 import uvicorn
 from dotenv import load_dotenv
-from exa_py import Exa
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse
@@ -276,34 +277,154 @@ def _build_demo_knowledge(product: dict, competitor_names: list[str]) -> dict:
     return knowledge
 
 
-# ── Phase 1: Research (Exa) ──────────────────────────────────────────────
+# ── Phase 1: Research (TinyFish Web Agent API) ──────────────────────────
+
+TINYFISH_BASE = "https://agent.tinyfish.ai"
+
+
+def _tf_headers():
+    api_key = os.environ.get("TINYFISH_API_KEY")
+    if not api_key:
+        raise ValueError("TINYFISH_API_KEY not set")
+    return {"X-API-Key": api_key, "Content-Type": "application/json"}
+
+
+def _tf_run_sync(url: str, goal: str) -> dict | None:
+    """Run a TinyFish automation synchronously. Returns result or None."""
+    try:
+        resp = requests.post(
+            f"{TINYFISH_BASE}/v1/automation/run",
+            headers=_tf_headers(),
+            json={"url": url, "goal": goal},
+            timeout=120,
+        )
+        data = resp.json()
+        if data.get("status") == "COMPLETED" and data.get("result"):
+            return data["result"]
+    except Exception as e:
+        print(f"TinyFish error: {e}", file=sys.stderr)
+    return None
+
+
+def _tf_run_batch_and_poll(runs: list[dict], timeout: int = 180) -> list[dict | None]:
+    """Submit a batch of TinyFish runs and poll until all complete."""
+    headers = _tf_headers()
+
+    # Submit batch
+    resp = requests.post(
+        f"{TINYFISH_BASE}/v1/automation/run-batch",
+        headers=headers,
+        json={"runs": runs},
+        timeout=30,
+    )
+    batch_data = resp.json()
+    run_ids = batch_data.get("run_ids", [])
+    if not run_ids:
+        return [None] * len(runs)
+
+    # Poll until all done
+    results = [None] * len(run_ids)
+    deadline = time.time() + timeout
+    while time.time() < deadline:
+        poll_resp = requests.post(
+            f"{TINYFISH_BASE}/v1/runs/batch",
+            headers=headers,
+            json={"run_ids": run_ids},
+            timeout=30,
+        )
+        poll_data = poll_resp.json()
+        all_done = True
+        for i, run_obj in enumerate(poll_data.get("data", [])):
+            status = run_obj.get("status")
+            if status == "COMPLETED":
+                results[i] = run_obj.get("result")
+            elif status in ("FAILED", "CANCELLED"):
+                results[i] = None
+            else:
+                all_done = False
+        if all_done:
+            break
+        time.sleep(3)
+
+    return results
+
 
 def _run_research(product: dict, loop: asyncio.AbstractEventLoop) -> dict:
-    """Run Exa research synchronously (called via asyncio.to_thread)."""
+    """Run TinyFish research synchronously (called via asyncio.to_thread)."""
     _emit_sync.loop = loop
-    api_key = os.environ.get("EXA_API_KEY")
-    if not api_key:
-        raise ValueError("EXA_API_KEY not set")
-    exa = Exa(api_key=api_key)
+    name = product["name"]
 
-    # Discover competitors
+    # Step 1: Discover competitors
     _emit_sync({"type": "research_progress", "step": "discovering_competitors"})
-    competitors = _discover_competitors(exa, product, max_competitors=5)
+    discover_result = _tf_run_sync(
+        url=f"https://www.google.com/search?q={requests.utils.quote(name + ' competitors alternatives 2025')}",
+        goal=(
+            f"Find the top 3-5 competitors or alternatives to '{name}'. "
+            f"Extract a JSON list of competitor product names. "
+            f"Return as: {{\"competitors\": [\"Name1\", \"Name2\", ...]}}"
+        ),
+    )
+
+    competitors = []
+    if discover_result:
+        # Try to extract competitor names from the result
+        if isinstance(discover_result, dict):
+            competitors = discover_result.get("competitors", [])
+        if not competitors:
+            # Try parsing from string result
+            result_str = json.dumps(discover_result)
+            competitors = _extract_competitor_names(result_str, name)
+
+    if not competitors:
+        competitors = ["Claude", "Gemini", "Perplexity"]  # fallback
+
+    competitors = competitors[:5]
     _emit_sync({"type": "research_progress", "step": "competitors_found", "competitors": competitors})
 
-    # Research product
-    _emit_sync({"type": "research_progress", "step": "researching_product", "name": product["name"]})
-    product_info = _research_product(exa, product)
+    # Step 2: Research product + all competitors in batch
+    all_targets = [name] + competitors
+    runs = []
+    for target in all_targets:
+        runs.append({
+            "url": f"https://www.google.com/search?q={requests.utils.quote(target + ' pricing features overview 2025')}",
+            "goal": (
+                f"Research '{target}'. Extract: "
+                f"1) A one-sentence overview of what it is. "
+                f"2) Top 5 key features as a list. "
+                f"3) Pricing tiers. "
+                f"Return as JSON: {{\"overview\": \"...\", \"features\": [\"...\", ...], \"pricing\": \"...\"}}"
+            ),
+        })
 
-    # Research each competitor
+    _emit_sync({"type": "research_progress", "step": "researching_product", "name": name})
+    results = _tf_run_batch_and_poll(runs)
+
+    # Step 3: Build knowledge from results
+    product_info = _parse_research_result(results[0]) if results[0] else {}
     competitor_info = {}
-    for comp in competitors:
+    for i, comp in enumerate(competitors):
         _emit_sync({"type": "research_progress", "step": "researching_competitor", "name": comp})
-        competitor_info[comp] = _research_competitor(exa, comp, product["name"])
+        comp_result = results[i + 1] if (i + 1) < len(results) else None
+        competitor_info[comp] = _parse_research_result(comp_result) if comp_result else {}
 
-    # Build knowledge base
     knowledge = _build_knowledge_base(product, competitors, product_info, competitor_info)
     return knowledge
+
+
+def _parse_research_result(result: dict | None) -> dict:
+    """Parse a TinyFish result into structured overview/features/pricing."""
+    if not result:
+        return {}
+    info = {}
+    if isinstance(result, dict):
+        info["overview"] = result.get("overview", "")
+        features = result.get("features", [])
+        if isinstance(features, list):
+            info["features"] = features
+        elif isinstance(features, str):
+            info["features"] = [f.strip() for f in features.split(",") if f.strip()]
+        info["pricing"] = result.get("pricing", "")
+    return info
 
 
 def _emit_sync(msg: dict):
@@ -311,107 +432,17 @@ def _emit_sync(msg: dict):
     _emit_sync.loop.call_soon_threadsafe(message_queue.put_nowait, msg)
 
 
-def _discover_competitors(exa: Exa, product: dict, max_competitors: int) -> list[str]:
-    name = product["name"]
-    counts = Counter()
-
-    queries = [
-        f"best {name} alternatives 2025",
-        f"{name} competitors comparison 2025",
-    ]
-
-    for query in queries:
-        results = exa.search(query, num_results=5)
-        for r in results.results:
-            if r.text:
-                names = _extract_competitor_names(r.text[:3000], name)
-                for n in names:
-                    counts[n] += 1
-
-    if len(counts) < 3:
-        try:
-            answer = exa.search(f"What are the top competitors to {name}?", num_results=10)
-            for r in answer.results:
-                if r.text:
-                    names = _extract_competitor_names(r.text[:3000], name)
-                    for n in names:
-                        counts[n] += 1
-        except Exception:
-            pass
-
-    return [n for n, _ in counts.most_common(max_competitors)]
-
-
 def _extract_competitor_names(text: str, product_name: str) -> list[str]:
     names = set()
     product_lower = product_name.lower()
-
     known_products = [
         "ChatGPT", "Claude", "Gemini", "Copilot", "Perplexity",
-        "Grok", "DeepSeek", "Llama", "Mistral", "Pi",
-        "Jasper", "Copy.ai", "Writesonic", "YouChat", "Poe",
-        "Notion AI", "Bing Chat", "Google Bard", "Meta AI",
-        "HuggingChat", "Character.AI", "Inflection",
+        "Grok", "DeepSeek", "Mistral", "Jasper", "Notion AI",
     ]
-
     for p in known_products:
         if p.lower() != product_lower and p.lower() in text.lower():
             names.add(p)
-
-    vs_pattern = re.findall(
-        rf'{re.escape(product_name)}\s+vs\.?\s+([A-Z][A-Za-z0-9\s.]+?)(?:\s*[-–—,\n])',
-        text, re.IGNORECASE
-    )
-    for match in vs_pattern:
-        n = match.strip()
-        if n.lower() != product_lower and 2 <= len(n) <= 30:
-            names.add(n)
-
     return list(names)
-
-
-def _research_product(exa: Exa, product: dict) -> dict:
-    name = product["name"]
-    info = {"pricing": None, "reviews": None}
-
-    try:
-        results = exa.search(f"{name} pricing plans 2025", num_results=3)
-        texts = [r.text[:2000] for r in results.results if r.text]
-        if texts:
-            info["pricing"] = {
-                "raw_text": "\n---\n".join(texts),
-                "sources": [r.url for r in results.results if r.url],
-            }
-    except Exception:
-        pass
-
-    try:
-        results = exa.search(f"{name} review pros cons 2025", num_results=3)
-        texts = [r.text[:1500] for r in results.results if r.text]
-        if texts:
-            info["reviews"] = {
-                "raw_text": "\n---\n".join(texts),
-                "sources": [r.url for r in results.results if r.url],
-            }
-    except Exception:
-        pass
-
-    return info
-
-
-def _research_competitor(exa: Exa, comp: str, product_name: str) -> dict:
-    info = {}
-    try:
-        results = exa.search(f"{comp} pricing features review 2025", num_results=3)
-        texts = [r.text[:2000] for r in results.results if r.text]
-        if texts:
-            info = {
-                "raw_text": "\n---\n".join(texts),
-                "sources": [r.url for r in results.results if r.url],
-            }
-    except Exception:
-        pass
-    return info
 
 
 def _build_knowledge_base(product: dict, competitors: list[str],
@@ -421,38 +452,27 @@ def _build_knowledge_base(product: dict, competitors: list[str],
             "name": product["name"],
             "url": product.get("url", ""),
             "description": product.get("description", ""),
-            "pricing": product_info.get("pricing"),
-            "reviews": product_info.get("reviews"),
+            "overview": product_info.get("overview", ""),
+            "features": product_info.get("features", []),
+            "pricing": product_info.get("pricing", ""),
         },
         "competitors": competitor_info,
         "competitor_names": competitors,
     }
 
-    summary_parts = [f"=== {product['name']} ==="]
-    summary_parts.append(f"Description: {product.get('description', '')}")
+    # Build summary text for chat simulation context
+    summary_parts = [f"{product['name']}: {product_info.get('overview', product.get('description', ''))}"]
+    pricing = product_info.get("pricing", "")
+    if pricing:
+        summary_parts.append(f"Pricing: {pricing}")
 
-    pricing = product_info.get("pricing")
-    if pricing and isinstance(pricing, dict):
-        raw = pricing.get("raw_text", "")
-        if raw:
-            summary_parts.append(f"Pricing info: {raw[:500]}")
-
-    reviews = product_info.get("reviews")
-    if reviews and isinstance(reviews, dict):
-        raw = reviews.get("raw_text", "")
-        if raw:
-            summary_parts.append(f"Reviews: {raw[:500]}")
-
-    for comp_name, comp_data in competitor_info.items():
-        summary_parts.append(f"\n=== {comp_name} ===")
-        if comp_data and isinstance(comp_data, dict):
-            raw = comp_data.get("raw_text", "")
-            if raw:
-                summary_parts.append(raw[:500])
-            else:
-                summary_parts.append(json.dumps(comp_data, ensure_ascii=False)[:500])
-        else:
-            summary_parts.append("No data available")
+    for comp_name in competitors:
+        comp_data = competitor_info.get(comp_name, {})
+        overview = comp_data.get("overview", "")
+        comp_pricing = comp_data.get("pricing", "")
+        summary_parts.append(f"\n{comp_name}: {overview}")
+        if comp_pricing:
+            summary_parts.append(f"Pricing: {comp_pricing}")
 
     knowledge["summary_text"] = "\n".join(summary_parts)
     return knowledge
@@ -468,21 +488,21 @@ async def _run_chat_simulation(knowledge: dict):
     persona_map = {p["id"]: p for p in PERSONAS}
     knowledge_summary = knowledge.get("summary_text", f"No research data available about {PRODUCT['name']}.")
     # Truncate knowledge to avoid exceeding model's 2048 token limit
-    if len(knowledge_summary) > 600:
-        knowledge_summary = knowledge_summary[:600] + "..."
+    if len(knowledge_summary) > 400:
+        knowledge_summary = knowledge_summary[:400] + "..."
     competitor_names = knowledge.get("competitor_names", [])
 
     for cluster in CLUSTERS:
         cid = cluster["cluster_id"]
         member_ids = cluster["persona_ids"]
         all_members = [persona_map[pid] for pid in member_ids if pid in persona_map]
-        # Limit to 8 members per cluster for manageable conversations
-        members = all_members[:8]
+        # Only 8 chat, but all vote
+        chat_members = all_members[:8]
 
         await message_queue.put({
             "type": "system",
             "cluster_id": cid,
-            "message": f"Discussion starting — {len(members)} participants",
+            "message": f"Discussion starting — {len(chat_members)} participants",
         })
 
         chat_history = []
@@ -498,7 +518,7 @@ async def _run_chat_simulation(knowledge: dict):
                 history_text = history_text[-500:]
 
             conversations = []
-            for p in members:
+            for p in chat_members:
                 frustrations = ", ".join(p.get("top_3_frustrations", []))
 
                 system_msg = (
@@ -527,7 +547,7 @@ async def _run_chat_simulation(knowledge: dict):
             )
 
             pass_count = 0
-            for p, raw_msg in zip(members, outputs):
+            for p, raw_msg in zip(chat_members, outputs):
                 msg = raw_msg.strip()
                 if not msg or msg.lower() == "pass":
                     pass_count += 1
@@ -561,7 +581,7 @@ async def _run_chat_simulation(knowledge: dict):
             await message_queue.put({
                 "type": "system",
                 "cluster_id": cid,
-                "message": f"Round {round_num} complete — {pass_count}/{len(members)} passed",
+                "message": f"Round {round_num} complete — {pass_count}/{len(chat_members)} passed",
             })
 
 
@@ -578,7 +598,7 @@ async def _run_chat_simulation(knowledge: dict):
         if len(vote_history) > 400:
             vote_history = vote_history[-400:]
 
-        for p in members:
+        for p in all_members:
             vote_conversations.append([
                 {"role": "system", "content": (
                     f"You are {p.get('name', 'Unknown')}, {p.get('age', '?')}yo "
@@ -602,7 +622,7 @@ async def _run_chat_simulation(knowledge: dict):
         pass_count = 0
         cluster_decisions = []
 
-        for p, raw_vote in zip(members, vote_outputs):
+        for p, raw_vote in zip(all_members, vote_outputs):
             choice, reason = _parse_vote(raw_vote, PRODUCT["name"], competitor_names)
 
             if choice == PRODUCT["name"].lower():
@@ -630,7 +650,7 @@ async def _run_chat_simulation(knowledge: dict):
 
         DECISIONS[cid] = cluster_decisions
 
-        total = len(members)
+        total = len(all_members)
         await message_queue.put({
             "type": "results",
             "cluster_id": cid,
