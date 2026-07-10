@@ -2,11 +2,11 @@
 
 ![TinyUser](./new.png)
 
-Simulated word-of-mouth for product discovery.
+> Simulated word-of-mouth for product discovery.
 
 ## Overview
 
-Humans discover products, then gossip about them. TinyUser simulates that dynamic to surface market signals from research plus conversation. It generates diverse personas from population statistics, uses **Exa** to gather live product and competitor context, then drops those personas into a chatroom where they discuss and vote on competing products. The result is a competitive analysis report powered by simulated consumer conversations.
+Humans discover products, then gossip about them. TinyUser simulates that dynamic to surface market signals from research plus conversation. It generates diverse personas from **actual population statistics**, uses **Exa** to gather live product and competitor context, then drops those personas into a chatroom where they discuss and vote on competing products. The result is a competitive analysis report powered by simulated consumer conversations.
 
 **Tech stack:** Python · FastAPI · Modal (GPU inference) · Qwen 2.5 · OpenAI API · Exa · React · Three.js · Vite
 
